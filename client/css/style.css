@@ -257,7 +257,7 @@
 }
 
 .category {
-  width: 247px;
+  width: 84px;
   position: relative;
 }
 
@@ -361,13 +361,12 @@
 }
 
 footer {
-  padding-top: 28px;
+  margin-top: 28px !important;
 }
 
 .consumer_wrap {
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
   justify-content: space-between;
   margin-bottom: 32px;
 }
@@ -395,12 +394,16 @@ footer {
 .question_wrap {
   display: flex;
   flex-direction: column;
+  margin-top: 23px;
 }
 
 .question_kakao, .question_oneOnOne, .question_lot {
   display: flex;
   flex-direction: row;
-  margin-top: 16px;
+}
+
+.question_oneOnOne, .question_lot {
+  margin-top: 23px;
 }
 
 .question_btn {
@@ -458,7 +461,7 @@ footer {
   font-size: 12px;
   font-weight: 400;
   color: var(--content);
-  margin-top: 5px;
+  margin-top: 3px;
 }
 
 .company_introduce p:first-child {
@@ -476,7 +479,7 @@ footer {
 .sns_btn {
   width: 30px;
   height: 30px;
-  margin-left: 20px;
+  margin-left: 16px;
 }
 
 .sns_btn:first-child {
@@ -491,7 +494,8 @@ footer {
   padding: 24px 0 32px;
   border-top: 1px solid var(--gray-100);
   display: flex;
-  /* flex-direction: row; */
+  flex-direction: row;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
