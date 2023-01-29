@@ -107,6 +107,8 @@
   border-radius: 10px;
   top: 20px;
   padding: 8px;
+  background: var(--white);
+  z-index: 1;
 }
 
 .cs_list li {
@@ -136,7 +138,7 @@
   left: 0;
 }
 
-.logo_wrap > img {
+.logo_wrap a img {
   width: 82px;
   height: 42px;
   margin-right: 12px;
@@ -299,15 +301,6 @@
   height: 24px;
   margin-right: 8px;
 }
-
-
-/* .category li::before {
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  background: url("../assets/icons/category/gift.png") center / 24px no-repeat;
-} */
 
 .burger_wrap {
   position: relative;
