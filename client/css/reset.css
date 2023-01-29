@@ -7,16 +7,40 @@ body *::after {
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+div, p, ul, li, table, th, td, textarea, input, span, form, h1, h2, h3, h4, h5, h6, dt, dl, dd, em, sup{
+  padding:0;
+  margin:0;
+}
+
+form, fieldset, p {
+  margin:0;
+  padding:0;
+  border:0;
+}
+
 ul, ol, dl, dd, dt, li {
   list-style-type: none;
   margin: 0;
   padding:0;
 }
 
+img {
+  border:0;
+  vertical-align:middle;
+  outline:none;
+}
+
 button {
   border: none;
   padding: 0;
   margin: 0;
+  background: #ffffff;
+  cursor: pointer;
 }
 
 a {

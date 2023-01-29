@@ -359,3 +359,182 @@
 .delivery a span {
   color: var(--purple);
 }
+
+footer {
+  padding-top: 28px;
+}
+
+.consumer_wrap {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.consumer_title {
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--content);
+}
+
+.consumer_number {
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--content);
+  margin-top: 16px;
+}
+
+.consumer_time {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--content);
+  vertical-align: middle;
+}
+
+.question_wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.question_kakao, .question_oneOnOne, .question_lot {
+  display: flex;
+  flex-direction: row;
+  margin-top: 16px;
+}
+
+.question_btn {
+  width: 140px;
+  height: 40px;
+  margin-right: 16px;
+  border: 1px solid var(--gray-200);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--content);
+}
+
+.question_text {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--content);
+}
+
+.question_text .second {
+  margin-top: 2px;
+}
+
+.question_email {
+  margin-top: 16px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--content);
+}
+
+.question_email a {
+  color: var(--purple);
+}
+
+.company ul {
+  display: flex;
+  width: 100%;
+}
+
+.company ul li {
+  margin-left: 14px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--content);
+}
+
+.company ul li:first-child {
+  margin-left: 0;
+}
+
+.company_introduce {
+  margin-top: 28px;
+}
+
+.company_introduce p {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--content);
+  margin-top: 5px;
+}
+
+.company_introduce p:first-child {
+  margin-top: 0;
+}
+
+.company_introduce p a {
+  color: var(--purple);
+}
+
+.company_sns {
+  margin-top: 28px;
+}
+
+.sns_btn {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+}
+
+.sns_btn:first-child {
+  margin-left: 0;
+}
+
+.sns_btn a img{
+  width: 100%;
+}
+
+.alliance {
+  padding: 24px 0 32px;
+  border-top: 1px solid var(--gray-100);
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+}
+
+.alliance button {
+  display: flex;
+  text-align: left;
+  width: 100%;
+}
+
+.alliance button p {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--content);
+  word-break: break-all;
+}
+
+.isms_btn img, .eprivacy_btn img, .wooribank_btn img {
+  width: 34px;
+  height: 34px;
+  margin-right: 8px;
+}
+
+.payment_btn img{
+  width: 102px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+.copyright {
+  width: 100%;
+  height: 108px;
+  background: var(--gray-50);
+  text-align: center;
+  padding-top: 20px;
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--gray-400);
+}
+
+.copyright .second {
+  margin-top: 4px;
+}
+
+.copyright_text {
+  margin-top: 8px;
+}
