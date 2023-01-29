@@ -491,25 +491,44 @@ footer {
 }
 
 .alliance {
-  padding: 24px 0 32px;
   border-top: 1px solid var(--gray-100);
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
+  width: 100%;
+  padding: 24px 0 32px;
 }
 
 .alliance button {
   display: flex;
+  align-items: flex-start;
   text-align: left;
-  width: 100%;
+  appearance: button;
+  line-height: 16px;
+}
+
+.isms_btn {
+  width: 217px;
+}
+
+.eprivacy_btn {
+  width: 222px;
+}
+
+.payment_btn {
+  width: 270px;
+}
+
+.wooribank_btn {
+  width: 283px;
 }
 
 .alliance button p {
   font-size: 10px;
   font-weight: 400;
   color: var(--content);
-  word-break: break-all;
+  word-break: break-word;
 }
 
 .isms_btn img, .eprivacy_btn img, .wooribank_btn img {
