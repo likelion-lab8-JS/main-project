@@ -1,0 +1,42 @@
+@import url(./color.css);
+@import url(./font.css);
+@import url(./a11y.css);
+@import url(./reset.css);
+
+.popup_wrap {
+  width: 100%;
+  text-align: center;
+  background-color: var(--purple);
+}
+
+.popup {
+  position: relative;
+  line-height: 50px;
+}
+
+.popup_text {
+  color: var(--white);
+  font-size: 16px;
+}
+
+.popup_close_btn {
+  background: transparent;
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  top: 4px;
+  right: 0;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.popup_close_img {
+  width: 100%;
+}
+
+
+.container {
+  width: 1050px;
+  margin: 0 auto;
+}
