@@ -60,6 +60,7 @@
 
 .product-review-body {
   margin-top: 16px;
+  border-top: 1px solid #000000;
   /* background-color: red; */
 }
 
@@ -69,8 +70,9 @@
 
 .notice-header {
   padding : 17px 20px;
-  background-color: gold;
+  /* background-color: gold; */
   box-sizing: border-box;
+  border-bottom: 1px solid #E1E1E1;
 }
 
 .notice-badge {
@@ -82,4 +84,79 @@
   font-weight: bold;
   border-color: transparent;
   border-radius: 1px;
+}
+
+.notice-title {
+  font-weight: bold;
+  font-size: medium;
+}
+
+.notice-content {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12.003px;
+  line-height: 150%;
+  padding: 20px;
+  gap: 40px;
+  width: 1050px;
+  height: 362px;
+  border-bottom: 1px solid #E1E1E1;
+  background: #F9F9F9;
+  position: relative;
+}
+
+.question {
+  width: 974px;
+  height: 36px;
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12.003px;
+  line-height: 150%;
+  /* or 18px */
+
+  /* content */
+  color: #333333;
+}
+
+.answer {
+  width: 481px;
+  height: 216px;
+  /* Label/Small */
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12.003px;
+  line-height: 150%;
+  /* or 18px */
+
+  /* content */
+  color: #333333;
+}
+
+.written-date {
+  width: 481px;
+  height: 18px;
+
+  /* Label/Small */
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12.003px;
+  line-height: 150%;
+  /* identical to box height, or 18px */
+
+  /* gray/400 */
+  color: #898989;
+}
+
+.question, .answer, .written-date {
+  position: relative;
+  left: 36px;
+}
+
+.quest-icon, .ans-icon {
+  position: absolute;
+  left: 20px;
 }
