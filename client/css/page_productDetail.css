@@ -57,3 +57,29 @@
 .view-by-recent {
   color: #A6A6A6;
 }
+
+.product-review-body {
+  margin-top: 16px;
+  /* background-color: red; */
+}
+
+.product-review-notice {
+  /* background-color: aquamarine; */
+}
+
+.notice-header {
+  padding : 17px 20px;
+  background-color: gold;
+  box-sizing: border-box;
+}
+
+.notice-badge {
+  background-color: #e1e1e1;
+  font-size: small;
+  margin-right: 20px;
+  margin-left: 0PX;
+  padding: 2px 8px;
+  font-weight: bold;
+  border-color: transparent;
+  border-radius: 1px;
+}
