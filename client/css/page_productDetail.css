@@ -1,0 +1,21 @@
+.product-review-wrapper {
+  background-color: aqua;
+  width: 1050px;
+  margin: 0 auto;
+}
+
+.product-review-header {
+  background-color: orange;
+  position: relative;
+}
+
+.write-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  background-color: #5F0080;
+  width: 155px;
+  height: 44px;
+  border-radius: 4px;
+}
