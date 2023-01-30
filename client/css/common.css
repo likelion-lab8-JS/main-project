@@ -298,6 +298,10 @@
   padding: 8px 0px 8px 12px;
 }
 
+.category li:hover {
+  background-color: var(--gray-100);
+}
+
 .category li:hover a{
   color: var(--purple);
 }
