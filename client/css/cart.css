@@ -1,0 +1,96 @@
+.cart_wrap {
+  background-color: gold;
+}
+
+h2.cart_title {
+  margin-top: 80px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.cart_container {
+  background-color: skyblue;
+  margin-top: 44px;
+}
+.select_menu {
+  background-color: orange;
+  padding: 16px 0;
+}
+
+.select_all {
+  margin: 0 17px 0 8px;
+  position: relative;
+}
+
+.select_all::after {
+  content: "";
+  width: 1px;
+  height: 13px;
+  background-color: #eee;
+  position: absolute;
+  top: 3px;
+  right: -12px;
+}
+
+.select_delete {
+  background-color: transparent;
+  font-size: 16px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  cart_list                                 */
+/* -------------------------------------------------------------------------- */
+.list_title {
+  background-color: green;
+  padding: 14px 7px;
+  display: flex;
+  flex-direction: row;
+}
+
+.cold_storage {
+  padding: 2px 0;
+  flex-grow: 1;
+  background: url(../assets/icons/cart/cold_storage.svg) no-repeat;
+  background-size: inherit;
+  padding-left: 30px;
+}
+
+.freezing_storage {
+  padding: 2px 0;
+  flex-grow: 1;
+  background: url(../assets/icons/cart/feezing_storage.svg) no-repeat;
+  background-size: inherit;
+  background-position: left;
+  padding-left: 38px;
+  margin-left: -4px;
+}
+
+.list_title img {
+  margin-right: 20px;
+}
+
+button.close_btn {
+  background-color: transparent;
+}
+
+button.close_btn img {
+  display: block;
+  width: 15px;
+  flex-grow: 0;
+}
+
+.product_list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.product_img img {
+  width: 60px;
+  height: 78px;
+}
+
+.count_box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

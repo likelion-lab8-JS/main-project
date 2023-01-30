@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/cart.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/main.js" type="module"></script>
@@ -295,14 +295,14 @@
       </article>
     </section>
 
-    <section class="cart_wrap">
+    <section class="cart_wrap container">
       <h2 class="cart_title">장바구니</h2>
 
       <div class="cart_container">
         <div class="cart_list_box">
           <div class="select_menu">
             <label for="">
-              <input type="checkbox" />
+              <input type="checkbox" class="a11yHidden" />
               <img src="./assets/icons/cart/checked_icon.svg" alt="선택하기" />
               <span class="select_all">전체선택 (0/1)</span>
             </label>
@@ -314,11 +314,7 @@
           <div class="cart_list">
             <div class="cart_text_box">
               <h4 class="list_title">
-                <span
-                  ><img
-                    src="./assets/icons/cart/cold_storage.svg"
-                    alt="" /></span
-                >냉장 식품
+                <span class="cold_storage">냉장 식품</span>
                 <button class="close_btn">
                   <img
                     src="./assets/icons/cart/top_arrow.svg"
@@ -330,14 +326,14 @@
               <ul class="product_list_box">
                 <li class="product_list">
                   <label for="">
-                    <input type="checkbox" />
+                    <input type="checkbox" class="a11yHidden" />
                     <img
                       src="./assets/icons/cart/checked_icon.svg"
                       alt="선택하기"
                     />
                   </label>
 
-                  <a href="#">
+                  <a href="#" class="product_img">
                     <img
                       src="./assets/thumbnail/product01.png"
                       alt="[풀무원]탱탱쫄면(4개입)"
@@ -383,11 +379,7 @@
           <div class="cart_list">
             <div class="cart_text_box">
               <h4 class="list_title">
-                <span
-                  ><img
-                    src="./assets/icons/cart/feezing_storage.svg"
-                    alt="" /></span
-                >냉동 식품
+                <span class="freezing_storage">냉동 식품</span>
                 <button class="close_btn">
                   <img
                     src="./assets/icons/cart/top_arrow.svg"
@@ -399,14 +391,14 @@
               <ul class="product_list_box">
                 <li class="product_list">
                   <label for="">
-                    <input type="checkbox" />
+                    <input type="checkbox" class="a11yHidden" />
                     <img
                       src="./assets/icons/cart/checked_icon.svg"
                       alt="선택하기"
                     />
                   </label>
 
-                  <a href="#">
+                  <a href="#" class="product_img">
                     <img
                       src="./assets/thumbnail/product01.png"
                       alt="[풀무원]탱탱쫄면(4개입)"
@@ -452,7 +444,7 @@
           <div class="cart_list_box">
             <div class="select_menu">
               <label for="">
-                <input type="checkbox" />
+                <input type="checkbox" class="a11yHidden" />
                 <img src="./assets/icons/cart/checked_icon.svg" alt="" />
                 <span class="select_all">전체선택 (0/1)</span>
               </label>
