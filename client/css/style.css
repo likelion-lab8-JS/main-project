@@ -2,8 +2,6 @@
 @import url(./font.css);
 @import url(./a11y.css);
 @import url(./reset.css);
-@import url(./margin.css);
-@import url(./padding.css);
 
 .container {
   width: 1050px;
@@ -15,6 +13,10 @@
   height: 13px;
   background-color: var(--gray-bar);
   margin: 0 12px;
+}
+
+.footer_bar {
+  margin: 0px 8px;
 }
 
 .top_bar.second {
@@ -374,6 +376,10 @@ footer {
   padding-top: 28px;
 }
 
+.consumer {
+  width: 477px;
+}
+
 .consumer_wrap {
   display: flex;
   flex-flow: row nowrap;
@@ -447,19 +453,23 @@ footer {
   color: var(--purple);
 }
 
-.company ul {
+.company {
+  width: 486px;
+}
+
+.company_menu_wrap {
   display: flex;
   width: 100%;
 }
 
-.company ul li {
+.company_menu {
   margin-left: 14px;
   font-size: 16px;
   font-weight: 400;
   color: var(--content);
 }
 
-.company ul li:first-child {
+.company_menu:first-child {
   margin-left: 0;
 }
 
@@ -482,21 +492,23 @@ footer {
   color: var(--purple);
 }
 
-.company_sns {
+.company_sns_wrap {
   margin-top: 28px;
+  display: flow-root;
 }
 
-.sns_btn {
+.company_sns {
   width: 30px;
   height: 30px;
-  margin-left: 16px;
+  margin-left: 20px;
+  float: left;
 }
 
-.sns_btn:first-child {
+.company_sns:first-child {
   margin-left: 0;
 }
 
-.sns_btn a img{
+.company_sns img {
   width: 100%;
 }
 
