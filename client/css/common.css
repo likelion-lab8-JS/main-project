@@ -220,7 +220,6 @@
   width: 32px;
   height: 32px;
   background: transparent url(../assets/icons/Icon/search.png) center / 32px no-repeat;
-  /* margin-left: 20px; */
   vertical-align: bottom;
 }
 
@@ -459,7 +458,7 @@ footer {
 
 .company_menu_wrap {
   display: flex;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .company_menu {
