@@ -10,11 +10,15 @@
   margin: 0 auto;
 }
 
-.bar {
+.top_bar, .logo_bar {
   width: 1px;
   height: 13px;
   background-color: var(--gray-bar);
   margin: 0 12px;
+}
+
+.top_bar.second {
+  margin-right: 0 !important;
 }
 
 .is_active {
@@ -126,7 +130,7 @@
   flex-flow: row nowrap;
   align-items: center;
   position: relative;
-  margin-top: 32px;
+  margin-top: 21px;
   height: 60px;
 }
 
@@ -185,7 +189,7 @@
   border-radius: 4px;
 }
 
-.formInput input {
+.formInput_input{
   width: 300px;
   height: 34px;
   border: none;
@@ -193,11 +197,12 @@
   font-size: 21px;
 }
 
-.formInput input[type="search"]::placeholder {
+.formInput_input::placeholder {
   color: var(--gray-400);
   font-size: 21px;
   height: 100%;
   font-weight: 400;
+  vertical-align: middle;
 }
 
 .formInput input:focus {
@@ -205,12 +210,11 @@
 }
 
 .formInput button {
-  position: absolute;
-  top: 19px;
-  right: 20px;
-  width: 20px;
-  height: 20px;
-  background: transparent url("../assets/icons/Icon/search.png") center / cover no-repeat;
+  width: 34px;
+  height: 34px;
+  background: transparent url(../assets/icons/Icon/search.png) center / 32px no-repeat;
+  margin-left: 20px;
+  vertical-align: bottom;
 }
 
 .icon {
@@ -253,7 +257,8 @@
   flex-flow: row nowrap;
   align-items: center;
   position: relative;
-  margin-top: 24px;
+  /* margin-top: 24px; */
+  height: 72px;
 }
 
 .category {
@@ -335,19 +340,24 @@
 
 .keyworld a {
   width: 150px;
+  height: 40px;
   text-align: center;
-  padding: 8px 0;
   color: var(--content);
   font-size: 16px;
   font-weight: 600;
+  line-height: 40px;
 }
 
 .delivery {
   position: absolute;
   right: 0;
-  padding: 4px 8px;
+  width: 95px;
+  height: 27px;
   border: 1px solid var(--gray-300);
   border-radius: 16px;
+  text-align: center;
+  line-height: 23px;
+  color: var(--gray-500);
 }
 
 .delivery a {
@@ -361,7 +371,7 @@
 }
 
 footer {
-  margin-top: 28px !important;
+  padding-top: 28px;
 }
 
 .consumer_wrap {

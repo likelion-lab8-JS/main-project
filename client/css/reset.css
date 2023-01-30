@@ -58,6 +58,10 @@ a {
   text-decoration: none;
 }
 
+input {
+  font-family: "Pretendard";
+}
+
 input[type="search"] {
   -webkit-appearance: none;
   appearance: none;
@@ -72,5 +76,4 @@ input::-webkit-search-cancel-button,
 input::-webkit-search-results-button,
 input::-webkit-search-results-decoration{
 	-webkit-appearance: none;
-  
 }
