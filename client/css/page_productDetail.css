@@ -407,3 +407,19 @@ body {
 }
 
 /* ---------- [detail] 상세정보 ---------- */
+.detail_information {
+  background-color: rgb(222, 222, 68);
+}
+
+.detail_information_img {
+  width: 1010px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 96px;
+}
+
+.detail_information_img img{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
