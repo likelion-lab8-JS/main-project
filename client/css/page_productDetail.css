@@ -245,6 +245,7 @@
 
 .prev-next-btn {
   margin-top: 16px;
+  margin-bottom: 72px;
   height:32px;
 }
 
@@ -271,9 +272,52 @@
 .inquiry-table {
   width: 1050px;
   height:auto;
+  border-top: #000000 2px solid;
+  padding : 0px 20px;
+}
 
+.inquiry-table td {
+  height: 58px;
+  text-align: center;
+  color: #898989;
+  font-weight: 600;
+}
+
+tbody td:first-child {
+  text-align: left;
+  color: #000;
 }
 
 thead {
-  
+  width: 1050px;
+  height: 58px;
 }
+
+
+.title {
+  width: 750px;
+}
+
+.author, .created-date, .status {
+  width: 100px;
+}
+   
+tbody .notice-badge::before {
+  border-top: #000000 1px solid;
+}
+
+tr td.is-secret {
+  color: #898989;
+}
+
+.is-secret img{
+  display: inline-block;
+  margin-left: 20px;
+}
+
+td.is-answered {
+  color: #5F0080;
+  font-size: medium;
+  font-weight: 600;
+}
+
