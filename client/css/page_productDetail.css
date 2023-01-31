@@ -2,23 +2,32 @@ body {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
+/* ----------------------------------- */
+/* ----------main영역관련 css---------- */
+/* ----------------------------------- */
+
+
+/* ----------------------------------- */
+/* main영역관련 css > main_information */
+/* ----------------------------------- */
+
 .productDetail_main {
   width: 1050px;
+  padding-top: 40px;
   margin-left: auto;
   margin-right: auto;
-  /* background-color: bisque; */
-  padding-top: 40px;
   display: flex;
   justify-content: space-between;
 }
 
 .product_image {
+  /* 모든 썸네일 이미지는 400*514로 동일 */
   width: 400px;
   height: 514px;
 }
 
 .product_information {
-  width: 560px;
+  width: 560px; /* 가로폭이 고정됨 */
   /* background-color: yellow; */
 }
 
@@ -28,6 +37,7 @@ body {
 }
 
 .type_of_delivery {
+  /* 고정된 width와 height */
   width: 74px;
   height: 30px;
   font-style:normal;
@@ -35,7 +45,6 @@ body {
   font-size: 21.328px;
   line-height: 140%;
   color: #6B6B6B;
-  background-color: white;
 }
 
 .selected_product {
@@ -45,13 +54,12 @@ body {
   gap:4px;
   width: 296px;
   height: 73px;
-  background-color: white;
   margin-top: 16px;
 }
 
 .product_name {
-  width: 296px;
-  height: 43px;
+  /* width: 296px; width는 데이터에 따라 다름 */
+  height: 43px; /* 높이는 고정 */
   font-style:normal;
   font-weight: 600;
   font-size: 28.43px;
@@ -60,7 +68,7 @@ body {
 }
 
 .product_short_description {
-  width: 182px;
+  /* width: 182px; */
   height: 26px;
   font-weight: 400;
   font-size: 16px;
@@ -86,7 +94,7 @@ body {
   font-size: 28.43px;
   color: #333333;
   font-weight: 600;
-  width: 80px;
+  /* width: 80px; 변하는 값이므로 */
   height: 43px;
 }
 
@@ -101,14 +109,23 @@ body {
 
 .point_benefits_information {
   color: #5F0080;
-  width: 218px;
+  /* width: 218px; */
   height: 24px;
   font-weight: 600;
   font-size: 16px;
   line-height: 150%;
   margin-top: 16px;
-  background-color: white;
 }
+
+/* 만약에 로그인 된 경우 -> 적립혜택 보여줌
+.point_benefits_information {
+  // 자바스크립트와 함께 구현 필요
+} */
+
+
+/* ----------------------------------- */
+/* main영역관련 css > sub_information */
+/* ----------------------------------- */
 
 .sub_information {
   /* background-color: orange; */
@@ -116,6 +133,8 @@ body {
   font-weight: 600;
   line-height: 150%;
   color: #6B6B6B;
+  font-weight: 600;
+  font-size: 12.003px;
 }
 
 .condition_of_morning_delivery {
@@ -123,7 +142,8 @@ body {
   color: #898989;
 }
 
-.sub_information dl, .buy dl {
+.sub_information dl, 
+.buy dl {
   border-top: 1px solid #E1E1E1;
   padding: 16px 0px;
   display: flex;
@@ -140,18 +160,34 @@ body {
   width: 432px;
 }
 
-.buy {
-  background-color: white;
+/* ----------------------------------- */
+/* main영역관련 css > buy_information */
+/* ----------------------------------- */
+
+/* .buy_information {
+  background-color: lightblue;
+} */
+
+.dl_product_choose dt {
+  width:128px; 
+  height:26px; 
+  font-weight: 600; 
+  font-size: 12.003px;
+  line-height: 150%; 
+  color: #6B6B6B;
 }
 
 .number_of_product {
   padding: 3px 8px;
+  /* display: inline-block; */
+}
+
+.number_of_product span{
   font-size: 16px;
-  line-height: 24px;
   font-weight: 600;
   /* background-color: aqua; */
   height: 24px;
-  /* display: inline-block; */
+  line-height: 150%;
 }
 
 .minus_amount, .plus_amount {
@@ -166,10 +202,18 @@ body {
 
 .calc_price {
   /* border: 1px solid #C4C4C4;     */
-  width: 400px;
+  /* width: 400px; */
   /* padding-top: 12px; */
   /* background-color: white; */
   font-size: 12px;
+  border: 1px solid #E1E1E1; 
+  padding: 12px 16px; 
+  position: relative;
+  flex-grow: 1;
+}
+
+.dl_product_choose dd {
+  display: flex;
 }
 
 .total_price_1 {
@@ -184,9 +228,41 @@ body {
 
 }
 
+.buy_box {
+  flex-grow: 1;
+}
+
+.buy_product_name {
+  color:#6B6B6B; 
+  font-size: 12.003px;
+  font-weight: 600; 
+  line-height: 150%; 
+  height:18px;
+  margin-bottom: 12px;
+}
+
+.choose_product_num {
+  display:flex; 
+  align-items: center; 
+  justify-content: center;
+  border: 1px solid #C4C4C4; 
+  width:84px; 
+  box-sizing: border-box; 
+  padding:0; 
+  margin-top: 12px;
+}
+
+.calc_price div:nth-child(2) {
+  align-items:center; 
+  display:flow-root;
+}
+
 .dl_product_choose {
+  padding: 16px 0px;
   /* background-color: skyblue; */
   border-bottom: 1px solid #E1E1E1;
+  border-top: 1px solid #E1E1E1;
+  display: flex;
 }
 
 .calc_total_price {

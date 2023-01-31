@@ -287,10 +287,9 @@
     </article>
   </section>
 
-  <!-- 나의 코드 영역 시작 -->
+  <!-------------------------- 나의 코드 영역 시작 -------------------------->
   <main class="productDetail_main">
     <img class="product_image" src="assets/tangtang/detail_view.jpg">
-
     <section class="product_information">
       <article class="main_information">
         <div class="type_of_delivery">샛별배송</div>
@@ -346,30 +345,26 @@
           </dd>
         </dl>
       </article>
-      <article class="buy">
+      <article class="buy_information">
         <dl class="dl_product_choose">
-          <dt style="width:128px; height:26px; font-weight: 600; line-height: 150%; color: #6B6B6B;">상품선택</dt>
-          <dd>
-            <div style="border: 1px solid #E1E1E1; padding: 12px 16px; position: relative;">
-              <div class="calc_price">
-                <div style="color:#6B6B6B; font-size: 12px; font-weight: 600; line-height: 150%; height:18px;">[풀무원]탱탱쫄면(4개입)</div>
-                <div style="align-items:center; display:flow-root;">
-                  <div style="display:flex; align-items: center; border: 1px solid #C4C4C4; width:84px; box-sizing: border-box; padding:0; margin-top: 12px;">
-                    <button class="minus_amount">
-                      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 14V16H10V14H20Z" fill="#333333"/>
-                        </svg>
-                    </button>
-                    <span class="number_of_product">1</span>
-                    <button class="plus_amount">
-                      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16 10V14H20V16H16V20H14V16H10V14H14V10H16Z" fill="#333333"/>
-                        </svg>
-                    </button>
+          <dt>상품선택</dt>
+          <dd class="buy_box">
+            <div class="calc_price">
+              <div class="buy_product_name">[풀무원]탱탱쫄면(4개입)</div>
+              <div>
+                <div class="choose_product_num">
+                  <button class="minus_amount">
+                    <img src="./assets/icons/detail_miyoung/minus_dark.svg">
+                  </button>
+                  <div class="number_of_product">
+                    <span>1</span>
                   </div>
-                  <div>
-                    <span class="total_price_1">4,980원</span>
-                  </div>
+                  <button class="plus_amount">
+                    <img src="./assets/icons/detail_miyoung/plus_dark.svg">
+                  </button>
+                </div>
+                <div>
+                  <span class="total_price_1">4,980원</span>
                 </div>
               </div>
             </div>
@@ -407,7 +402,6 @@
           <button class="push_cart">장바구니 담기</button>
         </div>
       </article>
-
     </section> <!-- /product_information -->
   </main>
   
