@@ -314,7 +314,7 @@ body {
 }
 
 /* ---------- [detail] 상품설명 ---------- */
-
+/* ---------- [detail] product_intro ---------- */
 .description {
   /* margin-left: auto;
   margin-right: auto; */
@@ -363,3 +363,33 @@ body {
   border-top: 1px solid #E1E1E1;
 }
 
+/* ---------- [detail] product_check_point ---------- */
+.product_check_point {
+  width: 1050px;
+  height: 71px;
+  font-weight: 700;
+  font-size: 50.517px;
+  line-height: 140%;
+  color: #333333;
+  /* background-color: pink; */
+  margin-top: 96px;
+}
+
+.product_check_point h3:before, .product_check_point h3:after{
+  content: " ";
+  /* width: 279.5px; */
+  height: 1px;
+  display: inline-block;
+  background: #D9D9D9;
+  flex-grow:1;
+}
+
+.product_check_point h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check_point {
+  padding: 0px 16px;
+}
