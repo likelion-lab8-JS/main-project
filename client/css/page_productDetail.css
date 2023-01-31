@@ -313,6 +313,53 @@ body {
   color: #5F0080;
 }
 
+/* ---------- [detail] 상품설명 ---------- */
 
+.description {
+  /* margin-left: auto;
+  margin-right: auto; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.description img{
+  margin-top: 40px;
+  width: 1050px;
+  height: 670px;
+}
+
+.description_text_short div:nth-child(1) {
+  font-weight: 600;
+  font-size: 28.43px;
+  line-height: 150%;
+  color: #000000;
+  width: 1050px;
+  background-color: skyblue;
+  text-align: center;
+  margin-top: 76px;
+}
+
+.description_text_short div:nth-child(2) {
+  font-weight: 700;
+  font-size: 50.517px;
+  line-height: 140%;
+  color: #333333;
+  width: 1050px;
+  background-color: bisque;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.description_text_long {
+  background-color: lightsalmon;
+  width: 1050px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #333333;
+  padding-top: 28px;
+  border-top: 1px solid #E1E1E1;
+}
 
