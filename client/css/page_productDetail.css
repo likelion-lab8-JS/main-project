@@ -324,7 +324,7 @@ body {
   align-items: center;
 }
 
-.description img{
+.product_intro img{
   margin-top: 40px;
   width: 1050px;
   height: 670px;
@@ -366,13 +366,17 @@ body {
 /* ---------- [detail] product_check_point ---------- */
 .product_check_point {
   width: 1050px;
-  height: 71px;
+  /* height: 71px; */
   font-weight: 700;
   font-size: 50.517px;
   line-height: 140%;
   color: #333333;
-  /* background-color: pink; */
+  background-color: pink;
   margin-top: 96px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
 }
 
 .product_check_point h3:before, .product_check_point h3:after{
@@ -390,6 +394,16 @@ body {
   align-items: center;
 }
 
-.check_point {
+.check_point_title {
   padding: 0px 16px;
 }
+
+.check_point_img {
+  width: 1010px;
+  height: 283px;
+  margin-top: 68px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- [detail] 상세정보 ---------- */
