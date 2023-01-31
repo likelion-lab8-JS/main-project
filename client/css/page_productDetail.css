@@ -244,13 +244,36 @@
 }
 
 .prev-next-btn {
-  text-align: center;
+  margin-top: 16px;
+  height:32px;
 }
 
 .prev {
-  background-image: none;
-}
+  background-image: no-repeat url("../assets/icons/Icon/arrow_prev.svg");
+  width: 8px;
+  height: 16px;
+  padding: 4px;
+  /* background-position: 4px 0; */
+  border-radius: 4px solid #E1E1E1;
+  margin-right: 16px;
+  display: inline-block;
+} 
 
 .next {
-  background-image: none;
+  background-image: url("../assets/icons/Icon/arrow_next.svg");
+  /* width: 8px;
+  height: 16px; */
+  /* background-position:; */
+  border-radius: 4px solid #E1E1E1;
+  display: inline-block;
+}
+
+.inquiry-table {
+  width: 1050px;
+  height:auto;
+
+}
+
+thead {
+  
 }
