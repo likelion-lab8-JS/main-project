@@ -297,217 +297,221 @@
 
     <section class="cart_wrap container">
       <h2 class="cart_title">장바구니</h2>
-
-      <div class="cart_container">
-        <div class="cart_list_box">
-          <div class="select_menu">
-            <label for="">
-              <input type="checkbox" class="a11yHidden" />
-              <img src="./assets/icons/cart/checked_icon.svg" alt="선택하기" />
-              <span class="select_all">전체선택 (0/1)</span>
-            </label>
-
-            <button class="select_delete">선택삭제</button>
-          </div>
-          <!-- select_menu -->
-
-          <div class="cart_list">
-            <div class="cart_text_box">
-              <h4 class="list_title">
-                <span class="cold_storage">냉장 식품</span>
-                <button class="close_btn">
-                  <img
-                    src="./assets/icons/cart/top_arrow.svg"
-                    alt="메뉴 접기"
-                  />
-                </button>
-              </h4>
-
-              <ul class="product_list_box">
-                <li class="product_list">
-                  <label for="">
-                    <input type="checkbox" class="a11yHidden" />
-                    <img
-                      src="./assets/icons/cart/checked_icon.svg"
-                      alt="선택하기"
-                    />
-                  </label>
-
-                  <a href="#" class="product_img">
-                    <img
-                      src="./assets/thumbnail/product01.png"
-                      alt="[풀무원]탱탱쫄면(4개입)"
-                    />
-                  </a>
-
-                  <div class="product_name">
-                    <a href="#"> [풀무원] 탱탱쫄면 (4개입) </a>
-                  </div>
-
-                  <div class="count_box">
-                    <button class="minus_btn">
-                      <img
-                        src="./assets/icons/cart/minus.svg"
-                        alt="수량 내리기"
-                      />
-                    </button>
-
-                    <div class="count">1</div>
-
-                    <button class="plus_btn">
-                      <img
-                        src="./assets/icons/cart/plus.svg"
-                        alt="수량 올리기"
-                      />
-                    </button>
-                  </div>
-                  <!-- count_box -->
-
-                  <p class="product_price">19,990원</p>
-
-                  <button class="delete_btn">
-                    <img
-                      src="./assets/icons/cart/cancle.svg"
-                      alt="상품 삭제하기"
-                    />
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="cart_list">
-            <div class="cart_text_box">
-              <h4 class="list_title">
-                <span class="freezing_storage">냉동 식품</span>
-                <button class="close_btn">
-                  <img
-                    src="./assets/icons/cart/top_arrow.svg"
-                    alt="메뉴 접기"
-                  />
-                </button>
-              </h4>
-
-              <ul class="product_list_box">
-                <li class="product_list">
-                  <label for="">
-                    <input type="checkbox" class="a11yHidden" />
-                    <img
-                      src="./assets/icons/cart/checked_icon.svg"
-                      alt="선택하기"
-                    />
-                  </label>
-
-                  <a href="#" class="product_img">
-                    <img
-                      src="./assets/thumbnail/product01.png"
-                      alt="[풀무원]탱탱쫄면(4개입)"
-                    />
-                  </a>
-
-                  <div class="product_name">
-                    <a href="#"> [풀무원] 탱탱쫄면 (4개입) </a>
-                  </div>
-
-                  <div class="count_box">
-                    <button class="minus_btn">
-                      <img
-                        src="./assets/icons/cart/minus.svg"
-                        alt="수량 내리기"
-                      />
-                    </button>
-
-                    <div class="count">1</div>
-
-                    <button class="plus_btn">
-                      <img
-                        src="./assets/icons/cart/plus.svg"
-                        alt="수량 올리기"
-                      />
-                    </button>
-                  </div>
-                  <!-- count_box -->
-
-                  <p class="product_price">19,990원</p>
-
-                  <button class="delete_btn">
-                    <img
-                      src="./assets/icons/cart/cancle.svg"
-                      alt="상품 삭제하기"
-                    />
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
+      <div class="cart_inner">
+        <div class="cart_container">
           <div class="cart_list_box">
             <div class="select_menu">
               <label for="">
                 <input type="checkbox" class="a11yHidden" />
-                <img src="./assets/icons/cart/checked_icon.svg" alt="" />
+                <img
+                  src="./assets/icons/cart/checked_icon.svg"
+                  alt="선택하기"
+                />
                 <span class="select_all">전체선택 (0/1)</span>
               </label>
 
               <button class="select_delete">선택삭제</button>
             </div>
             <!-- select_menu -->
+
+            <div class="cart_list">
+              <div class="cart_text_box">
+                <h4 class="list_title">
+                  <span class="cold_storage">냉장 식품</span>
+                  <button class="close_btn">
+                    <img
+                      src="./assets/icons/cart/top_arrow.svg"
+                      alt="메뉴 접기"
+                    />
+                  </button>
+                </h4>
+
+                <ul class="product_list_box">
+                  <li class="product_list">
+                    <label for="" class="checked">
+                      <input type="checkbox" class="a11yHidden" />
+                      <img
+                        src="./assets/icons/cart/checked_icon.svg"
+                        alt="선택하기"
+                      />
+                    </label>
+
+                    <a href="#" class="product_img">
+                      <img
+                        src="./assets/thumbnail/product01.png"
+                        alt="[풀무원]탱탱쫄면(4개입)"
+                      />
+                    </a>
+
+                    <div class="product_name">
+                      <a href="#"> [풀무원] 탱탱쫄면 (4개입) </a>
+                    </div>
+
+                    <div class="count_box">
+                      <button class="minus_btn">
+                        <img
+                          src="./assets/icons/cart/minus.svg"
+                          alt="수량 내리기"
+                        />
+                      </button>
+
+                      <div class="count">1</div>
+
+                      <button class="plus_btn">
+                        <img
+                          src="./assets/icons/cart/plus.svg"
+                          alt="수량 올리기"
+                        />
+                      </button>
+                    </div>
+                    <!-- count_box -->
+
+                    <p class="product_price">19,990원</p>
+
+                    <button class="delete_btn">
+                      <img
+                        src="./assets/icons/cart/cancle.svg"
+                        alt="상품 삭제하기"
+                      />
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="cart_list">
+              <div class="cart_text_box">
+                <h4 class="list_title">
+                  <span class="freezing_storage">냉동 식품</span>
+                  <button class="close_btn">
+                    <img
+                      src="./assets/icons/cart/top_arrow.svg"
+                      alt="메뉴 접기"
+                    />
+                  </button>
+                </h4>
+
+                <ul class="product_list_box">
+                  <li class="product_list">
+                    <label for="" class="checked">
+                      <input type="checkbox" class="a11yHidden" />
+                      <img
+                        src="./assets/icons/cart/checked_icon.svg"
+                        alt="선택하기"
+                      />
+                    </label>
+
+                    <a href="#" class="product_img">
+                      <img
+                        src="./assets/thumbnail/product01.png"
+                        alt="[풀무원]탱탱쫄면(4개입)"
+                      />
+                    </a>
+
+                    <div class="product_name">
+                      <a href="#"> [풀무원] 탱탱쫄면 (4개입) </a>
+                    </div>
+
+                    <div class="count_box">
+                      <button class="minus_btn">
+                        <img
+                          src="./assets/icons/cart/minus.svg"
+                          alt="수량 내리기"
+                        />
+                      </button>
+
+                      <div class="count">1</div>
+
+                      <button class="plus_btn">
+                        <img
+                          src="./assets/icons/cart/plus.svg"
+                          alt="수량 올리기"
+                        />
+                      </button>
+                    </div>
+                    <!-- count_box -->
+
+                    <p class="product_price">19,990원</p>
+
+                    <button class="delete_btn">
+                      <img
+                        src="./assets/icons/cart/cancle.svg"
+                        alt="상품 삭제하기"
+                      />
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="cart_list_box">
+              <div class="select_menu">
+                <label for="">
+                  <input type="checkbox" class="a11yHidden" />
+                  <img src="./assets/icons/cart/checked_icon.svg" alt="" />
+                  <span class="select_all">전체선택 (0/1)</span>
+                </label>
+
+                <button class="select_delete">선택삭제</button>
+              </div>
+              <!-- select_menu -->
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="payment_container">
-        <div class="shipping_address">
-          <h3 class="title">배송지</h3>
-          <p class="address">서울 중랑구 면목로 42길 11 (행운빌딩) 603호</p>
-          <p class="deliver">샛별배송</p>
-          <button class="change_address">배송지 변경</button>
+        <div class="payment_container">
+          <div class="shipping_address">
+            <h3 class="title">배송지</h3>
+            <p class="address">서울 중랑구 면목로 42길 11 (행운빌딩) 603호</p>
+            <p class="deliver">샛별배송</p>
+            <button class="change_address">배송지 변경</button>
+          </div>
+
+          <div class="price_box">
+            <div class="product_amount">
+              <span class="title">상품금액</span>
+              <span class="price">0원</span>
+            </div>
+
+            <div class="discount_amount">
+              <span class="title">상품할인금액</span>
+              <span class="price">0원</span>
+            </div>
+
+            <div class="shipping_amount">
+              <span class="title">배송비</span>
+              <span class="price">0원</span>
+            </div>
+
+            <div class="scheduled_payment">
+              <span class="title">결제예정금액</span>
+              <span class="price">0원</span>
+            </div>
+
+            <p class="accumulate">
+              <span class="accumulate_badge">적립</span>
+              로그인 후 회원 등급에 따라 적립
+            </p>
+          </div>
+
+          <button class="order_btn">주문하기</button>
+
+          <ul>
+            <li>쿠폰/적립금은 주문서에서 사용 가능합니다.</li>
+            <li>[주문완료] 상태일 경우에만 주문 취소 가능합니다.</li>
+            <li>
+              [마이컬리 > 주문내역 상세페이지] 에서 직접 취소하실 수 있습니다.
+            </li>
+            <li>
+              쿠폰, 적립금 사용 금액을 제외한 실 결제 금액 기준으로 최종
+              산정됩니다.
+            </li>
+            <li>
+              상품별로 적립금 지급 기준이 다를 수 있습니다. (상품 상세
+              페이지에서 확인 가능합니다)
+            </li>
+          </ul>
         </div>
-
-        <div class="price_box">
-          <div class="product_amount">
-            <span class="title">상품금액</span>
-            <span class="price">0원</span>
-          </div>
-
-          <div class="discount_amount">
-            <span class="title">상품할인금액</span>
-            <span class="price">0원</span>
-          </div>
-
-          <div class="shipping_amount">
-            <span class="title">배송비</span>
-            <span class="price">0원</span>
-          </div>
-
-          <div class="scheduled_payment">
-            <span class="title">결제예정금액</span>
-            <span class="price">0원</span>
-          </div>
-
-          <p class="accumulate">
-            <span class="accumulate_badge">적립</span>
-            로그인 후 회원 등급에 따라 적립
-          </p>
-        </div>
-
-        <button class="order_btn">주문하기</button>
-
-        <ul>
-          <li>쿠폰/적립금은 주문서에서 사용 가능합니다.</li>
-          <li>[주문완료] 상태일 경우에만 주문 취소 가능합니다.</li>
-          <li>
-            [마이컬리 > 주문내역 상세페이지] 에서 직접 취소하실 수 있습니다.
-          </li>
-          <li>
-            쿠폰, 적립금 사용 금액을 제외한 실 결제 금액 기준으로 최종
-            산정됩니다.
-          </li>
-          <li>
-            상품별로 적립금 지급 기준이 다를 수 있습니다. (상품 상세 페이지에서
-            확인 가능합니다)
-          </li>
-        </ul>
       </div>
     </section>
 

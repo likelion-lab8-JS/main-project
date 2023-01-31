@@ -1,5 +1,5 @@
 .cart_wrap {
-  background-color: gold;
+  /* background-color: gold; */
 }
 
 h2.cart_title {
@@ -7,14 +7,28 @@ h2.cart_title {
   text-align: center;
   font-weight: 500;
 }
+.cart_inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 24px;
+}
 
+/* -------------------------------------------------------------------------- */
+/*                               .cart_container                              */
+/* -------------------------------------------------------------------------- */
 .cart_container {
-  background-color: skyblue;
+  /* background-color: skyblue; */
   margin-top: 44px;
+  width: 742px;
 }
 .select_menu {
-  background-color: orange;
+  /* background-color: orange; */
   padding: 16px 0;
+}
+
+.select_menu:last-child {
+  border-top: 1px solid #eee;
 }
 
 .select_all {
@@ -41,10 +55,14 @@ h2.cart_title {
 /*                                  cart_list                                 */
 /* -------------------------------------------------------------------------- */
 .list_title {
-  background-color: green;
+  /* background-color: green; */
   padding: 14px 7px;
   display: flex;
   flex-direction: row;
+}
+
+.list_title:first-child {
+  border-top: 1px solid #000;
 }
 
 .cold_storage {
@@ -79,14 +97,57 @@ button.close_btn img {
   flex-grow: 0;
 }
 
+.product_list_box {
+  padding: 20px 0;
+}
+
 .product_list {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 8px;
 }
+
 .product_img img {
   width: 60px;
   height: 78px;
+  margin: 0 10px;
+}
+
+.product_name {
+  font-weight: 600;
+  width: 320px;
+  /* outline: 2px solid red; */
+}
+
+.count_box {
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  /* outline: 2px solid red; */
+}
+
+.minus_btn,
+.plus_btn {
+  padding: 10px 14px;
+  background-color: transparent;
+}
+
+.count {
+  padding: 3px 8px;
+}
+
+.product_price {
+  width: 127px;
+  text-align: right;
+  font-weight: 600;
+  /* outline: 2px solid red; */
+}
+
+.delete_btn {
+  width: 30px;
+  height: 30px;
+  /* outline: 2px solid red; */
+  background-color: transparent;
 }
 
 .count_box {
