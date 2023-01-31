@@ -1,0 +1,69 @@
+.login_box {
+  margin: 80px auto;
+  width: 340px;
+  text-align: center;
+}
+
+.login_box h3 {
+  color: var(--black);
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.idForm_group {
+  margin-top: 44px;
+}
+
+.id_input {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+}
+
+.passwordForm_group {
+  margin-top: 12px;
+}
+
+.password_input {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+}
+
+.find_wrap {
+  display: block;
+  text-align: right;
+  margin-top: 12px;
+}
+
+.find_wrap span {
+  color: var(--black);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.loginButton_wrap {
+  margin-top: 28px;
+}
+
+.loginButton_wrap button {
+  display: block;
+  width: 100%;
+  height: 54px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.login_btn {
+  color: var(--white);
+  background-color: var(--purple);
+}
+
+.register_btn {
+  margin-top: 12px;
+  color: var(--purple);
+  border: 1px solid var(--purple);
+}
