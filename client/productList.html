@@ -696,7 +696,7 @@
 
         <article class="product_list">
           <div class="tab_menu">
-            <h4 class="total"></h4>
+            <h4 class="total">총 284건</h4>
 
             <ul class="order_list">
               <li class="recommendation">
@@ -730,11 +730,11 @@
                 </div>
               </li>
 
-              <li class="new"><a href="#">신상품순</a></li>
-              <li class="sales_rate"><a href="#">판매량순</a></li>
-              <li class="benefit"><a href="#">혜택순</a></li>
-              <li class="low_price"><a href="#">낮은 가격순</a></li>
-              <li class="high_price"><a href="#">높은 가격순</a></li>
+              <li class="new oders"><a href="#">신상품순</a></li>
+              <li class="sales_rate oders"><a href="#">판매량순</a></li>
+              <li class="benefit oders"><a href="#">혜택순</a></li>
+              <li class="low_price oders"><a href="#">낮은 가격순</a></li>
+              <li class="high_price oders"><a href="#">높은 가격순</a></li>
             </ul>
           </div>
 
@@ -746,6 +746,7 @@
                     src="./assets/thumbnail/product01.png"
                     alt="[풀무원]탱탱쫄면(4개입)"
                   />
+
                   <button class="cart_icon">
                     <img
                       src="./assets/icons/list/cart.svg"
@@ -757,7 +758,7 @@
                 <div class="text_box">
                   <p class="product_delivery">샛별배송</p>
                   <p class="product_name">[풀무원] 탱탱쫄면 (4개입)</p>
-                  <p class="product_price">4,980원</p>
+                  <p class="product_price">4,980 원</p>
                   <p class="product_description">튀기지 않아 부담없는 매콤함</p>
 
                   <div class="badges">
@@ -786,7 +787,7 @@
                 <div class="text_box">
                   <p class="product_delivery">샛별배송</p>
                   <p class="product_name">[온더바디] 죠르디 시카 자석 선쿠션</p>
-                  <p class="product_price">32,500원</p>
+                  <p class="product_price">32,500 원</p>
                   <p class="product_description">
                     끈적임 없이 보송한 무기자차 선쿠션
                   </p>
@@ -813,9 +814,12 @@
                   <p class="product_delivery">샛별배송</p>
                   <p class="product_name">[프로쉬] 베이비 세탁세</p>
                   <p class="product_price">
-                    <span class="discount">24%</span>18,900원
+                    <span class="discount">24%</span>18,900 원
                   </p>
-                  <p class="product_description">튀기지 않아 부담없는 매콤함</p>
+                  <p class="cost">24,900 원</p>
+                  <p class="product_description">
+                    성분을 꼼꼼히 따져 골라 더욱 편안한
+                  </p>
 
                   <div class="badges">
                     <p class="karly_badge">Karly Only</p>
@@ -843,7 +847,7 @@
                 <div class="text_box">
                   <p class="product_delivery">샛별배송</p>
                   <p class="product_name">[풀무원] 탱탱쫄면 (4개입)</p>
-                  <p class="product_price">4,980원</p>
+                  <p class="product_price">4,980 원</p>
                   <p class="product_description">튀기지 않아 부담없는 매콤함</p>
 
                   <div class="badges">
@@ -872,7 +876,7 @@
                 <div class="text_box">
                   <p class="product_delivery">샛별배송</p>
                   <p class="product_name">[온더바디] 죠르디 시카 자석 선쿠션</p>
-                  <p class="product_price">32,500원</p>
+                  <p class="product_price">32,500 원</p>
                   <p class="product_description">
                     끈적임 없이 보송한 무기자차 선쿠션
                   </p>
@@ -899,8 +903,41 @@
                   <p class="product_delivery">샛별배송</p>
                   <p class="product_name">[프로쉬] 베이비 세탁세</p>
                   <p class="product_price">
-                    <span class="discount">24%</span>18,900원
+                    <span class="discount">24%</span>18,900 원
                   </p>
+                  <p class="cost">24,900 원</p>
+                  <p class="product_description">
+                    성분을 꼼꼼히 따져 골라 더욱 편안한
+                  </p>
+
+                  <div class="badges">
+                    <p class="karly_badge">Karly Only</p>
+                    <p class="limit_badge">한정수량</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- 리스트 추가 작업 -->
+            <div class="product_box">
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="./assets/thumbnail/product01.png"
+                    alt="[풀무원]탱탱쫄면(4개입)"
+                  />
+                  <button class="cart_icon">
+                    <img
+                      src="./assets/icons/list/cart.svg"
+                      alt="장바구니에 담기"
+                    />
+                  </button>
+                </div>
+
+                <div class="text_box">
+                  <p class="product_delivery">샛별배송</p>
+                  <p class="product_name">[풀무원] 탱탱쫄면 (4개입)</p>
+                  <p class="product_price">4,980 원</p>
                   <p class="product_description">튀기지 않아 부담없는 매콤함</p>
 
                   <div class="badges">
@@ -910,36 +947,188 @@
                 </div>
               </a>
             </div>
-          </div>
 
-          <div class="pagination">
-            <a href="#" class="first_page_move_btn">
-              <img
-                src="./assets/icons/list/double_left_arrow.svg"
-                alt="처음 페이지로 이동하기 아이콘"
-              />
-            </a>
-            <a href="#" class="prev_page_btn">
-              <img
-                src="./assets/icons/list/left_arrow.svg"
-                alt="이전 페이지로 이동하기 아이콘"
-              />
-            </a>
-            <a href="#" class="first_page_btn">1</a>
-            <a href="#" class="second_page_btn">2</a>
-            <a href="#" class="third_page_btn">3</a>
-            <a href="#" class="next_page_btn">
-              <img
-                src="./assets/icons/list/right_arrow.svg"
-                alt="다음 페이지로 이동하기 아이콘"
-              />
-            </a>
-            <a href="#" class="last_move_page_btn">
-              <img
-                src="./assets/icons/list/double_right_arrow.svg"
-                alt="마지막 페이지로 이동하기 아이콘"
-              />
-            </a>
+            <div class="product_box">
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="./assets/thumbnail/product02.png"
+                    alt="[온더바디] 죠르디 시카 자석 선쿠션"
+                  />
+                  <button class="cart_icon">
+                    <img
+                      src="./assets/icons/list/cart.svg"
+                      alt="장바구니에 담기"
+                    />
+                  </button>
+                </div>
+
+                <div class="text_box">
+                  <p class="product_delivery">샛별배송</p>
+                  <p class="product_name">[온더바디] 죠르디 시카 자석 선쿠션</p>
+                  <p class="product_price">32,500 원</p>
+                  <p class="product_description">
+                    끈적임 없이 보송한 무기자차 선쿠션
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="product_box">
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="./assets/thumbnail/product03.png"
+                    alt="[프로쉬]베이비 세탁세"
+                  />
+                  <button class="cart_icon">
+                    <img
+                      src="./assets/icons/list/cart.svg"
+                      alt="장바구니에 담기"
+                    />
+                  </button>
+                </div>
+
+                <div class="text_box">
+                  <p class="product_delivery">샛별배송</p>
+                  <p class="product_name">[프로쉬] 베이비 세탁세</p>
+                  <p class="product_price">
+                    <span class="discount">24%</span>18,900 원
+                  </p>
+                  <p class="cost">24,900 원</p>
+                  <p class="product_description">
+                    성분을 꼼꼼히 따져 골라 더욱 편안한
+                  </p>
+
+                  <div class="badges">
+                    <p class="karly_badge">Karly Only</p>
+                    <p class="limit_badge">한정수량</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="product_box">
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="./assets/thumbnail/product01.png"
+                    alt="[풀무원]탱탱쫄면(4개입)"
+                  />
+                  <button class="cart_icon">
+                    <img
+                      src="./assets/icons/list/cart.svg"
+                      alt="장바구니에 담기"
+                    />
+                  </button>
+                </div>
+
+                <div class="text_box">
+                  <p class="product_delivery">샛별배송</p>
+                  <p class="product_name">[풀무원] 탱탱쫄면 (4개입)</p>
+                  <p class="product_price">4,980 원</p>
+                  <p class="product_description">튀기지 않아 부담없는 매콤함</p>
+
+                  <div class="badges">
+                    <p class="karly_badge">Karly Only</p>
+                    <p class="limit_badge">한정수량</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="product_box">
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="./assets/thumbnail/product02.png"
+                    alt="[온더바디] 죠르디 시카 자석 선쿠션"
+                  />
+                  <button class="cart_icon">
+                    <img
+                      src="./assets/icons/list/cart.svg"
+                      alt="장바구니에 담기"
+                    />
+                  </button>
+                </div>
+
+                <div class="text_box">
+                  <p class="product_delivery">샛별배송</p>
+                  <p class="product_name">[온더바디] 죠르디 시카 자석 선쿠션</p>
+                  <p class="product_price">32,500 원</p>
+                  <p class="product_description">
+                    끈적임 없이 보송한 무기자차 선쿠션
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="product_box">
+              <a href="#">
+                <div class="img_box">
+                  <img
+                    src="./assets/thumbnail/product03.png"
+                    alt="[프로쉬]베이비 세탁세"
+                  />
+                  <button class="cart_icon">
+                    <img
+                      src="./assets/icons/list/cart.svg"
+                      alt="장바구니에 담기"
+                    />
+                  </button>
+                </div>
+
+                <div class="text_box">
+                  <p class="product_delivery">샛별배송</p>
+                  <p class="product_name">[프로쉬] 베이비 세탁세</p>
+                  <p class="product_price">
+                    <span class="discount">24%</span>18,900 원
+                  </p>
+                  <p class="cost">24,900 원</p>
+                  <p class="product_description">
+                    성분을 꼼꼼히 따져 골라 더욱 편안한
+                  </p>
+
+                  <div class="badges">
+                    <p class="karly_badge">Karly Only</p>
+                    <p class="limit_badge">한정수량</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- 상품 리스트 끝 -->
+
+          <div class="pagination_wrap">
+            <div class="pagination">
+              <a href="#" class="first_page_move_btn">
+                <img
+                  src="./assets/icons/list/double_left_arrow.svg"
+                  alt="처음 페이지로 이동하기 아이콘"
+                />
+              </a>
+              <a href="#" class="prev_page_btn">
+                <img
+                  src="./assets/icons/list/left_arrow.svg"
+                  alt="이전 페이지로 이동하기 아이콘"
+                />
+              </a>
+              <a href="#" class="first_page_btn">1</a>
+              <a href="#" class="second_page_btn">2</a>
+              <a href="#" class="third_page_btn">3</a>
+              <a href="#" class="next_page_btn">
+                <img
+                  src="./assets/icons/list/right_arrow.svg"
+                  alt="다음 페이지로 이동하기 아이콘"
+                />
+              </a>
+              <a href="#" class="last_move_page_btn">
+                <img
+                  src="./assets/icons/list/double_right_arrow.svg"
+                  alt="마지막 페이지로 이동하기 아이콘"
+                />
+              </a>
+            </div>
           </div>
         </article>
       </div>
