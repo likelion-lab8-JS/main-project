@@ -151,7 +151,7 @@
   color: #898989;
 }
 
-.question, .answer, .written-date {
+.question, .answer {
   position: relative;
   left: 36px;
 }
@@ -160,3 +160,4 @@
   position: absolute;
   left: 20px;
 }
+
