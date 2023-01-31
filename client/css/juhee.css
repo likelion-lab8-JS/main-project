@@ -26,6 +26,12 @@
   display: none;
 }
 
+/* main */
+.page_main {
+  position: relative;
+}
+
+
 /* 오늘의 상품 추천 */
 .today_recommend_products {
   width: 1050px;
@@ -129,4 +135,41 @@
   margin: 40px auto;
   height: 140px;
   background: url(../assets/banner/line-banner\ 1.png) no-repeat 0 0 / cover;
+}
+
+/* 최근 본 상품 */
+.recent_products_container {
+  width: 74px;
+  position: absolute;
+  top: 193px;
+  right: 39px;
+  border: 1px solid var(--gray-200);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 8px;
+  gap: 8px;
+}
+.recent_products_title {
+  font-size: 12px;
+  font-weight: 600;
+}
+.recent_products_list {
+  width: 40px;
+  max-height: 130px;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.recent_product {
+  width: 100%;
+  height: 51px;
+}
+
+.recent_products_prev {
+  width: 18px;
+  height: 18px;
+  background: url(../assets/icons/main/arrow-small.png) no-repeat;
+  order: -1;
 }
