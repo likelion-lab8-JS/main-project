@@ -291,6 +291,7 @@ tbody td:first-child {
 thead {
   width: 1050px;
   height: 58px;
+  
 }
 
 
@@ -306,7 +307,7 @@ tbody .notice-badge::before {
   border-top: #000000 1px solid;
 }
 
-tr td.is-secret {
+tr td.is-secret button {
   color: #898989;
 }
 
@@ -321,3 +322,7 @@ td.is-answered {
   font-weight: 600;
 }
 
+tr td button {
+  font-weight: 600;
+  font-size: medium;
+}
