@@ -412,7 +412,7 @@ body {
   line-height: 150%;
   color: #000000;
   width: 1050px;
-  background-color: skyblue;
+  /* background-color: skyblue; */
   text-align: center;
   margin-top: 76px;
 }
@@ -423,13 +423,13 @@ body {
   line-height: 140%;
   color: #333333;
   width: 1050px;
-  background-color: bisque;
+  /* background-color: bisque; */
   text-align: center;
   margin-bottom: 36px;
 }
 
 .description_text_long {
-  background-color: lightsalmon;
+  /* background-color: lightsalmon; */
   width: 1050px;
   font-weight: 400;
   font-size: 16px;
@@ -447,7 +447,7 @@ body {
   font-size: 50.517px;
   line-height: 140%;
   color: #333333;
-  background-color: pink;
+  /* background-color: pink; */
   margin-top: 96px;
   /* display: flex;
   flex-direction: column;
@@ -483,9 +483,9 @@ body {
 }
 
 /* ---------- [detail] 상세정보 ---------- */
-.detail_information {
+/* .detail_information {
   background-color: rgb(222, 222, 68);
-}
+} */
 
 .detail_information_img {
   width: 1010px;
@@ -501,7 +501,7 @@ body {
 }
 
 .why_karly {
-  background-color: lightslategray;
+  /* background-color: lightslategray; */
   width: 1010px;
   margin-left: auto;
   margin-right: auto;
@@ -516,7 +516,7 @@ body {
   height: 40px;
   margin-top: 72px;
   text-align: center;
-  background-color: lightseagreen;
+  /* background-color: lightseagreen; */
 }
 
 .why_karly_content1 dt:before,
@@ -556,7 +556,7 @@ body {
 .why_karly_content4,
 .why_karly_content5 {
   margin-top: 35px;
-  background-color: pink;
+  /* background-color: pink; */
   width: 315px;
   /* height: 272px; */
   display: flex;
@@ -593,7 +593,7 @@ body {
 .why_karly_content3 dd,
 .why_karly_content4 dd,
 .why_karly_content5 dd {
-  background: gray;
+  /* background: gray; */
   font-weight: 400;
   font-size: 16px;
   line-height: 160%;
