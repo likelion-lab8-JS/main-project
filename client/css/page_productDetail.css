@@ -423,3 +423,128 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+.why_karly {
+  background-color: lightslategray;
+  width: 1010px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.why_karly_title {
+  font-weight: 700;
+  font-size: 28.43px;
+  line-height: 140%;
+  color: #333333;
+  width: 1010px;
+  height: 40px;
+  margin-top: 72px;
+  text-align: center;
+  background-color: lightseagreen;
+}
+
+.why_karly_content1 dt:before,
+.why_karly_content2 dt:before,
+.why_karly_content3 dt:before,
+.why_karly_content4 dt:before,
+.why_karly_content5 dt:before {
+  display: inline-block;
+  content: ' ';
+  width: 40px;
+  height: 40px;
+}
+
+.why_karly_content1 dt:before {
+  background:  url(../assets/icons/detail_miyoung/content1.png) no-repeat 50% 50%;
+}
+
+.why_karly_content2 dt:before {
+  background:  url(../assets/icons/detail_miyoung/content2.png) no-repeat 50% 50%;
+}
+
+.why_karly_content3 dt:before {
+  background:  url(../assets/icons/detail_miyoung/content3.png) no-repeat 50% 50%;
+}
+
+.why_karly_content4 dt:before {
+  background:  url(../assets/icons/detail_miyoung/content4.png) no-repeat 50% 50%;
+}
+
+.why_karly_content5 dt:before {
+  background:  url(../assets/icons/detail_miyoung/content5.png) no-repeat 50% 50%;
+}
+
+.why_karly_content1,
+.why_karly_content2,
+.why_karly_content3,
+.why_karly_content4,
+.why_karly_content5 {
+  margin-top: 35px;
+  background-color: pink;
+  width: 315px;
+  /* height: 272px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 56px 0px 0px;
+}
+
+.why_karly_content4,
+.why_karly_content5 {
+  margin-top: 0px;
+}
+
+.why_karly_content1 dt,
+.why_karly_content2 dt,
+.why_karly_content3 dt,
+.why_karly_content4 dt,
+.why_karly_content5 dt {
+  gap: 16px;
+  /* width: 153px; */
+  height: 88px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+  font-size: 21.328px;
+  line-height: 150%;
+  color: #5F0080;
+}
+
+.why_karly_content1 dd,
+.why_karly_content2 dd,
+.why_karly_content3 dd,
+.why_karly_content4 dd,
+.why_karly_content5 dd {
+  background: gray;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #333333;
+  text-align: center;
+  height: 104px;
+  margin-top: 24px;  
+}
+
+.why_karly_content4 dd,
+.why_karly_content5 dd {
+  height: 130px;
+}
+
+.why_karly_contents div:nth-child(1) {
+  display: flex;
+  justify-content: center;
+}
+
+.why_karly_contents div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+.why_karly_contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
