@@ -10,9 +10,10 @@
 
 .top_bar,
 .logo_bar {
-  display: block;
-  margin: 0 6px;
-  color: var(--gray-bar);
+  width: 1px;
+  height: 13px;
+  background-color: var(--gray-bar);
+  margin: 0 12px;
 }
 
 .footer_bar {
@@ -217,8 +218,7 @@
   display: flex;
 }
 
-.icon_wrap a {
-  display: block;
+.icon button {
   width: 36px;
   height: 36px;
 }
@@ -543,7 +543,7 @@
   margin-right: 8px;
 }
 
-.alliance_payment img {
+.payment_btn img {
   width: 102px;
   height: 32px;
   margin-right: 8px;
