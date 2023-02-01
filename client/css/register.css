@@ -1,0 +1,96 @@
+.input_active {
+  color: var(--purple) !important;
+  border: 1px solid var(--purple) !important;
+}
+
+.register_wrap {
+  margin: 80px 0 40px;
+}
+
+.register_box {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.register_title {
+  display: block;
+  text-align: center;
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.register_essential {
+  display: block;
+  text-align: right;
+}
+
+.register_essential::before {
+  content: "*";
+  position: absolute;
+  color: var(--info-error);
+  margin: -6px 0 0 -9px;
+}
+
+.register {
+  width: 100%;
+  display: flow-root;
+  margin-top: 12px;
+}
+
+.register form {
+  width: 333px;
+  float: left;
+  margin-left: 8px;
+}
+
+.register_login {
+  border-top: 1px solid var(--black);
+  padding-top: 20px;
+}
+
+.register_kind, .register_overlap {
+  float: left;
+  line-height: 44px;
+}
+
+.register_kind {
+  width: 139px;
+  height: 44px;
+  height: 44px;
+  padding-left: 8px;
+}
+
+.register_kind::after {
+  content: "*";
+  position: absolute;
+  color: var(--info-error);
+  margin: -5px 0 0 2px;
+}
+
+.register_common {
+  width: 100%;
+  height: 44px;
+  padding: 9px 20px;
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.register_common::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.register_overlap {
+  display: block;
+  width: 143px;
+  height: 44px;
+  margin-left: 8px;
+  color: var(--gray-none);
+  border: 1px solid var(--gray-none);
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+}
