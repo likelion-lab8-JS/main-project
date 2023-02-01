@@ -340,6 +340,7 @@ tr td button {
 
 .review-popup-header {
   position: relative;
+  height: 60px;
 }
 
 .icon-close {
@@ -472,7 +473,16 @@ input[type=checkbox] {
 }
 input[type=checkbox] + label { 
   cursor: pointer; 
-  padding-left: 23px; 
+  padding-left: 30px; 
   background-repeat: no-repeat;
-  background-image: url('../assets/icons/Icon/unchecked.svg');
+  background: transparent no-repeat url('../assets/icons/Icon/unchecked.svg') left / 24px;
+  height: 30px;
+}
+input[type=checkbox]:checked + label {
+  height: 30px;
+  background: transparent no-repeat url('../assets/icons/Icon/checked.png') left / 24px;
+}
+
+.secret-checkbox {
+  height : 60px;
 }

@@ -484,11 +484,9 @@
       
       <fieldset class="review-content-input-wrapper">
         <label for="content">내용</label>
-        <textarea required maxlength="5000" ></textarea>     
+        
+        <textarea required maxlength="5000" ></textarea><p class="text-limit">0/5000</p>  
       </fieldset>
-      <div class="text-limit">
-        <p>0/5000</p>
-      </div>
     </div>
 
     <div class="review-popup-button-wrapper">
@@ -592,10 +590,9 @@
         <p>0/5000</p>
       </div>
     </div>
-    <label class="">
-      <input name="isSecret" type="checkbox" class="">
-      <img src="./assets/icons/Icon/unchecked.svg"><span>비밀글로 문의하기</span></label>
-
+    <div class="secret-checkbox">
+    <input type="checkbox" name="checker" id="isSecret"><label for="isSecret">비밀글로 문의하기</label>
+    </div>
     <div class="review-popup-button-wrapper">
       <button class="btn-cancel">취소</button>
       <button class="btn-submit">등록</button>
