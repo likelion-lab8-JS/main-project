@@ -69,9 +69,6 @@
   /* background-color: red; */
 }
 
-.product-review-notice {
-  /* background-color: aquamarine; */
-}
 
 .notice-header {
   padding : 17px 20px;
@@ -209,9 +206,6 @@
   border-bottom: 1px solid #E1E1E1;
 }
 
-.user-info {
-
-}
 
 .user-info p {
   /* Label/Small */
@@ -255,8 +249,8 @@
 
 .bg-arrow_prev {
   width: 56px; 
-  height: 56px;
-  background: url('../assets/icons/Icon/arrow_prev.png') 10px 10px no-repeat;
+  height: 56px;                   
+  background: url('../assets/icons/Icon/arrow_prev.png') center / 30px no-repeat;
   border: 1px solid #E1E1E1;
   border-radius: 4px;
   margin-right: 8px;
@@ -265,7 +259,7 @@
 .bg-arrow_next {
   width: 56px; 
   height: 56px;
-  background: url('../assets/icons/Icon/arrow_next.png') 10px 10px no-repeat;
+  background: url('../assets/icons/Icon/arrow_next.png') center / 30px no-repeat;
   border: 1px solid #E1E1E1;
   border-radius: 4px;
   margin-left: 8px;
@@ -484,5 +478,5 @@ input[type=checkbox]:checked + label {
 }
 
 .secret-checkbox {
-  height : 60px;
+  height : 58px;
 }
