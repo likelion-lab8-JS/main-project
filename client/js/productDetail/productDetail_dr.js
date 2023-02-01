@@ -15,3 +15,17 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
+const collt = document.getElementsByClassName("collapsible-table");
+let j;
+
+for (j = 0; j < collt.length; j++) {
+  collt[j].addEventListener("click", function() {
+    this.classList.toggle("active");
+    const folded = this.parentElement.parentElement.parentElement.parentElement.nextElementSibling;
+    if (folded.style.display === "block") {
+      folded.style.display = "none";
+    } else {
+      folded.style.display = "block";
+    }
+  });
+}
