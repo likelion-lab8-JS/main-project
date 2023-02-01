@@ -290,12 +290,12 @@
   </header>
 
   <section class="register_wrap">
-    <article class="register_box">
+    <article class="register_box register_container">
       <span class="register_title">회원가입</span>
       <span class="register_essential">필수입력사항</span>
 
-      <div class="register register_login">
-        <span class="register_kind">아이디</span>
+      <div class="register register_id">
+        <span class="register_kind essential">아이디</span>
 
         <form method="POST">
           <fieldset>
@@ -313,7 +313,7 @@
       </div>
 
       <div class="register register_password">
-        <span class="register_kind">비밀번호</span>
+        <span class="register_kind essential">비밀번호</span>
 
         <form method="POST">
           <fieldset>
@@ -329,7 +329,7 @@
       </div>
 
       <div class="register register_passwordCheck">
-        <span class="register_kind">비밀번호 확인</span>
+        <span class="register_kind essential">비밀번호 확인</span>
 
         <form method="POST">
           <fieldset>
@@ -345,7 +345,7 @@
       </div>
 
       <div class="register register_name">
-        <span class="register_kind">이름</span>
+        <span class="register_kind essential">이름</span>
 
         <form method="POST">
           <fieldset>
@@ -361,7 +361,7 @@
       </div>
 
       <div class="register register_email">
-        <span class="register_kind">이메일</span>
+        <span class="register_kind essential">이메일</span>
 
         <form method="POST">
           <fieldset>
@@ -369,14 +369,248 @@
             <div class="register_group">
               <div class="register_input">
                 <label for="email" class="a11yHidden">이메일</label>
-                <input id="email" class="register_common" type="text" required placeholder="이메일을 입력해주세요" name="email"/>
+                <input id="email" class="register_common" type="text" required placeholder="예) marketkarly@karly.com" name="email"/>
               </div>
             </div>
           </fieldset>
         </form>
 
-        <button class="register_overlap input_active">중복확인</button>
+        <button class="register_overlap">중복확인</button>
       </div>
+
+      <div class="register register_phone">
+        <span class="register_kind essential">휴대폰</span>
+
+        <form method="POST">
+          <fieldset>
+            <legend>휴대폰</legend>
+            <div class="register_group">
+              <div class="register_input">
+                <label for="phone" class="a11yHidden">휴대폰</label>
+                <input id="phone" class="register_common" type="tel" required placeholder="숫자만 입력해주세요." name="phone"/>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+
+        <button class="register_overlap">인증번호 받기</button>
+      </div>
+
+      <div class="register register_address">
+        <span class="register_kind">주소</span>
+
+        <div class="address_wrap">
+          <button class="address_button">주소 검색</button>
+          <p class="register_notice">배송지에 따라 상품 정보가 달라질 수 있습니다.</p>
+        </div>
+
+        <!--<form method="POST">
+          <fieldset>
+            <legend>주소</legend>
+            <div class="register_group">
+              <div class="register_input">
+                <label for="address" class="a11yHidden">주소</label>
+                <input id="address" class="register_common" type="text" readonly placeholder="주소를 검색해 주세요" name="address"/>
+              </div>
+
+              <div class="register_input address_input">
+                <label for="sub_address" class="a11yHidden">나머지주소</label>
+                <input id="sub_address" class="register_common" type="text" placeholder="나머지 주소를 입력해주세요" name="sub_address"/>
+              </div>
+
+              <p class="register_notice">배송지에 따라 상품 정보가 달라질 수 있습니다.</p>
+            </div>
+          </fieldset>
+        </form>
+
+        <button class="register_overlap">재검색</button>-->
+      </div>
+
+      <div class="register register_gender">
+        <span class="register_kind">성별</span>
+
+        <form method="POST">
+          <div class="register_group">
+            <div class="register_input">
+              <label for="male" class="check_label">
+                <input id="male" class="a11yHidden check_common" type="radio" name="gender" value="male" />
+                <span class="input_checked">
+                  <div class="input_inner"></div>
+                </span>
+                <span class="input_label">남자</span>
+              </label>
+
+              <label for="female" class="check_label">
+                <input id="female" class="a11yHidden check_common" type="radio" name="gender" value="female" />
+                <span class="input_checked">
+                  <div class="input_inner"></div>
+                </span>
+                <span class="input_label">여자</span>
+              </label>
+
+              <label for="nocheck" class="check_label">
+                <input id="nocheck" class="a11yHidden check_common" type="radio" name="gender" value="nocheck" />
+                <span class="input_checked">
+                  <div class="input_inner"></div>
+                </span>
+                <span class="input_label">선택 안함</span>
+              </label>
+
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="register register_birth">
+        <span class="register_kind">생년월일</span>
+
+        <form method="POST">
+          <fieldset>
+            <legend>생년월일</legend>
+            <div class="register_group">
+              <div class="birth_input">
+                <label for="birth_year" class="birth_label">
+                  <input id="birth_year" class="birth_common" type="text" required placeholder="YYYY" name="birth" maxlength="4"/>
+                </label>
+                <span>/</span>
+                <label for="birth_month" class="birth_label">
+                  <input id="birth_month" class="birth_common" type="text" required placeholder="MM" name="birth" maxlength="2"/>
+                </label>
+                <span>/</span>
+                <label for="birth_day" class="birth_label">
+                  <input id="birth_day" class="birth_common" type="text" required placeholder="DD" name="birth" maxlength="2"/>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="register register_add">
+        <span class="register_kind">추가입력 사항</span>
+
+        <form method="POST">
+          <div class="register_group">
+            <div class="register_input">
+              <label for="recommend" class="check_label">
+                <input id="recommend" class="a11yHidden check_common" type="radio" name="add" value="male" />
+                <span class="input_checked">
+                  <div class="input_inner"></div>
+                </span>
+                <span class="input_label">친구초대 추천인 아이디</span>
+              </label>
+
+              <label for="event" class="check_label">
+                <input id="event" class="a11yHidden check_common" type="radio" name="add" value="female" />
+                <span class="input_checked">
+                  <div class="input_inner"></div>
+                </span>
+                <span class="input_label">참여 이벤트명</span>
+              </label>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <!--<div class="register add_box">
+        <span class="register_kind"></span>
+
+        <form method="POST">
+          <fieldset>
+            <legend>주소</legend>
+            <div class="register_group">
+              <div class="register_input add_input">
+                <label for="add_id" class="a11yHidden">추천인 아이디</label>
+                <input id="add_id" class="register_common" type="text" placeholder="추천인 아이디를 입력해 주세요." name="add_id"/>
+              </div>
+
+              <p class="register_notice id_information">가입 후 7일 내 첫 주문 배송완료시, 친구초대 이벤트 적립금이 지급됩니다.</p>
+
+              <div class="register_input add_input">
+                <label for="join_event" class="a11yHidden">추천인 아이디</label>
+                <input id="join_event" class="register_common" type="text" placeholder="추천인 아이디를 입력해 주세요." name="join_event"/>
+              </div>
+
+              <p class="register_notice event_information">
+                추천인 아이디와 참여 이벤트명 중 하나만 선택 가능합니다.<br/>
+                가입 이후는 수정이 불가능 합니다.<br/>
+                대소문자 및 띄어쓰기에 유의해주세요.
+              </p>
+
+            </div>
+          </fieldset>
+        </form>
+
+        <button class="register_overlap input_active">아이디 확인</button>
+      </div>-->
+    </article>
+
+    <article class="terms_wrap register_container">
+      <span class="terms_title register_kind essential">
+        이용약관동의
+      </span>
+
+      <div class="terms_list">
+        <div class="terms_box">
+          <label for="terms_all" class="terms_label">
+            <input id="terms_all" class="a11yHidden terms_common" required type="checkbox" name="terms_all" value="all"/>
+            <img src="./assets/icons/Icon/checkbox.png" alt="" />
+            <span class="terms_text">전체 동의합니다.</span>
+          </label>
+          <p class="terms_notice">
+
+          </p>
+        </div>
+
+        <div class="terms_box">
+          <label for="terms_use" class="terms_label">
+            <input id="terms_use" class="a11yHidden terms_common" required type="checkbox" name="terms_use" value="use"/>
+            <img src="./assets/icons/Icon/checkbox.png" alt="" />
+            <span class="terms_text">이용약관 동의 (필수)</span>
+          </label>
+          <span>
+            <a class="terms_link" href="#">약관보기</a>
+          </span>
+        </div>
+
+        <div class="terms_box">
+          <label for="terms_privacy" class="terms_label">
+            <input id="terms_privacy" class="a11yHidden terms_common" required type="checkbox" name="terms_privacy" value="privacy"/>
+            <img src="./assets/icons/Icon/checkbox.png" alt="" />
+            <span class="terms_text">개인정보 수집 · 이용 동의 (필수)</span>
+          </label>
+          <span>
+            <a class="terms_link" href="#">약관보기</a>
+          </span>
+        </div>
+
+        <div class="terms_box">
+          <label for="terms_receive" class="terms_label" >
+            <input id="terms_receive" class="a11yHidden terms_common" type="checkbox" name="terms_receive" value="receive"/>
+            <img src="./assets/icons/Icon/checkbox.png" alt="" />
+            <span class="terms_text">무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택)</span>
+          </label>
+          <span>
+            <a class="terms_link" href="#">약관보기</a>
+          </span>
+        </div>
+
+        <div class="terms_box">
+          <label for="terms_age" class="terms_label">
+            <input id="terms_age" class="a11yHidden terms_common" required type="checkbox" name="terms_age" value="age"/>
+            <img src="./assets/icons/Icon/checkbox.png" alt="" />
+            <span class="terms_text">본인은 만 14세 이상입니다. (필수)</span>
+          </label>
+          <span>
+            <a class="terms_link" href="#">약관보기</a>
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <article class="register_button register_container">
+      <button>가입하기</button>
     </article>
   </section>
 

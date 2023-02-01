@@ -3,13 +3,18 @@
   border: 1px solid var(--purple) !important;
 }
 
+.register_container {
+  width: 640px;
+  margin: 0 auto;
+}
+
 .register_wrap {
-  margin: 80px 0 40px;
+  margin-top: 80px;
 }
 
 .register_box {
-  width: 640px;
-  margin: 0 auto;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--black);
 }
 
 .register_title {
@@ -23,6 +28,11 @@
 .register_essential {
   display: block;
   text-align: right;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--content);
+  padding: 0 4px 12px 0;
+  border-bottom: 2px solid var(--black);
 }
 
 .register_essential::before {
@@ -35,7 +45,15 @@
 .register {
   width: 100%;
   display: flow-root;
-  margin-top: 12px;
+  margin-top: 40px;
+}
+
+.register.register_id {
+  margin-top: 0;
+}
+
+.register.add_box {
+  margin-top: 10px;
 }
 
 .register form {
@@ -44,8 +62,7 @@
   margin-left: 8px;
 }
 
-.register_login {
-  border-top: 1px solid var(--black);
+.register_id {
   padding-top: 20px;
 }
 
@@ -57,11 +74,13 @@
 .register_kind {
   width: 139px;
   height: 44px;
-  height: 44px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--content);
   padding-left: 8px;
 }
 
-.register_kind::after {
+.register_kind.essential::after {
   content: "*";
   position: absolute;
   color: var(--info-error);
@@ -93,4 +112,193 @@
   border-radius: 4px;
   font-size: 16px;
   font-weight: 600;
+}
+
+.address_wrap {
+  width: 333px;
+  margin-left: 8px;
+  float: left;
+}
+
+.register_notice{
+  margin-top: 7px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--black);
+}
+
+.event_information {
+  line-height: 18px;
+}
+
+.address_button {
+  width: 100%;
+  height: 44px;
+  border: 1px solid var(--purple);
+  border-radius: 4px;
+  color: var(--purple);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.address_input {
+  margin-top: 12px;
+}
+
+.register_input {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 44px;
+}
+
+.check_label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.check_common {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--content);
+}
+
+.check_common:checked + .input_checked{
+  background-color: var(--purple);
+  border: none;
+}
+
+.input_checked {
+  font-size: 16px;
+  min-width: 24px;
+  min-height: 24px;
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid var(--gray-200);
+}
+
+.input_inner {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: var(--white);
+}
+
+.input_label {
+  position: relative;
+  margin-left: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--content);
+}
+
+
+.birth_input {
+  width: 333px;
+  height: 44px;
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  /*justify-content: space-between;*/
+  align-items: center;
+  padding: 9px 92px;
+}
+
+.birth_input input:focus{
+  border: none !important;
+}
+
+.birth_common {
+  width: 50px;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.birth_common::placeholder {
+  color: var(--gray-400);
+}
+
+.terms_wrap {
+  display: flow-root;
+  padding: 20px 0 40px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.terms_title {
+  float: left;
+  padding-left: 8px;
+}
+
+.terms_list {
+  width: 429px;
+  margin-left: 8px;
+  float: left;
+}
+
+.terms_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.terms_box:first-child {
+  margin-top: 0;
+}
+
+.terms_label {
+  display: inline-block;
+
+}
+
+.terms_label img {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.terms_common {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.terms_text {
+  vertical-align: middle;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--content);
+}
+
+.terms_link{
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--purple);
+  height: 24px;
+  line-height: 26px;
+}
+.register_button {
+  height: 134px;
+  position: relative;
+}
+
+
+.register_button button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 340px;
+  height: 54px;
+  background-color: var(--purple);
+  color: var(--white);
 }
