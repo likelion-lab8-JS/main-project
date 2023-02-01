@@ -466,3 +466,13 @@ label {
   font-size: small;
   text-align: right;
 }
+
+input[type=checkbox] {
+  display:none;
+}
+input[type=checkbox] + label { 
+  cursor: pointer; 
+  padding-left: 23px; 
+  background-repeat: no-repeat;
+  background-image: url('../assets/icons/Icon/unchecked.svg');
+}
