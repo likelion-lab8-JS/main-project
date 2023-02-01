@@ -463,6 +463,43 @@
 
   </div>
 
+  <!--후기 작성 팝업  -->
+  <div class="review-popup-wrapper">
+    <div class="review-popup-header">
+      <h2>
+        후기 작성
+      </h2>
+      <button class="icon-close" aria-label="close_window"></button>
+    </div>
+
+    <div class="review-popup-info">
+      <img src="./assets/tangtang/thumbnail.jpg" alt=""/>
+      <p class="product-name">[풀무원] 탱탱쫄면 (4개입)</p>
+    </div>
+    <div class="review-popup-input">
+      <fieldset class="review-title-input-wrapper">
+        <label for="title">제목</label>
+        <input type="text" value="제목을 입력해 주세요" required>
+      </fieldset>
+      
+      <fieldset class="review-content-input-wrapper">
+        <label for="content">내용</label>
+        <textarea required maxlength="5000" ></textarea>     
+      </fieldset>
+      <div class="text-limit">
+        <p>0/5000</p>
+      </div>
+    </div>
+    <label class="">
+      <input name="isSecret" type="checkbox" class="">
+      <img src="">비밀글로 문의하기</span></label>
+
+    <div class="review-popup-button-wrapper">
+      <button class="btn-cancel">취소</button>
+      <button class="btn-submit">등록</button>
+    </div>
+  </div>
+
   <!--상품 문의  -->
   <div class="product-review-wrapper">
     <section class="product-review-header">
@@ -529,6 +566,9 @@
       <button class="bg-arrow_next" aria-label="next_page"></button>
     </div>
   </div>
+
+  
+
 
   <!-- 푸터 -->
   <footer class="footer_wrap">

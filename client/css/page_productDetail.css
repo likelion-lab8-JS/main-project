@@ -10,6 +10,7 @@
 
 .product-review-header {
   position: relative;
+  margin-top: 56px;
   margin-bottom: 56px;
 }
 
@@ -295,6 +296,9 @@ thead {
 
 }
 
+td {
+  border-top: #E1E1E1 1px solid;
+}
 
 .title {
   width: 750px;
@@ -326,4 +330,139 @@ td.is-answered {
 tr td button {
   font-weight: 600;
   font-size: medium;
+}
+
+.review-popup-wrapper {
+  padding: 32px;
+  width: 793px;
+  height: 630px;
+}
+
+.review-popup-header {
+  position: relative;
+}
+
+.icon-close {
+  width: 30px;
+  height: 30px;
+  background-image: url(../assets/icons/Icon/close_btn.svg);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+
+.review-popup-info {
+  position: relative;
+  width: 729px;
+  height: 104px;
+  border-bottom: 1px solid #E1E1E1;
+  border-top: 1px solid #E1E1E1;
+  box-sizing: border-box;
+}
+
+.review-popup-info img {
+  width: 72px;
+  height: 72px;
+  position: absolute;
+  top: 16px;
+  left: 0;
+}
+
+.review-popup-info p {
+  display: inline-block;
+  margin-left: 96px;
+  position: relative;
+  top: 40px;
+}
+.review-title-input-wrapper label{
+  padding-left: 8px;
+
+}
+.review-title-input-wrapper label{
+  padding-left: 8px;
+
+}
+
+.review-content-input-wrapper{
+  position: relative;
+}
+
+.review-content-input-wrapper label {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+textarea {
+  width: 629px;
+  height: 198px;
+  color: #A6A6A6;
+  display: inline-block;
+  margin-left: 64px;
+  padding: 16px;
+  resize: none;
+}
+
+label {
+  margin-right: 24px;
+}
+
+.review-popup-input {
+  padding-top: 16px;
+
+}
+
+
+
+.review-title-input-wrapper input {
+  width: 629px;
+  height: 32px;
+  margin-bottom: 12px;
+  display: inline-block;
+  color:#898989;
+  padding: 9px 20px;
+
+}
+
+/* 후기작성 팝업 버튼 */
+.review-popup-button-wrapper {
+  width: 729px;
+  height: 74px;
+  text-align: center;
+  padding-top: 20px;
+  border-top: #E1E1E1 1px solid;
+  gap: 12px;
+}
+
+.btn-cancel {
+  color: #333333;
+  font-weight: 600;
+  font-size: 16px;
+  width: 186px;
+  height: 54px;
+  border: 1px solid #C4C4C4;
+  border-radius: 4px;
+  margin-right: 6px;
+}
+
+.btn-submit {
+  font-size: 16px;
+  width: 186px;
+  height: 54px;
+  color: #FFFFFF;
+  font-weight: 600;
+  background: #E1E1E1;
+  border-radius: 4px;
+  margin-left: 6px;
+  
+}
+
+.text-limit {
+  position: relative;
+  right: 40px;
+  bottom: 20px;
+  color: #A6A6A6;
+  font-size: small;
+  text-align: right;
 }
