@@ -345,7 +345,7 @@ tr td button {
 .icon-close {
   width: 30px;
   height: 30px;
-  background-image: url(../assets/icons/Icon/close_btn.svg);
+  background: transparent url(../assets/icons/Icon/close_btn.svg) center / 12px no-repeat ;
   position: absolute;
   right: 0;
   top: 0;
