@@ -278,7 +278,7 @@
   display: none;
   position: absolute;
   width: 84px;
-  padding-top: 30px;
+  padding-top: 26px;
 }
 
 .category:hover ul {
@@ -299,7 +299,7 @@
   background-color: var(--gray-100);
 }
 
-.category li:hover a{
+.category li:hover a {
   color: var(--purple);
 }
 
