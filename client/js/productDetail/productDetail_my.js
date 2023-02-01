@@ -63,6 +63,18 @@ const plusButton = document.querySelector('.plus_amount');
 plusButton.addEventListener('click', clickPlusButton);
 
 
+//////////////////////////화면 초점 이동//////////////////////////
+function goToScroll(name) {
+  let location = document.querySelector("."+name).offsetTop;
+  window.scrollTo({
+    top: location,
+    behavior: 'smooth'
+  });
+}
+
+//  [참고] 동률님 코드와 합치면,
+//  navigation의 3,4번째 버튼에
+//  onclick연결해줘야 함
 
 
 
