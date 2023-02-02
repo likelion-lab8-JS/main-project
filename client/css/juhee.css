@@ -44,7 +44,6 @@ body {
 
 /* main_banner */
 .swiper_main_banner{
-  background: orange;
   min-width: 1050px;
   height: 370px;
   position: relative;
@@ -80,7 +79,6 @@ body {
 
 /* 오늘의 상품 추천 */
 .today_recommend_products {
-  background: skyblue;
   width: 1050px;
   padding: 40px 0;;
   margin: 0 auto;
@@ -104,7 +102,6 @@ body {
   position: relative;
 }
 .recommend_products_wrapper {
-  background: lime;
   width: 100%;
   height: 100%;
   display: flex;
@@ -112,12 +109,9 @@ body {
   transition-property: transform;
 }
 .recommend_products_slide {
-  background: orange;
   width: 249px;
-  margin-right: 18px;
 }
 .product_img_container {
-  background: yellow;
   height: 320px;
   position: relative;
 }
