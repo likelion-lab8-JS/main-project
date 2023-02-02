@@ -179,6 +179,7 @@ body {
   top: 132px;
   left: -25px;
   transform: scaleX(-1);
+  display: none;
 }
 .recommend_products_next {
   width: 60px;
