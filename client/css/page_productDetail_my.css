@@ -376,6 +376,9 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 48px;
+  background-color: yellowgreen;
+  /* 추가 코드 */
+  
 }
 
 .product_navigation button {
