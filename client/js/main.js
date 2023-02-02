@@ -19,6 +19,10 @@ const mainBannerSwiper = new Swiper('.swiper_main_banner', {
   }, 
   loop: true,
   speed: 1000,
+  pagination: {
+    el: ".pagination_main_banner",
+    type: "fraction",
+  },
   navigation: {
     nextEl: '.main_banner_next',
     prevEl: '.main_banner_prev',
