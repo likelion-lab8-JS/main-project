@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./css/common.css" />
   <link rel="stylesheet" href="./css/page_productDetail_dr.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script src="./js/productDetail/productDetail_dr.js" type="module"></script>
+  
   <script src="./js/main.js" type="module"></script>
   <title>마켓칼리</title>
 </head>
@@ -299,7 +299,7 @@
       <h2 class="product-review-title">
         상품후기
       </h2>
-      <button class="write-btn">
+      <button class="write-btn" id="write-review">
         후기 작성하기
       </button>
       <ul class="review-benefit">
@@ -504,7 +504,7 @@
       <h2 class="product-review-title">
         상품문의
       </h2>
-      <button class="write-btn">
+      <button class="write-btn" id="write-inquiry">
         문의하기
       </button>
       <ul class="review-benefit">
@@ -665,7 +665,7 @@
 
   
   <!--문의 작성 팝업  -->
-  <div class="review-popup-wrapper folded">
+  <div class="review-popup-wrapper inquiry-popup-wrapper folded">
     <div class="review-popup-header">
       <h2>
         문의 작성
@@ -837,4 +837,5 @@
   </footer>
   
 </body>
+<script src="./js/productDetail/productDetail_dr.js" type="module"></script>
 </html>

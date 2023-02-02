@@ -2,9 +2,9 @@ import { getNode } from "../../lib/index.js";
 
 // 상품 후기 게시판 내 아코디언 메뉴 기능 
 const coll = document.getElementsByClassName("collapsible");
-let i;
 
-for (i = 0; i < coll.length; i++) {
+
+for (let i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     const folded = this.parentElement.nextElementSibling;
@@ -19,9 +19,9 @@ for (i = 0; i < coll.length; i++) {
 
 // 상품문의 테이블 내 아코디언 메뉴 기능 
 const collt = document.getElementsByClassName("collapsible-table");
-let j;
 
-for (j = 0; j < collt.length; j++) {
+
+for (let j = 0; j < collt.length; j++) {
   collt[j].addEventListener("click", function() {
     this.classList.toggle("active");
     const folded = this.parentElement.parentElement.parentElement.parentElement.nextElementSibling;
@@ -35,9 +35,20 @@ for (j = 0; j < collt.length; j++) {
 
 // 버튼 클릭 시 팝업창 띄우기 & 뒷 배경 회색 & 뒷 배경 클릭 시 팝업 종료
 
-const popuphandler = function (){
-  return console.log('button clicked')
+const write_review = getNode('#write-review');
+const open_reviewpopup = function (){
+  const reviewpopup = getNode('.review-popup-wrapper');
+  reviewpopup.style.display = 'block';
 }
-const write_button = getNode('write-btn');
 
-write_button.addEventListener('click', popuphandler);
+
+const write_inquiry = getNode('#write-inquiry');
+const open_inquirypopup = function (){
+  const reviewpopup = getNode('.inquiry-popup-wrapper');
+  reviewpopup.style.display = 'block';
+}
+
+
+write_review.addEventListener('click', open_reviewpopup);
+write_inquiry.addEventListener('click', open_inquirypopup);
+// 
