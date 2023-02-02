@@ -32,6 +32,7 @@ h2.title {
 
 .reset_btn {
   background-color: transparent;
+  font-weight: 600;
   color: var(--gray-300);
 }
 
