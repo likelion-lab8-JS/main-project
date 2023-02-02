@@ -55,10 +55,14 @@ h2.cart_title {
 /* -------------------------------------------------------------------------- */
 /*                                  cart_list                                 */
 /* -------------------------------------------------------------------------- */
+.cart_list {
+}
+
 .list_title {
   padding: 14px 0px;
   display: flex;
   flex-direction: row;
+  border-bottom: 1px solid var(--gray-100);
 }
 
 .list_title:first-child {
@@ -95,10 +99,20 @@ button.close_btn img {
   display: block;
   width: 15px;
   flex-grow: 0;
+  transition: 0.4s;
+}
+
+.under_arrow {
+  transform: rotate(180deg);
 }
 
 .product_list_box {
-  padding: 20px 0;
+  padding: 10px 0;
+  display: none;
+}
+
+.product_list_box.active {
+  display: block;
 }
 
 .product_list {
@@ -106,6 +120,7 @@ button.close_btn img {
   flex-direction: row;
   align-items: center;
   gap: 8px;
+  padding: 10px 0;
 }
 
 .product_img img {
