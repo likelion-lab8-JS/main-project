@@ -32,6 +32,7 @@
   width: 100%;
   text-align: center;
   background-color: var(--purple);
+  
 }
 
 .popup {
@@ -171,8 +172,6 @@
 .search_group {
   width: 400px;
   display: relative;
-  /* display: flex;
-  flex-direction: row; */
 }
 
 .search_form {
@@ -551,7 +550,23 @@
   margin-right: 8px;
 }
 
-.copyright {
+.alliance_isms {
+  width: 217px;
+}
+
+.alliance_eprivacy {
+  width: 222px;
+}
+
+.alliance_payment {
+  width: 270px;
+}
+
+.alliance_wooribank {
+  width: 283px;
+}
+
+.copyright_wrap {
   width: 100%;
   height: 108px;
   background: var(--gray-50);
