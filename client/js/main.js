@@ -28,17 +28,17 @@ const mainBannerSwiper = new Swiper('.swiper_main_banner', {
 /* -------------------------------------------------------------------------- */
 /*                                  오늘의 상품 추천                                 */
 /* -------------------------------------------------------------------------- */
-const recommend_products_prev = getNode('.recommend_products_prev');
-const recommend_products_next = getNode('.recommend_products_next');
+const today_prev = getNode('.today_prev');
+const today_next = getNode('.today_next');
 
-const todayRecommendSwiper = new Swiper('.swiper_recommend_products', {
+const todaySwiper = new Swiper('.swiper_today', {
   slidesPerView: 4,
   slidesPerGroup : 4,
   spaceBetween: 18,
   speed: 500,
   navigation: {
-    nextEl: '.recommend_products_next',
-    prevEl: '.recommend_products_prev',
+    nextEl: today_next,
+    prevEl: today_prev,
   },
   on: {
     slideChange: function (){
@@ -51,16 +51,16 @@ const todayRecommendSwiper = new Swiper('.swiper_recommend_products', {
       // V라고 정의된 object가 나옴... 어디서 튀어나온거지..
 
       if (this.activeIndex === 4) {
-        recommend_products_prev.style.display = 'flex';
-        recommend_products_next.style.display = 'flex';
+        today_prev.style.display = 'flex';
+        today_next.style.display = 'flex';
       }
       if (this.realIndex === 8) {
-        recommend_products_prev.style.display = 'flex';
-        recommend_products_next.style.display = 'none';
+        today_prev.style.display = 'flex';
+        today_next.style.display = 'none';
       }
       if (this.realIndex === 0) {
-        recommend_products_prev.style.display = 'none';
-        recommend_products_next.style.display = 'flex';
+        today_prev.style.display = 'none';
+        today_next.style.display = 'flex';
       }
       // activeIndex와 realIndex의 차이..?
   }}

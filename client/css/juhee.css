@@ -78,7 +78,7 @@ body {
 
 
 /* 오늘의 상품 추천 */
-.today_recommend_products {
+.recommend_products {
   width: 1050px;
   padding: 40px 0;;
   margin: 0 auto;
