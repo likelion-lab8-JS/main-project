@@ -285,6 +285,10 @@ tbody td:first-child {
   color: #000;
 }
 
+tr {
+  border-bottom : 1px solid #898989;
+}
+
 thead {
   width: 1050px;
   height: 58px;
