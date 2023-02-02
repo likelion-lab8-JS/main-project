@@ -1,5 +1,8 @@
 body {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+  /*detail의 네비게이션바에서 position:sticky를 쓰기 위해*/
+  height: auto; 
 }
 
 /* ----------------------------------- */
@@ -376,9 +379,11 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 48px;
-  background-color: yellowgreen;
   /* 추가 코드 */
-  
+  background-color: yellowgreen;
+  position:sticky;
+  top:0;
+
 }
 
 .product_navigation button {

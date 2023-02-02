@@ -70,20 +70,20 @@ plusButton.addEventListener('click', clickPlusButton);
 
 
 /* -------------------------------- [ 사용자가 후기를 등록할때마다 네비게이션바의 후기개수 늘어나기 ] ------------------------------- */
-// 참고로 동률님과 코드를 합치기 전에 짠거라서 나중에 합치면 수정이 필요할 수도 있음
-// 동률님 코드: <button class="btn-submit">등록</button>
-function clickSubmitButton() {
-  // 네비게이션바의 후기 버튼 노드 가져오기
-  const getNumNode = document.querySelector('.btn_product_review span');
-  // 네비게이션바의 후기에서 괄호안의 숫자만 빼오기
-  let reviewNum = +((getNumNode.textContent).replace(/[^0-9]/g,"")); // (숫자)에서 숫자만 추출
-  // 등록하면 후기 개수 하나 증가
-  reviewNum = reviewNum + 1; 
-  // 바뀐 후기 개수를 네비게이션바에 업데이트 하기 
-  getNumNode.textContent = `(${reviewNum})`;
-}
-const getSubmitButton = document.querySelector('.btn-submit');
-getSubmitButton.addEventListener('click', clickSubmitButton);
+// // 참고로 동률님과 코드를 합치기 전에 짠거라서 나중에 합치면 수정이 필요할 수도 있음
+// // 동률님 코드: <button class="btn-submit">등록</button>
+// function clickSubmitButton() {
+//   // 네비게이션바의 후기 버튼 노드 가져오기
+//   const getNumNode = document.querySelector('.btn_product_review span');
+//   // 네비게이션바의 후기에서 괄호안의 숫자만 빼오기
+//   let reviewNum = +((getNumNode.textContent).replace(/[^0-9]/g,"")); // (숫자)에서 숫자만 추출
+//   // 등록하면 후기 개수 하나 증가
+//   reviewNum = reviewNum + 1; 
+//   // 바뀐 후기 개수를 네비게이션바에 업데이트 하기 
+//   getNumNode.textContent = `(${reviewNum})`;
+// }
+// const getSubmitButton = document.querySelector('.btn-submit');
+// getSubmitButton.addEventListener('click', clickSubmitButton);
 
 
 /* ---------------------------------------- [ 네비게이션바 > 각 영역으로 화면 초점 이동 ] ------------------------------------------ */
@@ -100,11 +100,62 @@ function goToScroll(name) {
 
 
 /* --------------------------------- [ 네비게이션바 > 화면초점위치에 따라 버튼의 css스타일링 바뀌기 ] ---------------------------------- */
+window.addEventListener('scroll', function() {
+  const posY = this.window.pageYOffset;
+  const descriptionPart = this.document.querySelector('.description').getBoundingClientRect().top;
+  const detailPart = this.document.querySelector('.detail_information').getBoundingClientRect().top;
+  // const reviewPart = this.document.querySelector('').getBoundingClientRect().top;
+  // const inquiryPart = this.document.querySelector('').getBoundingClientRect().top;
 
+  const descriptionTop = posY + descriptionPart;
+  const detailTop = posY + detailPart;
+  // const reviewTop = posY + reviewPart;
+  // const inquiryTop = posY + inquiryPart;
 
+  let totalHeight = document.body.scrollHeight - this.window.innerHeight -1;
+  
+  // 버튼 저장
+  let descriptionBtn = document.querySelector('.btn_product_description');
+  let detailBtn = document.querySelector('.btn_detail_information');
+  let reviewBtn = document.querySelector('.btn_product_review');
+  let inquiryBtn = document.querySelector('.btn_product_inquiry');
 
+  if(posY < descriptionTop) {
+    // 버튼 모두 회색
+    descriptionBtn.style.backgroundColor = "#F9F9F9";
+    descriptionBtn.style.color = "#333333";
+    // detailBtn.style.backgroundColor = "#F9F9F9";
+    // detailBtn.style.color = "#333333";
+    detailBtn.style.backgroundColor = "white";
+    detailBtn.style.color = "#5F0080";
+    reviewBtn.style.backgroundColor = "#F9F9F9";
+    reviewBtn.style.color = "#333333";
+    inquiryBtn.style.backgroundColor = "#F9F9F9";
+    inquiryBtn.style.color = "#333333";
+  } else if(posY >= descriptionTop && posY < detailTop) {
+    console.log("여기는 상품설명");
+    // 상품설명
+    detailBtn.style.backgroundColor = "white";
+    detailBtn.style.color = "#5F0080";
+  } else {
+    console.log("여기는 나머지");
+  }
 
-// 후기 개수에 따라 후기 값 변화
+  // if(posY >= desriptionTop && posY < detailTop) {
+  //   console.log("여기는 description부분이야~");
+  // } else if(posY >= aboutTop && posY < skillsTop) {
+
+  // } else if(posY >= skillsTop && posY < workTop) {
+
+  // } else if(posY >= workTop && posY <= totalHeight) {
+
+  // } else {
+
+  // }
+});
+
+/* --------------------------------- [ 네비게이션바 상단 고정 ] --------------------------------- */
+
 
 
 
