@@ -90,6 +90,12 @@ body {
 }
 
 
+/* 상품 추천 공통 */
+.swiper-button-disabled {
+  display: none;
+}
+
+
 /* 오늘의 상품 추천 */
 .recommend_products {
   width: 1050px;
@@ -192,7 +198,6 @@ body {
   top: 132px;
   left: -25px;
   transform: scaleX(-1);
-  display: none;
 }
 .recommend_products_next {
   width: 60px;
