@@ -65,3 +65,35 @@ const todaySwiper = new Swiper('.swiper_today', {
       // activeIndex와 realIndex의 차이..?
   }}
 })
+
+/* -------------------------------------------------------------------------- */
+/*                                  할인 상품 추천                                  */
+/* -------------------------------------------------------------------------- */
+const sale_prev = getNode('.sale_prev');
+const sale_next = getNode('.sale_next');
+
+const saleSwiper = new Swiper('.swiper_sale', {
+  slidesPerView: 4,
+  slidesPerGroup : 4,
+  spaceBetween: 18,
+  speed: 500,
+  navigation: {
+    nextEl: sale_next,
+    prevEl: sale_prev,
+  },
+  on: {
+    slideChange: function (){
+      if (this.activeIndex === 4) {
+        sale_prev.style.display = 'flex';
+        sale_next.style.display = 'flex';
+      }
+      if (this.realIndex === 8) {
+        sale_prev.style.display = 'flex';
+        sale_next.style.display = 'none';
+      }
+      if (this.realIndex === 0) {
+        sale_prev.style.display = 'none';
+        sale_next.style.display = 'flex';
+      }
+  }}
+})
