@@ -1,6 +1,4 @@
-
-// import { getNode } from "../../lib/dom/index.js";
-
+import { getNode } from "../../lib/index.js";
 
 // 상품 후기 게시판 내 아코디언 메뉴 기능 
 const coll = document.getElementsByClassName("collapsible");
