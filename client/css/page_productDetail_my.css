@@ -389,6 +389,15 @@ body {
   color: #333333;
 }
 
+.btn_product_review span {
+  height: 19px;
+  line-height: 160%;
+  font-weight: 400;
+  font-size: 12.003px;
+  margin-left: 8px;
+  /* background-color: aqua; */
+}
+
 .product_navigation.is_active {
   border-width: 1px 1px 0px 1px;
   border-style: solid;
