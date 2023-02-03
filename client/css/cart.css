@@ -134,16 +134,36 @@ button.close_btn img {
 .count_box {
   border: 1px solid #c4c4c4;
   border-radius: 5px;
+  width: 84px;
+  height: 30px;
+}
+.minus_btn {
+  background: url(../assets/icons/cart/minus.svg) no-repeat center;
+  width: 28px;
+  height: 28px;
+  text-indent: -9999px;
 }
 
-.minus_btn,
+.minus_btn.active {
+  background: url(../assets/icons/cart/active_minus.svg) no-repeat center;
+}
+
 .plus_btn {
-  padding: 10px 14px;
-  background-color: transparent;
+  background: url(../assets/icons/cart/plus.svg) no-repeat center;
+  width: 28px;
+  height: 28px;
+  text-indent: -9999px;
+}
+
+.plus_btn.active {
+  background: url(../assets/icons/cart/active_plus.svg) no-repeat center;
 }
 
 .count {
-  padding: 3px 8px;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
 }
 
 .product_price {
