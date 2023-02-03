@@ -21,42 +21,39 @@ h2.cart_title {
 
 .select_menu {
   padding: 16px 0;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  align-self: cen;
 }
 
-.select_menu img {
-  margin-top: -3px;
+.select_menu > label {
+  margin: 0 16px 0 8px;
+  position: relative;
+}
+
+.select_menu > label::after {
+  content: "";
+  width: 1px;
+  height: 13px;
+  position: absolute;
+  top: 4px;
+  right: -8px;
+  background-color: #eee;
 }
 
 .select_menu:last-child {
   border-top: 1px solid #eee;
 }
 
-.select_all {
-  margin: 0px 17px 0 8px;
-  position: relative;
-  z-index: -1;
-}
-
-.select_all::after {
-  content: "";
-  width: 1px;
-  height: 13px;
-  background-color: #eee;
-  position: absolute;
-  top: 3px;
-  right: -12px;
-}
-
 .select_delete {
   background-color: transparent;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 /* -------------------------------------------------------------------------- */
 /*                                  cart_list                                 */
 /* -------------------------------------------------------------------------- */
-.cart_list {
-}
 
 .list_title {
   padding: 14px 0px;
