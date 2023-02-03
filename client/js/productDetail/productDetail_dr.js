@@ -1,8 +1,7 @@
-import { getNode, getNodes } from "../../lib/index.js";
+import { getNode } from "../../lib/index.js";
 
 // 상품 후기 게시판 내 아코디언 메뉴 기능 
 const coll = document.getElementsByClassName("collapsible");
-
 
 for (let i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
@@ -44,7 +43,6 @@ const open_reviewpopup = function (){
   modal.style.display ='block';
   reviewpopup.style.display = 'block';
 }
-write_review.addEventListener('click', open_reviewpopup);
 
 
 /** 문의하기 버튼 클릭 이벤트*/
@@ -53,14 +51,12 @@ const open_inquirypopup = function (){
   modal.style.display ='block';
   inquirypopup.style.display = 'block';
 }
+
+write_review.addEventListener('click', open_reviewpopup);
 write_inquiry.addEventListener('click', open_inquirypopup);
 
 
-
 /** 팝업 창 닫기 버튼 클릭 이벤트 */
-
-
-
 const cancel = document.querySelectorAll('.popup-close'); 
 
 const close_popup = function(){
