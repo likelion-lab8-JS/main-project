@@ -6,7 +6,8 @@ const arrowBtn = getNodes(".close_btn > img");
 const subCheck = getNodes("#sub_check");
 const allCheck = getNodes("#all_check");
 
-// 전체 선택
+// 체크박스
+// 1. 전체 선택
 for (let i = 0; i < allCheck.length; i++) {
   allCheck[i].addEventListener("click", function () {
     if (allCheck[i].checked === true) {
@@ -23,7 +24,7 @@ for (let i = 0; i < allCheck.length; i++) {
   });
 }
 
-// 개별선택
+// 2. 개별선택
 for (let i = 0; i < subCheck.length; i++) {
   subCheck[i].addEventListener("click", function () {
     if (subCheck[i].checked === subCheck.length) {
@@ -38,25 +39,7 @@ for (let i = 0; i < subCheck.length; i++) {
   });
 }
 
-// 전체선택 구현하기
-// for (let i = 0; i < checkBox.length; i++) {
-//   checkBox[i].addEventListener("click", function () {
-//     checkBox[i].classList.add("on");
-
-//     subCheck.forEach((item) => {
-//       item.classList.add("on");
-//     });
-//     checkBox[checkBox.length - 1].classList.add("on");
-//   });
-// }
-
-// // 개별선택 구현하기
-// for (let i = 0; i < subCheck.length; i++) {
-//   subCheck[i].addEventListener("click", function () {
-//     subCheck[i].classList.add("on");
-//   });
-// }
-
+// 리스트 클릭시 아코디언메뉴 구현
 for (let i = 0; i < listTitle.length; i++) {
   listTitle[i].addEventListener("click", function (e) {
     let closeBtn = e.target.closest(".list_title");
