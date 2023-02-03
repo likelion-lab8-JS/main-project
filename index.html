@@ -14,14 +14,45 @@
 </head>
 
 <body>
+  <!-- modal -->
   <!-- popup_beauty -->
-  <div id="modal">
+  <div id="beauty_modal">
     <div class="popup_container">
       <div class="popup_beauty-container">
         <a href="/" class="popup_beauty" title="처음 만나는 뷰티 플랫폼, 뷰티 칼리 사이트로 이동 (현재창)"></a>
       </div>
       <button type="button" class="close_popup_for_day">오늘 하루 안 보기</button>
       <button type="button" class="close_popup">닫기</button>
+    </div>
+  </div>
+
+  <!-- cart -->
+  <div class="modal-overlay" id="cart_modal">
+    <div class="modal-window">
+      <div class="cart_modal_title" hidden>
+        <h3>장바구니</h3>
+      </div>
+      <div class="cart_modal_content">
+        <div class="cart_info">
+          <div class="cart_product_name">[풀무원] 탱탱쫄면 (4개입)</div>
+          <div class="cart_product_price">4,980원</div>
+          <div class="cart_counter">
+            <button type="button" class="btn_cart btn_cart_minus"></button>
+            <div class="cart_count">1</div>
+            <button type="button" class="btn_cart btn_cart_plus"></button>
+          </div>
+        </div>
+        <div class="cart_total">
+          <div class="cart_total_price_label">합계</div>
+          <div class="cart_total_price">4,980원</div>
+          <span class="save_label">적립</span>
+          <span class="save_content">구매 시 5원 적립</span>
+        </div>
+        <div class="cart_modal_close_area">
+          <button type="button" class="btn_cart_close btn_cart_cancel">취소</button>
+          <button type="button" class="btn_cart_close btn_cart_day">장바구니 담기</button>
+        </div>
+      </div>
     </div>
   </div>
   

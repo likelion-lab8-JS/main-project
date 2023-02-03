@@ -2,7 +2,7 @@
 body {
   position: relative;
 }
-#modal {
+#beauty_modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -214,6 +214,133 @@ body {
 .recommend_products_prev::after,
 .recommend_products_next::after {
   display: none;
+}
+
+
+/* cart */
+.modal-overlay {
+  width: 396px;
+  height: 292px;
+  border-radius: 16px;
+  padding: 24px 20px;
+  background: var(--white);
+  box-shadow: 0px 8px 36px rgba(0, 0, 0, 0.2);
+}
+.cart_modal_content {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 28px;
+}
+.cart_info {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.cart_product_name {
+  width: 100%;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.cart_product_price{
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--black);
+}
+.cart_counter{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 84px;
+  height: 30px;
+  border: 1px solid var(--gray-200);
+}
+.cart_count {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.btn_cart {
+  width: 30px;
+  height: 30px;
+}
+.btn_cart_minus {
+  background: url(../assets/icons/main/Minus.png);
+}
+.btn_cart_plus {
+  background: url(../assets/icons/main/Plus.png);
+}
+.cart_total {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+}
+.cart_total_price_label {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.cart_total_price{
+  width: 100%;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.4;
+  color: var(--black);
+  text-align: end;
+
+}
+.save_label {
+  width: 37px;
+  height: 18px;
+  background: var(--accent-yellow);
+  border-radius: 1px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--white);
+  text-align: center;
+  margin-right: 8px;
+}
+.save_content {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--black);
+  
+}
+.cart_modal_close_area {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 8px;
+}
+.btn_cart_close {
+  width: 174px;
+  height: 54px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.btn_cart_cancel {
+  border: 1px solid var(--gray-400);
+  color: var(--content);
+}
+.btn_cart_day {
+  background: var(--purple);
+  color: var(--white);
 }
 
 
