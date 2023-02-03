@@ -45,6 +45,7 @@ body {
 /* main_banner */
 .swiper_main_banner{
   max-width: 1900px;
+  min-width: 1050px;
   height: 370px;
   margin: 0 auto;
   position: relative;
@@ -52,7 +53,6 @@ body {
 }
 .slide_main_banner img{
   width: 100%;
-  min-width: 1050px;
   height: 100%;
   object-fit: cover;
 }
@@ -60,12 +60,16 @@ body {
   width: 52px;
   height: 52px;
   background: url(../assets/icons/main/Arrow-main-banner.png) no-repeat;
+  right: 1518px;
+  left: auto;
 }
 .main_banner_next {
   width: 52px;
   height: 52px;
   background: url(../assets/icons/main/Arrow-main-banner.png) no-repeat;
   transform: scaleX(-1);
+  left: 1519px;
+  right: auto;
 }
 .main_banner_prev::after,
 .main_banner_next::after {
