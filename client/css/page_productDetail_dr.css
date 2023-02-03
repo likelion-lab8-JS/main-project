@@ -440,10 +440,6 @@ textarea {
   resize: none;
 }
 
-label {
-  /* margin-right: 24px; */
-}
-
 .review-popup-input {
   padding-top: 16px;
 
@@ -495,7 +491,7 @@ label {
   
 }
 
-.text-limit {
+.content-length-counter {
   position: relative;
   right: 40px;
   bottom: 20px;
@@ -516,7 +512,7 @@ input[type=checkbox] + label {
 }
 input[type=checkbox]:checked + label {
   height: 30px;
-  background: transparent no-repeat url('../assets/icons/list/none_checked.svg') left / 24px;
+  background: transparent no-repeat url('../assets/icons/Icon/checked.png') left / 24px;
 }
 
 .secret-checkbox {  

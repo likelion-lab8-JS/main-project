@@ -68,3 +68,22 @@ const close_popup = function(){
 for (let i = 0; i < cancel.length; i++){
   cancel[i].addEventListener('click',close_popup);
 }
+
+
+/** 글 등록 */
+
+let template = /* html */`
+<div class="notice-content folded">  
+      <img class="quest-icon" src="./assets/icons/Icon/question.svg" alt=""/>
+      <div class="question">
+        <p>
+          스티로폼 박스도 손상되어 있어 포장이 터져 엉망이네요</br>
+          환불 요청합니다.
+        </p>
+      </div>
+        <p class="written-date">  
+          2022. 11. 11
+        </p> 
+      </div>
+    </div>
+`
