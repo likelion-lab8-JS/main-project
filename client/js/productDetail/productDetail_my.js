@@ -122,39 +122,26 @@ window.addEventListener('scroll', function() {
 
   if(posY < descriptionTop) {
     // 버튼 모두 회색
-    descriptionBtn.style.backgroundColor = "#F9F9F9";
-    descriptionBtn.style.color = "#333333";
-    // detailBtn.style.backgroundColor = "#F9F9F9";
-    // detailBtn.style.color = "#333333";
-    detailBtn.style.backgroundColor = "white";
-    detailBtn.style.color = "#5F0080";
-    reviewBtn.style.backgroundColor = "#F9F9F9";
-    reviewBtn.style.color = "#333333";
-    inquiryBtn.style.backgroundColor = "#F9F9F9";
-    inquiryBtn.style.color = "#333333";
+    descriptionBtn.classList.remove("btn_is_focus");
+    detailBtn.classList.remove("btn_is_focus");
+    reviewBtn.classList.remove("btn_is_focus");
+    inquiryBtn.classList.remove("btn_is_focus");
+    
   } else if(posY >= descriptionTop && posY < detailTop) {
-    console.log("여기는 상품설명");
-    // 상품설명
-    detailBtn.style.backgroundColor = "white";
-    detailBtn.style.color = "#5F0080";
+    //console.log("여기는 상품설명");
+    descriptionBtn.classList.add("btn_is_focus");
+    detailBtn.classList.remove("btn_is_focus");
+    reviewBtn.classList.remove("btn_is_focus");
+    inquiryBtn.classList.remove("btn_is_focus");
   } else {
-    console.log("여기는 나머지");
+    // detail부분
+    descriptionBtn.classList.remove("btn_is_focus");
+    detailBtn.classList.add("btn_is_focus");
+    reviewBtn.classList.remove("btn_is_focus");
+    inquiryBtn.classList.remove("btn_is_focus");
   }
-
-  // if(posY >= desriptionTop && posY < detailTop) {
-  //   console.log("여기는 description부분이야~");
-  // } else if(posY >= aboutTop && posY < skillsTop) {
-
-  // } else if(posY >= skillsTop && posY < workTop) {
-
-  // } else if(posY >= workTop && posY <= totalHeight) {
-
-  // } else {
-
-  // }
 });
 
-/* --------------------------------- [ 네비게이션바 상단 고정 ] --------------------------------- */
 
 
 
