@@ -26,35 +26,6 @@
     </div>
   </div>
 
-  <!-- cart -->
-  <div class="modal-overlay" id="cart_modal">
-    <div class="modal-window">
-      <div class="cart_modal_title" hidden>
-        <h3>장바구니</h3>
-      </div>
-      <div class="cart_modal_content">
-        <div class="cart_info">
-          <div class="cart_product_name">[풀무원] 탱탱쫄면 (4개입)</div>
-          <div class="cart_product_price">4,980원</div>
-          <div class="cart_counter">
-            <button type="button" class="btn_cart btn_cart_minus"></button>
-            <div class="cart_count">1</div>
-            <button type="button" class="btn_cart btn_cart_plus"></button>
-          </div>
-        </div>
-        <div class="cart_total">
-          <div class="cart_total_price_label">합계</div>
-          <div class="cart_total_price">4,980원</div>
-          <span class="save_label">적립</span>
-          <span class="save_content">구매 시 5원 적립</span>
-        </div>
-        <div class="cart_modal_close_area">
-          <button type="button" class="btn_cart_close btn_cart_cancel">취소</button>
-          <button type="button" class="btn_cart_close btn_cart_day">장바구니 담기</button>
-        </div>
-      </div>
-    </div>
-  </div>
   
   <header class="header_wrap">
     <section class="popup_wrap">
@@ -359,7 +330,7 @@
               <a href="/">
                 <div class="product_img_container">
                   <img src="./client/assets/thumbnail/product01.png" alt="탱탱쫄면 4개입" />
-                  <button type="button">
+                  <button type="button" class="cart_icon">
                     <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
                   </button>
                 </div>
@@ -533,6 +504,32 @@
         </div>
         <button class="swiper-button-prev recommend_products_prev today_prev"></button>
         <button class="swiper-button-next recommend_products_next today_next"></button>
+      </div>
+      <!-- add_cart -->
+      <div class="add_cart">
+        <div class="add_cart_content">
+          <div class="cart_product_name">상품명</div>
+          <div class="cart_product_price">상품 가격</div>
+          <div class="count">
+            <button type="button" class="btn_count btn_count_minus"  aria-label="수량 줄이기" aria-disabled="true"></button>
+            <div class="count_number">0</div>        
+            <button type="button" class="btn_count btn_count_plus" aria-label="수량 늘리기" ></button>
+          </div>
+        </div>
+        <div class="cart_total_saving">
+          <div class="cart_total">
+            <div class="cart_total_label">합계</div>
+            <div class="cart_total_price">000,000원</div>
+          </div>
+          <div class="cart_saving">
+            <div class="cart_saving_label">적립</div>
+            <div class="cart_saving_content">구매 시 00원 적립</div>
+          </div>
+        </div>
+        <div class="cart_btn_area">
+          <button type="button" class="btn_cancel">취소</button>
+          <button type="button" class="btn_add_cart">장바구니 담기</button>
+        </div>
       </div>
     </section>
 
