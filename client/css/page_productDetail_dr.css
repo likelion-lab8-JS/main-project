@@ -1,3 +1,9 @@
+:root{
+  --popup_Width : 793px;
+  --popup_height : 630px;
+}
+
+
 * {
   font-family: 'Pretendard';
 }
@@ -338,12 +344,37 @@ tr td button {
   padding: 32px;
   width: 793px;
   height: 630px;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100;
 }
+
+.popup-modal {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  width:100%;
+  height: 100%;
+  content:'';
+  background: rgba(0,0,0,0.5);
+  z-index: 10;
+  display: none;
+}
+
 
 .review-popup-header {
   position: relative;
   height: 60px;
-}
+}    
 
 .icon-close {
   width: 30px;
@@ -382,12 +413,10 @@ tr td button {
   top: 40px;
 }
 .review-title-input-wrapper label{
-  padding-left: 8px;
-
-}
-.review-title-input-wrapper label{
-  padding-left: 8px;
-
+  margin-left: 8px;
+  background-color: transparent;
+  display: inline-block;
+  margin-right: 12px;
 }
 
 .review-content-input-wrapper{
@@ -405,13 +434,14 @@ textarea {
   height: 198px;
   color: #A6A6A6;
   display: inline-block;
+  background-color: transparent;
   margin-left: 64px;
   padding: 16px;
   resize: none;
 }
 
 label {
-  margin-right: 24px;
+  /* margin-right: 24px; */
 }
 
 .review-popup-input {
@@ -420,15 +450,16 @@ label {
 }
 
 
-
 .review-title-input-wrapper input {
   width: 645px;
   height: 32px;
   margin-bottom: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
   display: inline-block;
   color:#898989;
   padding: 9px 20px;
-
+  background-color: transparent;
 }
 
 /* 후기작성 팝업 버튼 */
@@ -480,15 +511,15 @@ input[type=checkbox] + label {
   cursor: pointer; 
   padding-left: 30px; 
   background-repeat: no-repeat;
-  background: transparent no-repeat url('../assets/icons/Icon/unchecked.svg') left / 24px;
+  background: transparent no-repeat url('../assets/icons/list/none_checked.svg') left / 24px;
   height: 30px;
 }
 input[type=checkbox]:checked + label {
   height: 30px;
-  background: transparent no-repeat url('../assets/icons/Icon/checked.png') left / 24px;
+  background: transparent no-repeat url('../assets/icons/list/none_checked.svg') left / 24px;
 }
 
-.secret-checkbox {
+.secret-checkbox {  
   height : 58px;
 }
 
