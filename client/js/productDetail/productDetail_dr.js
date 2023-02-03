@@ -55,20 +55,20 @@ const open_inquirypopup = function (){
 }
 write_inquiry.addEventListener('click', open_inquirypopup);
 
+
+
 /** 팝업 창 닫기 버튼 클릭 이벤트 */
-const close_review = getNode('.close-review');
-const close_inquiry = getNode('.close-inquiry');
-const cancel_review = getNode('.cancel-review');
-const cancel_inquiry = getNode('.cancel-inquiry');
+
+
+
+const cancel = document.querySelectorAll('.popup-close'); 
 
 const close_popup = function(){
-  console.log('hit');
   reviewpopup.style.display = 'none';
   inquirypopup.style.display = 'none';
   modal.style.display = 'none';
 }
 
-close_inquiry.addEventListener('click', close_popup);
-close_review.addEventListener('click', close_popup);
-cancel_inquiry.addEventListener('click', close_popup);
-cancel_review.addEventListener('click', close_popup);
+for (let i = 0; i < cancel.length; i++){
+  cancel[i].addEventListener('click',close_popup);
+}
