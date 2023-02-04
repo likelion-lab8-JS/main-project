@@ -70,7 +70,7 @@ for (let i = 0; i < cancel.length; i++){
 }
 
 
-/** 글 등록 */
+/** 질문글 등록 */
 
 let template = /* html */`
 <div class="notice-content folded">  
@@ -87,3 +87,26 @@ let template = /* html */`
       </div>
     </div>
 `
+
+
+/** 글자수 세기 */
+
+// 0. textarea 노드 선택 
+let rev_textarea = document.getElementById('review-text')
+
+// 1. textarea에 작성한 글 선택
+
+
+// 2. 글자수 표시해주는 p 태그 
+let review_counter = document.querySelector('.content-length-counter');
+
+// 3. 글의 길이를 p태그에 표시
+// review_counter = `${review_text.length} / 5000`
+
+// 4. 키의 입력을 받을 때마다 작동하는 이벤트 함수 생성 
+const counttexthandler = function (e){
+  let content = e.target.value.length;
+  review_counter.innerHTML = content + '/ 5000';};
+
+rev_textarea.addEventListener('input', counttexthandler);
+
