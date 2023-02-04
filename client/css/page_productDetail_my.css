@@ -272,6 +272,10 @@ body {
   /* overflow:hidden; */
 }
 
+.minus_amount img {
+  cursor: default;
+}
+
 .minus_amount, .plus_amount {
   border: 0;
   width: 30px;

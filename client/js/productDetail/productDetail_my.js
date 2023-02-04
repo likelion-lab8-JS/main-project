@@ -1,10 +1,10 @@
 
 
-/* -------------------------- [ 장바구니에 얼마나 수량을 담을지 결정하는 버튼과 관련된 이벤트 함수 ] ------------------------- */
+/*------------------------------[ 장바구니에 얼마나 수량을 담을지 결정하는 버튼과 관련된 이벤트 함수 ]------------------------------ */
 
-// -버튼을 누르면 선택한 수량이 줄어든다
+// - 버튼을 누르면 선택한 수량이 줄어든다
 function clickMinusButton() { 
-  // 현재 상품 개수를 가지고 있는 노드 가져옴
+  // 현재 상품 개수를 가지고 있는 노드를 가져옴
   let productNumNode = document.querySelector('.number_of_product span');
   // 노드에서 텍스트만 가져옴
   let productNum = +(productNumNode.textContent); 
@@ -12,12 +12,13 @@ function clickMinusButton() {
   if(productNum == 1) {
     return;
   }
-  // 값을 줄어들게 한다
+  // 값을 줄어들게 함
   productNum = productNum - 1;
   // 줄어든 값이 1일 경우, 마이너스 버튼을 light색으로 바꿈
   if(productNum == 1) {
     let getImgNode = document.querySelector('.minus_amount img');
     getImgNode.src="./assets/icons/detail_miyoung/minus_light.svg";
+    getImgNode.style.cursor = "default"; // 커서 모양 변동
   }
   // 값을 바꿔낀다
   productNumNode.textContent = `${productNum}`;
@@ -46,6 +47,7 @@ function clickPlusButton() {
   if(productNum != 1) {
     let getImgNode = document.querySelector('.minus_amount img');
     getImgNode.src="./assets/icons/detail_miyoung/minus_dark.svg";
+    getImgNode.style.cursor = "pointer"; // 커서 모양 변동
   }
   // 값을 바꿔낀다
   productNumNode.textContent = `${productNum}`;
@@ -69,7 +71,8 @@ const plusButton = document.querySelector('.plus_amount');
 plusButton.addEventListener('click', clickPlusButton);
 
 
-/* -------------------------------- [ 사용자가 후기를 등록할때마다 네비게이션바의 후기개수 늘어나기 ] ------------------------------- */
+/*------------------------------[ 사용자가 후기를 등록할때마다 네비게이션바의 후기개수 늘어나기 ]------------------------------*/
+
 // // 참고로 동률님과 코드를 합치기 전에 짠거라서 나중에 합치면 수정이 필요할 수도 있음
 // // 동률님 코드: <button class="btn-submit">등록</button>
 // function clickSubmitButton() {
@@ -86,7 +89,8 @@ plusButton.addEventListener('click', clickPlusButton);
 // getSubmitButton.addEventListener('click', clickSubmitButton);
 
 
-/* ---------------------------------------- [ 네비게이션바 > 각 영역으로 화면 초점 이동 ] ------------------------------------------ */
+/*------------------------------[ 네비게이션바 > 각 영역으로 화면 초점 이동 ]------------------------------*/
+
 function goToScroll(name) {
   let location = document.querySelector("."+name).offsetTop;
   window.scrollTo({
@@ -100,6 +104,7 @@ function goToScroll(name) {
 
 
 /* --------------------------------- [ 네비게이션바 > 화면초점위치에 따라 버튼의 css스타일링 바뀌기 ] ---------------------------------- */
+
 window.addEventListener('scroll', function() {
   const posY = this.window.pageYOffset;
   const descriptionPart = this.document.querySelector('.description').getBoundingClientRect().top;
@@ -111,8 +116,6 @@ window.addEventListener('scroll', function() {
   const detailTop = posY + detailPart;
   // const reviewTop = posY + reviewPart;
   // const inquiryTop = posY + inquiryPart;
-
-  let totalHeight = document.body.scrollHeight - this.window.innerHeight -1;
   
   // 버튼 저장
   let descriptionBtn = document.querySelector('.btn_product_description');
@@ -141,7 +144,7 @@ window.addEventListener('scroll', function() {
   }
 });
 
-// ----------------------------장바구니 담기-------------------------------
+/* --------------------------------- [ 장바구니 담기 버튼 클릭 > header의 장바구니 아이콘에 말풍선 띄우고 없애기 ] ---------------------------------- */
 
 const pushCartBtn = document.querySelector('.push_cart'); // 장바구니 담기 버튼
 const modalCart = document.querySelector('.modal_cart'); // 모달창 노드 가져오기
@@ -157,48 +160,3 @@ function clickPushCartBtn() {
 // 장바구니 담기 버튼을 누를때마다 이벤트 발생
 pushCartBtn.addEventListener('click', clickPushCartBtn);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-///////////////////////네비게이션 바 고정///////////////////////////
-// --> 창환님 코드 진행 후 붙히기
-// let nav = document.querySelector('.product_navigation');
-// let navTop = nav.offsetTop;
-
-// function fixNav() {
-//   if (window.scroppY >= navTop) {
-//     document.body.classList.add('fixed-nav');
-//   } else {
-//     document.body.classList.remove('fixed-nav');
-//   }
-// }
-// window.addEventListener('scroll', fixNav);
-
-// let getTop = nav.offset().top;
-// function ficNav() {
-  //   let window = 
-  //   window.scroll 
-  // }
-
-  // let nav = document.querySelector('.product_navigation');
-  // nav.addEventListener('scroll', function() {
-  // console.log(window.scrollY); // 현재 스크롤바를 얼마나 내렸냐 측정
-  // window.scrollY = window.pageYOffset;
-
-  // this.window.scrollTo(0,100);
-  // this.window.scrollBy(0,100);
-
-// });
