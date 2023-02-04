@@ -93,6 +93,7 @@ let template = /* html */`
 
 // 0. textarea 노드 선택 
 let rev_textarea = document.getElementById('review-text')
+let inq_textarea = document.getElementById('review-text')
 
 // 1. textarea에 작성한 글 선택
 
@@ -109,4 +110,5 @@ const counttexthandler = function (e){
   review_counter.innerHTML = content + ' / 5000';};
 
 rev_textarea.addEventListener('input', counttexthandler);
+inq_textarea.addEventListener('input', counttexthandler);
 

@@ -505,18 +505,23 @@ input[type=checkbox] {
 }
 input[type=checkbox] + label { 
   cursor: pointer; 
-  padding-left: 30px; 
+  padding-left: 62px; 
   background-repeat: no-repeat;
   background: transparent no-repeat url('../assets/icons/list/none_checked.svg') left / 24px;
+  background-position-x: 30px;
   height: 30px;
+  display: inline-block;
 }
 input[type=checkbox]:checked + label {
   height: 30px;
   background: transparent no-repeat url('../assets/icons/Icon/checked.png') left / 24px;
+  background-position-x: 30px;
+  display: inline-block;
 }
 
 .secret-checkbox {  
   height : 58px;
+  line-height: 30px;
 }
 
 .folded {
@@ -524,6 +529,3 @@ input[type=checkbox]:checked + label {
   overflow: hidden;
 }
 
-.active {
-
-}
