@@ -126,7 +126,6 @@ window.addEventListener('scroll', function() {
     detailBtn.classList.remove("btn_is_focus");
     reviewBtn.classList.remove("btn_is_focus");
     inquiryBtn.classList.remove("btn_is_focus");
-    
   } else if(posY >= descriptionTop && posY < detailTop) {
     //console.log("여기는 상품설명");
     descriptionBtn.classList.add("btn_is_focus");
