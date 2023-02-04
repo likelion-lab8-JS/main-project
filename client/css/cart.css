@@ -24,7 +24,7 @@ h2.cart_title {
   font-size: 15px;
   display: flex;
   flex-direction: row;
-  align-self: cen;
+  align-self: center;
 }
 
 .select_menu > label {
