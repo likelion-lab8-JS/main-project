@@ -86,6 +86,8 @@ h2.cart_title {
 
 .list_title img {
   margin-right: 20px;
+  top: 15px;
+  height: 15px;
 }
 
 button.close_btn {
@@ -135,7 +137,8 @@ button.close_btn img {
   border: 1px solid #c4c4c4;
   border-radius: 5px;
   width: 84px;
-  height: 30px;
+  height: 28px;
+  margin-top: 6px;
 }
 .minus_btn {
   background: url(../assets/icons/cart/minus.svg) no-repeat center;
@@ -176,6 +179,7 @@ button.close_btn img {
   width: 30px;
   height: 30px;
   background-color: transparent;
+  margin-top: -3px;
 }
 
 .count_box {

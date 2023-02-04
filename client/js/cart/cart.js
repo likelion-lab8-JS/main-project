@@ -12,6 +12,8 @@ const scheduledPayment = getNode(".scheduled_payment .price");
 // 상품금액 합산
 let totalProductCount = +productPrice.replace(/[^0-9]/g, "") * subCheck.length;
 
+const allCheckLabel = getNodes(".select_menu > label");
+
 // 체크박스
 // 1. 전체 선택
 // 상품 금액란에 총합 계산해서 넣기
@@ -23,6 +25,11 @@ productAmount.innerText = `${totalProductCount
 scheduledPayment.innerText = `${totalProductCount
   .toString()
   .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`;
+
+// 전체선택 수량
+allCheckLabel.forEach((el) => {
+  el.innerText = `전체선택 (${subCheck.length}/${subCheck.length})`;
+});
 
 for (let i = 0; i < allCheck.length; i++) {
   allCheck[i].addEventListener("click", function () {
@@ -39,6 +46,10 @@ for (let i = 0; i < allCheck.length; i++) {
       scheduledPayment.innerText = `${totalProductCount
         .toString()
         .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`;
+
+      allCheckLabel.forEach((el) => {
+        el.innerText = `전체선택 (${subCheck.length}/${subCheck.length})`;
+      });
     } else {
       subCheck.forEach((item) => {
         item.checked = false;
@@ -48,6 +59,10 @@ for (let i = 0; i < allCheck.length; i++) {
       // 상품금액 모두 초기화
       productAmount.innerText = `0원`;
       scheduledPayment.innerText = `0원`;
+
+      allCheckLabel.forEach((el) => {
+        el.innerText = `전체선택 (0/${subCheck.length})`;
+      });
     }
   });
 }
