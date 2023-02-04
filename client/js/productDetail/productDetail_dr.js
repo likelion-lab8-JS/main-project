@@ -106,7 +106,7 @@ let review_counter = document.querySelector('.content-length-counter');
 // 4. 키의 입력을 받을 때마다 작동하는 이벤트 함수 생성 
 const counttexthandler = function (e){
   let content = e.target.value.length;
-  review_counter.innerHTML = content + '/ 5000';};
+  review_counter.innerHTML = content + ' / 5000';};
 
 rev_textarea.addEventListener('input', counttexthandler);
 

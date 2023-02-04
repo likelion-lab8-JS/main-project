@@ -323,24 +323,7 @@
           
           <fieldset class="review-content-input-wrapper">
             <label for="content">내용</label>
-            
-            <textarea id="review-text" maxlength="5000" required>
-              
-            </textarea>
-            <!-- <div id="write-review-default">
-              <p>컬리는 믿을 수 있는 후기문화를 함께 만들어가고자 합니다. 식품 등의 표시광고에 대한 법률을 준수하고자 다음과 같은 부당한 상품평에 대해서는 별도 고지 없이 임시 대처, 비공개 전환, 삭제, 적립금 회수 등의 필요한 조치가 취해 질 수 있습니다.
-              </p>
-    
-              <strong>후기 작성 시 유의사항</strong>
-              <ul>
-                <li>개인의 주관적인 의견으로 인해 상품의 기능 및 효과에 대하여 오해의 소지가 있는 내용</li>
-                <li>식품/건강기능식품과 관련하여 질병의 예방 및 치료, 체중감량(다이어트)에 효능효과가 있다는 내용</li>
-                <li>일반 화장품을 기능성화장품의 효능효과가 있다는 내용을 통한 오인 표현</li>
-                <li>의약외품을 의약품으로 오인하게 하는 표현</li>
-                <li>생활화학제품을 본래 용도와 다르게 사용하는 내용 및 효능효과를 과장하는 내용</li>
-                <li>욕설, 폭력성, 음란성, 상업성 등의 게시물 또는 구매 상품과 무관하거나 반복되는 동일 단어나 문장을 사용하여 판매자나 다른 이용자의 후기 이용을 방해한다고 판단되는 경우</li>
-              </ul>
-            </div> -->
+            <textarea inputmode='text' name="content" id="review-text" maxlength="5000" required></textarea>
             <p class="content-length-counter" id="reviewcounter">0/5000</p>  
           </fieldset>
         </div>
@@ -548,8 +531,8 @@
             <textarea inputmode='text' required maxlength="5000"
             name="content"></textarea>
             
+            <p class="content-length-counter">0/5000</p>
           </fieldset>
-          <p class="content-length-counter">0/5000</p>
         </div>
         <div class="secret-checkbox">
         <input type="checkbox" name="checker" id="isSecret" tabindex="1"><label for="isSecret">비밀글로 문의하기</label>
