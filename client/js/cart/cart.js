@@ -11,7 +11,7 @@ const productAmount = getNode(".product_amount .price");
 const scheduledPayment = getNode(".scheduled_payment .price");
 // 상품금액 합산
 let totalProductCount = +productPrice.replace(/[^0-9]/g, "") * subCheck.length;
-
+// 전체선택시 상품개수 체크
 const allCheckLabel = getNodes(".select_menu > label");
 
 // 체크박스
@@ -74,10 +74,18 @@ for (let i = 0; i < subCheck.length; i++) {
   subCheck[i].addEventListener("click", function () {
     if (subCheck[i].checked === true) {
       subCheckCount++;
+
+      allCheckLabel.forEach((el) => {
+        el.innerText = `전체선택 (${subCheckCount}/${subCheck.length})`;
+      });
     } else {
-      // 개별선택 했을 때 상품금액 차감
+      subCheckCount--;
+      allCheckLabel.forEach((el) => {
+        el.innerText = `전체선택 (${subCheckCount}/${subCheck.length})`;
+      });
     }
 
+    // 개별선택 개수와 개별선택 길이가 같으면 전체선택, 아니면 전체선택 해제
     if (subCheck.length === subCheckCount) {
       allCheck.forEach((item) => {
         item.checked = true;
