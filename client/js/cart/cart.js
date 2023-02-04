@@ -82,10 +82,6 @@ function getPlusCount(e) {
 
   // 증가에 따라 가격 변동
   const originalPrice = e.target.parentElement.nextElementSibling;
-  // const price = +e.target.parentElement.nextElementSibling.innerText.replace(
-  //   /[^0-9]/g,
-  //   ""
-  // );
   const price = +productPrice.replace(/[^0-9]/g, "");
 
   let totalPrice = price * num;
@@ -122,6 +118,16 @@ function getMinusCount(e) {
     const getImgNode = e.target.closest(".minus_btn");
     getImgNode.classList.remove("active");
   }
+
+  // 감소에 따라 가격 변동
+  const originalPrice = e.target.parentElement.nextElementSibling;
+  const price = +productPrice.replace(/[^0-9]/g, "");
+
+  let totalPrice = price * num;
+
+  originalPrice.innerText = `${totalPrice
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`;
 }
 
 minusBtn.forEach((el) => {
