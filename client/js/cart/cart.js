@@ -38,16 +38,6 @@ for (let i = 0; i < subCheck.length; i++) {
         item.checked = false;
       });
     }
-
-    // if (subCheck[i].checked === subCheck.length) {
-    //   allCheck.forEach((el) => {
-    //     el.checked = true;
-    //   });
-    // } else {
-    //   allCheck.forEach((el) => {
-    //     el.checked = false;
-    //   });
-    // }
   });
 }
 
@@ -67,10 +57,11 @@ for (let i = 0; i < listTitle.length; i++) {
   });
 }
 
-// 클릭시 수량 증가
+// 수량 증감 버튼 구현
 const plusBtn = getNodes(".plus_btn");
 const minusBtn = getNodes(".minus_btn");
 
+// 클릭시 수량 증가
 function getPlusCount(e) {
   let productCount = e.target.previousElementSibling;
   if (!productCount) return;
@@ -87,9 +78,37 @@ function getPlusCount(e) {
     const getImgNode = e.target.closest(".plus_btn");
     getImgNode.classList.add("active");
   }
-  console.log(num);
 }
 
 plusBtn.forEach((el) => {
   el.addEventListener("click", getPlusCount);
+});
+
+function getMinusCount(e) {
+  let productCount = e.target.nextElementSibling;
+  if (!productCount) return;
+
+  let num = +productCount.innerText;
+  if (num === 1) return;
+
+  if (plusBtn) {
+    num--;
+  }
+
+  productCount.innerText = num;
+
+  if (num !== 1) {
+    const getImgNode = e.target.closest(".minus_btn");
+    getImgNode.classList.add("active");
+  }
+
+  // 1이 됐을 때 더이상 내려가지 않도록 막음
+  if (num === 1) {
+    const getImgNode = e.target.closest(".minus_btn");
+    getImgNode.classList.remove("active");
+  }
+}
+
+minusBtn.forEach((el) => {
+  el.addEventListener("click", getMinusCount);
 });
