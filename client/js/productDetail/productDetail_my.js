@@ -141,9 +141,21 @@ window.addEventListener('scroll', function() {
   }
 });
 
+// ----------------------------장바구니 담기-------------------------------
 
+const pushCartBtn = document.querySelector('.push_cart'); // 장바구니 담기 버튼
+const modalCart = document.querySelector('.modal_cart'); // 모달창 노드 가져오기
 
+function clickPushCartBtn() {
+  modalCart.classList.remove("a11yHidden"); // 화면에 말풍선이 보이게 한다
+  setTimeout(function() {
+    modalCart.classList.add("a11yHidden"); // 특정시간후에 말풍선이 사라진다
+  }, 1300);
+  
+}
 
+// 장바구니 담기 버튼을 누를때마다 이벤트 발생
+pushCartBtn.addEventListener('click', clickPushCartBtn);
 
 
 
