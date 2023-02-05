@@ -91,24 +91,23 @@ let template = /* html */`
 
 /** 글자수 세기 */
 
-// 0. textarea 노드 선택 
-let rev_textarea = document.getElementById('review-text')
-let inq_textarea = document.getElementById('review-text')
-
-// 1. textarea에 작성한 글 선택
-
-
-// 2. 글자수 표시해주는 p 태그 
+let rev_textarea = document.getElementById('review-text');
+let inq_textarea = document.getElementById('inquiry-text');
+ 
 let review_counter = document.querySelector('.content-length-counter');
+let inquiry_counter = document.getElementById('inquiry-count')
 
-// 3. 글의 길이를 p태그에 표시
-// review_counter = `${review_text.length} / 5000`
-
-// 4. 키의 입력을 받을 때마다 작동하는 이벤트 함수 생성 
-const counttexthandler = function (e){
+ 
+const review_count = function (e){
   let content = e.target.value.length;
-  review_counter.innerHTML = content + ' / 5000';};
+  review_counter.innerHTML = content + ' / 5000';
+};
+ 
+const inquiry_count = function (e){
+  let content = e.target.value.length;
+  inquiry_counter.innerHTML = content + ' / 5000';
+};
 
-rev_textarea.addEventListener('input', counttexthandler);
-inq_textarea.addEventListener('input', counttexthandler);
+rev_textarea.addEventListener('input', review_count);
+inq_textarea.addEventListener('input', inquiry_count);
 
