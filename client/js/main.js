@@ -37,12 +37,14 @@ const mainBannerSwiper = new Swiper('.swiper_main_banner', {
 /* -------------------------------------------------------------------------- */
 const todaySwiper = recommendProductsSwiper('.swiper_today','.today_next','.today_prev');
 const cartModal = getNode('#cart_modal');
-const cartIcon = getNode('.cart_icon');
 const body = getNode('body');
 const btnCancel = getNode('.btn_cancel');
+const recommendProductsWrapper = getNode('.recommend_products_wrapper');
 
 /* cart */
-cartIcon.addEventListener('click', (e)=>{
+recommendProductsWrapper.addEventListener('click', function(e){
+  let cartButton = e.target.closest('button');
+  if (!cartButton) return;
   e.preventDefault();
   addClass(cartModal, 'is-active');
   addClass(body, 'scroll_lock');
@@ -50,7 +52,7 @@ cartIcon.addEventListener('click', (e)=>{
 btnCancel.addEventListener('click', function (){
   removeClass(cartModal, 'is-active');
   removeClass(body, 'scroll_lock');
-})
+});
 
 
 /* -------------------------------------------------------------------------- */
