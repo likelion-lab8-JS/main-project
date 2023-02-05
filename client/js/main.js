@@ -1,4 +1,4 @@
-import { getNode, recommendProductsSwiper, addClass } from './main_page/index.js'
+import { getNode, recommendProductsSwiper, addClass, removeClass } from './main_page/index.js'
 
 
 /* -------------------------------------------------------------------------- */
@@ -39,6 +39,7 @@ const todaySwiper = recommendProductsSwiper('.swiper_today','.today_next','.toda
 const cartModal = getNode('#cart_modal');
 const cartIcon = getNode('.cart_icon');
 const body = getNode('body');
+const btnCancel = getNode('.btn_cancel');
 
 /* cart */
 cartIcon.addEventListener('click', (e)=>{
@@ -46,6 +47,10 @@ cartIcon.addEventListener('click', (e)=>{
   addClass(cartModal, 'is-active');
   addClass(body, 'scroll_lock');
 });
+btnCancel.addEventListener('click', function (){
+  removeClass(cartModal, 'is-active');
+  removeClass(body, 'scroll_lock');
+})
 
 
 /* -------------------------------------------------------------------------- */
