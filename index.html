@@ -506,29 +506,31 @@
         <button class="swiper-button-next recommend_products_next today_next"></button>
       </div>
       <!-- add_cart -->
-      <div class="add_cart">
-        <div class="add_cart_content">
-          <div class="cart_product_name">상품명</div>
-          <div class="cart_product_price">상품 가격</div>
-          <div class="count">
-            <button type="button" class="btn_count btn_count_minus"  aria-label="수량 줄이기" aria-disabled="true"></button>
-            <div class="count_number">0</div>        
-            <button type="button" class="btn_count btn_count_plus" aria-label="수량 늘리기" ></button>
+      <div class="popup_modal" id="cart_modal">
+        <div class="add_cart">
+          <div class="add_cart_content">
+            <div class="cart_product_name">[풀무원] 탱탱쫄면 (4개입)</div>
+            <div class="cart_product_price">4,980원</div>
+            <div class="count">
+              <button type="button" class="btn_count btn_count_minus"  aria-label="수량 줄이기" aria-disabled="true"></button>
+              <div class="count_number">0</div>        
+              <button type="button" class="btn_count btn_count_plus" aria-label="수량 늘리기" ></button>
+            </div>
           </div>
-        </div>
-        <div class="cart_total_saving">
-          <div class="cart_total">
-            <div class="cart_total_label">합계</div>
-            <div class="cart_total_price">000,000원</div>
+          <div class="cart_total_saving">
+            <div class="cart_total">
+              <div class="cart_total_label">합계</div>
+              <div class="cart_total_price">00,000원</div>
+            </div>
+            <div class="cart_saving">
+              <div class="cart_saving_label">적립</div>
+              <div class="cart_saving_content">구매 시 00원 적립</div>
+            </div>
           </div>
-          <div class="cart_saving">
-            <div class="cart_saving_label">적립</div>
-            <div class="cart_saving_content">구매 시 00원 적립</div>
+          <div class="cart_btn_area">
+            <button type="button" class="btn_cancel">취소</button>
+            <button type="button" class="btn_add_cart">장바구니 담기</button>
           </div>
-        </div>
-        <div class="cart_btn_area">
-          <button type="button" class="btn_cancel">취소</button>
-          <button type="button" class="btn_add_cart">장바구니 담기</button>
         </div>
       </div>
     </section>

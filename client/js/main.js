@@ -1,13 +1,15 @@
-import { getNode, recommendProductsSwiper } from './main_page/index.js'
+import { getNode, recommendProductsSwiper, addClass } from './main_page/index.js'
+
 
 /* -------------------------------------------------------------------------- */
 /*                                popup_beauty                                */
 /* -------------------------------------------------------------------------- */
 window.onload = function () {
   getNode('.close_popup').onclick = function () {
-      getNode('#modal').style.display = "none"
+      getNode('#beauty_modal').style.display = "none"
   };
 };
+
 
 /* -------------------------------------------------------------------------- */
 /*                                 main_banner                                */
@@ -29,10 +31,22 @@ const mainBannerSwiper = new Swiper('.swiper_main_banner', {
   },
 })
 
+
 /* -------------------------------------------------------------------------- */
 /*                                  오늘의 상품 추천                                 */
 /* -------------------------------------------------------------------------- */
 const todaySwiper = recommendProductsSwiper('.swiper_today','.today_next','.today_prev');
+const cartModal = getNode('#cart_modal');
+const cartIcon = getNode('.cart_icon');
+const body = getNode('body');
+
+/* cart */
+cartIcon.addEventListener('click', (e)=>{
+  e.preventDefault();
+  addClass(cartModal, 'is-active');
+  addClass(body, 'scroll_lock');
+});
+
 
 /* -------------------------------------------------------------------------- */
 /*                                  할인 상품 추천                                  */
