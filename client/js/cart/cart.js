@@ -77,23 +77,23 @@ function countCheckBox() {
     });
   }
 
+  function calcSubCheckPrice() {
+    const subProductPrice =
+      +productPrice.replace(/[^0-9]/g, "") * subCheckCount;
+    const changeInnerText = `${subProductPrice
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`;
+
+    productAmount.innerText = changeInnerText;
+    scheduledPayment.innerText = changeInnerText;
+  }
+
   subCheck.forEach((el) => {
     if (el.checked === true) {
       subCheckCount++;
-
-      let subProductPrice =
-        +productPrice.replace(/[^0-9]/g, "") * subCheckCount;
-
-      productAmount.innerText = `${subProductPrice
-        .toString()
-        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`;
-
-      scheduledPayment.innerText = `${subProductPrice
-        .toString()
-        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`;
+      calcSubCheckPrice();
     } else {
-      productAmount.innerText = `0원`;
-      scheduledPayment.innerText = `0원`;
+      calcSubCheckPrice();
     }
 
     if (subCheck.length === subCheckCount) {
