@@ -111,3 +111,26 @@ const inquiry_count = function (e){
 rev_textarea.addEventListener('input', review_count);
 inq_textarea.addEventListener('input', inquiry_count);
 
+
+/** swiper 사용 */
+// const swiper = new Swiper('.swiper', {
+//   // Optional parameters
+//   direction: 'vertical',
+//   loop: true,
+
+//   // If we need pagination
+//   pagination: {
+//     el: '.swiper-pagination',
+//   },
+
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+
+  // And if we need scrollbar
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  // },
+// });

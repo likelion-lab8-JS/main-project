@@ -245,12 +245,12 @@
   margin-bottom: 20px;
 }
 
-.prev-next-btn {
+.prev_next_btn_wrapper {
   margin-top: 16px;
   margin-bottom: 72px;
   height:32px;
-  /* display: flex;
-  align-items: center; */
+  display: flex;
+  align-items: center;
   text-align: center;
 }
 
@@ -260,7 +260,7 @@
   background: url('../assets/icons/Icon/arrow_prev.png') center / 30px no-repeat;
   border: 1px solid #E1E1E1;
   border-radius: 4px;
-  margin-right: 8px;
+  flex-direction: row;
 }
 
 .bg-arrow_next {
@@ -269,7 +269,21 @@
   background: url('../assets/icons/Icon/arrow_next.png') center / 30px no-repeat;
   border: 1px solid #E1E1E1;
   border-radius: 4px;
-  margin-left: 8px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-prev {
+  position: relative;
+  left: 461px;
+}
+
+.swiper-button-next {
+  position: relative;
+  left : 477px;
 }
 
 .inquiry-table {
