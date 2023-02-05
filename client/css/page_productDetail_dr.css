@@ -257,7 +257,8 @@
 .bg-arrow_prev {
   width: 56px; 
   height: 56px;                   
-  background: url('../assets/icons/Icon/arrow_prev.png') center / 30px no-repeat;
+  background: url('../assets/icons/Icon/arrow_next.png') center / 30px no-repeat;
+  transform: rotate(-180deg);
   border: 1px solid #E1E1E1;
   border-radius: 4px;
   flex-direction: row;

@@ -549,7 +549,7 @@
           </fieldset>
         </div>
         <div class="secret-checkbox">
-        <input type="checkbox" name="checker" id="isSecret" tabindex="1"><label for="isSecret">비밀글로 문의하기</label>
+        <input type="checkbox" name="checker" id="isSecret" role="tab" aria-checked="false" tabindex="0"><label for="isSecret">비밀글로 문의하기</label>
         </div>
         <div class="review-popup-button-wrapper">
           <button class="btn-cancel popup-close">취소</button>
@@ -867,17 +867,16 @@
     </section>
   </footer>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
+  
 </body>
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
 <script src="./js/productDetail/productDetail_dr.js" type="module"></script>
 </html>
