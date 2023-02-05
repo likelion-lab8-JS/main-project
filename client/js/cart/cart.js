@@ -11,51 +11,48 @@ const productAmount = getNode(".product_amount .price");
 const scheduledPayment = getNode(".scheduled_payment .price");
 // 상품금액 합산
 let totalProductCount = +productPrice.replace(/[^0-9]/g, "") * subCheck.length;
+
 // 전체선택시 상품개수 체크
 const allCheckLabel = getNodes(".select_menu > label");
 
 // 체크박스
 // 1. 전체 선택
 // 상품 금액란에 총합 계산해서 넣기
-productAmount.innerText = `${totalProductCount
-  .toString()
-  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`;
+function calcProductPrice(element) {
+  element.innerText = `${totalProductCount
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`;
+}
 
-// 구매결정 금액란에 총합 계산해서 넣기
-scheduledPayment.innerText = `${totalProductCount
-  .toString()
-  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`;
+calcProductPrice(productAmount);
+calcProductPrice(scheduledPayment);
+
+function showAllCheck() {
+  allCheckLabel.forEach((el) => {
+    el.innerText = `전체선택 (${subCheck.length}/${subCheck.length})`;
+  });
+}
 
 // 전체선택 수량
-allCheckLabel.forEach((el) => {
-  el.innerText = `전체선택 (${subCheck.length}/${subCheck.length})`;
-});
+showAllCheck();
 
-for (let i = 0; i < allCheck.length; i++) {
-  allCheck[i].addEventListener("click", function () {
-    if (allCheck[i].checked === true) {
-      subCheck.forEach((item) => {
-        item.checked = true;
+function selectAllCheckBox() {
+  allCheck.forEach((el) => {
+    if (el.checked === true) {
+      subCheck.forEach((el) => {
+        el.checked = true;
       });
       allCheck[allCheck.length - 1].checked = true;
 
-      productAmount.innerText = `${totalProductCount
-        .toString()
-        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`;
+      calcProductPrice(productAmount);
+      calcProductPrice(scheduledPayment);
 
-      scheduledPayment.innerText = `${totalProductCount
-        .toString()
-        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`;
-
-      allCheckLabel.forEach((el) => {
-        el.innerText = `전체선택 (${subCheck.length}/${subCheck.length})`;
-      });
+      showAllCheck();
     } else {
       subCheck.forEach((item) => {
         item.checked = false;
       });
       allCheck[allCheck.length - 1].checked = false;
-
       // 상품금액 모두 초기화
       productAmount.innerText = `0원`;
       scheduledPayment.innerText = `0원`;
@@ -67,28 +64,44 @@ for (let i = 0; i < allCheck.length; i++) {
   });
 }
 
-// 2. 개별선택
-let subCheckCount = 0;
+allCheck.forEach((el) => {
+  el.addEventListener("click", selectAllCheckBox);
+});
 
-for (let i = 0; i < subCheck.length; i++) {
-  subCheck[i].addEventListener("click", function () {
-    if (subCheck[i].checked === true) {
+// 2. 개별선택
+function countCheckBox() {
+  let subCheckCount = 0;
+  function showSubCheckLabel() {
+    allCheckLabel.forEach((el) => {
+      el.innerText = `전체선택 (${subCheckCount}/${subCheck.length})`;
+    });
+  }
+
+  subCheck.forEach((el) => {
+    if (el.checked === true) {
       subCheckCount++;
 
-      allCheckLabel.forEach((el) => {
-        el.innerText = `전체선택 (${subCheckCount}/${subCheck.length})`;
-      });
+      let subProductPrice =
+        +productPrice.replace(/[^0-9]/g, "") * subCheckCount;
+
+      productAmount.innerText = `${subProductPrice
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`;
+
+      scheduledPayment.innerText = `${subProductPrice
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`;
     } else {
-      subCheckCount--;
-      allCheckLabel.forEach((el) => {
-        el.innerText = `전체선택 (${subCheckCount}/${subCheck.length})`;
-      });
+      productAmount.innerText = `0원`;
+      scheduledPayment.innerText = `0원`;
     }
 
-    // 개별선택 개수와 개별선택 길이가 같으면 전체선택, 아니면 전체선택 해제
     if (subCheck.length === subCheckCount) {
       allCheck.forEach((item) => {
         item.checked = true;
+
+        calcProductPrice(productAmount);
+        calcProductPrice(scheduledPayment);
       });
     } else {
       allCheck.forEach((item) => {
@@ -96,7 +109,12 @@ for (let i = 0; i < subCheck.length; i++) {
       });
     }
   });
+  showSubCheckLabel();
 }
+
+subCheck.forEach((el) => {
+  el.addEventListener("click", countCheckBox);
+});
 
 // 리스트 클릭시 아코디언메뉴 구현
 const list = getNodes(".product_list_box");
