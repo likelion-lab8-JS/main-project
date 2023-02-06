@@ -1,4 +1,4 @@
-
+// import { getNode } from "../../lib/dom/index.js";
 
 /*------------------------------[ 장바구니에 얼마나 수량을 담을지 결정하는 버튼과 관련된 이벤트 함수 ]------------------------------ */
 
@@ -6,6 +6,7 @@
 function clickMinusButton() { 
   // 현재 상품 개수를 가지고 있는 노드를 가져옴
   let productNumNode = document.querySelector('.number_of_product span');
+  // let productNumNode = getNode('.number_of_product span');
   // 노드에서 텍스트만 가져옴
   let productNum = +(productNumNode.textContent); 
   // 만약에 현재 값이 1이라면 더이상 값이 줄어들 수 없음 => return처리하기
@@ -103,6 +104,18 @@ function goToScroll(name) {
 // onclick="goToScroll('클래스명')"
 
 
+/* 작은 메뉴바 위치서부터 상단에 고정 */
+window.addEventListener('scroll', funtion() {
+  const posY = this.window.pageYOffset;
+  const smallMenu = this.document.querySelector('.small_header_nav').getBoundingClientRect().top;
+  const smallMenuTop = posY + smallMenu;
+  let getSmallMenu = document.querySelector('.small_header_nav');
+  if(posY > smallMenuTop) {
+    getSmallMenu.classList.remove(".a11yHidden");
+  } else {
+    getSmallMenu.classList.add(".a11yHidden");
+  }
+});
 /* --------------------------------- [ 네비게이션바 > 화면초점위치에 따라 버튼의 css스타일링 바뀌기 ] ---------------------------------- */
 
 window.addEventListener('scroll', function() {
