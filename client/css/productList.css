@@ -30,13 +30,13 @@ h2.title {
   font-size: 16px;
 }
 
-.reset_btn {
+.reset_button {
   background-color: transparent;
   font-weight: 600;
-  color: var(--gray-300);
+  color: #757575;
 }
 
-button.toggle_btn {
+button.toggle_button {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -49,18 +49,19 @@ button.toggle_btn {
   transition: 0.6s;
 }
 
-.toggle_btn svg {
+.toggle_button img {
+  width: 18px;
+  height: 18px;
   transition: 0.4s;
 }
 
 .list_wrapper {
-  /* background-color: red; */
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease-out;
 }
 
-.list_wrapper a:hover {
+.list_wrapper .list_title:hover {
   color: var(--purple);
 }
 
@@ -68,31 +69,20 @@ button.toggle_btn {
   transform: rotate(180deg);
 }
 
-.category_list,
-.brand_list,
-.price_list,
-.type_list,
-.except_list {
+.category_list {
   padding: 16px 0;
-}
-
-.category_list a,
-.brand_list a,
-.price_list a,
-.type_list a,
-.except_list a {
   display: flex;
   align-items: center;
 }
 
-.check_btn {
+.check_button {
   background: url(../assets/icons/list/none_checked.svg) no-repeat;
   width: 24px;
   height: 24px;
   text-indent: -9999px;
 }
 
-.none_btn {
+.none_button {
   background: url(../assets/icons/list/checked.svg) no-repeat;
 }
 
@@ -102,28 +92,31 @@ button.toggle_btn {
 
 .list_counter {
   font-size: 12px;
-  color: var(--gray-300);
+  color: #757575;
   margin-left: 8px;
 }
 
-.more_btn {
-  background-color: transparent;
+.more_button {
   width: 100%;
   padding: 16px 0;
-  color: var(--gray-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #757575;
 }
 
-.more_btn svg {
-  margin-left: 5px;
+.more_button img {
+  width: 18px;
+  height: 18px;
 }
 
 /* -------------------------------------------------------------------------- */
 /*                                product_list                                */
 /* -------------------------------------------------------------------------- */
 .product_list {
-  /* background-color: gold; */
   width: 783px;
 }
+
 .tab_menu {
   display: flex;
   flex-direction: row;
@@ -132,12 +125,13 @@ button.toggle_btn {
 }
 
 .tab_menu .order_list {
-  /* background-color: orange; */
   width: 445px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  /* background-color: red; */
 }
+
 .recommendation {
   width: 60px;
   display: flex;
@@ -165,46 +159,60 @@ button.toggle_btn {
   display: block;
 }
 
-.oders {
-  color: var(--gray-300);
+.orders {
+  color: #757575;
+  position: relative;
+}
+
+.orders::after {
+  content: "";
+  width: 1px;
+  height: 13px;
+  background-color: #757575;
+  position: absolute;
+  top: 3px;
+  left: -9px;
 }
 
 .product_container {
-  /* background-color: lime; */
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.product_box {
+.product_content {
   width: 250px;
-  margin-bottom: 24px;
+  margin-bottom: 40px;
+  position: relative;
 }
 
-.img_box {
-  display: block;
-  position: relative;
-  width: 100%;
+.product_box img {
+  width: 250px;
   height: 320px;
 }
 
-.img_box img {
-  width: 100%;
+.text_box > a {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart_icon {
+  background-color: transparent;
+  position: absolute;
+  top: 260px;
+  right: 15px;
 }
 
 .cart_icon img {
-  position: absolute;
   width: 45px;
   height: 45px;
-  bottom: 17px;
-  right: 15px;
 }
 
 .product_delivery {
   padding: 16px 0;
   font-size: 12px;
   font-weight: 600;
-  color: var(--gray-400);
+  color: #757575;
 }
 
 .product_price {
@@ -212,19 +220,22 @@ button.toggle_btn {
   font-size: 22px;
   font-weight: 600;
 }
+
 .text_box .cost {
-  color: var(--gray-400);
+  color: #757575;
   text-decoration: line-through;
+  margin-bottom: 10px;
 }
 
 .product_price .discount {
-  color: var(--accent-yellow);
+  color: #db3b06;
   margin-right: 8px;
 }
+
 .product_description {
   font-size: 12px;
-  color: var(--gray-400);
-  margin: 10px 0;
+  color: #757575;
+  margin-bottom: 10px;
 }
 
 .badges {
@@ -269,17 +280,18 @@ button.toggle_btn {
 }
 
 .pagination > a {
-  display: block;
   width: 34px;
   height: 34px;
-  outline: 1px solid var(--gray-100);
+  outline: 1px solid var(--gray-300);
   text-align: center;
   line-height: 34px;
 }
 
 .pagination > a img {
   display: block;
-  padding: 13px 13px;
+  width: 10px;
+  height: 10px;
+  margin: 12px auto;
 }
 
 .pagination a:hover {
