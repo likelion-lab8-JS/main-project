@@ -305,6 +305,10 @@
   font-weight: 600;
 }
 
+table {
+  border-spacing: 0;
+}
+
 tbody td:first-child {
   text-align: left;
   color: #000;
