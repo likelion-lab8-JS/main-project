@@ -60,14 +60,14 @@ body {
 .main_banner_prev {
   width: 52px;
   height: 52px;
-  background: url(../assets/icons/main/Arrow-main-banner.png) no-repeat;
+  background: url(../assets/icons/main/Arrow-main-banner.svg) no-repeat;
   right: 1518px;
   left: auto;
 }
 .main_banner_next {
   width: 52px;
   height: 52px;
-  background: url(../assets/icons/main/Arrow-main-banner.png) no-repeat;
+  background: url(../assets/icons/main/Arrow-main-banner.svg) no-repeat;
   transform: scaleX(-1);
   left: 1519px;
   right: auto;
@@ -198,7 +198,7 @@ body {
 .recommend_products_prev {
   width: 60px;
   height: 60px;
-  background: url(../assets/icons/main/arrow2.png) no-repeat;
+  background: url(../assets/icons/main/arrow-recommend-products.svg) no-repeat;
   position: absolute;
   top: 132px;
   left: -25px;
@@ -207,7 +207,7 @@ body {
 .recommend_products_next {
   width: 60px;
   height: 60px;
-  background: url(../assets/icons/main/arrow2.png) no-repeat;
+  background: url(../assets/icons/main/arrow-recommend-products.svg) no-repeat;
   position: absolute;
   top: 132px;
   right: -25px;
@@ -282,10 +282,10 @@ body {
   overflow: hidden;
 }
 .btn_count_minus {
-  background: url(../assets/icons/main/Minus.png) no-repeat;
+  background: url(../assets/icons/main/Minus.svg) no-repeat;
 }
 .btn_count_plus {
-  background: url(../assets/icons/main/Plus.png) no-repeat;
+  background: url(../assets/icons/main/Plus.svg) no-repeat;
 }
 .cart_total {
   display: flex;
@@ -383,12 +383,12 @@ body {
 .recent_products_prev {
   width: 18px;
   height: 18px;
-  background: url(../assets/icons/main/arrow-small.png) no-repeat;
+  background: url(../assets/icons/main/Arrow-recent-products.svg) no-repeat;
   order: -1;
 }
 .recent_products_next {
   width: 18px;
   height: 18px;
-  background: url(../assets/icons/main/arrow-small.png) no-repeat;
+  background: url(../assets/icons/main/Arrow-recent-products.svg) no-repeat;
   transform: scaleY(-1);
 }
