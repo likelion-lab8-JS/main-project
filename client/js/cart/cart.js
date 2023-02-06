@@ -159,6 +159,10 @@ function getPlusCount(e) {
   originalPrice.innerText = `${totalPrice
     .toString()
     .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`;
+
+  // productAmount.innerText = totalPrice + totalProductCount;
+  // scheduledPayment.innerText = totalPrice + totalProductCount;
+  // console.log(totalPrice + totalProductCount);
 }
 
 plusBtn.forEach((el) => {
