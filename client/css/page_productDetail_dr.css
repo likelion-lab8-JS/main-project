@@ -71,6 +71,8 @@
 
 .view_by_recent {
   color: #A6A6A6;
+  background: url(../assets/icons/Icon/bar.svg) no-repeat left / 1px;
+  padding-left: 8px;
 }
 
 .product_review_body {
