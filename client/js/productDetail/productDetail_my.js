@@ -74,31 +74,33 @@ plusButton.addEventListener('click', clickPlusButton);
 
 /*------------------------------[ 사용자가 후기를 등록할때마다 네비게이션바의 후기개수 늘어나기 ]------------------------------*/
 
-// // 참고로 동률님과 코드를 합치기 전에 짠거라서 나중에 합치면 수정이 필요할 수도 있음
-// // 동률님 코드: <button class="btn-submit">등록</button>
-// function clickSubmitButton() {
-//   // 네비게이션바의 후기 버튼 노드 가져오기
-//   const getNumNode = document.querySelector('.btn_product_review span');
-//   // 네비게이션바의 후기에서 괄호안의 숫자만 빼오기
-//   let reviewNum = +((getNumNode.textContent).replace(/[^0-9]/g,"")); // (숫자)에서 숫자만 추출
-//   // 등록하면 후기 개수 하나 증가
-//   reviewNum = reviewNum + 1; 
-//   // 바뀐 후기 개수를 네비게이션바에 업데이트 하기 
-//   getNumNode.textContent = `(${reviewNum})`;
-// }
-// const getSubmitButton = document.querySelector('.btn-submit');
-// getSubmitButton.addEventListener('click', clickSubmitButton);
+// 참고로 동률님과 코드를 합치기 전에 짠거라서 나중에 합치면 수정이 필요할 수도 있음
+// 동률님 코드: <button class="btn_submit">등록</button>
+function clickSubmitButton() {
+  // 네비게이션바의 후기 버튼 노드 가져오기
+  const getNumNode = document.querySelector('.btn_product_review span');
+  // 네비게이션바의 후기에서 괄호안의 숫자만 빼오기
+  let reviewNum = +((getNumNode.textContent).replace(/[^0-9]/g,"")); // (숫자)에서 숫자만 추출
+  // 등록하면 후기 개수 하나 증가
+  reviewNum = reviewNum + 1; 
+  // 바뀐 후기 개수를 네비게이션바에 업데이트 하기 
+  getNumNode.textContent = `(${reviewNum})`;
+}
+const getSubmitButton = document.querySelector('.btn_submit');
+getSubmitButton.addEventListener('click', clickSubmitButton);
 
 
 /*------------------------------[ 네비게이션바 > 각 영역으로 화면 초점 이동 ]------------------------------*/
 
+
 function goToScroll(name) {
-  let location = document.querySelector("."+name).offsetTop;
+  let location = document.querySelector("." + name).offsetTop;
   window.scrollTo({
     top: location,
     behavior: 'smooth'
   });
 }
+
 // [재확인 필요] 동률님의 리팩토링된 클래스명 확인 필요
 // 동률님 코드와 합치면, HTML파일에서 navigation의 3,4번째 버튼에 onclick연결해줘야 함
 // onclick="goToScroll('클래스명')"
@@ -122,13 +124,13 @@ window.addEventListener('scroll', function() {
   const posY = this.window.pageYOffset;
   const descriptionPart = this.document.querySelector('.description').getBoundingClientRect().top;
   const detailPart = this.document.querySelector('.detail_information').getBoundingClientRect().top;
-  // const reviewPart = this.document.querySelector('').getBoundingClientRect().top;
-  // const inquiryPart = this.document.querySelector('').getBoundingClientRect().top;
+  const reviewPart = this.document.querySelector('.review_wrapper').getBoundingClientRect().top;
+  const inquiryPart = this.document.querySelector('.inquiry_wrapper').getBoundingClientRect().top;
 
   const descriptionTop = posY + descriptionPart;
   const detailTop = posY + detailPart;
-  // const reviewTop = posY + reviewPart;
-  // const inquiryTop = posY + inquiryPart;
+  const reviewTop = posY + reviewPart;
+  const inquiryTop = posY + inquiryPart;
   
   // 버튼 저장
   let descriptionBtn = document.querySelector('.btn_product_description');
@@ -148,12 +150,22 @@ window.addEventListener('scroll', function() {
     detailBtn.classList.remove("btn_is_focus");
     reviewBtn.classList.remove("btn_is_focus");
     inquiryBtn.classList.remove("btn_is_focus");
-  } else {
+  } else if(posY >= detailTop && posY < reviewTop) {
     // detail부분
     descriptionBtn.classList.remove("btn_is_focus");
     detailBtn.classList.add("btn_is_focus");
     reviewBtn.classList.remove("btn_is_focus");
     inquiryBtn.classList.remove("btn_is_focus");
+  } else if(posY >= reviewTop && posY < inquiryPart) {
+    descriptionBtn.classList.remove("btn_is_focus");
+    detailBtn.classList.remove("btn_is_focus");
+    reviewBtn.classList.add("btn_is_focus");
+    inquiryBtn.classList.remove("btn_is_focus");
+  } else {
+    descriptionBtn.classList.remove("btn_is_focus");
+    detailBtn.classList.remove("btn_is_focus");
+    reviewBtn.classList.remove("btn_is_focus");
+    inquiryBtn.classList.add("btn_is_focus");
   }
 });
 

@@ -2,7 +2,7 @@
 <html lang="ko-KR">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>마켓칼리</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
@@ -12,11 +12,18 @@
   <link rel="stylesheet" href="./css/color.css" />
   <link rel="stylesheet" href="./css/page_productDetail_my.css"> 
   <link rel="stylesheet" href="./css/page_productDetail_dr.css"> 
-  <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script defer src="./js/productDetail/productDetail_my.js"></script>
-  <script defer src="./js/productDetail/productDetail_dr.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script defer src="./js/productDetail/productDetail_my.js"></script> <!-- getNode같은 걸 가져와서 쓰려면 type="module"을 적어야함 -->
+  <script defer src="./js/productDetail/productDetail_dr.js"></script> <!-- getNode같은 걸 가져와서 쓰려면 type="module"을 적어야함 -->
   <script src="./js/main.js" type="module"></script>
-  <title>마켓칼리</title>
+  <script type="module">
+    const swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </head>
 
 <body>
@@ -613,9 +620,9 @@
   
   <nav class="product_navigation">
     <button onclick="goToScroll('description')" class="btn_product_description" aria-label="상품설명">상품설명</button>
-    <button onclick="goToScroll('detail_information')"class="btn_detail_information" aria-label="상세정보">상세정보</button>
-    <button onclick="goToScroll('product-review-wrapper')" class="btn_product_review" aria-label="상품후기">후기<span>(0)</span></button>
-    <button onclick="goToScroll('product-review-wrapper')" class="btn_product_inquiry" aria-label="상품문의">문의</button>
+    <button onclick="goToScroll('detail_information')" class="btn_detail_information" aria-label="상세정보">상세정보</button>
+    <button onclick="goToScroll('review_wrapper')" class="btn_product_review" aria-label="상품후기">후기<span>(0)</span></button>
+    <button onclick="goToScroll('inquiry_wrapper')" class="btn_product_inquiry" aria-label="상품문의">문의</button>
   </nav> <!-- /product_navigation -->
 
   <section class="description">
@@ -784,15 +791,15 @@
       </div>
     </div>
     
-    <div class="product_review_body">
-      <div class="product_review_notice">
-        <div class="notice_header">
-          <span class="notice_badge">
-            공지
-          </span>
-          <button class="notice_title collapsible">금주의 베스트 후기 안내</button>
-        </div> 
-        <div class="notice_content folded">  
+  <div class="product_review_body">
+    <div class="product_review_notice">
+      <div class="notice_header">
+        <span class="notice_badge">
+          공지
+        </span>
+        <button class="notice_title collapsible">금주의 베스트 후기 안내</button>
+      </div> 
+      <div class="notice_content folded">  
           <img class="quest_icon" src="./assets/icons/Icon/question.svg" alt=""/>
           <div class="question">
             <p>
@@ -856,8 +863,8 @@
           </p> 
         </div>
     </div>
-  </div>
-  <div class="swiper mySwiper">
+    </div>
+    <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="product_review_content">
@@ -940,7 +947,8 @@
       <button class="bg_arrow_next swiper-button-next" aria-label="next_page"></button>
     </div>
 
-  </div>
+    </div>
+  </div> 
 
   
   <!--상품 문의  -->
