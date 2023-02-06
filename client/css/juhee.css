@@ -180,7 +180,7 @@ body {
   font-size: 21px;
   font-weight: 600;
   line-height: 1.5;
-  color: var(--accent-yellow);
+  color: #db3b06;
 }
 .product_price {
   font-size: 21px;
@@ -192,7 +192,7 @@ body {
   width: 100%;
   font-size: 12px;
   line-height: 1.6;
-  color: var(--gray-400);
+  color: #757575;
   text-decoration: line-through;
 }
 .recommend_products_prev {
