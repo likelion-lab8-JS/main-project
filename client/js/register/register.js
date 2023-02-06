@@ -60,3 +60,329 @@ let add_event = document.querySelector(".register.event");
 let check_all = document.querySelector(".terms_all input");
 let check = document.querySelectorAll(".terms_check input");
 
+id.addEventListener("keyup", event_id);
+password.addEventListener("keyup", event_password);
+password_check.addEventListener("keyup", event_password_check);
+name.addEventListener("keyup", event_name);
+email.addEventListener("keyup",event_email);
+phone.addEventListener("keyup",event_phone);
+year.addEventListener("keyup",event_year);
+month.addEventListener("keyup",event_month);
+day.addEventListener("keyup",event_day);
+
+function event_id() {
+	if (id.value == "" || !id_essential.test(id.value)) {
+		id_validation.classList.add("is_active");
+		id_overlap.disabled = true;
+	} else {
+		id_validation.classList.remove("is_active");
+		id_overlap.disabled = false;
+	}
+}
+
+/*id.onkeyup = function () {
+	if (id.value == "" || !id_essential.test(id.value)) {
+		id_validation.classList.add("is_active");
+		id_overlap.disabled = true;
+	} else {
+		id_validation.classList.remove("is_active");
+		id_overlap.disabled = false;
+	}
+}*/
+
+function event_password() {
+	if (password.value == "") {
+		password_validation.classList.add("is_active");
+		password_length.classList.remove("essential");
+	} else if (password.value.length < 8 || password_essential.test(password.value)) {
+		password_validation.classList.remove("is_active");
+		password_length.classList.add("essential");
+	} else {
+		password_validation.classList.remove("is_active");
+		password_length.classList.remove("essential");
+	}
+}
+/*password.onkeyup = function () {
+	if (password.value == "") {
+		password_validation.classList.add("is_active");
+		password_length.classList.remove("essential");
+	} else if (password.value.length < 8 || password_essential.test(password.value)) {
+		password_validation.classList.remove("is_active");
+		password_length.classList.add("essential");
+	} else {
+		password_validation.classList.remove("is_active");
+		password_length.classList.remove("essential");
+	}
+}*/
+
+function event_password_check() {
+	if (password_check.value == "") {
+		password_retry.classList.add("is_active");
+		password_same.classList.remove("essential");
+	} else if (password_check.value !== password.value) {
+		password_retry.classList.remove("is_active");
+		password_same.classList.add("essential");
+	} else {
+		password_retry.classList.remove("is_active");
+		password_same.classList.remove("essential");
+	}
+}
+
+/*password_check.onkeyup = function () {
+	if (password_check.value == "") {
+		password_retry.classList.add("is_active");
+		password_same.classList.remove("essential");
+	} else if (password_check.value !== password.value) {
+		password_retry.classList.remove("is_active");
+		password_same.classList.add("essential");
+	} else {
+		password_retry.classList.remove("is_active");
+		password_same.classList.remove("essential");
+	}
+}*/
+
+function event_name() {
+	if (name.value == "") {
+		name_validation.classList.add("is_active");
+	} else {
+		name_validation.classList.remove("is_active");
+	}
+}
+
+/*name.onkeyup = function () {
+	if (name.value == "") {
+		name_validation.classList.add("is_active");
+	} else {
+		name_validation.classList.remove("is_active");
+	}
+}*/
+
+function event_email() {
+	if (email.value == "") {
+		email_validation.classList.add("is_active");
+		email_match.classList.remove("essential");
+		email_overlap.disabled = true;
+	} else if (email.value !== "" && !email_essential.test(email.value)) {
+		email_validation.classList.remove("is_active");
+		email_match.classList.add("essential");
+		email_overlap.disabled = true;
+	} else {
+		email_validation.classList.remove("is_active");
+		email_match.classList.remove("essential");
+		email_overlap.disabled = false;
+	}
+}
+
+/*email.onkeyup = function () {
+	if (email.value == "") {
+		email_validation.classList.add("is_active");
+		email_match.classList.remove("essential");
+		email_overlap.disabled = true;
+	} else if (email.value !== "" && !email_essential.test(email.value)) {
+		email_validation.classList.remove("is_active");
+		email_match.classList.add("essential");
+		email_overlap.disabled = true;
+	} else {
+		email_validation.classList.remove("is_active");
+		email_match.classList.remove("essential");
+		email_overlap.disabled = false;
+	}
+}*/
+
+function event_phone() {
+	if (phone.value == "" || !phone_essential.test(phone.value) === true) {
+		phone_validation.classList.add("is_active");
+		phone_overlap.disabled = true;
+	} else {
+		phone_validation.classList.remove("is_active");
+		phone_overlap.disabled = false;
+	}
+}
+
+/*phone.onkeyup = function () {
+	if (phone.value == "" || !phone_essential.test(phone.value) === true) {
+		phone_validation.classList.add("is_active");
+		phone_overlap.disabled = true;
+	} else {
+		phone_validation.classList.remove("is_active");
+		phone_overlap.disabled = false;
+	}
+}*/
+
+/* 다음 주소 연동 */
+const kakao_address = function () {
+	new daum.Postcode({
+		oncomplete: function (data) {
+			//선택시 입력값 세팅
+			document.getElementById("address").value = data.address; // 주소 넣기
+			document.querySelector(".address_wrap").classList.add("none");
+			document.querySelector(".address_detail").classList.remove("none");
+			document.getElementById("sub_address").focus(); //상세입력 포커싱
+		},
+	}).open();
+}
+
+/* 주소검색 버튼 눌렀을 때 */
+address_search.addEventListener("click", function (){
+	kakao_address();
+});
+
+/* 재검색 눌렀을 때 */
+address_research.addEventListener("click", function () {
+	document.querySelector(".address_wrap").classList.remove("none");
+	document.querySelector(".address_detail").classList.add("none");
+	kakao_address();
+});
+
+/* 출생 연도 */
+
+function event_year() {
+	if (year.value.length < 4) {
+		year_validation.classList.add("is_active");
+		year_available.classList.remove("is_active");
+	} else if (year.value.length == 4 && year.value < 1900 || year.value > year_now) {
+		year_validation.classList.remove("is_active");
+		year_available.classList.add("is_active");
+	} else {
+		year_validation.classList.remove("is_active");
+		year_available.classList.remove("is_active");
+	}
+}
+/*year.onkeyup = function () {
+	if (year.value.length < 4) {
+		year_validation.classList.add("is_active");
+		year_available.classList.remove("is_active");
+	} else if (year.value.length == 4 && year.value < 1900 || year.value > year_now) {
+		year_validation.classList.remove("is_active");
+		year_available.classList.add("is_active");
+	} else {
+		year_validation.classList.remove("is_active");
+		year_available.classList.remove("is_active");
+	}
+}*/
+
+/* 출생 월 */
+function event_month() {
+	if (month.value == "") {
+		month_validation.classList.add("is_active");
+		month_available.classList.remove("is_active");
+	} else if (month.value < 1 || month.value > 12) {
+		month_validation.classList.remove("is_active");
+		month_available.classList.add("is_active");
+	} else {
+		month_validation.classList.remove("is_active");
+		month_available.classList.remove("is_active");
+	}
+}
+/*month.onkeyup = function () {
+	if (month.value == "") {
+		month_validation.classList.add("is_active");
+		month_available.classList.remove("is_active");
+	} else if (month.value < 1 || month.value > 12) {
+		month_validation.classList.remove("is_active");
+		month_available.classList.add("is_active");
+	} else {
+		month_validation.classList.remove("is_active");
+		month_available.classList.remove("is_active");
+	}
+}*/
+
+/* 출생 날 */
+
+function event_day() {
+	if (day.value == "") {
+		day_validation.classList.add("is_active");
+		day_available.classList.remove("is_active");
+	} else if (day.value < 1 || day.value > 31) {
+		day_validation.classList.remove("is_active");
+		day_available.classList.add("is_active");
+	} else {
+		day_validation.classList.remove("is_active");
+		day_available.classList.remove("is_active");
+	}
+}
+/*day.onkeyup = function () {
+	if (day.value == "") {
+		day_validation.classList.add("is_active");
+		day_available.classList.remove("is_active");
+	} else if (day.value < 1 || day.value > 31) {
+		day_validation.classList.remove("is_active");
+		day_available.classList.add("is_active");
+	} else {
+		day_validation.classList.remove("is_active");
+		day_available.classList.remove("is_active");
+	}
+}*/
+
+/* 추천인, 이벤트명 */
+
+/*const add = function () {
+	let add_value = document.querySelector('input[name="add"]:checked').value;
+
+	if (add_value == "recommend") {
+		add_recommend.classList.remove("none");
+	} else if (add_value == "event") {
+		add_event.classList.remove("none");
+	} else {
+		add_recommend.classList.add("none");
+		add_event.classList.add("none");
+	}
+}
+add();*/
+
+/* 이용 약관 체크박스 boolean 값 저장*/
+const agreements = {
+	terms_use: false,
+	terms_privacy: false,
+	terms_receive: false,
+	terms_age : false
+}
+
+check.forEach(function (item) {
+	item.addEventListener("input", toggle_check);
+});
+
+/* 체크박스 input 이벤트가 발생할 때 마다 all_check() 함수 실행 */
+function toggle_check(e) {
+	const { checked, id } = e.target;
+	agreements[id] = checked;
+	// this.parentNode.classList.toggle("active");
+	all_check();
+}
+
+/* 따로 1개씩 체크해서 모두 체크 했을 때, 전체 동의 체크 되게 하는 구문 */
+function all_check() {
+	const { terms_use, terms_privacy, terms_receive, terms_age } = agreements;
+	if (terms_use && terms_privacy && terms_receive && terms_age) {
+		check_all.checked = true;
+	} else {
+		check_all.checked = false;
+	}
+}
+
+/* 전체 동의 체크 했을 때, 모든 checkbox 선택 */
+check_all.addEventListener("click",function (e) {
+	let { checked } = e.target;
+	if (checked) {
+		check.forEach(function (item) {
+			item.checked = true;
+			agreements[item.id] = true;
+		});
+	} else {
+		check.forEach(function (item) {
+			item.checked = false;
+			agreements[item.id] = false;
+		});
+	}
+})
+
+
+/*
+* 추가입력 사항 했을때 checked된 값 받아서 추천인아이디, 참여 이벤트명 블럭 나오게 하기
+→ undefined 해결을 못함.. 질문 해야할듯
+* 포함된 값을 data.json으로 넘기기
+→ 전혀 모르겠습니다.. 질문해야함
+* localstorage 이용해서 random 아이디 값 생성 후 unique id값
+*/
+
+// document.querySelectorAll('input[name="gender"]:checked').value
