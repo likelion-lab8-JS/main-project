@@ -209,6 +209,31 @@ function event_phone() {
 	}
 }*/
 
+/* 다음 주소 연동 */
+const kakao_address = function () {
+	new daum.Postcode({
+		oncomplete: function (data) {
+			//선택시 입력값 세팅
+			document.getElementById("address").value = data.address; // 주소 넣기
+			document.querySelector(".address_wrap").classList.add("none");
+			document.querySelector(".address_detail").classList.remove("none");
+			document.getElementById("sub_address").focus(); //상세입력 포커싱
+		},
+	}).open();
+}
+
+/* 주소검색 버튼 눌렀을 때 */
+address_search.addEventListener("click", function (){
+	kakao_address();
+});
+
+/* 재검색 눌렀을 때 */
+address_research.addEventListener("click", function () {
+	document.querySelector(".address_wrap").classList.remove("none");
+	document.querySelector(".address_detail").classList.add("none");
+	kakao_address();
+});
+
 /* 출생 연도 */
 
 function event_year() {
@@ -289,3 +314,75 @@ function event_day() {
 	}
 }*/
 
+/* 추천인, 이벤트명 */
+
+const add = function () {
+	let add_value = document.querySelector('input[name="add"]:checked').value;
+
+	if (add_value == "recommend") {
+		add_recommend.classList.remove("none");
+	} else if (add_value == "event") {
+		add_event.classList.remove("none");
+	} else {
+		add_recommend.classList.add("none");
+		add_event.classList.add("none");
+	}
+}
+add();
+
+/* 이용 약관 체크박스 boolean 값 저장*/
+const agreements = {
+	terms_use: false,
+	terms_privacy: false,
+	terms_receive: false,
+	terms_age : false
+}
+
+check.forEach(function (item) {
+	item.addEventListener("input", toggle_check);
+});
+
+/* 체크박스 input 이벤트가 발생할 때 마다 all_check() 함수 실행 */
+function toggle_check(e) {
+	const { checked, id } = e.target;
+	agreements[id] = checked;
+	// this.parentNode.classList.toggle("active");
+	all_check();
+}
+
+/* 따로 1개씩 체크해서 모두 체크 했을 때, 전체 동의 체크 되게 하는 구문 */
+function all_check() {
+	const { terms_use, terms_privacy, terms_receive, terms_age } = agreements;
+	if (terms_use && terms_privacy && terms_receive && terms_age) {
+		check_all.checked = true;
+	} else {
+		check_all.checked = false;
+	}
+}
+
+/* 전체 동의 체크 했을 때, 모든 checkbox 선택 */
+check_all.addEventListener("click",function (e) {
+	let { checked } = e.target;
+	if (checked) {
+		check.forEach(function (item) {
+			item.checked = true;
+			agreements[item.id] = true;
+		});
+	} else {
+		check.forEach(function (item) {
+			item.checked = false;
+			agreements[item.id] = false;
+		});
+	}
+})
+
+
+/*
+* 추가입력 사항 했을때 checked된 값 받아서 추천인아이디, 참여 이벤트명 블럭 나오게 하기
+→ undefined 해결을 못함.. 질문 해야할듯
+* 포함된 값을 data.json으로 넘기기
+→ 전혀 모르겠습니다.. 질문해야함
+* localstorage 이용해서 random 아이디 값 생성 후 unique id값
+*/
+
+// document.querySelectorAll('input[name="gender"]:checked').value
