@@ -1,7 +1,7 @@
 import { getNode, getNodes } from "../../lib/dom/getNode.js";
 
-const subCheck = getNodes("#sub_check");
-const allCheck = getNodes("#all_check");
+const subCheck = getNodes("input[name='sub_check']");
+const allCheck = getNodes("input[name='all_check']");
 
 // 수량 증감 버튼 구현
 const plusBtn = getNodes(".plus_btn");
