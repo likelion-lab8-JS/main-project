@@ -56,7 +56,8 @@
 }
 
 .popup_img {
-  width: 100%;
+  width: 42px;
+  height: 42px;
 }
 
 .topbtn_wrap {
@@ -72,10 +73,21 @@
 
 .topbtn_list li {
   font-size: 12px;
+  margin-left: 16px;
+  padding-bottom: 10px;
 }
 
 .topbtn_register {
   color: var(--purple);
+}
+
+.topbtn_register::after, .topbtn_login::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 13px;
+  border-right: 1px solid var(--gray-bar);
+  margin: 1px 0 0 8px;
 }
 
 .topbtn_cs {
@@ -95,7 +107,7 @@
 .cs_list {
   display: none;
   position: absolute;
-  width: 100px;
+  width: 120px;
   right: 0;
   border: 1px solid #d9d9d9;
   border-radius: 10px;
@@ -120,7 +132,7 @@
   flex-flow: row nowrap;
   align-items: center;
   position: relative;
-  margin-top: 21px;
+  margin-top: 11px;
   height: 60px;
 }
 
@@ -222,12 +234,32 @@
 }
 
 .icon_location {
+  position: relative;
+  display: block;
+  width: 36px;
+  height: 36px;
   background: transparent url("../assets/icons/Icon/location.png") center / 36px no-repeat;
 }
+
+/*.location_box {
+  display: none;
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  background: white;
+  border: 1px solid black;
+  top: 30px;
+  right: 0;
+  z-index: 1;
+}*/
 
 .icon_location:hover {
   background-image: url("../assets/icons/Icon/location_hover.png");
 }
+
+/*.icon_location:hover .location_box {
+  display: block;
+}*/
 
 .icon_heart {
   background: transparent url("../assets/icons/Icon/heart.png") center / 36px no-repeat;
@@ -494,6 +526,11 @@
   height: 30px;
   margin-left: 20px;
   float: left;
+}
+
+.company_sns img {
+  width: 30px;
+  height: 30px;
 }
 
 .company_sns:first-child {

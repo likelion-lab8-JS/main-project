@@ -28,6 +28,7 @@
     font-style: normal;
     font-weight: 400;
     src: url('font/Pretendard-Regular.woff') format('woff');
+    font-display: swap;
 }
 
 @font-face {
@@ -42,6 +43,7 @@
     font-style: normal;
     font-weight: 600;
     src: url('font/Pretendard-SemiBold.woff') format('woff');
+    font-display: swap;
 }
 
 @font-face {
@@ -49,6 +51,7 @@
     font-style: normal;
     font-weight: 700;
     src: url('font/Pretendard-Bold.woff') format('woff');
+    font-display: swap;
 }
 
 @font-face {

@@ -343,22 +343,22 @@
   position: relative;
 }
 
-.register_button button {
+#register_submit {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 340px;
   height: 54px;
-  color: var(--gray-none);
-  border: 1px solid var(--gray-none);
+  background-color: var(--purple);
+  color: var(--white) !important;
   border-radius: 4px;
   font-size: 16px;
   font-weight: 600;
 }
 
-.register_button button.is_active {
-  border: none;
-  background-color: var(--purple);
-  color: var(--white) !important;
+#register_submit:disabled {
+  color: var(--gray-none) !important;
+  border: 1px solid var(--gray-none) !important;
+  background-color: var(--white);
 }

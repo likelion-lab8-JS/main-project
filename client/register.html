@@ -1,15 +1,13 @@
 <!DOCTYPE html>
   <html lang="ko-KR">
   <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/register.css"/>
     <link rel="stylesheet" href="./css/common.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/register/register.js" defer></script>
-    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <title>회원가입</title>
   </head>
 <body>
@@ -29,13 +27,9 @@
           <a href="#">회원가입</a>
         </li>
 
-        <span class="top_bar">|</span>
-
         <li class="topbtn_login">
           <a href="#">로그인</a>
         </li>
-
-        <span class="top_bar">|</span>
 
         <li class="topbtn_cs">
           <a href="#">
@@ -92,16 +86,20 @@
                 <label for="search" class="a11yHidden">검색어</label>
                 <input id="search" class="search_input" type="search" required placeholder="검색어를 입력해주세요" name="search"/>
               </div>
-              <button class="search_btn" type="submit"></button>
+              <button class="search_btn" type="submit" aria-label="검색어에 입력한 내용을 제출할 수 있게 해주는 버튼"></button>
             </div>
           </fieldset>
         </form>
       </article>
 
       <article class="icon_wrap">
-        <a class="icon_location" href="#"></a>
-        <a class="icon_heart" href="#"></a>
-        <a class="icon_cart" href="#"></a>
+        <div class="icon_location">
+          <!--<div class="location_box">
+            감사합니다 고객님 ㅎㅇㅎㅇ
+          </div>-->
+        </div>
+        <a class="icon_heart" href="#" aria-label="찜한 상품들의 목록을 보러갈 수 있는 아이콘"></a>
+        <a class="icon_cart" href="#" aria-label="장바구니에 담아둔 상품 목록을 보러갈 수 있는 아이콘"></a>
       </article>
     </section>
 
@@ -537,7 +535,7 @@
             <legend>주소</legend>
             <div class="register_group">
               <div class="register_input add_input">
-                <label for="add_id" class="a11yHidden">추천인 아이디</label>
+                <label for="add_id" class="a11yHidden">친구 초대 추천인 아이디</label>
                 <input id="add_id" class="register_common" type="text" placeholder="추천인 아이디를 입력해 주세요." name="add_id"/>
               </div>
               <p class="register_notice id_information">가입 후 7일 내 첫 주문 배송완료시, 친구초대 이벤트 적립금이 지급됩니다.</p>
@@ -556,7 +554,7 @@
             <legend>주소</legend>
             <div class="register_group">
               <div class="register_input add_input">
-                <label for="join_event" class="a11yHidden">추천인 아이디</label>
+                <label for="join_event" class="a11yHidden">참여 이벤트명</label>
                 <input id="join_event" class="register_common" type="text" placeholder="참여 이벤트명을 입력해 주세요." name="join_event"/>
               </div>
 
@@ -706,28 +704,28 @@
           <p>
             입점문의 : <a href="#">입정문의하기</a><span class="footer_bar">|</span>제휴문의 : <a href="#">business@karlycorp.com</a>
           </p>
-          <p>채용문의 : recruit@karlycorp    .com</p>
+          <p>채용문의 : recruit@karlycorp.com</p>
           <p>팩스 : 070 - 7500 - 6098</p>
         </div>
 
         <div class="company_sns_wrap">
-          <a class="company_sns" href="#">
+          <a class="company_sns" href="#" aria-label="회사 소식을 전하는 소셜서비스 네이버 블로그에 연결">
             <img src="./assets/icons/sns/blog.png" alt=""/>
           </a>
 
-          <a class="company_sns" href="#">
+          <a class="company_sns" href="#" aria-label="회사 소식을 전하는 소셜서비스 페이스북에 연결">
             <img src="./assets/icons/sns/faceBook.png" alt=""/>
           </a>
 
-          <a class="company_sns" href="#">
+          <a class="company_sns" href="#" aria-label="회사 소식을 전하는 소셜서비스 인스타그램에 연결">
             <img src="./assets/icons/sns/instagram.png" alt=""/>
           </a>
 
-          <a class="company_sns" href="#">
+          <a class="company_sns" href="#" aria-label="회사 소식을 전하는 소셜서비스 네이버 포스트에 연결">
             <img src="./assets/icons/sns/post.png" alt=""/>
           </a>
 
-          <a class="company_sns" href="#">
+          <a class="company_sns" href="#" aria-label="회사 소식을 전하는 소셜서비스 유튜브에 연결">
             <img src="./assets/icons/sns/youtube.png" alt=""/>
           </a>
         </div>
