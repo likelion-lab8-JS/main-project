@@ -294,7 +294,7 @@ button.close_btn img {
 .notice {
   font-size: 0.75rem;
   letter-spacing: -0.0125rem;
-  color: var(--gray-400);
+  color: #757575;
   padding-bottom: 5rem;
 }
 
