@@ -40,19 +40,29 @@ const cartModal = getNode('#cart_modal');
 const body = getNode('body');
 const btnCancel = getNode('.btn_cancel');
 const recommendProductsWrapper = getNode('.recommend_products_wrapper');
+let recentProductLink = getNode('.recent_product a');
 
 /* cart */
 recommendProductsWrapper.addEventListener('click', function(e){
   let cartButton = e.target.closest('button');
-  if (!cartButton) return;
-  e.preventDefault();
-  addClass(cartModal, 'is-active');
-  addClass(body, 'scroll_lock');
+  let productDetailLink = e.target.closest('a');
+  let productThumbnail = e.target.closest('a .product_img');
+
+  if (cartButton) {
+    e.preventDefault();
+    addClass(cartModal, 'is-active');
+    addClass(body, 'scroll_lock');
+  } else {
+    localStorage.setItem('thumbnail', productThumbnail.src);
+    localStorage.setItem('href', productDetailLink.href);
+  }
 });
 btnCancel.addEventListener('click', function (){
   removeClass(cartModal, 'is-active');
   removeClass(body, 'scroll_lock');
 });
+recentProductLink.style.background = `url(${localStorage.getItem('thumbnail')}) no-repeat 0 0 / 100%`;
+recentProductLink.href = localStorage.getItem('href');
 
 
 /* -------------------------------------------------------------------------- */
