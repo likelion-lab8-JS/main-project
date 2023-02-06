@@ -30,6 +30,7 @@
   width: 100%;
   text-align: center;
   background-color: var(--purple);
+  
 }
 
 .popup {
@@ -167,7 +168,7 @@
 
 .search_group {
   width: 400px;
-  display: relative;
+  display: relative; 
 }
 
 .search_form {
@@ -313,7 +314,7 @@
   width: 16px;
   height: 14px;
   margin-right: 12px;
-  top: -1px;
+  top: -1 px;
 }
 
 .burger {
@@ -534,7 +535,7 @@
   margin-right: 8px;
 }
 
-.alliance_payment img {
+.alliance_payment img{
   width: 102px;
   height: 32px;
   margin-right: 8px;
@@ -548,7 +549,7 @@
   width: 222px;
 }
 
-.alliance_payment {
+.alliance_payment{
   width: 270px;
 }
 
