@@ -4,9 +4,13 @@ import { getNode, recommendProductsSwiper, addClass, removeClass } from './main_
 /* -------------------------------------------------------------------------- */
 /*                                popup_beauty                                */
 /* -------------------------------------------------------------------------- */
+const body = getNode('body');
+
 window.onload = function () {
+  addClass(body, 'scroll_lock');
   getNode('.close_popup').onclick = function () {
-      getNode('#beauty_modal').style.display = "none"
+    getNode('#beauty_modal').style.display = "none";
+    removeClass(body, 'scroll_lock');
   };
 };
 
@@ -37,7 +41,6 @@ const mainBannerSwiper = new Swiper('.swiper_main_banner', {
 /* -------------------------------------------------------------------------- */
 const todaySwiper = recommendProductsSwiper('.swiper_today','.today_next','.today_prev');
 const cartModal = getNode('#cart_modal');
-const body = getNode('body');
 const btnCancel = getNode('.btn_cancel');
 const recommendProductsWrapper = getNode('.recommend_products_wrapper');
 let recentProductLink = getNode('.recent_product a');
