@@ -14,7 +14,7 @@ h2.title {
 .navigator {
   width: 267px;
   padding-right: 47px;
-  /* height: 960px; */
+  /* height: 60rem; */
   /* position: static; */
 }
 
@@ -23,7 +23,7 @@ h2.title {
   flex-direction: row;
   justify-content: space-between;
   padding: 14px 0;
-  border-bottom: 1px solid var(--gray-100);
+  border-bottom: 0.0625rem solid var(--gray-100);
 }
 
 .filter_title {
@@ -45,7 +45,7 @@ button.toggle_button {
   font-size: 16px;
   font-weight: 600;
   text-align: left;
-  border-bottom: 1px solid var(--gray-100);
+  border-bottom: 0.0625rem solid var(--gray-100);
   transition: 0.6s;
 }
 
@@ -79,7 +79,7 @@ button.toggle_button {
   background: url(../assets/icons/list/none_checked.svg) no-repeat;
   width: 24px;
   height: 24px;
-  text-indent: -9999px;
+  text-indent: -624.9375rem;
 }
 
 .none_button {
@@ -106,26 +106,26 @@ button.toggle_button {
 }
 
 .more_button img {
-  width: 18px;
-  height: 18px;
+  width: 1.125rem;
+  height: 1.125rem;
 }
 
 /* -------------------------------------------------------------------------- */
 /*                                product_list                                */
 /* -------------------------------------------------------------------------- */
 .product_list {
-  width: 783px;
+  width: 48.9375rem;
 }
 
 .tab_menu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
 }
 
 .tab_menu .order_list {
-  width: 445px;
+  width: 27.8125rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -133,7 +133,7 @@ button.toggle_button {
 }
 
 .recommendation {
-  width: 60px;
+  width: 3.75rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -142,15 +142,15 @@ button.toggle_button {
 
 .des_icon .description {
   position: absolute;
-  width: 270px;
-  top: 30px;
+  width: 16.875rem;
+  top: 1.875rem;
   left: 0;
   background-color: var(--white);
-  padding: 14px;
-  font-size: 12px;
-  line-height: 16px;
-  border: 1px solid var(--gray-300);
-  border-radius: 3px;
+  padding: 0.875rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  border: 0.0625rem solid var(--gray-300);
+  border-radius: 0.1875rem;
   display: none;
   z-index: 1;
 }
@@ -166,12 +166,12 @@ button.toggle_button {
 
 .orders::after {
   content: "";
-  width: 1px;
-  height: 13px;
+  width: 0.0625rem;
+  height: 0.8125rem;
   background-color: #757575;
   position: absolute;
-  top: 3px;
-  left: -9px;
+  top: 0.1875rem;
+  left: -0.5625rem;
 }
 
 .product_container {
@@ -181,14 +181,14 @@ button.toggle_button {
 }
 
 .product_content {
-  width: 250px;
-  margin-bottom: 40px;
+  width: 15.625rem;
+  margin-bottom: 2.5rem;
   position: relative;
 }
 
 .product_box img {
-  width: 250px;
-  height: 320px;
+  width: 15.625rem;
+  height: 20rem;
 }
 
 .text_box > a {
@@ -199,70 +199,70 @@ button.toggle_button {
 .cart_icon {
   background-color: transparent;
   position: absolute;
-  top: 260px;
-  right: 15px;
+  top: 16.25rem;
+  right: 0.9375rem;
 }
 
 .cart_icon img {
-  width: 45px;
-  height: 45px;
+  width: 2.8125rem;
+  height: 2.8125rem;
 }
 
 .product_delivery {
-  padding: 16px 0;
-  font-size: 12px;
+  padding: 1rem 0;
+  font-size: 0.75rem;
   font-weight: 600;
   color: #757575;
 }
 
 .product_price {
-  margin: 16px 0;
-  font-size: 22px;
+  margin: 1rem 0;
+  font-size: 1.375rem;
   font-weight: 600;
 }
 
 .text_box .cost {
   color: #757575;
   text-decoration: line-through;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .product_price .discount {
   color: #db3b06;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .product_description {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #757575;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .badges {
-  width: 124px;
+  width: 7.75rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 600;
 }
 
 .karly_badge {
-  width: 65px;
-  height: 26px;
-  line-height: 26px;
+  width: 4.0625rem;
+  height: 1.625rem;
+  line-height: 1.625rem;
   background: var(--gray-100);
-  border-radius: 4px;
+  border-radius: 0.25rem;
   text-align: center;
   color: var(--purple);
 }
 
 .limit_badge {
-  width: 50px;
-  height: 26px;
-  line-height: 26px;
+  width: 3.125rem;
+  height: 1.625rem;
+  line-height: 1.625rem;
   background: var(--gray-100);
-  border-radius: 4px;
+  border-radius: 0.25rem;
   text-align: center;
 }
 
@@ -270,28 +270,28 @@ button.toggle_button {
 /*                                 pagination                                 */
 /* -------------------------------------------------------------------------- */
 .pagination_wrap {
-  margin: 60px 0 80px 0;
+  margin: 3.75rem 0 5rem 0;
 }
 .pagination {
-  width: 232px;
+  width: 14.5rem;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
 }
 
 .pagination > a {
-  width: 34px;
-  height: 34px;
-  outline: 1px solid var(--gray-300);
+  width: 2.125rem;
+  height: 2.125rem;
+  outline: 0.0625rem solid var(--gray-300);
   text-align: center;
-  line-height: 34px;
+  line-height: 2.125rem;
 }
 
 .pagination > a img {
   display: block;
-  width: 10px;
-  height: 10px;
-  margin: 12px auto;
+  width: 0.625rem;
+  height: 0.625rem;
+  margin: 0.75rem auto;
 }
 
 .pagination a:hover {
