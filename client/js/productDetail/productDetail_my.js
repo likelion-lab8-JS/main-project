@@ -105,17 +105,17 @@ function goToScroll(name) {
 
 
 /* 작은 메뉴바 위치서부터 상단에 고정 */
-window.addEventListener('scroll', funtion() {
-  const posY = this.window.pageYOffset;
-  const smallMenu = this.document.querySelector('.small_header_nav').getBoundingClientRect().top;
-  const smallMenuTop = posY + smallMenu;
-  let getSmallMenu = document.querySelector('.small_header_nav');
-  if(posY > smallMenuTop) {
-    getSmallMenu.classList.remove(".a11yHidden");
-  } else {
-    getSmallMenu.classList.add(".a11yHidden");
-  }
-});
+// window.addEventListener('scroll', funtion() {
+//   const posY = this.window.pageYOffset;
+//   const smallMenu = this.document.querySelector('.small_header_nav').getBoundingClientRect().top;
+//   const smallMenuTop = posY + smallMenu;
+//   let getSmallMenu = document.querySelector('.small_header_nav');
+//   if(posY > smallMenuTop) {
+//     getSmallMenu.classList.remove(".a11yHidden");
+//   } else {
+//     getSmallMenu.classList.add(".a11yHidden");
+//   }
+// });
 /* --------------------------------- [ 네비게이션바 > 화면초점위치에 따라 버튼의 css스타일링 바뀌기 ] ---------------------------------- */
 
 window.addEventListener('scroll', function() {
