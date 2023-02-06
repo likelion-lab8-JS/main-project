@@ -293,83 +293,96 @@
   
   
   <!-- 상품 후기 -->
-  <div class="product-review-wrapper">
-    <section class="product-review-header">
-      <h2 class="product-review-title">
+  <div class="review_wrapper">
+    <section class="review_header">
+      <h2>
         상품후기
       </h2>
-      <button class="write-btn" id="write-review">
+      <button class="write_btn" id="write_review">
         후기 작성하기
       </button>
       <!--후기 작성 팝업  -->
-      <div class="review-popup-wrapper folded">
-        <div class="review-popup-header">
+      <div class="review_popup_wrapper folded">
+        <div class="review_popup_header">
           <h2>
             후기 작성
           </h2>
-          <button class="icon-close popup-close" aria-label="close_window"></button>
+          <button class="icon_close popup_close" aria-label="close_window"></button>
         </div>
     
-        <div class="review-popup-info">
+        <div class="review_popup_info">
           <img src="./assets/tangtang/thumbnail.jpg" alt=""/>
-          <p class="product-name">[풀무원] 탱탱쫄면 (4개입)</p>
+          <p class="product_name">[풀무원] 탱탱쫄면 (4개입)</p>
         </div>
-        <div class="review-popup-input">
-          <fieldset class="review-title-input-wrapper">
+        <div class="review_popup_input">
+          <fieldset class="review_title_input_wrapper">
             <label for="title">제목</label>
-            <input type="text" value="제목을 입력해 주세요" required>
+            <input type="text" placeholder="제목을 입력해 주세요" required>
           </fieldset>
           
-          <fieldset class="review-content-input-wrapper">
+          <fieldset class="review_content_input_wrapper">
             <label for="content">내용</label>
-            <textarea inputmode='text' name="content" id="review-text" maxlength="5000" required></textarea>
-            <p class="content-length-counter" id="reviewcounter">0/5000</p>  
+            <textarea inputmode='text' name="content" id="review_text" maxlength="5000" required></textarea>
+            <p class="content_length_counter" id="reviewcounter">0/5000</p>  
           </fieldset>
         </div>
+          <!-- <div id="write-review-default">
+              <p>컬리는 믿을 수 있는 후기문화를 함께 만들어가고자 합니다. 식품 등의 표시광고에 대한 법률을 준수하고자 다음과 같은 부당한 상품평에 대해서는 별도 고지 없이 임시 대처, 비공개 전환, 삭제, 적립금 회수 등의 필요한 조치가 취해 질 수 있습니다.
+              </p>
     
-        <div class="review-popup-button-wrapper">
-          <button class="btn-cancel popup-close">취소</button>
-          <button class="btn-submit">등록</button>
+              <strong>후기 작성 시 유의사항</strong>
+              <ul>
+                <li>개인의 주관적인 의견으로 인해 상품의 기능 및 효과에 대하여 오해의 소지가 있는 내용</li>
+                <li>식품/건강기능식품과 관련하여 질병의 예방 및 치료, 체중감량(다이어트)에 효능효과가 있다는 내용</li>
+                <li>일반 화장품을 기능성화장품의 효능효과가 있다는 내용을 통한 오인 표현</li>
+                <li>의약외품을 의약품으로 오인하게 하는 표현</li>
+                <li>생활화학제품을 본래 용도와 다르게 사용하는 내용 및 효능효과를 과장하는 내용</li>
+                <li>욕설, 폭력성, 음란성, 상업성 등의 게시물 또는 구매 상품과 무관하거나 반복되는 동일 단어나 문장을 사용하여 판매자나 다른 이용자의 후기 이용을 방해한다고 판단되는 경우</li>
+              </ul>
+            </div> -->
+        <div class="review_popup_button_wrapper">
+          <button class="btn_cancel popup_close">취소</button>
+          <button class="btn_submit popup_close">등록</button>
         </div>
       </div>
-      <ul class="review-benefit">
-        <span class="review-benefit-title">글후기 50원 적립금 혜택이 있어요.</span>
+      <ul class="review_benefit">
+        <span class="review_benefit_title">글후기 50원 적립금 혜택이 있어요.</span>
         <li>퍼플, 더퍼플은 2배 적립(100원) / 주간 베스트 후기로 선정 시 5,000원 추가 적립</li>
         <li>후기 작성은 배송완료일로부터 30일 이내 가능합니다.</li>
         <li>작성하신 후기는 확인 후 적립금이 지급됩니다.(영업일 기준 평균 1~2일 소요)</li>
       </ul>
     </section>
-    <div class="count-n-sort">
-      <p class="review-count">
+    <div class="count_n_sort">
+      <p class="review_count">
         총 2개
       </p>
-      <div class="sort-btns">
-        <button class="view-by-recommend">
+      <div class="sort_btns">
+        <button class="view_by_recommend">
           추천순
         </button>
-        <button class="view-by-recent">
+        <button class="view_by_recent">
           |  최근 등록순
         </button>
       </div>
     </div>
     
-    <div class="product-review-body">
-      <div class="product-review-notice">
-        <div class="notice-header">
-          <span class="notice-badge">
+    <div class="product_review_body">
+      <div class="product_review_notice">
+        <div class="notice_header">
+          <span class="notice_badge">
             공지
           </span>
-          <button class="notice-title collapsible">금주의 베스트 후기 안내</button>
+          <button class="notice_title collapsible">금주의 베스트 후기 안내</button>
         </div> 
-        <div class="notice-content folded">  
-          <img class="quest-icon" src="./assets/icons/Icon/question.svg" alt=""/>
+        <div class="notice_content folded">  
+          <img class="quest_icon" src="./assets/icons/Icon/question.svg" alt=""/>
           <div class="question">
             <p>
               스티로폼 박스도 손상되어 있어 포장이 터져 엉망이네요</br>
               환불 요청합니다.
             </p>
           </div>
-          <img class="ans-icon" src="./assets/icons/Icon/answer.svg" alt=""/>
+          <img class="ans_icon" src="./assets/icons/Icon/answer.svg" alt=""/>
           <div class="answer">
             <p>
               안녕하세요. 칼리입니다.</br>
@@ -384,28 +397,28 @@
                 칼리 드림.</br>
               </br>
             </p>
-            <p class="written-date">  
+            <p class="written_date">  
               2022. 11. 11
             </p> 
           </div>
       </div>
     </div>
-    <div class="product-review-notice">
-      <div class="notice-header">
-        <span class="notice-badge">
+    <div class="product_review_notice">
+      <div class="notice_header">
+        <span class="notice_badge">
           공지
         </span>
-        <button class="notice-title collapsible">상품 후기 적립금 정책 안내</button>
+        <button class="notice_title collapsible">상품 후기 적립금 정책 안내</button>
       </div> 
-      <div class="notice-content folded">  
-        <img class="quest-icon" src="./assets/icons/Icon/question.svg" alt=""/>
+      <div class="notice_content folded">  
+        <img class="quest_icon" src="./assets/icons/Icon/question.svg" alt=""/>
         <div class="question">
           <p>
             스티로폼 박스도 손상되어 있어 포장이 터져 엉망이네요</br>
             환불 요청합니다.
           </p>
         </div>
-        <img class="ans-icon" src="./assets/icons/Icon/answer.svg" alt=""/>
+        <img class="ans_icon" src="./assets/icons/Icon/answer.svg" alt=""/>
         <div class="answer">
           <p>
             안녕하세요. 칼리입니다.</br>
@@ -420,7 +433,7 @@
             칼리 드림.</br>
             </br>
           </p>
-          <p class="written-date">  
+          <p class="written_date">  
             2022. 11. 11
           </p> 
         </div>
@@ -429,65 +442,65 @@
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <div class="product-review-content">
-          <div class="user-info">
+        <div class="product_review_content">
+          <div class="user_info">
             <p>
-            <span class="is-best">베스트</span>
-            <span class="membership-grade">퍼플</span>
+            <span class="is_best">베스트</span>
+            <span class="membership_grade">퍼플</span>
             김*진    
             </p>
           </div>
-          <div class="review-info">
-            <p class="product-info">
+          <div class="review_info">
+            <p class="product_info">
               [풀무원] 탱탱쫄면(4개입)
             </p>
-            <p class="written-review">
+            <p class="written_review">
               너무 맛있어여~</br>
               면이 쫄깃하고 양념도 짱맛나요!!
             </p>
-            <p class="written-date">
+            <p class="written_date">
               2022. 11. 10
             </p>
           </div>
         </div>
-        <div class="product-review-content">
-          <div class="user-info">
+        <div class="product_review_content">
+          <div class="user_info">
             <p>
-            <span class="is-best">베스트</span>
-            <span class="membership-grade">퍼플</span>
+            <span class="is_best">베스트</span>
+            <span class="membership_grade">퍼플</span>
             김*진    
             </p>
           </div>
-          <div class="review-info">
-            <p class="product-info">
+          <div class="review_info">
+            <p class="product_info">
               [풀무원] 탱탱쫄면(4개입)
             </p>
-            <p class="written-review">
+            <p class="written_review">
               또 주문할 것 같습니다.</br>
               너무 맛있어요 내스타일이야~!
             </p>
-            <p class="written-date">
+            <p class="written_date">
               2022. 11. 10
             </p>
           </div>
         </div>   
-        <div class="product-review-content">
-          <div class="user-info">
+        <div class="product_review_content">
+          <div class="user_info">
             <p>
-            <span class="is-best">베스트</span>
-            <span class="membership-grade">퍼플</span>
+            <span class="is_best">베스트</span>
+            <span class="membership_grade">퍼플</span>
             김*범    
             </p>
           </div>
-          <div class="review-info">
-            <p class="product-info">
+          <div class="review_info">
+            <p class="product_info">
               [풀무원] 탱탱쫄면(4개입)
             </p>
-            <p class="written-review">
+            <p class="written_review">
               너무 맛있어여~</br>
               면이 쫄깃하고 양념도 짱맛나요!!
             </p>
-            <p class="written-date">
+            <p class="written_date">
               2022. 11. 10
             </p>
           </div>
@@ -505,60 +518,59 @@
     </div>
 
     <div class="prev_next_btn_wrapper">
-      <button class="bg-arrow_prev swiper-button-prev" aria-label="previous_page"></button>
-      <button class="bg-arrow_next swiper-button-next" aria-label="next_page"></button>
+      <button class="bg_arrow_prev swiper-button-prev" aria-label="previous_page"></button>
+      <button class="bg_arrow_next swiper-button-next" aria-label="next_page"></button>
     </div>
 
   </div>
 
   
   <!--상품 문의  -->
-  <div class="product-review-wrapper">
-    <section class="product-review-header">
-      <h2 class="product-review-title">
+  <div class="inquiry_wrapper">
+    <section class="inquiry_header">
+      <h2>
         상품문의
       </h2>
-      <button class="write-btn" id="write-inquiry">
+      <button class="write_btn" id="write_inquiry">
         문의하기
       </button>
       <!--문의 작성 팝업  -->
-      <div class="review-popup-wrapper inquiry-popup-wrapper folded">
-        <div class="review-popup-header">
+      <div class="inquiry_popup_wrapper folded">
+        <div class="inquiry_popup_header">
           <h2>
             문의 작성
           </h2>
-          <button class="icon-close popup-close" aria-label="close_window"></button>
+          <button class="icon_close popup_close" aria-label="창닫기"></button>
         </div>
     
-        <div class="review-popup-info">
+        <div class="inquiry_popup_info">
           <img src="./assets/tangtang/thumbnail.jpg" alt=""/>
-          <p class="product-name">[풀무원] 탱탱쫄면 (4개입)</p>
+          <p class="product_name">[풀무원] 탱탱쫄면 (4개입)</p>
         </div>
-        <div class="review-popup-input">
-          <fieldset class="review-title-input-wrapper">
+        <div class="inquiry_popup_input">
+          <fieldset class="inquiry_title_input_wrapper">
             <label for="title">제목</label>
-            <input type="text" value="제목을 입력해 주세요" required>
+            <input type="text" placeholder="제목을 입력해 주세요" required>
           </fieldset>
           
-          <fieldset class="review-content-input-wrapper">
+          <fieldset class="inquiry_content_input_wrapper">
             <label for="content">내용</label>
-            <textarea inputmode='text' id="inquiry-text" required maxlength="5000"
+            <textarea inputmode='text' id="inquiry_text" required maxlength="5000"
             name="content"></textarea>
             
-            <p class="content-length-counter" id="inquiry-count">0/5000</p>
+            <p class="content_length_counter" id="inquiry_count">0/5000</p>
           </fieldset>
         </div>
-        <div class="secret-checkbox">
+        <div class="secret_checkbox">
         <input type="checkbox" name="checker" id="isSecret" role="tab" aria-checked="false" tabindex="0"><label for="isSecret">비밀글로 문의하기</label>
         </div>
-        <div class="review-popup-button-wrapper">
-          <button class="btn-cancel popup-close">취소</button>
-          <button class="btn-submit">등록</button>
+        <div class="inquiry_popup_button_wrapper">
+          <button class="btn_cancel popup_close">취소</button>
+          <button class="btn_submit popup_close">등록</button>
         </div>
       </div>
-      <div class="popup-modal"></div>
-      <ul class="review-benefit">
-        <span class="review-benefit-title"></span>
+      <div class="popup_modal"></div>
+      <ul class="inquiry_benefit">
         <li>상품에 대한 문의를 남기는 공간입니다. 해당 게시판의 성격과 다른 글은 사전동의 없이 담당 게시판으로 이동될 수 있습니다.</li>
         <li>배송관련, 주문(취소/교환/환불)관련 문의 및 요청사항은 마이컬리 내 1:1 문의에 남겨주세요.</li>
       </ul>
@@ -569,37 +581,37 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide">
 
-      <table class="inquiry-table">
+      <table class="inquiry_table">
         <thead>
           <tr>
             <th class="title">제목</th>
             <th class="author">작성자</th>
-            <th class="created-date">작성일</th>
+            <th class="created_date">작성일</th>
             <th class="status">답변상태</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><span class="notice-badge">
+            <td><span class="notice_badge">
               공지
             </span>
-            <button class="notice-title collapsible-table">판매(일시)중단 제품 안내(22.11.10 업데이트)</button></td>
+            <button class="notice_title collapsible_table">판매(일시)중단 제품 안내(22.11.10 업데이트)</button></td>
             <td class="author">칼리</td>
-            <td class="created-date">2017.02.01</td>
+            <td class="created_date">2017.02.01</td>
             <td class="status">-</td>
           </tr>
         </tbody>
       </table>
 
-        <div class="notice-content folded">  
-          <img class="quest-icon" src="./assets/icons/Icon/question.svg" alt=""/>
+        <div class="notice_content folded">  
+          <img class="quest_icon" src="./assets/icons/Icon/question.svg" alt=""/>
           <div class="question">
             <p>
               스티로폼 박스도 손상되어 있어 포장이 터져 엉망이네요</br>
               환불 요청합니다.
             </p>
           </div>
-          <img class="ans-icon" src="./assets/icons/Icon/answer.svg" alt=""/>
+          <img class="ans_icon" src="./assets/icons/Icon/answer.svg" alt=""/>
           <div class="answer">
             <p>
               안녕하세요. 칼리입니다.</br>
@@ -614,32 +626,32 @@
               칼리 드림.</br>
               </br>
             </p>
-            <p class="written-date">  
+            <p class="written_date">  
               2022. 11. 11
             </p> 
           </div>
         </div>
       
-      <table class="inquiry-table">
+      <table class="inquiry_table">
         <tbody>
           <tr>
-            <td><button class="collapsible-table">팩이 터져서 왔어요</button></td>
+            <td><button class="collapsible_table">팩이 터져서 왔어요</button></td>
             <td class="author">김*식</td>
-            <td class="created-date">2022.11.11</td>
+            <td class="created_date">2022.11.11</td>
             <td class="status">답변대기</td>
           </tr>
         </tbody>
       </table>
 
-      <div class="notice-content folded">  
-        <img class="quest-icon" src="./assets/icons/Icon/question.svg" alt=""/>
+      <div class="notice_content folded">  
+        <img class="quest_icon" src="./assets/icons/Icon/question.svg" alt=""/>
         <div class="question">
           <p>
             스티로폼 박스도 손상되어 있어 포장이 터져 엉망이네요</br>
             환불 요청합니다.
           </p>
         </div>
-        <img class="ans-icon" src="./assets/icons/Icon/answer.svg" alt=""/>
+        <img class="ans_icon" src="./assets/icons/Icon/answer.svg" alt=""/>
         <div class="answer">
           <p>
             안녕하세요. 칼리입니다.</br>
@@ -654,19 +666,19 @@
             칼리 드림.</br>
             </br>
           </p>
-          <p class="written-date">  
+          <p class="written_date">  
             2022. 11. 11
           </p> 
         </div>
       </div>
 
-      <table class="inquiry-table">
+      <table class="inquiry_table">
         <tbody>
           <tr>
-            <td class="is-secret"><button class="collapsible-table">비밀글입니다.</button><img src="./assets/icons/Icon/Lock.svg" alt=""/></td>
+            <td class="is_secret"><button class="collapsible_table">비밀글입니다.</button><img src="./assets/icons/Icon/Lock.svg" alt=""/></td>
             <td class="author">김*범</td>
-            <td class="created-date">2022.09.13</td>
-            <td class="status is-answered">답변완료</td>
+            <td class="created_date">2022.09.13</td>
+            <td class="status is_answered">답변완료</td>
           </tr>
           <!-- <tr>
             <td class="is-secret"><button class="notice-title">비밀글입니다.</button><img src="./assets/icons/Icon/Lock.svg" alt="" /></td>
@@ -683,15 +695,15 @@
         </tbody>
       </table>
     
-      <div class="notice-content folded">  
-        <img class="quest-icon" src="./assets/icons/Icon/question.svg" alt=""/>
+      <div class="notice_content folded">  
+        <img class="quest_icon" src="./assets/icons/Icon/question.svg" alt=""/>
         <div class="question">
           <p>
             스티로폼 박스도 손상되어 있어 포장이 터져 엉망이네요</br>
             환불 요청합니다.
           </p>
         </div>
-        <img class="ans-icon" src="./assets/icons/Icon/answer.svg" alt=""/>
+        <img class="ans_icon" src="./assets/icons/Icon/answer.svg" alt=""/>
         <div class="answer">
           <p>
             안녕하세요. 칼리입니다.</br>
@@ -706,7 +718,7 @@
             칼리 드림.</br>
             </br>
           </p>
-          <p class="written-date">  
+          <p class="written_date">  
             2022. 11. 11
           </p> 
         </div>
@@ -723,8 +735,8 @@
 
   </div>
   <div class="prev_next_btn_wrapper">
-    <button class="bg-arrow_prev swiper-button-prev" aria-label="previous_page"></button>
-    <button class="bg-arrow_next swiper-button-next" aria-label="next_page"></button>
+    <button class="bg_arrow_prev swiper-button-prev" aria-label="previous_page"></button>
+    <button class="bg_arrow_next swiper-button-next" aria-label="next_page"></button>
   </div>
 </div>
   

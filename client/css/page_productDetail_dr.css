@@ -8,19 +8,18 @@
   font-family: 'Pretendard';
 }
 
-.product-review-wrapper {
-  /* background-color: aqua; */
+.review_wrapper, .inquiry_wrapper {
   width: 1050px;
   margin: 0 auto;
 }
 
-.product-review-header {
+.review_header, .inquiry_header {
   position: relative;
   margin-top: 56px;
   margin-bottom: 56px;
 }
 
-.write-btn {
+.write_btn {
   position: absolute;
   top: 0;
   right: 0;
@@ -31,28 +30,33 @@
   border-radius: 4px;
 }
 
-.review-benefit {
+.review_benefit_title {
+  font-size: medium;
+}
+
+
+.review_benefit , .inquiry_benefit{
   margin-top: 24px;
   font-weight: bold;
 }
 
-.review-benefit li{
+.review_benefit li, .inquiry_benefit li{
   list-style-type: disc;
   margin-left: 20px;
   font-weight: 400;
   font-size: small;
 }
 
-.count-n-sort {
+.count_n_sort {
   position: relative;
 }
 
-.review-count {
+.review_count {
   font-size: small;
   display: inline-block;
 }
 
-.sort-btns {
+.sort_btns {
   position: absolute;
   top: 0;
   right: 0;
@@ -60,30 +64,30 @@
   font-size: medium;
 }
 
-.view-by-recommend {
+.view_by_recommend {
   font-weight: bold;
   
 }
 
-.view-by-recent {
+.view_by_recent {
   color: #A6A6A6;
 }
 
-.product-review-body {
+.product_review_body {
   margin-top: 16px;
   border-top: 1px solid #000000;
   /* background-color: red; */
 }
 
 
-.notice-header {
+.notice_header {
   padding : 17px 20px;
   /* background-color: gold; */
   box-sizing: border-box;
   border-bottom: 1px solid #E1E1E1;
 }
 
-.notice-badge {
+.notice_badge {
   background-color: #e1e1e1;
   font-size: small;
   margin-right: 20px;
@@ -94,12 +98,12 @@
   border-radius: 1px;
 }
 
-.notice-title {
+.notice_title {
   font-weight: bold;
   font-size: medium;
 }
 
-.notice-content {
+.notice_content {
   font-style: normal;
   font-weight: 600;
   font-size: 12.003px;
@@ -143,7 +147,7 @@
   color: #333333;
 }
 
-.written-date {
+.written_date {
   width: 481px;
   height: 18px;
 
@@ -163,17 +167,17 @@
   left: 36px;
 }
 
-.quest-icon, .ans-icon {
+.quest_icon, .ans_icon {
   position: absolute;
   left: 20px;
  
 }
 
-.ans-icon {
+.ans_icon {
   top: 78px;
 }
 
-.is-best {
+.is_best {
   font-style: normal;
   font-weight: 600;
   font-size: 12.003px;
@@ -189,7 +193,7 @@
   
 }
 
-.membership-grade {
+.membership_grade {
   width: 21px;
   height: 18px;
   background-color: white;
@@ -205,7 +209,7 @@
   margin-left: 8px;
   margin-right: 8px;
 }
-.product-review-content {
+.product_review_content {
   font-size: 12.003px;
   padding: 20px;
   display: flex;
@@ -214,7 +218,7 @@
 }
 
 
-.user-info p {
+.user_info p {
   /* Label/Small */
   font-style: normal;
   font-weight: 600;
@@ -222,13 +226,13 @@
   /* identical to box height, or 18px */
 }
 
-.product-info {
+.product_info {
   color:#898989;
   font-weight: 600;
   line-height: 150%;
 }
 
-.review-info {
+.review_info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -240,7 +244,7 @@
   height: 114px;
 }
 
-.written-review {
+.written_review {
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -254,7 +258,7 @@
   text-align: center;
 }
 
-.bg-arrow_prev {
+.bg_arrow_prev {
   width: 56px; 
   height: 56px;                   
   background: url('../assets/icons/Icon/arrow_next.png') center / 30px no-repeat;
@@ -264,7 +268,7 @@
   flex-direction: row;
 }
 
-.bg-arrow_next {
+.bg_arrow_next {
   width: 56px; 
   height: 56px;
   background: url('../assets/icons/Icon/arrow_next.png') center / 30px no-repeat;
@@ -287,14 +291,14 @@
   left : 477px;
 }
 
-.inquiry-table {
+.inquiry_table {
   width: 1050px;
   height:auto;
 
   padding : 0px 20px;
 }
 
-.inquiry-table td {
+.inquiry_table td {
   height: 58px;
   text-align: center;
   color: #898989;
@@ -319,32 +323,28 @@ thead {
 
 }
 
-td {
-  
-}
-
 .title {
   width: 750px;
 }
 
-.author, .created-date, .status {
+.author, .created_date, .status {
   width: 100px;
 }
    
-tbody .notice-badge::before {
+tbody .notice_badge::before {
   border-top: #000000 1px solid;
 }
 
-tr td.is-secret button {
+tr td.is_secret button {
   color: #898989;
 }
 
-.is-secret img{
+.is_secret img{
   display: inline-block;
   margin-left: 20px;
 }
 
-td.is-answered {
+td.is_answered {
   color: #5F0080;
   font-size: medium;
   font-weight: 600;
@@ -355,7 +355,7 @@ tr td button {
   font-size: medium;
 }
 
-.review-popup-wrapper {
+.review_popup_wrapper , .inquiry_popup_wrapper {
   padding: 32px;
   width: 793px;
   height: 630px;
@@ -372,7 +372,7 @@ tr td button {
   z-index: 100;
 }
 
-.popup-modal {
+.popup_modal {
   position: fixed;
   top:0;
   left:0;
@@ -386,12 +386,12 @@ tr td button {
 }
 
 
-.review-popup-header {
+.review_popup_header, .inquiry_popup_header {
   position: relative;
   height: 60px;
 }    
 
-.icon-close {
+.icon_close {
   width: 30px;
   height: 30px;
   background: transparent url(../assets/icons/Icon/close_btn.svg) center / 12px no-repeat ;
@@ -400,11 +400,11 @@ tr td button {
   top: 0;
 }
 
-.product-name {
+.product_name {
   font-style: normal;
   font-weight: 600;
 }
-.review-popup-info {
+.review_popup_info , .inquiry_popup_info {
   position: relative;
   width: 729px;
   height: 104px;
@@ -413,7 +413,7 @@ tr td button {
   box-sizing: border-box;
 }
 
-.review-popup-info img {
+.review_popup_info img , .inquiry_popup_info img {
   width: 72px;
   height: 72px;
   position: absolute;
@@ -421,24 +421,24 @@ tr td button {
   left: 0;
 }
 
-.review-popup-info p {
+.review_popup_info p , .inquiry_popup_info p {
   display: inline-block;
   margin-left: 96px;
   position: relative;
   top: 40px;
 }
-.review-title-input-wrapper label{
+.review_title_input_wrapper label , .inquiry_title_input_wrapper label{
   margin-left: 8px;
   background-color: transparent;
   display: inline-block;
   margin-right: 12px;
 }
 
-.review-content-input-wrapper{
+.review_content_input_wrapper, .inquiry_content_input_wrapper {
   position: relative;
 }
 
-.review-content-input-wrapper label {
+.review_content_input_wrapper label , .inquiry_content_input_wrapper label{
   position: absolute;
   top: 8px;
   left: 8px;
@@ -455,13 +455,13 @@ textarea {
   resize: none;
 }
 
-.review-popup-input {
+.review_popup_input, .inquiry_popup_input {
   padding-top: 16px;
 
 }
 
 
-.review-title-input-wrapper input {
+.review_title_input_wrapper input , .inquiry_title_input_wrapper input {
   width: 645px;
   height: 32px;
   margin-bottom: 12px;
@@ -473,8 +473,8 @@ textarea {
   background-color: transparent;
 }
 
-/* 후기작성 팝업 버튼 */
-.review-popup-button-wrapper {
+
+.review_popup_button_wrapper, .inquiry_popup_button_wrapper {
   width: 729px;
   height: 74px;
   text-align: center;
@@ -483,7 +483,7 @@ textarea {
   gap: 12px;
 }
 
-.btn-cancel {
+.btn_cancel {
   color: #333333;
   font-weight: 600;
   font-size: 16px;
@@ -494,7 +494,7 @@ textarea {
   margin-right: 6px;
 }
 
-.btn-submit {
+.btn_submit {
   font-size: 16px;
   width: 186px;
   height: 54px;
@@ -506,7 +506,7 @@ textarea {
   
 }
 
-.content-length-counter {
+.content_length_counter {
   position: relative;
   right: 40px;
   bottom: 20px;
@@ -516,7 +516,7 @@ textarea {
 }
 
 input[type=checkbox] {
-  display:none;
+  opacity: 0;
 }
 input[type=checkbox] + label { 
   cursor: pointer; 
@@ -534,7 +534,7 @@ input[type=checkbox]:checked + label {
   display: inline-block;
 }
 
-.secret-checkbox {  
+.secret_checkbox {  
   height : 58px;
   line-height: 30px;
 }
@@ -542,5 +542,5 @@ input[type=checkbox]:checked + label {
 .folded {
   display: none;
   overflow: hidden;
-}
+}   
 
