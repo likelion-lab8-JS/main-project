@@ -91,25 +91,45 @@ getSubmitButton.addEventListener('click', clickSubmitButton);
 
 
 /*------------------------------[ 네비게이션바 > 각 영역으로 화면 초점 이동 ]------------------------------*/
-
-
-function goToScroll(name) {
-  let location = document.querySelector("." + name).offsetTop;
+function goToScrollDescription() {
+  let location = document.querySelector('.description').offsetTop;
   window.scrollTo({
     top: location,
     behavior: 'smooth'
   });
 }
-
 const btnDescription = getNode('.btn_product_description');
-const btnDetail = getNode('.btn_detail_information');
-const btnReview = getNode('.btn_product_review');
-const btnInquiry = getNode('.btn_product_inquiry');
+btnDescription.addEventListener('click', goToScrollDescription);
 
-btnDescription.addEventListener('click', goToScroll('description'));
-btnDetail.addEventListener('click', goToScroll('detail_information'));
-btnReview.addEventListener('click', goToScroll('review_wrapper'));
-btnInquiry.addEventListener('click', goToScroll('inquiry_wrapper'));
+function goToScrollDetail() {
+  let location = document.querySelector('.detail_information').offsetTop;
+  window.scrollTo({
+    top: location,
+    behavior: 'smooth'
+  });
+}
+const btnDetail = getNode('.btn_detail_information');
+btnDetail.addEventListener('click', goToScrollDetail);
+
+function goToScrollReview() {
+  let location = document.querySelector('.review_wrapper').offsetTop;
+  window.scrollTo({
+    top: location,
+    behavior: 'smooth'
+  });
+}
+const btnReview = getNode('.btn_product_review');
+btnReview.addEventListener('click', goToScrollReview);
+
+function goToScrollInquiry() {
+  let location = document.querySelector('.inquiry_wrapper').offsetTop;
+  window.scrollTo({
+    top: location,
+    behavior: 'smooth'
+  });
+}
+const btnInquiry = getNode('.btn_product_inquiry');
+btnInquiry.addEventListener('click', goToScrollInquiry);
 
 // [재확인 필요] 동률님의 리팩토링된 클래스명 확인 필요
 // 동률님 코드와 합치면, HTML파일에서 navigation의 3,4번째 버튼에 onclick연결해줘야 함
