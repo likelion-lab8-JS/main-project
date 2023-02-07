@@ -67,26 +67,6 @@ for (let i = 0; i < cancel.length; i++){
   cancel[i].addEventListener('click',quit_popup);
 }
 
-
-/** 질문글 등록 */
-
-let template = /* html */`
-<div class="notice_content folded">  
-      <img class="quest_icon" src="./assets/icons/Icon/question.svg" alt=""/>
-      <div class="question">
-        <p>
-          스티로폼 박스도 손상되어 있어 포장이 터져 엉망이네요</br>
-          환불 요청합니다.
-        </p>
-      </div>
-        <p class="written-date">  
-          2022. 11. 11
-        </p> 
-      </div>
-    </div>
-`
-
-
 /** 글자수 세기 */
 
 let rev_textarea = document.getElementById('review_text');
