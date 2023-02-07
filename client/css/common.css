@@ -81,8 +81,8 @@
   color: var(--purple);
 }
 
-
-.topbtn_register::after, .topbtn_login::after {
+.topbtn_register::after,
+.topbtn_login::after {
   content: "";
   position: absolute;
   width: 1px;
@@ -241,7 +241,36 @@
   display: block;
   width: 36px;
   height: 36px;
-  background: transparent url("../assets/icons/Icon/location.png") center / 36px no-repeat;
+  background: transparent url("../assets/icons/Icon/location.png") center / 36px 
+  no-repeat;
+}
+
+.location_box {
+  display: none;
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  background: white;
+  border: 2px solid var(--gray-400);
+  border-radius: 16px;
+  top: 35px;
+  right: 0;
+  z-index: 1;
+  padding: 10px;
+}
+
+.location_text {
+
+}
+
+.location_button {
+  text-align: center;
+  width: 100%;
+  height: 20px;
+  background-color: var(--purple);
+  color: var(--white);
+  margin-top: 10px;
+  border-radius: 4px;
 }
 
 .location_box {

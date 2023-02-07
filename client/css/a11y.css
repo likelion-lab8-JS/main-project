@@ -1,5 +1,6 @@
 /* Accessibility Styles */
-.a11y_hidden, legend {
+.a11y_hidden,
+legend {
   overflow: hidden;
   position: absolute !important;
   clip: rect(0, 0, 0, 0);

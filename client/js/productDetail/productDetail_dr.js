@@ -132,5 +132,3 @@ inq_textarea.addEventListener('input', inquiry_count);
   //   el: '.swiper-scrollbar',
   // },
 // });
-
-localStorage.setItem('test','안녕');
