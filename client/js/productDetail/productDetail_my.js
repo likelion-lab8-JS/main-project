@@ -105,6 +105,7 @@ const btnDescription = getNode('.btn_product_description');
 const btnDetail = getNode('.btn_detail_information');
 const btnReview = getNode('.btn_product_review');
 const btnInquiry = getNode('.btn_product_inquiry');
+
 btnDescription.addEventListener('click', goToScroll('description'));
 btnDetail.addEventListener('click', goToScroll('detail_information'));
 btnReview.addEventListener('click', goToScroll('review_wrapper'));
