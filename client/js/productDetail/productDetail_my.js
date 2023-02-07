@@ -113,9 +113,9 @@ function goToScroll(name) {
 //   const smallMenuTop = posY + smallMenu;
 //   let getSmallMenu = document.querySelector('.small_header_nav');
 //   if(posY > smallMenuTop) {
-//     getSmallMenu.classList.remove(".a11yHidden");
+//     getSmallMenu.classList.remove(".a11y_hidden");
 //   } else {
-//     getSmallMenu.classList.add(".a11yHidden");
+//     getSmallMenu.classList.add(".a11y_hidden");
 //   }
 // });
 
@@ -167,19 +167,13 @@ window.addEventListener('scroll', function() {
     detailBtn.classList.remove("btn_is_focus");
     reviewBtn.classList.add("btn_is_focus");
     inquiryBtn.classList.remove("btn_is_focus");
-  } else if (posY >= inquiryTop) {
+  } else {
     console.log("여기는 문의");
     descriptionBtn.classList.remove("btn_is_focus");
     detailBtn.classList.remove("btn_is_focus");
     reviewBtn.classList.remove("btn_is_focus");
     inquiryBtn.classList.add("btn_is_focus");
-  } else {
-    console.log("아무것도 아님");
-    descriptionBtn.classList.remove("btn_is_focus");
-    detailBtn.classList.remove("btn_is_focus");
-    reviewBtn.classList.remove("btn_is_focus");
-    inquiryBtn.classList.remove("btn_is_focus");
-  }
+  } 
 });
 
 /* --------------------------------- [ 장바구니 담기 버튼 클릭 > header의 장바구니 아이콘에 말풍선 띄우고 없애기 ] ---------------------------------- */
@@ -188,9 +182,9 @@ const pushCartBtn = document.querySelector('.push_cart'); // 장바구니 담기
 const modalCart = document.querySelector('.modal_cart'); // 모달창 노드 가져오기
 
 function clickPushCartBtn() {
-  modalCart.classList.remove("a11yHidden"); // 화면에 말풍선이 보이게 한다
+  modalCart.classList.remove("a11y_hidden"); // 화면에 말풍선이 보이게 한다
   setTimeout(function() {
-    modalCart.classList.add("a11yHidden"); // 특정시간후에 말풍선이 사라진다
+    modalCart.classList.add("a11y_hidden"); // 특정시간후에 말풍선이 사라진다
   }, 1300);
 }
 
