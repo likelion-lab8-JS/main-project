@@ -14,7 +14,7 @@ body {
 }
 
 body {
-  font-family: "Pretendard";
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: normal;
   background-color: #ffffff;
   margin: 0;
@@ -121,3 +121,4 @@ input::-webkit-search-results-button,
 input::-webkit-search-results-decoration {
   -webkit-appearance: none;
 }
+
