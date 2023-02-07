@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/cart.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./js/main.js" type="module"></script>
+    <script src="./js/cart/cart.js" type="module"></script>
     <title>마켓칼리</title>
   </head>
 
@@ -38,13 +38,9 @@
             <a href="#">회원가입</a>
           </li>
 
-          <span class="top_bar">|</span>
-
           <li class="topbtn_login">
             <a href="#">로그인</a>
           </li>
-
-          <span class="top_bar">|</span>
 
           <li class="topbtn_cs">
             <a href="#">
@@ -97,7 +93,7 @@
               <legend>검색</legend>
               <div class="searchForm_group">
                 <div class="search_form">
-                  <label for="search" class="a11yHidden">검색어</label>
+                  <label for="search" class="a11y_hidden">검색어</label>
                   <input
                     id="search"
                     class="search_input"
@@ -107,16 +103,36 @@
                     name="search"
                   />
                 </div>
-                <button class="search_btn" type="submit"></button>
+                <button
+                  class="search_btn"
+                  type="submit"
+                  aria-label="검색어에 입력한 내용을 제출할 수 있게 해주는 버튼"
+                ></button>
               </div>
             </fieldset>
           </form>
         </article>
 
         <article class="icon_wrap">
-          <a class="icon_location" href="#"></a>
-          <a class="icon_heart" href="#"></a>
-          <a class="icon_cart" href="#"></a>
+          <div class="icon_location">
+            <div class="location_box">
+              <p class="location_text">
+                배송지를 등록하고<br />
+                구매가능한 상품을 확인하세요
+              </p>
+              <button class="location_button">로그인</button>
+            </div>
+          </div>
+          <a
+            class="icon_heart"
+            href="#"
+            aria-label="찜한 상품들의 목록을 보러갈 수 있는 아이콘"
+          ></a>
+          <a
+            class="icon_cart"
+            href="#"
+            aria-label="장바구니에 담아둔 상품 목록을 보러갈 수 있는 아이콘"
+          ></a>
         </article>
       </section>
 
@@ -312,14 +328,8 @@
         <div class="cart_container">
           <div class="cart_list_box">
             <div class="select_menu">
-              <label for="">
-                <input type="checkbox" class="a11yHidden" />
-                <img
-                  src="./assets/icons/cart/checked_icon.svg"
-                  alt="선택하기"
-                />
-                <span class="select_all">전체선택 (0/1)</span>
-              </label>
+              <input type="checkbox" id="all_check2" name="all_check" checked />
+              <label for="all_check2">전체선택 (0/1)</label>
 
               <button class="select_delete">선택삭제</button>
             </div>
@@ -327,7 +337,7 @@
 
             <div class="cart_list">
               <div class="cart_text_box">
-                <h4 class="list_title">
+                <p class="list_title">
                   <span class="cold_storage">냉장 식품</span>
                   <button class="close_btn">
                     <img
@@ -335,17 +345,17 @@
                       alt="메뉴 접기"
                     />
                   </button>
-                </h4>
+                </p>
 
                 <ul class="product_list_box">
                   <li class="product_list">
-                    <label for="" class="checked">
-                      <input type="checkbox" class="a11yHidden" />
-                      <img
-                        src="./assets/icons/cart/checked_icon.svg"
-                        alt="선택하기"
-                      />
-                    </label>
+                    <input
+                      type="checkbox"
+                      id="sub_check1"
+                      name="sub_check"
+                      checked
+                    />
+                    <label for="sub_check1" class="a11y_hidden">선택하기</label>
 
                     <a href="#" class="product_img">
                       <img
@@ -368,7 +378,56 @@
 
                       <div class="count">1</div>
 
-                      <button class="plus_btn">
+                      <button class="plus_btn" id="btn_1">
+                        <img
+                          src="./assets/icons/cart/plus.svg"
+                          alt="수량 올리기"
+                        />
+                      </button>
+                    </div>
+                    <!-- count_box -->
+
+                    <p class="product_price">19,990원</p>
+
+                    <button class="delete_btn">
+                      <img
+                        src="./assets/icons/cart/cancle.svg"
+                        alt="상품 삭제하기"
+                      />
+                    </button>
+                  </li>
+
+                  <li class="product_list">
+                    <input
+                      type="checkbox"
+                      id="sub_check2"
+                      name="sub_check"
+                      checked
+                    />
+                    <label for="sub_check2" class="a11y_hidden">선택하기</label>
+
+                    <a href="#" class="product_img">
+                      <img
+                        src="./assets/thumbnail/product01.png"
+                        alt="[풀무원]탱탱쫄면(4개입)"
+                      />
+                    </a>
+
+                    <div class="product_name">
+                      <a href="#"> [풀무원] 탱탱쫄면 (4개입) </a>
+                    </div>
+
+                    <div class="count_box">
+                      <button class="minus_btn">
+                        <img
+                          src="./assets/icons/cart/minus.svg"
+                          alt="수량 내리기"
+                        />
+                      </button>
+
+                      <div class="count">1</div>
+
+                      <button class="plus_btn" id="btn_2">
                         <img
                           src="./assets/icons/cart/plus.svg"
                           alt="수량 올리기"
@@ -392,7 +451,7 @@
 
             <div class="cart_list">
               <div class="cart_text_box">
-                <h4 class="list_title">
+                <p class="list_title">
                   <span class="freezing_storage">냉동 식품</span>
                   <button class="close_btn">
                     <img
@@ -400,17 +459,17 @@
                       alt="메뉴 접기"
                     />
                   </button>
-                </h4>
+                </p>
 
                 <ul class="product_list_box">
                   <li class="product_list">
-                    <label for="" class="checked">
-                      <input type="checkbox" class="a11yHidden" />
-                      <img
-                        src="./assets/icons/cart/checked_icon.svg"
-                        alt="선택하기"
-                      />
-                    </label>
+                    <input
+                      type="checkbox"
+                      id="sub_check3"
+                      name="sub_check"
+                      checked
+                    />
+                    <label for="sub_check3" class="a11y_hidden">선택하기</label>
 
                     <a href="#" class="product_img">
                       <img
@@ -420,25 +479,18 @@
                     </a>
 
                     <div class="product_name">
-                      <a href="#"> [풀무원] 탱탱쫄면 (4개입) </a>
+                      <a href="#"> [풀무원] 탱탱쫄면 (4개입)</a>
                     </div>
 
                     <div class="count_box">
-                      <button class="minus_btn">
-                        <img
-                          src="./assets/icons/cart/minus.svg"
-                          alt="수량 내리기"
-                        />
-                      </button>
+                      <!--마이너스-->
+                      <button class="minus_btn">수량내리기</button>
 
+                      <!--수량-->
                       <div class="count">1</div>
 
-                      <button class="plus_btn">
-                        <img
-                          src="./assets/icons/cart/plus.svg"
-                          alt="수량 올리기"
-                        />
-                      </button>
+                      <!--증가-->
+                      <button class="plus_btn">수량올리기</button>
                     </div>
                     <!-- count_box -->
 
@@ -457,11 +509,13 @@
 
             <div class="cart_list_box">
               <div class="select_menu">
-                <label for="">
-                  <input type="checkbox" class="a11yHidden" />
-                  <img src="./assets/icons/cart/checked_icon.svg" alt="" />
-                  <span class="select_all">전체선택 (0/1)</span>
-                </label>
+                <input
+                  type="checkbox"
+                  id="all_check1"
+                  name="all_check"
+                  checked
+                />
+                <label for="all_check1">전체선택 (0/1)</label>
 
                 <button class="select_delete">선택삭제</button>
               </div>
@@ -567,10 +621,12 @@
 
             <div class="question_email">
               <p class="first">
-                비회원 문의 : <a href="">help@karlycorp.com</a>
+                비회원 문의 :
+                <a href="mailto:help@karlycorp.com">help@karlycorp.com</a>
               </p>
               <p class="second">
-                비회원 대량주문 문의 : <a href="">help@karlycorp.com</a>
+                비회원 대량주문 문의 :
+                <a href="mailto:help@karlycorp.com">help@karlycorp.com</a>
               </p>
             </div>
           </div>
@@ -608,28 +664,48 @@
               ><span class="footer_bar">|</span>제휴문의 :
               <a href="#">business@karlycorp.com</a>
             </p>
-            <p>채용문의 : recruit@karlycorp .com</p>
+            <p>채용문의 : recruit@karlycorp.com</p>
             <p>팩스 : 070 - 7500 - 6098</p>
           </div>
 
           <div class="company_sns_wrap">
-            <a class="company_sns" href="#">
+            <a
+              class="company_sns"
+              href="#"
+              aria-label="회사 소식을 전하는 소셜서비스 네이버 블로그에 연결"
+            >
               <img src="./assets/icons/sns/blog.png" alt="" />
             </a>
 
-            <a class="company_sns" href="#">
+            <a
+              class="company_sns"
+              href="#"
+              aria-label="회사 소식을 전하는 소셜서비스 페이스북에 연결"
+            >
               <img src="./assets/icons/sns/faceBook.png" alt="" />
             </a>
 
-            <a class="company_sns" href="#">
+            <a
+              class="company_sns"
+              href="#"
+              aria-label="회사 소식을 전하는 소셜서비스 인스타그램에 연결"
+            >
               <img src="./assets/icons/sns/instagram.png" alt="" />
             </a>
 
-            <a class="company_sns" href="#">
+            <a
+              class="company_sns"
+              href="#"
+              aria-label="회사 소식을 전하는 소셜서비스 네이버 포스트에 연결"
+            >
               <img src="./assets/icons/sns/post.png" alt="" />
             </a>
 
-            <a class="company_sns" href="#">
+            <a
+              class="company_sns"
+              href="#"
+              aria-label="회사 소식을 전하는 소셜서비스 유튜브에 연결"
+            >
               <img src="./assets/icons/sns/youtube.png" alt="" />
             </a>
           </div>
