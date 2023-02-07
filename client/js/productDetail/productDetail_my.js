@@ -94,7 +94,7 @@ getSubmitButton.addEventListener('click', clickSubmitButton);
 function goToScrollDescription() {
   let location = document.querySelector('.description').offsetTop;
   window.scrollTo({
-    top: location,
+    top: location-72-71,
     behavior: 'smooth'
   });
 }
