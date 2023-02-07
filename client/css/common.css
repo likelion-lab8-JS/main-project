@@ -81,8 +81,8 @@
   color: var(--purple);
 }
 
-
-.topbtn_register::after, .topbtn_login::after {
+.topbtn_register::after,
+.topbtn_login::after {
   content: "";
   position: absolute;
   width: 1px;
