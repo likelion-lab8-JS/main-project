@@ -1,72 +1,72 @@
 /* 회원 정보 (value 값 저장 할 변수) */
-let id = document.getElementById("id");
-let password = document.getElementById("password");
-let password_check = document.getElementById("password_check");
-let name = document.getElementById("name");
-let email = document.getElementById("email");
-let phone = document.getElementById("phone");
-let address = document.getElementById("address");
-let sub_address = document.getElementById("sub_address");
-let male = document.getElementById("male");
-let female = document.getElementById("female");
-let nocheck = document.getElementById("nocheck");
-let today = new Date();
-let year = document.getElementById("birth_year");
-let year_now = today.getFullYear();
-let month = document.getElementById("birth_month");
-let day = document.getElementById("birth_day");
-let recommend = document.getElementById("recommend");
-let event = document.getElementById("event");
+let id = document.getElementById("id"),
+		password = document.getElementById("password"),
+		password_check = document.getElementById("password_check"),
+		name = document.getElementById("name"),
+		email = document.getElementById("email"),
+		phone = document.getElementById("phone"),
+		address = document.getElementById("address"),
+		sub_address = document.getElementById("sub_address"),
+		gender = document.querySelector('input[name="gender"]:checked'),
+		male = document.getElementById("male"),
+		female = document.getElementById("female"),
+		nocheck = document.getElementById("nocheck"),
+		today = new Date(),
+		year = document.getElementById("birth_year"),
+		year_now = today.getFullYear(),
+		month = document.getElementById("birth_month"),
+		day = document.getElementById("birth_day"),
+		recommend = document.getElementById("recommend"),
+		event = document.getElementById("event"),
+		add_id = document.getElementById("add_id"),
+		join_event = document.getElementById("join_event");
 
 /* 정규 표현식 */
-let id_essential = /^[A-Za-z0-9]{4,20}$/
-let password_essential = /^[a-zA-Z0-9][!@#$%^*+_=()/<>?-]{8,20}$/;
-let email_essential = /^[0-9a-zA-Z]([-_]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
-let phone_essential = /^[0-9]*$/
-let year_essential = /^[0-9]/
-let month_essential = /^[0-9]/
-let day_essential = /^[0-9]/
+let id_essential = /^[A-Za-z0-9]{4,20}$/,
+		password_essential = /^[a-zA-Z0-9][!@#$%^*+_=()/<>?-]{8,20}$/,
+		email_essential = /^[0-9a-zA-Z]([-_]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i,
+		phone_essential = /^[0-9]*$/;
 
 /* validation 변수 저장 */
-let id_validation = document.getElementById("id_validation");
-let password_validation = document.getElementById("password_validation");
-let password_length = document.getElementById("password_length");
-let password_retry = document.getElementById("password_retry");
-let password_same = document.getElementById("password_same");
-let name_validation = document.getElementById("name_validation");
-let email_validation = document.getElementById("email_validation");
-let email_match = document.getElementById("email_match");
-let phone_validation = document.getElementById("phone_validation");
-let year_validation = document.getElementById("year_validation");
-let year_available = document.getElementById("year_available");
-let month_validation = document.getElementById("month_validation");
-let month_available = document.getElementById("month_available");
-let day_validation = document.getElementById("day_validation");
-let day_available = document.getElementById("day_available");
+let id_validation = document.getElementById("id_validation"),
+		password_validation = document.getElementById("password_validation"),
+		password_length = document.getElementById("password_length"),
+		password_retry = document.getElementById("password_retry"),
+		password_same = document.getElementById("password_same"),
+		name_validation = document.getElementById("name_validation"),
+		email_validation = document.getElementById("email_validation"),
+		email_match = document.getElementById("email_match"),
+		phone_validation = document.getElementById("phone_validation"),
+		year_validation = document.getElementById("year_validation"),
+		year_available = document.getElementById("year_available"),
+		month_validation = document.getElementById("month_validation"),
+		month_available = document.getElementById("month_available"),
+		day_validation = document.getElementById("day_validation"),
+		day_available = document.getElementById("day_available");
 
 /* button 변수 저장 */
-let id_overlap = document.getElementById("id_overlap");
-let email_overlap = document.getElementById("email_overlap");
-let phone_overlap = document.getElementById("phone_overlap");
-let address_search = document.getElementById("address_search");
-let address_research = document.getElementById("address_research");
-let submit = document.getElementById("register_submit");
+let id_overlap = document.getElementById("id_overlap"),
+		email_overlap = document.getElementById("email_overlap"),
+		phone_overlap = document.getElementById("phone_overlap"),
+		address_search = document.getElementById("address_search"),
+		address_research = document.getElementById("address_research"),
+		submit = document.getElementById("register_submit");
 
 /* 추천인, 이벤트 변수 저장 */
-let add_recommend = document.querySelector(".register.recommend");
-let add_event = document.querySelector(".register.event");
+let add_recommend = document.querySelector(".register.recommend"),
+		add_event = document.querySelector(".register.event");
 
 /* 이용 약관 변수 */
-let use = document.querySelector(".terms_check #terms_use");
-let privacy = document.getElementById("terms_privacy");
-let age = document.getElementById("terms_age");
-
+let use = document.getElementById("terms_use"),
+		privacy = document.getElementById("terms_privacy"),
+		receive = document.getElementById("terms_receive"),
+		age = document.getElementById("terms_age");
 /* 체크 박스 변수 */
-let check_all = document.querySelector(".terms_all input");
-let check = document.querySelectorAll(".terms_check input");
+let check_all = document.querySelector(".terms_all input"),
+		check = document.querySelectorAll(".terms_check input");
 
 id.addEventListener("keyup", event_id);
-id.addEventListener("keyup", submit_able);
+id.addEventListener("click", random_text);
 password.addEventListener("keyup", event_password);
 password_check.addEventListener("keyup", event_password_check);
 name.addEventListener("keyup", event_name);
@@ -76,7 +76,10 @@ year.addEventListener("keyup",event_year);
 month.addEventListener("keyup",event_month);
 day.addEventListener("keyup",event_day);
 
-/* 제출 버튼 활성화 */
+/* 10자리 random text 생성 함수 */
+function random_text() {
+	id.value = Math.random().toString(36).substring(2, 12);
+}
 
 function event_id() {
 	if (id.value == "" || !id_essential.test(id.value)) {
@@ -117,8 +120,6 @@ function event_password_check() {
 	}
 	submit_able();
 }
-
-
 
 function event_name() {
 	if (name.value == "") {
@@ -186,6 +187,18 @@ address_research.addEventListener("click", function () {
 	kakao_address();
 });
 
+male.addEventListener("click", function () {
+	gender.value = "male";
+})
+
+female.addEventListener("click", function () {
+	gender.value = "female";
+})
+
+nocheck.addEventListener("click", function () {
+	gender.value = "nocheck";
+})
+
 /* 출생 연도 */
 
 function event_year() {
@@ -251,7 +264,6 @@ const add = function () {
 		add_event.classList.add("none");
 	}
 }
-
 add();
 
 recommend.addEventListener("click", function () {
@@ -270,12 +282,6 @@ const agreements = {
 	terms_age: false
 }
 
-const essential_agreements = {
-	terms_use: false,
-	terms_privacy: false,
-	terms_age: false
-}
-
 check.forEach(function (item) {
 	item.addEventListener("input", toggle_check);
 });
@@ -284,6 +290,7 @@ check.forEach(function (item) {
 function toggle_check(e) {
 	const { checked, id } = e.target;
 	agreements[id] = checked;
+	submit_able();
 	all_check();
 }
 
@@ -311,26 +318,54 @@ check_all.addEventListener("click",function (e) {
 			agreements[item.id] = false;
 		});
 	}
+	submit_able();
 })
 
+/* 가입하기 버튼 활성화, 비활성화 */
 function submit_able() {
 	if (id.value, password.value, password_check.value, name.value, email.value, phone.value, address.value == ""
-	) {
+	&& use.checked, privacy.checked, age.checked == false) {
 		submit.disabled = true;
 	} else {
 		submit.disabled = false;
 	}
 }
-submit_able();
 
-/*
-form handler, method="post"
-ajax
-fetch > mdn docs
-endpoint url api 요청(?)
-crud
-try catch
-와.... 이거 가능할까?
-* 포함된 값을 data.json 으로 넘기기
-* localstorage 이용해서 random 아이디 값 생성 후 unique id값
-*/
+async function register() {
+	const user_info = {
+		id: id.value,
+		password: password.value,
+		name: name.value,
+		email: email.value,
+		phone: phone.value,
+		address: address.value,
+		sub_address: sub_address.value,
+		gender: gender.value,
+		year: year.value,
+		month: month.value,
+		day: day.value,
+		add_id: add_id.value,
+		join_event: join_event.value,
+		use: use.checked,
+		privacy: privacy.checked,
+		receive: receive.checked,
+		age: age.checked
+	};
+
+	fetch("http://localhost:3000/user_info", {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify(user_info)
+	})
+		.then((user_info) => {
+			if (user_info.ok) {
+				console.log("성공", user_info);
+			} else {
+				console.log("실패");
+			}
+		})
+}
+
+submit.addEventListener("click",register);

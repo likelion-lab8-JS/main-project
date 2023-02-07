@@ -1,4 +1,63 @@
 {
+  "user_info": [
+    {
+      "id": "limitplay",
+      "password": "rlaskqkrdl1!",
+      "name": "문창환",
+      "email": "limitplay@naver.com",
+      "phone": "01031853347",
+      "address": "경북 안동시 숲쟁이길 10-3",
+      "sub_address": "449",
+      "gender": "male",
+      "year": "1994",
+      "month": "05",
+      "day": "15",
+      "add_id": "doyoongod",
+      "join_event": "",
+      "use": true,
+      "privacy": true,
+      "receive": false,
+      "age": true
+    },
+    {
+      "id": "miyoung",
+      "password": "likelion",
+      "name": "서미영",
+      "email": "",
+      "phone": "00000000000",
+      "address": "서울 서초구 강남대로 48-3",
+      "sub_address": "",
+      "gender": "nocheck",
+      "year": "1989",
+      "month": "03",
+      "day": "09",
+      "add_id": "",
+      "join_event": "",
+      "use": true,
+      "privacy": true,
+      "receive": false,
+      "age": true
+    },
+    {
+      "id": "hayeon11",
+      "password": "gkdusdl1",
+      "name": "김하연",
+      "email": "hayeon11@gmail.com",
+      "phone": "00000000000",
+      "address": "부산 해운대구 APEC로 17",
+      "sub_address": "",
+      "gender": "female",
+      "year": "2000",
+      "month": "02",
+      "day": "07",
+      "add_id": "",
+      "join_event": "",
+      "use": true,
+      "privacy": true,
+      "receive": false,
+      "age": true
+    }
+  ],
   "products": [
     {
       "id": "product-rksk",
