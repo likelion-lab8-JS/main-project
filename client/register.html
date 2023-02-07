@@ -2,17 +2,18 @@
   <html lang="ko-KR">
   <head>
     <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>회원가입</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <meta name="keywords" content="회원가입"/>
+    <meta name="description" content="회원가입을 하는 페이지 입니다."/>
+    <meta name="og:type" content="website" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/register.css"/>
     <link rel="stylesheet" href="./css/common.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./js/main.js" type="module"></script>
-    <title>회원가입</title>
+    <script src="./js/register/register.js" type="module"></script>
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
   </head>
-
 <body>
   <header class="header_wrap">
     <section class="popup_wrap">
@@ -30,13 +31,9 @@
           <a href="#">회원가입</a>
         </li>
 
-        <span class="top_bar">|</span>
-
         <li class="topbtn_login">
           <a href="#">로그인</a>
         </li>
-
-        <span class="top_bar">|</span>
 
         <li class="topbtn_cs">
           <a href="#">
@@ -90,19 +87,24 @@
             <legend>검색</legend>
             <div class="searchForm_group">
               <div class="search_form">
-                <label for="search" class="a11yHidden">검색어</label>
+                <label for="search" class="a11y_hidden">검색어</label>
                 <input id="search" class="search_input" type="search" required placeholder="검색어를 입력해주세요" name="search"/>
               </div>
-              <button class="search_btn" type="submit"></button>
+              <button class="search_btn" type="submit" aria-label="검색어에 입력한 내용을 제출할 수 있게 해주는 버튼"></button>
             </div>
           </fieldset>
         </form>
       </article>
 
       <article class="icon_wrap">
-        <a class="icon_location" href="#"></a>
-        <a class="icon_heart" href="#"></a>
-        <a class="icon_cart" href="#"></a>
+        <div class="icon_location">
+          <div class="location_box">
+            <p class="location_text">배송지를 등록하고<br/> 구매가능한 상품을 확인하세요</p>
+            <button class="location_button">로그인</button>
+          </div>
+        </div>
+        <a class="icon_heart" href="#" aria-label="찜한 상품들의 목록을 보러갈 수 있는 아이콘"></a>
+        <a class="icon_cart" href="#" aria-label="장바구니에 담아둔 상품 목록을 보러갈 수 있는 아이콘"></a>
       </article>
     </section>
 
@@ -290,93 +292,353 @@
   </header>
 
   <section class="register_wrap">
-    <article class="register_box">
+    <article class="register_box register_container">
       <span class="register_title">회원가입</span>
       <span class="register_essential">필수입력사항</span>
 
-      <div class="register register_login">
-        <span class="register_kind">아이디</span>
+      <div class="register register_id">
+        <span class="register_kind essential">아이디</span>
 
-        <form method="POST">
+        <form method="POST" >
           <fieldset>
             <legend>아이디</legend>
             <div class="register_group">
               <div class="register_input">
-                <label for="id" class="a11yHidden">아이디</label>
-                <input id="id" class="register_common" type="text" required placeholder="아이디를 입력해주세요" name="id"/>
+                <label for="id" class="a11y_hidden">아이디</label>
+                <input id="id" class="register_common" type="text" required placeholder="아이디를 입력해주세요" name="id" minlength="4" maxlength="20"/>
               </div>
             </div>
+            <p id="id_validation" class="register_validation">4자 이상 20자 이하 영문 혹은 영문과 숫자 조합</p>
           </fieldset>
         </form>
 
-        <button class="register_overlap input_active">중복확인</button>
+        <button id="id_overlap" class="register_overlap" disabled="">중복확인</button>
       </div>
 
       <div class="register register_password">
-        <span class="register_kind">비밀번호</span>
+        <span class="register_kind essential">비밀번호</span>
 
         <form method="POST">
           <fieldset>
             <legend>비밀번호</legend>
             <div class="register_group">
               <div class="register_input">
-                <label for="password" class="a11yHidden">비밀번호</label>
-                <input id="password" class="register_common" type="password" required placeholder="비밀번호를 입력해주세요" name="password"/>
+                <label for="password" class="a11y_hidden">비밀번호</label>
+                <input id="password" class="register_common" type="password" required placeholder="비밀번호를 입력해주세요" name="password" minlength="8" maxlength="20"/>
               </div>
             </div>
+            <p id="password_validation" class="register_validation">영문,숫자,특수문자(공백 제외) 허용</p>
+            <p id="password_length" class="register_validation">8자 이상 20자 이하 입력해주세요.</p>
           </fieldset>
         </form>
       </div>
 
       <div class="register register_passwordCheck">
-        <span class="register_kind">비밀번호 확인</span>
+        <span class="register_kind essential">비밀번호 확인</span>
 
         <form method="POST">
           <fieldset>
             <legend>비밀번호 확인</legend>
             <div class="register_group">
               <div class="register_input">
-                <label for="password2" class="a11yHidden">비밀번호 확인</label>
-                <input id="password2" class="register_common" type="password" required placeholder="비밀번호를 한번 더 입력해주세요" name="password2"/>
+                <label for="password_check" class="a11y_hidden">비밀번호 확인</label>
+                <input id="password_check" class="register_common" type="password" required placeholder="비밀번호를 한번 더 입력해주세요" name="password_check"/>
               </div>
             </div>
+            <p id="password_retry" class="register_validation">바밀번호를 한번 더 입력해주세요.</p>
+            <p id="password_same" class="register_validation">바밀번호가 일치하지 않습니다.</p>
           </fieldset>
         </form>
       </div>
 
       <div class="register register_name">
-        <span class="register_kind">이름</span>
+        <span class="register_kind essential">이름</span>
 
         <form method="POST">
           <fieldset>
             <legend>이름</legend>
             <div class="register_group">
               <div class="register_input">
-                <label for="name" class="a11yHidden">이름</label>
+                <label for="name" class="a11y_hidden">이름</label>
                 <input id="name" class="register_common" type="text" required placeholder="이름을 입력해주세요" name="name"/>
               </div>
             </div>
+            <p id="name_validation" class="register_validation">이름을 입력해주세요.</p>
           </fieldset>
         </form>
       </div>
 
       <div class="register register_email">
-        <span class="register_kind">이메일</span>
+        <span class="register_kind essential">이메일</span>
 
         <form method="POST">
           <fieldset>
             <legend>이메일</legend>
             <div class="register_group">
               <div class="register_input">
-                <label for="email" class="a11yHidden">이메일</label>
-                <input id="email" class="register_common" type="text" required placeholder="이메일을 입력해주세요" name="email"/>
+                <label for="email" class="a11y_hidden">이메일</label>
+                <input id="email" class="register_common" type="text" required placeholder="예) marketkarly@karly.com" name="email"/>
               </div>
+            </div>
+            <p id="email_validation" class="register_validation">이메일을 입력해주세요.</p>
+            <p id="email_match" class="register_validation">이메일 형식으로 입력해 주세요.</p>
+          </fieldset>
+        </form>
+
+        <button id="email_overlap" class="register_overlap" disabled="">중복확인</button>
+      </div>
+
+      <div class="register register_phone">
+        <span class="register_kind essential">휴대폰</span>
+
+        <form method="POST">
+          <fieldset>
+            <legend>휴대폰</legend>
+            <div class="register_group">
+              <div class="register_input">
+                <label for="phone" class="a11y_hidden">휴대폰</label>
+                <input id="phone" class="register_common" type="text" required placeholder="숫자만 입력해주세요." name="phone" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" maxlength="11"/>
+              </div>
+            </div>
+            <p id="phone_validation" class="register_validation">휴대폰 번호를 입력해주세요.</p>
+          </fieldset>
+        </form>
+
+        <button id="phone_overlap" class="register_overlap" disabled="">인증번호 받기</button>
+      </div>
+
+      <div class="register register_address">
+        <span class="register_kind essential">주소</span>
+
+        <div class="address_wrap">
+          <button id="address_search" class="address_button">주소 검색</button>
+          <p class="register_notice">배송지에 따라 상품 정보가 달라질 수 있습니다.</p>
+        </div>
+
+        <div class="address_detail none">
+          <form method="POST">
+            <fieldset>
+              <legend>주소</legend>
+              <div class="register_group">
+                <div class="register_input">
+                  <label for="address" class="a11y_hidden">주소</label>
+                  <input id="address" class="register_common" type="text" readonly placeholder="주소를 검색해 주세요" name="address"/>
+                </div>
+
+                <div class="register_input address_input">
+                  <label for="sub_address" class="a11y_hidden">나머지주소</label>
+                  <input id="sub_address" class="register_common" type="text" placeholder="나머지 주소를 입력해주세요" name="sub_address"/>
+                </div>
+
+                <p class="register_notice">배송지에 따라 상품 정보가 달라질 수 있습니다.</p>
+              </div>
+            </fieldset>
+          </form>
+
+          <button id="address_research" class="register_overlap">재검색</button>
+        </div>
+      </div>
+
+      <div class="register register_gender">
+        <span class="register_kind">성별</span>
+
+        <form method="POST">
+          <div class="register_group">
+            <div class="register_input">
+              <label for="male" class="check_label">
+                <input id="male" class="a11y_hidden check_common" type="radio" name="gender" value="male" />
+                <span class="input_checked">
+                  <div class="input_inner"></div>
+                </span>
+                <span class="input_label">남자</span>
+              </label>
+
+              <label for="female" class="check_label">
+                <input id="female" class="a11y_hidden check_common" type="radio" name="gender" value="female" />
+                <span class="input_checked">
+                  <div class="input_inner"></div>
+                </span>
+                <span class="input_label">여자</span>
+              </label>
+
+              <label for="nocheck" class="check_label">
+                <input id="nocheck" class="a11y_hidden check_common" type="radio" name="gender" value="nocheck" checked="checked"/>
+                <span class="input_checked">
+                  <div class="input_inner"></div>
+                </span>
+                <span class="input_label">선택 안함</span>
+              </label>
+
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="register register_birth">
+        <span class="register_kind">생년월일</span>
+
+        <form method="POST">
+          <fieldset>
+            <legend>생년월일</legend>
+            <div class="register_group">
+              <div class="birth_input">
+                <label for="birth_year" class="birth_label">
+                  <input id="birth_year" class="birth_common" type="text" required placeholder="YYYY" name="birth" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
+                </label>
+                <span>/</span>
+                <label for="birth_month" class="birth_label">
+                  <input id="birth_month" class="birth_common" type="text" required placeholder="MM" name="birth" maxlength="2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
+                </label>
+                <span>/</span>
+                <label for="birth_day" class="birth_label">
+                  <input id="birth_day" class="birth_common" type="text" required placeholder="DD" name="birth" maxlength="2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
+                </label>
+              </div>
+            </div>
+            <p id="year_validation" class="register_validation">태어난 년도 4자리를 정확히 입력하세요.</p>
+            <p id="year_available" class="register_validation">태어난 년도가 유효하지 않습니다.</p>
+            <p id="month_validation" class="register_validation">태어난 월 2자리를 정확히 입력하세요.</p>
+            <p id="month_available" class="register_validation">태어난 월이 유효하지 않습니다.</p>
+            <p id="day_validation" class="register_validation">태어난 일 2자리를 정확히 입력하세요.</p>
+            <p id="day_available" class="register_validation">태어난 일이 유효하지 않습니다.</p>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="register register_add">
+        <span class="register_kind">추가입력 사항</span>
+
+        <form method="POST">
+          <div class="register_group">
+            <div class="register_input">
+              <label for="recommend" class="check_label">
+                <input id="recommend" class="a11y_hidden check_common" type="radio" name="add" value="recommend" />
+                <span class="input_checked">
+                  <div class="input_inner"></div>
+                </span>
+                <span class="input_label">친구초대 추천인 아이디</span>
+              </label>
+
+              <label for="event" class="check_label">
+                <input id="event" class="a11y_hidden check_common" type="radio" name="add" value="event" />
+                <span class="input_checked">
+                  <div class="input_inner"></div>
+                </span>
+                <span class="input_label">참여 이벤트명</span>
+              </label>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="register recommend">
+        <span class="register_kind"></span>
+
+        <form method="POST">
+          <fieldset>
+            <legend>주소</legend>
+            <div class="register_group">
+              <div class="register_input add_input">
+                <label for="add_id" class="a11y_hidden">친구 초대 추천인 아이디</label>
+                <input id="add_id" class="register_common" type="text" placeholder="추천인 아이디를 입력해 주세요." name="add_id"/>
+              </div>
+              <p class="register_notice id_information">가입 후 7일 내 첫 주문 배송완료시, 친구초대 이벤트 적립금이 지급됩니다.</p>
             </div>
           </fieldset>
         </form>
 
-        <button class="register_overlap input_active">중복확인</button>
+        <button class="register_overlap">아이디 확인</button>
       </div>
+
+      <div class="register event">
+        <span class="register_kind"></span>
+
+        <form method="POST">
+          <fieldset>
+            <legend>주소</legend>
+            <div class="register_group">
+              <div class="register_input add_input">
+                <label for="join_event" class="a11y_hidden">참여 이벤트명</label>
+                <input id="join_event" class="register_common" type="text" placeholder="참여 이벤트명을 입력해 주세요." name="join_event"/>
+              </div>
+
+              <p class="register_notice event_information">
+                추천인 아이디와 참여 이벤트명 중 하나만 선택 가능합니다.<br/>
+                가입 이후는 수정이 불가능 합니다.<br/>
+                대소문자 및 띄어쓰기에 유의해주세요.
+              </p>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </article>
+
+    <article class="terms_wrap register_container">
+      <span class="terms_title register_kind essential">
+        이용약관동의
+      </span>
+
+      <form action="/" id="form_wrap" class="terms_list">
+        <div class="terms_box">
+          <label for="terms_all" class="terms_all">
+            <input id="terms_all" class="a11y_hidden terms_common" type="checkbox" name="terms_all" value="all"/>
+            <i class="terms_checkbox"></i>
+            <span class="terms_text all">전체 동의합니다.</span>
+          </label>
+          <p class="terms_notice">
+            선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.
+          </p>
+        </div>
+
+        <div class="terms_box">
+          <label for="terms_use" class="terms_check">
+            <input id="terms_use" class="a11y_hidden terms_common" required type="checkbox" value="use"/>
+            <i class="terms_checkbox"></i>
+            <span class="terms_text">이용약관 동의 (필수)</span>
+          </label>
+          <span>
+            <a class="terms_link" href="#">약관보기</a>
+          </span>
+        </div>
+
+        <div class="terms_box">
+          <label for="terms_privacy" class="terms_check">
+            <input id="terms_privacy" class="a11y_hidden terms_common" required type="checkbox" value="privacy"/>
+            <i class="terms_checkbox"></i>
+            <span class="terms_text">개인정보 수집 · 이용 동의 (필수)</span>
+          </label>
+          <span>
+            <a class="terms_link" href="#">약관보기</a>
+          </span>
+        </div>
+
+        <div class="terms_box">
+          <label for="terms_receive" class="terms_check" >
+            <input id="terms_receive" class="a11y_hidden terms_common" type="checkbox" value="receive"/>
+            <i class="terms_checkbox"></i>
+            <span class="terms_text">무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택)</span>
+          </label>
+          <span>
+            <a class="terms_link" href="#">약관보기</a>
+          </span>
+        </div>
+
+        <div class="terms_box">
+          <label for="terms_age" class="terms_check">
+            <input id="terms_age" class="a11y_hidden terms_common" required type="checkbox" value="age"/>
+            <i class="terms_checkbox"></i>
+            <span class="terms_text">본인은 만 14세 이상입니다. (필수)</span>
+          </label>
+          <span>
+            <a class="terms_link" href="#">약관보기</a>
+          </span>
+        </div>
+      </form>
+    </article>
+
+    <article class="register_button register_container">
+      <button id="register_submit" disabled="">가입하기</button>
     </article>
   </section>
 
@@ -418,8 +680,8 @@
           </div>
 
           <div class="question_email">
-            <p class="first">비회원 문의 : <a href="">help@karlycorp.com</a></p>
-            <p class="second">비회원 대량주문 문의 : <a href="">help@karlycorp.com</a></p>
+            <p class="first">비회원 문의 : <a href="mailto:help@karlycorp.com">help@karlycorp.com</a></p>
+            <p class="second">비회원 대량주문 문의 : <a href="mailto:help@karlycorp.com">help@karlycorp.com</a></p>
           </div>
         </div>
       </article>
@@ -447,28 +709,28 @@
           <p>
             입점문의 : <a href="#">입정문의하기</a><span class="footer_bar">|</span>제휴문의 : <a href="#">business@karlycorp.com</a>
           </p>
-          <p>채용문의 : recruit@karlycorp    .com</p>
+          <p>채용문의 : recruit@karlycorp.com</p>
           <p>팩스 : 070 - 7500 - 6098</p>
         </div>
 
         <div class="company_sns_wrap">
-          <a class="company_sns" href="#">
+          <a class="company_sns" href="#" aria-label="회사 소식을 전하는 소셜서비스 네이버 블로그에 연결">
             <img src="./assets/icons/sns/blog.png" alt=""/>
           </a>
 
-          <a class="company_sns" href="#">
+          <a class="company_sns" href="#" aria-label="회사 소식을 전하는 소셜서비스 페이스북에 연결">
             <img src="./assets/icons/sns/faceBook.png" alt=""/>
           </a>
 
-          <a class="company_sns" href="#">
+          <a class="company_sns" href="#" aria-label="회사 소식을 전하는 소셜서비스 인스타그램에 연결">
             <img src="./assets/icons/sns/instagram.png" alt=""/>
           </a>
 
-          <a class="company_sns" href="#">
+          <a class="company_sns" href="#" aria-label="회사 소식을 전하는 소셜서비스 네이버 포스트에 연결">
             <img src="./assets/icons/sns/post.png" alt=""/>
           </a>
 
-          <a class="company_sns" href="#">
+          <a class="company_sns" href="#" aria-label="회사 소식을 전하는 소셜서비스 유튜브에 연결">
             <img src="./assets/icons/sns/youtube.png" alt=""/>
           </a>
         </div>
