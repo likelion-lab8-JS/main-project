@@ -71,6 +71,8 @@
 
 .view_by_recent {
   color: #A6A6A6;
+  background: url(../assets/icons/Icon/bar.svg) no-repeat left / 1px;
+  padding-left: 8px;
 }
 
 .product_review_body {
@@ -346,6 +348,8 @@ tr td.is_secret button {
 .is_secret img{
   display: inline-block;
   margin-left: 20px;
+  width: 12px;
+  height: 14px;
 }
 
 td.is_answered {

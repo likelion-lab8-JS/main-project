@@ -81,8 +81,8 @@
   color: var(--purple);
 }
 
-
-.topbtn_register::after, .topbtn_login::after {
+.topbtn_register::after,
+.topbtn_login::after {
   content: "";
   position: absolute;
   width: 1px;
@@ -172,6 +172,17 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+
+/* .search fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+} */
+
+.search_group {
+  width: 400px;
+  display: relative;
 }
 
 .search_form {
