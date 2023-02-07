@@ -348,6 +348,8 @@ tr td.is_secret button {
 .is_secret img{
   display: inline-block;
   margin-left: 20px;
+  width: 12px;
+  height: 14px;
 }
 
 td.is_answered {
