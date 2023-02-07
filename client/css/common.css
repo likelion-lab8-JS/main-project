@@ -332,6 +332,7 @@
   position: absolute;
   width: 84px;
   padding-top: 26px;
+  z-index: 2;
 }
 
 .category:hover ul {
