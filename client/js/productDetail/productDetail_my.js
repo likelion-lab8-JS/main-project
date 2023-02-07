@@ -101,6 +101,15 @@ function goToScroll(name) {
   });
 }
 
+const btnDescription = getNode('.btn_product_description');
+const btnDetail = getNode('.btn_detail_information');
+const btnReview = getNode('.btn_product_review');
+const btnInquiry = getNode('.btn_product_inquiry');
+btnDescription.addEventListener('click', goToScroll('description'));
+btnDetail.addEventListener('click', goToScroll('detail_information'));
+btnReview.addEventListener('click', goToScroll('review_wrapper'));
+btnInquiry.addEventListener('click', goToScroll('inquiry_wrapper'));
+
 // [재확인 필요] 동률님의 리팩토링된 클래스명 확인 필요
 // 동률님 코드와 합치면, HTML파일에서 navigation의 3,4번째 버튼에 onclick연결해줘야 함
 // onclick="goToScroll('클래스명')"
@@ -143,32 +152,31 @@ window.addEventListener('scroll', function() {
 
   if(posY < descriptionTop) {
     // 버튼 모두 회색
-    console.log("아무것도 아님");
+    //console.log("아무것도 아님");
     descriptionBtn.classList.remove("btn_is_focus");
     detailBtn.classList.remove("btn_is_focus");
     reviewBtn.classList.remove("btn_is_focus");
     inquiryBtn.classList.remove("btn_is_focus");
   } else if(posY >= descriptionTop && posY < detailTop) {
-    console.log("여기는 상품설명");
+    //console.log("여기는 상품설명");
     descriptionBtn.classList.add("btn_is_focus");
     detailBtn.classList.remove("btn_is_focus");
     reviewBtn.classList.remove("btn_is_focus");
     inquiryBtn.classList.remove("btn_is_focus");
   } else if(posY >= detailTop && posY < reviewTop) {
-    // detail부분
-    console.log("여기는 디테일");
+    //console.log("여기는 디테일");
     descriptionBtn.classList.remove("btn_is_focus");
     detailBtn.classList.add("btn_is_focus");
     reviewBtn.classList.remove("btn_is_focus");
     inquiryBtn.classList.remove("btn_is_focus");
   } else if(posY >= reviewTop && posY < inquiryTop) {
-    console.log("여기는 리뷰");
+    //console.log("여기는 리뷰");
     descriptionBtn.classList.remove("btn_is_focus");
     detailBtn.classList.remove("btn_is_focus");
     reviewBtn.classList.add("btn_is_focus");
     inquiryBtn.classList.remove("btn_is_focus");
   } else {
-    console.log("여기는 문의");
+    //console.log("여기는 문의");
     descriptionBtn.classList.remove("btn_is_focus");
     detailBtn.classList.remove("btn_is_focus");
     reviewBtn.classList.remove("btn_is_focus");
