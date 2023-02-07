@@ -56,6 +56,46 @@
       "privacy": true,
       "receive": false,
       "age": true
+    },
+
+    {
+      "id": "popp62v9oo",
+      "password": "12341234",
+      "name": "김개똥",
+      "email": "123123@karly.com",
+      "phone": "00000000000",
+      "address": "경기 성남시 분당구 서판교로 32",
+      "sub_address": "222",
+      "gender": "male",
+      "year": "",
+      "month": "",
+      "day": "",
+      "add_id": "",
+      "join_event": "",
+      "use": true,
+      "privacy": true,
+      "receive": false,
+      "age": true
+    },
+
+    {
+      "id": "umc6c2xwpa",
+      "password": "11111111",
+      "name": "김아무개",
+      "email": "newxiah@naver.com",
+      "phone": "00000000000",
+      "address": "전남 영광군 법성면 숲쟁이길 3",
+      "sub_address": "",
+      "gender": "nocheck",
+      "year": "",
+      "month": "",
+      "day": "",
+      "add_id": "",
+      "join_event": "",
+      "use": true,
+      "privacy": true,
+      "receive": false,
+      "age": true
     }
   ],
   "products": [
