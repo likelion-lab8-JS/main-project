@@ -8,7 +8,8 @@
   margin: 0 auto;
 }
 
-.top_bar, .logo_bar {
+.top_bar,
+.logo_bar {
   display: block;
   margin: 0 6px;
   color: var(--gray-bar);
@@ -30,7 +31,6 @@
   width: 100%;
   text-align: center;
   background-color: var(--purple);
-  
 }
 
 .popup {
@@ -80,6 +80,7 @@
 .topbtn_register {
   color: var(--purple);
 }
+
 
 .topbtn_register::after, .topbtn_login::after {
   content: "";
@@ -163,7 +164,8 @@
   margin-left: 6px;
   width: 8px;
   height: 8px;
-  background: transparent url("../assets/icons/Icon/new.png") center / 8px no-repeat;
+  background: transparent url("../assets/icons/Icon/new.png") center / 8px
+    no-repeat;
 }
 
 .search_wrap {
@@ -180,7 +182,7 @@
 
 .search_group {
   width: 400px;
-  display: relative; 
+  display: relative;
 }
 
 .search_form {
@@ -217,7 +219,8 @@
   right: 20px;
   width: 32px;
   height: 32px;
-  background: transparent url(../assets/icons/Icon/search.png) center / 32px no-repeat;
+  background: transparent url(../assets/icons/Icon/search.png) center / 32px
+    no-repeat;
   vertical-align: bottom;
 }
 
@@ -227,7 +230,7 @@
   display: flex;
 }
 
-.icon_wrap a{
+.icon_wrap a {
   display: block;
   width: 36px;
   height: 36px;
@@ -278,7 +281,8 @@
 }
 
 .icon_heart {
-  background: transparent url("../assets/icons/Icon/heart.png") center / 36px no-repeat;
+  background: transparent url("../assets/icons/Icon/heart.png") center / 36px
+    no-repeat;
   margin: 0 20px;
 }
 
@@ -287,7 +291,8 @@
 }
 
 .icon_cart {
-  background: transparent url("../assets/icons/Icon/cart.png") center / 36px no-repeat;
+  background: transparent url("../assets/icons/Icon/cart.png") center / 36px
+    no-repeat;
 }
 
 .icon_cart:hover {
@@ -460,12 +465,15 @@
   margin-top: 23px;
 }
 
-.question_kakao, .question_oneOnOne, .question_lot {
+.question_kakao,
+.question_oneOnOne,
+.question_lot {
   display: flex;
   flex-direction: row;
 }
 
-.question_oneOnOne, .question_lot {
+.question_oneOnOne,
+.question_lot {
   margin-top: 23px;
 }
 
@@ -589,7 +597,7 @@
   margin-right: 8px;
 }
 
-.alliance_payment img{
+.alliance_payment img {
   width: 102px;
   height: 32px;
   margin-right: 8px;
@@ -603,7 +611,7 @@
   width: 222px;
 }
 
-.alliance_payment{
+.alliance_payment {
   width: 270px;
 }
 
