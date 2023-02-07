@@ -135,19 +135,22 @@ btnInquiry.addEventListener('click', goToScrollInquiry);
 // 동률님 코드와 합치면, HTML파일에서 navigation의 3,4번째 버튼에 onclick연결해줘야 함
 // onclick="goToScroll('클래스명')"
 
+/*------------------------------[ header를 넘어가면 작은 메뉴바 위치서부터 상단에 고정 ]------------------------------*/
+window.addEventListener('scroll', function() {
+  // 브라우저에서 얼마나 스크롤 했는지 posY에 저장
+  const posY = this.window.pageYOffset;
+  // 현재 보이는 화면 기준으로 top좌표
+  const topOfDetailMain = this.document.querySelector('.productDetail_main').getBoundingClientRect().top;
+  const posOfDetailMain = posY + topOfDetailMain; // productDetail_main의 절대위치 저장해놓기
+  let getSmallMenu = document.querySelector('.small_header_nav');
+  if(posY < posOfDetailMain) {
+    getSmallMenu.classList.add("a11y_hidden");
+  } else {
+    getSmallMenu.classList.remove("a11y_hidden");
+  }
+});
 
-/* 작은 메뉴바 위치서부터 상단에 고정 */
-// window.addEventListener('scroll', funtion() {
-//   const posY = this.window.pageYOffset;
-//   const smallMenu = this.document.querySelector('.small_header_nav').getBoundingClientRect().top;
-//   const smallMenuTop = posY + smallMenu;
-//   let getSmallMenu = document.querySelector('.small_header_nav');
-//   if(posY > smallMenuTop) {
-//     getSmallMenu.classList.remove(".a11y_hidden");
-//   } else {
-//     getSmallMenu.classList.add(".a11y_hidden");
-//   }
-// });
+
 
 
 /* --------------------------------- [ 네비게이션바 > 화면초점위치에 따라 버튼의 css스타일링 바뀌기 ] ---------------------------------- */
