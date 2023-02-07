@@ -81,8 +81,8 @@
   color: var(--purple);
 }
 
-.topbtn_register::after,
-.topbtn_login::after {
+
+.topbtn_register::after, .topbtn_login::after {
   content: "";
   position: absolute;
   width: 1px;
@@ -241,8 +241,7 @@
   display: block;
   width: 36px;
   height: 36px;
-  background: transparent url("../assets/icons/Icon/location.png") center / 36px
-    no-repeat;
+  background: transparent url("../assets/icons/Icon/location.png") center / 36px no-repeat;
 }
 
 .location_box {
@@ -260,6 +259,7 @@
 }
 
 .location_text {
+
 }
 
 .location_button {
@@ -353,7 +353,7 @@
   background-color: var(--gray-100);
 }
 
-.category li:hover a {
+.category li:hover a{
   color: var(--purple);
 }
 
