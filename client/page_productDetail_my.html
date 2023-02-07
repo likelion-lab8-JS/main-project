@@ -2,8 +2,8 @@
 <html lang="ko-KR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>마켓칼리</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/style.css" />
@@ -13,22 +13,23 @@
   <link rel="stylesheet" href="./css/page_productDetail_my.css"> 
   <link rel="stylesheet" href="./css/page_productDetail_dr.css"> 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script type="module" src="./js/productDetail/productDetail_dr.js"></script>
-  <script defer src="./js/productDetail/productDetail_my.js"></script>
+  <script type="module" src="./js/productDetail/productDetail_my.js"></script> <!-- getNode같은 걸 가져와서 쓰려면 type="module"을 적어야함 -->
+  <script type="module" src="./js/productDetail/productDetail_dr.js"></script> <!-- getNode같은 걸 가져와서 쓰려면 type="module"을 적어야함 -->
   <script src="./js/main.js" type="module"></script>
-  <!-- Initialize Swiper -->
-<script type="module">
-  const swiper = new Swiper(".mySwiper1", {
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-</script>
+  <script type="module">
+    const swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </head>
 
 <body>
   <!-- 창환님 코드 영역 -->
+
+  <!-- 창환님 new 헤더 코드 -->
   <header class="header_wrap">
     <section class="popup_wrap">
       <div class="popup container">
@@ -44,15 +45,11 @@
         <li class="topbtn_register">
           <a href="#">회원가입</a>
         </li>
-  
-        <span class="top_bar">|</span>
-  
+
         <li class="topbtn_login">
           <a href="#">로그인</a>
         </li>
-  
-        <span class="top_bar">|</span>
-  
+
         <li class="topbtn_cs">
           <a href="#">
             고객센터
@@ -64,19 +61,19 @@
                 공지사항
               </a>
             </li>
-  
+
             <li>
               <a href="#">
                 자주하는 질문
               </a>
             </li>
-  
+
             <li>
               <a href="#">
                 1:1 문의
               </a>
             </li>
-            
+
             <li>
               <a href="#">
                 대량주문
@@ -88,12 +85,12 @@
     </section>
 
     <section class="headContent_wrap container">
-      <div class="modal_cart a11yHidden">
-          <img class="modal_img" src="assets/tangtang/detail_view.jpg" alt="">
-          <div>
-            <span class="modal_product_name">[풀무원] 탱탱쫄면 (4개입)</span>
-            <span class="modal_text">장바구니에 상품을 담았습니다.</span>
-          </div>
+      <div class="modal_cart a11y_hidden">
+        <img class="modal_img" src="assets/tangtang/detail_view.jpg" alt="">
+        <div>
+          <span class="modal_product_name">[풀무원] 탱탱쫄면 (4개입)</span>
+          <span class="modal_text">장바구니에 상품을 담았습니다.</span>
+        </div>
       </div>
       <article class="logo_wrap">
         <h1>
@@ -105,24 +102,31 @@
         <span class="logo_bar">|</span>
         <a class="beauty_part" href="#">뷰티컬리</a>
       </article>
+
       <article class="search_wrap">
         <form method="POST">
           <fieldset>
             <legend>검색</legend>
             <div class="searchForm_group">
               <div class="search_form">
-                <label for="search" class="a11yHidden">검색어</label>
+                <label for="search" class="a11y_hidden">검색어</label>
                 <input id="search" class="search_input" type="search" required placeholder="검색어를 입력해주세요" name="search"/>
               </div>
-              <button class="search_btn" type="submit"></button>
+              <button class="search_btn" type="submit" aria-label="검색어에 입력한 내용을 제출할 수 있게 해주는 버튼"></button>
             </div>
           </fieldset>
         </form>
       </article>
+
       <article class="icon_wrap">
-        <a class="icon_location" href="#"></a>
-        <a class="icon_heart" href="#"></a>
-        <a class="icon_cart" href="#"></a>
+        <div class="icon_location">
+          <div class="location_box">
+            <p class="location_text">배송지를 등록하고<br/> 구매가능한 상품을 확인하세요</p>
+            <button class="location_button">로그인</button>
+          </div>
+        </div>
+        <a class="icon_heart" href="#" aria-label="찜한 상품들의 목록을 보러갈 수 있는 아이콘"></a>
+        <a class="icon_cart" href="#" aria-label="장바구니에 담아둔 상품 목록을 보러갈 수 있는 아이콘"></a>
       </article>
     </section>
 
@@ -143,147 +147,147 @@
               <span>선물하기</span>
             </a>
           </li>
-          
+
           <li>
             <a href="#">
               <img src="./assets/icons/category/vegetable.png" alt="" />
               <span>채소</span>
             </a>
           </li>
-          
+
           <li>
             <a href="#">
               <img src="./assets/icons/category/fruit.png" alt="" />
               <span>과일 · 견과 · 쌀</span>
             </a>
           </li>
-  
+
           <li>
             <a href="#">
               <img src="./assets/icons/category/seaFood.png" alt="" />
               <span>수산 · 해산 · 건어물</span>
             </a>
           </li>
-  
+
           <li>
             <a href="#">
               <img src="./assets/icons/category/meet.png" alt="" />
               <span>정육 · 계란</span>
             </a>
           </li>
-  
+
           <li>
             <a href="#">
               <img src="./assets/icons/category/cook.png" alt="" />
               <span>국 · 반찬 · 메인요리</span>
             </a>
           </li>
-  
+
           <li>
             <a href="#">
               <img src="./assets/icons/category/salad.png" alt="" />
               <span>샐러드 · 간편식</span>
             </a>
           </li>
-  
+
           <li>
             <a href="#">
               <img src="./assets/icons/category/spice.png" alt="" />
               <span>면 · 양념 · 오일</span>
             </a>
           </li>
-          
+
           <li>
             <a href="#">
               <img src="./assets/icons/category/coffee.png" alt="" />
               <span>생수 · 음료 · 우유 · 커피</span>
             </a>
           </li>
-  
+
           <li>
             <a href="#">
               <img src="./assets/icons/category/snack.png" alt="" />
               <span>간식 · 과자 · 떡</span>
             </a>
           </li>
-  
+
           <li>
             <a href="#">
               <img src="./assets/icons/category/bakery.png" alt="" />
               <span>베이커리 · 치즈 · 델리</span>
             </a>
           </li>
-  
+
           <li>
             <a href="#">
               <img src="./assets/icons/category/health.png" alt="" />
               <span>건강식품</span>
             </a>
           </li>
-  
+
           <li>
             <a href="#">
               <img src="./assets/icons/category/wine.png" alt="" />
               <span>와인</span>
             </a>
           </li>
-          
+
           <li>
             <a href="#">
               <img src="./assets/icons/category/traditionalLiquor.png" alt="" />
               <span>전통주</span>
             </a>
           </li>
-  
+
           <li>
             <a href="#">
               <img src="./assets/icons/category/detergent.png" alt="" />
               <span>생활용품 · 리빙 · 캠핑</span>
             </a>
           </li>
-  
+
           <li>
             <a href="#">
               <img src="./assets/icons/category/skincare.png" alt="" />
               <span>스킨케어 · 메이크업</span>
             </a>
           </li>
-  
+
           <li>
             <a href="#">
               <img src="./assets/icons/category/shampoo.png" alt="" />
               <span>헤어 · 바디 · 구강</span>
             </a>
           </li>
-  
+
           <li>
             <a href="#">
               <img src="./assets/icons/category/kitchen.png" alt="" />
               <span>주방용품</span>
             </a>
           </li>
-  
+
           <li>
             <a href="#">
               <img src="./assets/icons/category/wash.png" alt="" />
               <span>가전제품</span>
             </a>
           </li>
-  
+
           <li>
             <a href="#">
               <img src="./assets/icons/category/animal.png" alt="" />
               <span>반려동물</span>
             </a>
           </li>
-  
+
           <li>
             <a href="#">
               <img src="./assets/icons/category/baby.png" alt="" />
               <span>베이비 · 키즈 · 완구</span>
             </a>
           </li>
-  
+
           <li>
             <a href="#">
               <img src="./assets/icons/category/travel.png" alt="" />
@@ -292,14 +296,14 @@
           </li>
         </ul>
       </section>
-  
+
       <div class="keyworld">
         <a href="#">신상품</a>
         <a href="#">베스트</a>
         <a href="#">알뜰쇼핑</a>
         <a href="#">특가/헤택</a>
       </div>
-  
+
       <div class="delivery">
         <a href="#">
           <span>샛별·낮</span>
@@ -309,7 +313,7 @@
     </nav>
 
     <!-- 스크롤바 내릴때 나타나는 창 -->
-    <div class="small_header_nav a11yHidden">
+    <div class="small_header_nav a11y_hidden">
       <section class="category">
           <a href="#">
             <div class="burger_wrap">
@@ -488,7 +492,7 @@
               <legend>검색</legend>
               <div class="searchForm_group">
                 <div class="small_search_form">
-                  <label for="search" class="a11yHidden">검색어</label>
+                  <label for="search" class="a11y_hidden">검색어</label>
                   <input id="search" class="small_search_input" type="search" required placeholder="검색어를 입력해주세요" name="search"/>
                   <button class="small_search_btn" type="submit"></button>
                 </div>
@@ -506,8 +510,6 @@
       </div>
     </div>
   </header>
-
-  
   <!-------------------------- 나의 코드 영역 시작 -------------------------->
   <main class="productDetail_main">
     <img class="product_image" src="assets/tangtang/detail_view.jpg" alt="탱탱쫄면 제품 이미지">
@@ -620,10 +622,10 @@
   </main>
   
   <nav class="product_navigation">
-    <button onclick="goToScroll('description')" class="btn_product_description" aria-label="상품설명">상품설명</button>
-    <button onclick="goToScroll('detail_information')"class="btn_detail_information" aria-label="상세정보">상세정보</button>
-    <button onclick="goToScroll('product-review-wrapper')" class="btn_product_review" aria-label="상품후기">후기<span>(0)</span></button>
-    <button onclick="goToScroll('product-review-wrapper')" class="btn_product_inquiry" aria-label="상품문의">문의</button>
+    <button class="btn_product_description" aria-label="상품설명">상품설명</button>
+    <button class="btn_detail_information" aria-label="상세정보">상세정보</button>
+    <button class="btn_product_review" aria-label="상품후기">후기<span>(0)</span></button>
+    <button class="btn_product_inquiry" aria-label="상품문의">문의</button>
   </nav> <!-- /product_navigation -->
 
   <section class="description">
@@ -800,7 +802,8 @@
           </span>
           <button class="notice_title collapsible">금주의 베스트 후기 안내</button>
         </div> 
-        <div class="notice_content folded">  
+      </div>
+      <div class="notice_content folded">  
           <img class="quest_icon" src="./assets/icons/Icon/question.svg" alt=""/>
           <div class="question">
             <p>
@@ -864,8 +867,8 @@
           </p> 
         </div>
     </div>
-  </div>
-  <div class="swiper mySwiper">
+    </div>
+    <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="product_review_content">
@@ -948,7 +951,8 @@
       <button class="bg_arrow_next swiper-button-next" aria-label="next_page"></button>
     </div>
 
-  </div>
+    </div>
+  </div> 
 
   
   <!--상품 문의  -->
@@ -1002,8 +1006,8 @@
       </ul>
     </section>
 
-  <!-- 문의 테이블  -->
-  <div class="swiper mySwiper">
+    <!-- 문의 테이블  -->
+    <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
 
@@ -1164,9 +1168,10 @@
     <button class="bg_arrow_prev swiper-button-prev" aria-label="previous_page"></button>
     <button class="bg_arrow_next swiper-button-next" aria-label="next_page"></button>
   </div>
-</div>
+    </div>
+  </div>
 
-<!-- 푸터 -->
+  <!-- 창환님 코드 영역-->
   <footer class="footer_wrap">
     <section class="information_wrap container">
       <article class="consumer">
@@ -1301,7 +1306,5 @@
       <p class="copyright_text">© KURLY CORP. ALL RIGHTS RESERVED</p>
     </section>
   </footer>
-
 </body>
-
 </html>
