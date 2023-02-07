@@ -1,4 +1,4 @@
-// import { getNode } from "../../lib/dom/index.js";
+import { getNode } from "../../lib/dom/index.js";
 
 /*------------------------------[ 장바구니에 얼마나 수량을 담을지 결정하는 버튼과 관련된 이벤트 함수 ]------------------------------ */
 
@@ -118,15 +118,18 @@ function goToScroll(name) {
 //     getSmallMenu.classList.add(".a11yHidden");
 //   }
 // });
+
+
 /* --------------------------------- [ 네비게이션바 > 화면초점위치에 따라 버튼의 css스타일링 바뀌기 ] ---------------------------------- */
 
 window.addEventListener('scroll', function() {
-  const posY = this.window.pageYOffset;
-  const descriptionPart = this.document.querySelector('.description').getBoundingClientRect().top;
-  const detailPart = this.document.querySelector('.detail_information').getBoundingClientRect().top;
-  const reviewPart = this.document.querySelector('.review_wrapper').getBoundingClientRect().top;
-  const inquiryPart = this.document.querySelector('.inquiry_wrapper').getBoundingClientRect().top;
+  const posY = window.pageYOffset; // 브라우저에서 얼마나 스크롤 했지
+  const descriptionPart = document.querySelector('.description').getBoundingClientRect().top; // 현재 보이는 화면 기준으로 top좌표
+  const detailPart = document.querySelector('.detail_information').getBoundingClientRect().top;
+  const reviewPart = document.querySelector('.review_wrapper').getBoundingClientRect().top;
+  const inquiryPart = document.querySelector('.inquiry_wrapper').getBoundingClientRect().top;
 
+  // 절대 위치 구하기
   const descriptionTop = posY + descriptionPart;
   const detailTop = posY + detailPart;
   const reviewTop = posY + reviewPart;
@@ -140,32 +143,42 @@ window.addEventListener('scroll', function() {
 
   if(posY < descriptionTop) {
     // 버튼 모두 회색
+    console.log("아무것도 아님");
     descriptionBtn.classList.remove("btn_is_focus");
     detailBtn.classList.remove("btn_is_focus");
     reviewBtn.classList.remove("btn_is_focus");
     inquiryBtn.classList.remove("btn_is_focus");
   } else if(posY >= descriptionTop && posY < detailTop) {
-    //console.log("여기는 상품설명");
+    console.log("여기는 상품설명");
     descriptionBtn.classList.add("btn_is_focus");
     detailBtn.classList.remove("btn_is_focus");
     reviewBtn.classList.remove("btn_is_focus");
     inquiryBtn.classList.remove("btn_is_focus");
   } else if(posY >= detailTop && posY < reviewTop) {
     // detail부분
+    console.log("여기는 디테일");
     descriptionBtn.classList.remove("btn_is_focus");
     detailBtn.classList.add("btn_is_focus");
     reviewBtn.classList.remove("btn_is_focus");
     inquiryBtn.classList.remove("btn_is_focus");
-  } else if(posY >= reviewTop && posY < inquiryPart) {
+  } else if(posY >= reviewTop && posY < inquiryTop) {
+    console.log("여기는 리뷰");
     descriptionBtn.classList.remove("btn_is_focus");
     detailBtn.classList.remove("btn_is_focus");
     reviewBtn.classList.add("btn_is_focus");
     inquiryBtn.classList.remove("btn_is_focus");
-  } else {
+  } else if (posY >= inquiryTop) {
+    console.log("여기는 문의");
     descriptionBtn.classList.remove("btn_is_focus");
     detailBtn.classList.remove("btn_is_focus");
     reviewBtn.classList.remove("btn_is_focus");
     inquiryBtn.classList.add("btn_is_focus");
+  } else {
+    console.log("아무것도 아님");
+    descriptionBtn.classList.remove("btn_is_focus");
+    detailBtn.classList.remove("btn_is_focus");
+    reviewBtn.classList.remove("btn_is_focus");
+    inquiryBtn.classList.remove("btn_is_focus");
   }
 });
 
@@ -179,7 +192,6 @@ function clickPushCartBtn() {
   setTimeout(function() {
     modalCart.classList.add("a11yHidden"); // 특정시간후에 말풍선이 사라진다
   }, 1300);
-  
 }
 
 // 장바구니 담기 버튼을 누를때마다 이벤트 발생
