@@ -2,18 +2,30 @@
 <html lang="ko-KR">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./client/css/common.css" />
   <link rel="stylesheet" href="./client/css/juhee.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script src="./js/main.js" type="module"></script>
+  <script src="./client/js/main.js" type="module"></script>
   <title>마켓칼리</title>
 </head>
 
 <body>
+  <!-- modal -->
+  <!-- popup_beauty -->
+  <div id="beauty_modal">
+    <div class="popup_container">
+      <div class="popup_beauty-container">
+        <a href="/" class="popup_beauty" title="처음 만나는 뷰티 플랫폼, 뷰티 칼리 사이트로 이동 (현재창)"></a>
+      </div>
+      <button type="button" class="close_popup_for_day">오늘 하루 안 보기</button>
+      <button type="button" class="close_popup">닫기</button>
+    </div>
+  </div>
+
+  
   <header class="header_wrap">
     <section class="popup_wrap">
       <div class="popup container">
@@ -214,14 +226,14 @@
               <span>전통주</span>
             </a>
           </li>
-  
+          
           <li>
             <a href="#">
               <img src="./client/assets/icons/category/detergent.png" alt="" />
               <span>생활용품 · 리빙 · 캠핑</span>
             </a>
           </li>
-  
+          
           <li>
             <a href="#">
               <img src="./client/assets/icons/category/skincare.png" alt="" />
@@ -294,73 +306,71 @@
   <section>
     <div class="swiper_main_banner">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><a href="/"><img src="./client/assets/banner/banner05.png" alt="이 주의 특가 한 눈에 보기 배너" /></a></div>
-        <div class="swiper-slide"><a href="/"><img src="./client/assets/banner/banner01.png" alt="칼리 과일 가게 배너" /></a></div>
-        <div class="swiper-slide"><a href="/"><img src="./client/assets/banner/banner03.png" alt="칼리 퍼플 위크 배너" /></a></div>
-        <div class="swiper-slide"><a href="/"><img src="./client/assets/banner/banner02.png" alt="이 달의 카드 혜택 배너" /></a></div>
+        <div class="swiper-slide slide_main_banner"><a href="/"><img src="./client/assets/banner/banner05.png" alt="이 주의 특가 한 눈에 보기 배너" /></a></div>
+        <div class="swiper-slide slide_main_banner"><a href="/"><img src="./client/assets/banner/banner01.png" alt="칼리 과일 가게 배너" /></a></div>
+        <div class="swiper-slide slide_main_banner"><a href="/"><img src="./client/assets/banner/banner03.png" alt="칼리 퍼플 위크 배너" /></a></div>
+        <div class="swiper-slide slide_main_banner"><a href="/"><img src="./client/assets/banner/banner02.png" alt="이 달의 카드 혜택 배너" /></a></div>
       </div>
-      <div class="swiper-button-prev main_banner_prev"></div>
-      <div class="swiper-button-next main_banner_next"></div>
+      <div class="swiper-pagination pagination_main_banner"></div>
+      <button type="button" class="swiper-button-prev main_banner_prev"></button>
+      <button type="button" class="swiper-button-next main_banner_next"></button>
     </div>
   </section>
   
   <main class="page_main">
     <!-- 오늘의 상품 추천 -->
-    <section class="today_recommend_products">
+    <section class="recommend_products">
       <h2 class="a11yHidden">오늘의 상품 추천</h2>
       <p class="recommend_products_sub">이 상품 어때요?</p>
       <div class="swiper_container">
-        <div class="swiper_recommend_products">
+        <div class="swiper_recommend_products swiper_today">
           <div class="swiper-wrapper recommend_products_wrapper">
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="./client/page_productDetail_my.html" title="[풀무원] 탱탱쫄면 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product01.png" alt="탱탱쫄면 4개입" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product01.png" class="product_img" alt="탱탱쫄면 4개입" />
                 </div>
                 <div class="product_info">
                   <div class="product_name">[풀무원] 탱탱쫄면 (4개입)</div>
                   <span class="product_price">4,980 원</span>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="/" title="[온더바디] 죠르디 시카 자석 선쿠션 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product02.png" alt="죠르디 캐릭터가 그려져 있는 선쿠션" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product02.png" class="product_img" alt="죠르디 캐릭터가 그려져 있는 선쿠션" />
                 </div>
                 <div class="product_info">
                   <div class="product_name">[온더바디] 죠르디 시카 자석 선쿠션</div>
                   <span class="product_price">32,500 원</span>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="/" title="유기농 밀키퀸 현미 4kg 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product03.png" alt="밀키퀸 현미 4kg" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product03.png" class="product_img" alt="밀키퀸 현미 4kg" />
                 </div>
                 <div class="product_info">
                   <div class="product_name">유기농 밀키퀸 현미 4kg</div>
                   <span class="product_price">25,000 원</span>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="/" title="[프로쉬] 베이비 세탁세 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product04.png" alt="스프레이형과 기본형의 세탁세" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product04.png" class="product_img" alt="스프레이형과 기본형의 세탁세" />
                 </div>
                 <div class="product_info_sale">
                   <div class="product_name">[프로쉬] 베이비 세탁세</div>
@@ -369,56 +379,56 @@
                   <div class="product_cost">24,000 원</div>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="./client/page_productDetail_my.html" title="[풀무원] 탱탱쫄면 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product01.png" alt="탱탱쫄면 4개입" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product01.png" class="product_img" alt="탱탱쫄면 4개입" />
                 </div>
                 <div class="product_info">
                   <div class="product_name">[풀무원] 탱탱쫄면 (4개입)</div>
                   <span class="product_price">4,980 원</span>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="/" title="[온더바디] 죠르디 시카 자석 선쿠션 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product02.png" alt="죠르디 캐릭터가 그려져 있는 선쿠션" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product02.png" class="product_img" alt="죠르디 캐릭터가 그려져 있는 선쿠션" />
                 </div>
                 <div class="product_info">
                   <div class="product_name">[온더바디] 죠르디 시카 자석 선쿠션</div>
                   <span class="product_price">32,500 원</span>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="/" title="유기농 밀키퀸 현미 4kg 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product03.png" alt="밀키퀸 현미 4kg" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product03.png" class="product_img" alt="밀키퀸 현미 4kg" />
                 </div>
                 <div class="product_info">
                   <div class="product_name">유기농 밀키퀸 현미 4kg</div>
                   <span class="product_price">25,000 원</span>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="/" title="[프로쉬] 베이비 세탁세 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product04.png" alt="스프레이형과 기본형의 세탁세" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product04.png" class="product_img" alt="스프레이형과 기본형의 세탁세" />
                 </div>
                 <div class="product_info_sale">
                   <div class="product_name">[프로쉬] 베이비 세탁세</div>
@@ -427,56 +437,56 @@
                   <div class="product_cost">24,000 원</div>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="./client/page_productDetail_my.html" title="[풀무원] 탱탱쫄면 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product01.png" alt="탱탱쫄면 4개입" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product01.png" class="product_img" alt="탱탱쫄면 4개입" />
                 </div>
                 <div class="product_info">
                   <div class="product_name">[풀무원] 탱탱쫄면 (4개입)</div>
                   <span class="product_price">4,980 원</span>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="/" title="[온더바디] 죠르디 시카 자석 선쿠션 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product02.png" alt="죠르디 캐릭터가 그려져 있는 선쿠션" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product02.png" class="product_img" alt="죠르디 캐릭터가 그려져 있는 선쿠션" />
                 </div>
                 <div class="product_info">
                   <div class="product_name">[온더바디] 죠르디 시카 자석 선쿠션</div>
                   <span class="product_price">32,500 원</span>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="/" title="유기농 밀키퀸 현미 4kg 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product03.png" alt="밀키퀸 현미 4kg" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product03.png" class="product_img" alt="밀키퀸 현미 4kg" />
                 </div>
                 <div class="product_info">
                   <div class="product_name">유기농 밀키퀸 현미 4kg</div>
                   <span class="product_price">25,000 원</span>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="/" title="[프로쉬] 베이비 세탁세 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product04.png" alt="스프레이형과 기본형의 세탁세" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product04.png" class="product_img" alt="스프레이형과 기본형의 세탁세" />
                 </div>
                 <div class="product_info_sale">
                   <div class="product_name">[프로쉬] 베이비 세탁세</div>
@@ -485,11 +495,42 @@
                   <div class="product_cost">24,000 원</div>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
           </div>
         </div>
-        <div class="swiper-button-prev recommend_products_prev"></div>
-        <div class="swiper-button-next recommend_products_next"></div>
+        <button class="swiper-button-prev recommend_products_prev today_prev"></button>
+        <button class="swiper-button-next recommend_products_next today_next"></button>
+      </div>
+      <!-- add_cart -->
+      <div class="popup_modal" id="cart_modal">
+        <div class="add_cart">
+          <div class="add_cart_content">
+            <div class="cart_product_name">[풀무원] 탱탱쫄면 (4개입)</div>
+            <div class="cart_product_price">4,980원</div>
+            <div class="count">
+              <button type="button" class="btn_count btn_count_minus" aria-label="수량 줄이기" aria-disabled="true"></button>
+              <div class="count_number">0</div>        
+              <button type="button" class="btn_count btn_count_plus" aria-label="수량 늘리기" ></button>
+            </div>
+          </div>
+          <div class="cart_total_saving">
+            <div class="cart_total">
+              <div class="cart_total_label">합계</div>
+              <div class="cart_total_price">00,000원</div>
+            </div>
+            <div class="cart_saving">
+              <div class="cart_saving_label">적립</div>
+              <div class="cart_saving_content">구매 시 00원 적립</div>
+            </div>
+          </div>
+          <div class="cart_btn_area">
+            <button type="button" class="btn_cancel">취소</button>
+            <button type="button" class="btn_add_cart">장바구니 담기</button>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -500,61 +541,58 @@
     </div>
 
     <!-- 할인 상품 추천 -->
-    <section class="today_recommend_products">
+    <section class="recommend_products">
       <h2 class="a11yHidden">할인 상품 추천</h2>
       <p class="recommend_products_sub">놓치면 후회할 가격</p>
       <div class="swiper_container">
-        <div class="swiper_recommend_products">
+        <div class="swiper_recommend_products swiper_sale">
           <div class="swiper-wrapper recommend_products_wrapper">
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="./client/page_productDetail_my.html" title="[풀무원] 탱탱쫄면 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product01.png" alt="탱탱쫄면 4개입" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product01.png" class="product_img" alt="탱탱쫄면 4개입" />
                 </div>
                 <div class="product_info">
                   <div class="product_name">[풀무원] 탱탱쫄면 (4개입)</div>
                   <span class="product_price">4,980 원</span>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="/" title="[온더바디] 죠르디 시카 자석 선쿠션 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product02.png" alt="죠르디 캐릭터가 그려져 있는 선쿠션" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product02.png" class="product_img" alt="죠르디 캐릭터가 그려져 있는 선쿠션" />
                 </div>
                 <div class="product_info">
                   <div class="product_name">[온더바디] 죠르디 시카 자석 선쿠션</div>
                   <span class="product_price">32,500 원</span>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="/" title="유기농 밀키퀸 현미 4kg 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product03.png" alt="밀키퀸 현미 4kg" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product03.png" class="product_img" alt="밀키퀸 현미 4kg" />
                 </div>
                 <div class="product_info">
                   <div class="product_name">유기농 밀키퀸 현미 4kg</div>
                   <span class="product_price">25,000 원</span>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="/" title="[프로쉬] 베이비 세탁세 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product04.png" alt="스프레이형과 기본형의 세탁세" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product04.png" class="product_img" alt="스프레이형과 기본형의 세탁세" />
                 </div>
                 <div class="product_info_sale">
                   <div class="product_name">[프로쉬] 베이비 세탁세</div>
@@ -563,56 +601,56 @@
                   <div class="product_cost">24,000 원</div>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="./client/page_productDetail_my.html" title="[풀무원] 탱탱쫄면 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product01.png" alt="탱탱쫄면 4개입" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product01.png" class="product_img" alt="탱탱쫄면 4개입" />
                 </div>
                 <div class="product_info">
                   <div class="product_name">[풀무원] 탱탱쫄면 (4개입)</div>
                   <span class="product_price">4,980 원</span>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="/" title="[온더바디] 죠르디 시카 자석 선쿠션 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product02.png" alt="죠르디 캐릭터가 그려져 있는 선쿠션" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product02.png" class="product_img" alt="죠르디 캐릭터가 그려져 있는 선쿠션" />
                 </div>
                 <div class="product_info">
                   <div class="product_name">[온더바디] 죠르디 시카 자석 선쿠션</div>
                   <span class="product_price">32,500 원</span>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="/" title="유기농 밀키퀸 현미 4kg 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product03.png" alt="밀키퀸 현미 4kg" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product03.png" class="product_img" alt="밀키퀸 현미 4kg" />
                 </div>
                 <div class="product_info">
                   <div class="product_name">유기농 밀키퀸 현미 4kg</div>
                   <span class="product_price">25,000 원</span>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="/" title="[프로쉬] 베이비 세탁세 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product04.png" alt="스프레이형과 기본형의 세탁세" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product04.png" class="product_img" alt="스프레이형과 기본형의 세탁세" />
                 </div>
                 <div class="product_info_sale">
                   <div class="product_name">[프로쉬] 베이비 세탁세</div>
@@ -621,56 +659,56 @@
                   <div class="product_cost">24,000 원</div>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="./client/page_productDetail_my.html" title="[풀무원] 탱탱쫄면 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product01.png" alt="탱탱쫄면 4개입" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product01.png" class="product_img" alt="탱탱쫄면 4개입" />
                 </div>
                 <div class="product_info">
                   <div class="product_name">[풀무원] 탱탱쫄면 (4개입)</div>
                   <span class="product_price">4,980 원</span>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="/" title="[온더바디] 죠르디 시카 자석 선쿠션 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product02.png" alt="죠르디 캐릭터가 그려져 있는 선쿠션" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product02.png" class="product_img" alt="죠르디 캐릭터가 그려져 있는 선쿠션" />
                 </div>
                 <div class="product_info">
                   <div class="product_name">[온더바디] 죠르디 시카 자석 선쿠션</div>
                   <span class="product_price">32,500 원</span>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="/" title="유기농 밀키퀸 현미 4kg 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product03.png" alt="밀키퀸 현미 4kg" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product03.png" class="product_img" alt="밀키퀸 현미 4kg" />
                 </div>
                 <div class="product_info">
                   <div class="product_name">유기농 밀키퀸 현미 4kg</div>
                   <span class="product_price">25,000 원</span>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
             <div class="swiper-slide recommend_products_slide">
-              <a href="/">
+              <a href="/" title="[프로쉬] 베이비 세탁세 상품 페이지로 이동">
                 <div class="product_img_container">
-                  <img src="./client/assets/thumbnail/product04.png" alt="스프레이형과 기본형의 세탁세" />
-                  <button type="button">
-                    <img src="./client/assets/icons/main/Cart.png" alt="장바구니 아이콘" />
-                  </button>
+                  <img src="./client/assets/thumbnail/product04.png" class="product_img" alt="스프레이형과 기본형의 세탁세" />
                 </div>
                 <div class="product_info_sale">
                   <div class="product_name">[프로쉬] 베이비 세탁세</div>
@@ -679,35 +717,31 @@
                   <div class="product_cost">24,000 원</div>
                 </div>
               </a>
+              <button type="button" class="btn_recommend_products">
+                <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
+              </button>
             </div>
           </div>
         </div>
-        <div class="swiper-button-prev recommend_products_prev"></div>
-        <div class="swiper-button-next recommend_products_next"></div>
+        <button class="swiper-button-prev recommend_products_prev sale_prev"></button>
+        <button class="swiper-button-next recommend_products_next sale_next"></button>
       </div>
     </section>
     <!-- 최근 본 상품 -->
     <section class="recent_products_container">
       <h2 class="recent_products_title">최근 본 상품</h2>
       <ul class="recent_products_list">
-        <li class="recent_product">product1</li>
+        <li class="recent_product">
+          <a href="" title="최근 본 상품 페이지로 이동 (현재창)"></a>
+        </li>
         <li class="recent_product">product2</li>
         <li class="recent_product">product3</li>
       </ul>
-      <button type="button" class="recent_products_prev"></button>
-      <button type="button" class="recent_products_next"></button>
+      <button type="button" class="recent_products_prev" aria-label="이전 슬라이드로 이동"></button>
+      <button type="button" class="recent_products_next" aria-label="다음 슬라이드로 이동"></button>
     </section>
   </main>
 
-  <!-- pop_up -->
-  <div class="popup_container">
-    <a href="/" class="popup_beauty">
-      <p class="a11yHidden">처음 만나는 뷰티 플랫폼</p>
-      <p class="a11yHidden">지금 바로 만나보세요!</p>
-    </a>
-    <button type="button" class="close_popup_for_day">오늘 하루 안 보기</button>
-    <button type="button" class="close_popup">닫기</button>
-  </div>
 
 
   <footer class="footer_wrap">
