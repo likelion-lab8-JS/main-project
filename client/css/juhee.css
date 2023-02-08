@@ -32,7 +32,7 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  background: url(../assets/popup_beauty/popup_img.png) no-repeat 0 0 / cover;
+  background: url(../assets/popup_beauty/popup-img.webp) no-repeat 0 0 / cover;
 }
 .popup_container button {
   width: 50%;
@@ -86,12 +86,6 @@ body {
   line-height: 1.5;
   bottom: 28px;
   left: 1436px;
-}
-
-
-/* main */
-.page_main {
-  position: relative;
 }
 
 
@@ -345,15 +339,21 @@ body {
   width: 1050px;
   margin: 40px auto;
   height: 140px;
-  background: url(../assets/banner/line-banner\ 1.png) no-repeat 0 0 / cover;
+  background: url(../assets/banner/line-banner.webp) no-repeat 0 0 / cover;
 }
 
 /* 최근 본 상품 */
+.recent_products {
+  position: absolute;
+  top: 810px;
+  right: 39px;
+  height: 1030px;
+}
 .recent_products_container {
   width: 74px;
-  position: absolute;
-  top: 193px;
-  right: 39px;
+  height: 223px;
+  position: sticky;
+  top: 50%;
   border: 1px solid var(--gray-200);
   display: flex;
   flex-flow: row wrap;
@@ -364,14 +364,16 @@ body {
 .recent_products_title {
   font-size: 12px;
   font-weight: 600;
+  white-space: nowrap;
 }
 .recent_products_list {
   width: 40px;
-  max-height: 130px;
+  height: 129px;
   overflow: hidden;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  gap: 4px;
 }
 .recent_product {
   width: 40px;
@@ -394,4 +396,10 @@ body {
   height: 18px;
   background: url(../assets/icons/main/Arrow-recent-products.svg) no-repeat;
   transform: scaleY(-1);
+}
+
+@media (max-width: 1250px){
+  .recent_products {
+    display: none;
+}
 }
