@@ -222,3 +222,4 @@ function clickPushCartBtn() {
 
 // 장바구니 담기 버튼을 누를때마다 이벤트 발생
 pushCartBtn.addEventListener('click', clickPushCartBtn);
+
