@@ -365,7 +365,7 @@ async function register() {
 			} else {
 				console.log("실패");
 			}
-		})
+		}) 
 }
 
 submit.addEventListener("click",register);

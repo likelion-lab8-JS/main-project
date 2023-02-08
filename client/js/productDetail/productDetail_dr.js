@@ -1,4 +1,5 @@
 import { getNode } from "../../lib/index.js";
+export * from "./inquiry.js"
 
 // 상품 후기 게시판 내 아코디언 메뉴 기능 
 const coll = document.getElementsByClassName("collapsible");
@@ -36,15 +37,16 @@ const modal = getNode('.popup_modal');
 const write_review = getNode('#write_review');
 const reviewpopup = getNode('.review_popup_wrapper');
 const inquirypopup = getNode('.inquiry_popup_wrapper');
+const write_inquiry = getNode('#write_inquiry');
 
+/** 후기 작성하기 팝업 띄우기 */
 const open_reviewpopup = function (){
   modal.style.display ='block';
   reviewpopup.style.display = 'block';
 }
 
 
-/** 문의하기 버튼 클릭 이벤트*/
-const write_inquiry = getNode('#write_inquiry');
+/** 문의하기 팝업 띄우기 */
 const open_inquirypopup = function (){
   modal.style.display ='block';
   inquirypopup.style.display = 'block';
@@ -90,25 +92,4 @@ rev_textarea.addEventListener('input', review_count);
 inq_textarea.addEventListener('input', inquiry_count);
 
 
-/** swiper 사용 */
-// const swiper = new Swiper('.swiper', {
-//   // Optional parameters
-//   direction: 'vertical',
-//   loop: true,
 
-//   // If we need pagination
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
-
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-
-  // And if we need scrollbar
-  // scrollbar: {
-  //   el: '.swiper-scrollbar',
-  // },
-// });

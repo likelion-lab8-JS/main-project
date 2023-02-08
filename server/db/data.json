@@ -58,6 +58,44 @@
       "age": true
     }
   ],
+  "inquiry": [
+    {
+      "id": "",
+      "title": "",
+      "content": "",
+      "is_Secret": false
+    },
+    {
+      "title": "dassdds",
+      "content": "ddddas",
+      "is_Secret": "on",
+      "id": "ajIORzO"
+    },
+    {
+      "title": "",
+      "content": "dsfafsd",
+      "is_Secret": "on",
+      "id": "_iImUFq"
+    },
+    {
+      "title": "",
+      "content": "asfd",
+      "is_Secret": "on",
+      "id": "OW7mpEy"
+    },
+    {
+      "title": "",
+      "content": "ㅁㅇㄴㄹㅇㄴㄻㄹㄴㅁㅇ",
+      "is_Secret": "on",
+      "id": "ZS_xvdT"
+    },
+    {
+      "title": "",
+      "content": "ㅁㅇㄴㄹㄻㄴㅇㄴㅁㄹㅇㅁㄴㄹㅇ",
+      "is_Secret": "on",
+      "id": "_mx97LV"
+    }
+  ],
   "products": [
     {
       "id": "product-rksk",

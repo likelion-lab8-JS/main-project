@@ -754,7 +754,7 @@
           
           <fieldset class="review_content_input_wrapper">
             <label for="content">내용</label>
-            <textarea inputmode='text' name="content" id="review_text" maxlength="5000" required></textarea>
+            <textarea name="content" id="review_text" maxlength="5000" required></textarea>
             <p class="content_length_counter" id="reviewcounter">0/5000</p>  
           </fieldset>
         </div>
@@ -986,12 +986,12 @@
         </div>
         <div class="inquiry_popup_input">
           <fieldset class="inquiry_title_input_wrapper">
-            <label for="title">제목</label>
-            <input type="text" placeholder="제목을 입력해 주세요" required>
+            <label>제목</label>
+            <input type="text" id="inquiry_title" placeholder="제목을 입력해 주세요" required>
           </fieldset>
           
           <fieldset class="inquiry_content_input_wrapper">
-            <label for="content">내용</label>
+            <label>내용</label>
             <textarea inputmode='text' id="inquiry_text" required maxlength="5000"
             name="content"></textarea>
             
@@ -1003,7 +1003,7 @@
         </div>
         <div class="inquiry_popup_button_wrapper">
           <button class="btn_cancel popup_close">취소</button>
-          <button class="btn_submit popup_close">등록</button>
+          <button class="btn_submit popup_close" id="post_inquiry">등록</button>
         </div>
       </div>
       <div class="popup_modal"></div>
@@ -1244,7 +1244,7 @@
             주소 : 서울특별시 강남구 테헤란로 133, 18층(역삼동)<span class="footer_bar">|</span>대표이사 : 김슬아
           </p>
           <p>
-            입점문의 : <a href="#">입정문의하기</a><span class="footer_bar">|</span>제휴문의 : <a href="#">business@karlycorp.com</a>
+            입점문의 : <a href="#">입점문의하기</a><span class="footer_bar">|</span>제휴문의 : <a href="#">business@karlycorp.com</a>
           </p>
           <p>채용문의 : recruit@karlycorp.com</p>
           <p>팩스 : 070 - 7500 - 6098</p>
