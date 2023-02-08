@@ -359,15 +359,10 @@ async function register() {
 		headers: {
 			"Content-Type": "application/json",
 		},
-		body: JSON.stringify(user_info)
+		body: JSON.stringify(user_info),
 	})
-		.then((user_info) => {
-			if (user_info.ok) {
-				console.log("성공", user_info);
-			} else {
-				console.log("실패");
-			}
-		})
+		.then((user_info) => user_info.json())
+		.then((data) => console.log(data));
 }
 
 submit.addEventListener("click", register);
