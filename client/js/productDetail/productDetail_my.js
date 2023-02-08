@@ -91,43 +91,66 @@ getSubmitButton.addEventListener('click', clickSubmitButton);
 
 
 /*------------------------------[ 네비게이션바 > 각 영역으로 화면 초점 이동 ]------------------------------*/
+function goToScrollDescription() {
+  let location = document.querySelector('.description').offsetTop;
+  window.scrollTo({
+    top: location-72-71,
+    behavior: 'smooth'
+  });
+}
+const btnDescription = getNode('.btn_product_description');
+btnDescription.addEventListener('click', goToScrollDescription);
 
-
-function goToScroll(name) {
-  let location = document.querySelector("." + name).offsetTop;
+function goToScrollDetail() {
+  let location = document.querySelector('.detail_information').offsetTop;
   window.scrollTo({
     top: location,
     behavior: 'smooth'
   });
 }
-
-const btnDescription = getNode('.btn_product_description');
 const btnDetail = getNode('.btn_detail_information');
-const btnReview = getNode('.btn_product_review');
-const btnInquiry = getNode('.btn_product_inquiry');
+btnDetail.addEventListener('click', goToScrollDetail);
 
-btnDescription.addEventListener('click', goToScroll('description'));
-btnDetail.addEventListener('click', goToScroll('detail_information'));
-btnReview.addEventListener('click', goToScroll('review_wrapper'));
-btnInquiry.addEventListener('click', goToScroll('inquiry_wrapper'));
+function goToScrollReview() {
+  let location = document.querySelector('.review_wrapper').offsetTop;
+  window.scrollTo({
+    top: location,
+    behavior: 'smooth'
+  });
+}
+const btnReview = getNode('.btn_product_review');
+btnReview.addEventListener('click', goToScrollReview);
+
+function goToScrollInquiry() {
+  let location = document.querySelector('.inquiry_wrapper').offsetTop;
+  window.scrollTo({
+    top: location,
+    behavior: 'smooth'
+  });
+}
+const btnInquiry = getNode('.btn_product_inquiry');
+btnInquiry.addEventListener('click', goToScrollInquiry);
 
 // [재확인 필요] 동률님의 리팩토링된 클래스명 확인 필요
 // 동률님 코드와 합치면, HTML파일에서 navigation의 3,4번째 버튼에 onclick연결해줘야 함
 // onclick="goToScroll('클래스명')"
 
+/*------------------------------[ header를 넘어가면 작은 메뉴바 위치서부터 상단에 고정 ]------------------------------*/
+window.addEventListener('scroll', function() {
+  // 브라우저에서 얼마나 스크롤 했는지 posY에 저장
+  const posY = this.window.pageYOffset;
+  // 현재 보이는 화면 기준으로 top좌표
+  const topOfDetailMain = this.document.querySelector('.productDetail_main').getBoundingClientRect().top;
+  const posOfDetailMain = posY + topOfDetailMain; // productDetail_main의 절대위치 저장해놓기
+  let getSmallMenu = document.querySelector('.small_header_nav');
+  if(posY < posOfDetailMain) {
+    getSmallMenu.classList.add("a11y_hidden");
+  } else {
+    getSmallMenu.classList.remove("a11y_hidden");
+  }
+});
 
-/* 작은 메뉴바 위치서부터 상단에 고정 */
-// window.addEventListener('scroll', funtion() {
-//   const posY = this.window.pageYOffset;
-//   const smallMenu = this.document.querySelector('.small_header_nav').getBoundingClientRect().top;
-//   const smallMenuTop = posY + smallMenu;
-//   let getSmallMenu = document.querySelector('.small_header_nav');
-//   if(posY > smallMenuTop) {
-//     getSmallMenu.classList.remove(".a11y_hidden");
-//   } else {
-//     getSmallMenu.classList.add(".a11y_hidden");
-//   }
-// });
+
 
 
 /* --------------------------------- [ 네비게이션바 > 화면초점위치에 따라 버튼의 css스타일링 바뀌기 ] ---------------------------------- */
@@ -199,3 +222,4 @@ function clickPushCartBtn() {
 
 // 장바구니 담기 버튼을 누를때마다 이벤트 발생
 pushCartBtn.addEventListener('click', clickPushCartBtn);
+
