@@ -1,4 +1,4 @@
-import { getNode, recommendProductsSwiper, addClass, removeClass } from './main_page/index.js'
+import { getNode, recommendProductsSwiper, addClass, removeClass, getNodes } from './main_page/index.js'
 
 
 /* -------------------------------------------------------------------------- */
@@ -33,7 +33,13 @@ const mainBannerSwiper = new Swiper('.swiper_main_banner', {
     nextEl: '.main_banner_next',
     prevEl: '.main_banner_prev',
   },
-})
+});
+let mainBanners = getNodes('.slide_main_banner');
+mainBanners.forEach(node => {
+  if (node.classList.contains('swiper-slide-duplicate')) {
+    node.tabindex = '-1';
+  }
+});
 
 
 /* -------------------------------------------------------------------------- */
@@ -44,6 +50,7 @@ const cartModal = getNode('#cart_modal');
 const btnCancel = getNode('.btn_cancel');
 const recommendProductsWrapper = getNode('.recommend_products_wrapper');
 let recentProductLink = getNode('.recent_product a');
+const recentProducts = getNode('.recent_products');
 
 /* cart */
 recommendProductsWrapper.addEventListener('click', function(e){
@@ -64,11 +71,19 @@ btnCancel.addEventListener('click', function (){
   removeClass(cartModal, 'is-active');
   removeClass(body, 'scroll_lock');
 });
-recentProductLink.style.background = `url(${localStorage.getItem('thumbnail')}) no-repeat 0 0 / 100%`;
-recentProductLink.href = localStorage.getItem('href');
 
 
 /* -------------------------------------------------------------------------- */
 /*                                  할인 상품 추천                                  */
 /* -------------------------------------------------------------------------- */
 const saleSwiper = recommendProductsSwiper('.swiper_sale','.sale_next','.sale_prev');
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   최근 본 항목                                  */
+/* -------------------------------------------------------------------------- */
+if (localStorage.getItem('thumbnail')) {
+  recentProducts.hidden = false;
+  recentProductLink.style.background = `url(${localStorage.getItem('thumbnail')}) no-repeat 0 0 / 100%`;
+  recentProductLink.href = localStorage.getItem('href');
+}
