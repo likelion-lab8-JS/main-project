@@ -56,6 +56,167 @@
       "privacy": true,
       "receive": false,
       "age": true
+<<<<<<< HEAD
+    },
+    {
+      "id": "popp62v9oo",
+      "password": "12341234",
+      "name": "김개똥",
+      "email": "123123@karly.com",
+      "phone": "00000000000",
+      "address": "경기 성남시 분당구 서판교로 32",
+      "sub_address": "222",
+      "gender": "male",
+      "year": "",
+      "month": "",
+      "day": "",
+      "add_id": "",
+      "join_event": "",
+      "use": true,
+      "privacy": true,
+      "receive": false,
+      "age": true
+    },
+    {
+      "id": "umc6c2xwpa",
+      "password": "11111111",
+      "name": "김아무개",
+      "email": "newxiah@naver.com",
+      "phone": "00000000000",
+      "address": "전남 영광군 법성면 숲쟁이길 3",
+      "sub_address": "",
+      "gender": "nocheck",
+      "year": "",
+      "month": "",
+      "day": "",
+      "add_id": "",
+      "join_event": "",
+      "use": true,
+      "privacy": true,
+      "receive": false,
+      "age": true
+    },
+    {
+      "id": "kgvilsjcqg",
+      "password": "11111111",
+      "name": "문창환",
+      "email": "limitplay@naver.com",
+      "phone": "11111111111",
+      "address": "전북 정읍시 충정로 356",
+      "sub_address": "",
+      "gender": "female",
+      "year": "",
+      "month": "",
+      "day": "",
+      "add_id": "",
+      "join_event": "",
+      "use": true,
+      "privacy": true,
+      "receive": false,
+      "age": true
+    },
+    {
+      "id": "xzd3f0l518",
+      "password": "55555555",
+      "name": "이휘재",
+      "email": "new@xiah.com",
+      "phone": "123456789",
+      "address": "충남 보령시 천북면 구둥굴길 20-2",
+      "sub_address": "",
+      "gender": "nocheck",
+      "year": "",
+      "month": "",
+      "day": "",
+      "add_id": "",
+      "join_event": "",
+      "use": true,
+      "privacy": true,
+      "receive": false,
+      "age": true
+    },
+    {
+      "id": "bv4km8npr3",
+      "password": "123456789",
+      "name": "나랑드",
+      "email": "one@two.com",
+      "phone": "11111111111",
+      "address": "경기 양평군 지평면 관교길 1",
+      "sub_address": "",
+      "gender": "nocheck",
+      "year": "",
+      "month": "",
+      "day": "",
+      "add_id": "",
+      "join_event": "",
+      "use": true,
+      "privacy": true,
+      "receive": false,
+      "age": true
+    },
+    {
+      "id": "glujamvvty",
+      "password": "789456123",
+      "name": "사이다",
+      "email": "three@four.io",
+      "phone": "11111111111",
+      "address": "경기 의정부시 별꽃길 59",
+      "sub_address": "",
+      "gender": "male",
+      "year": "",
+      "month": "",
+      "day": "",
+      "add_id": "",
+      "join_event": "",
+      "use": true,
+      "privacy": true,
+      "receive": false,
+      "age": true
+=======
+    }
+  ],
+  "inquiry": [
+    {
+      "id": "",
+      "title": "",
+      "content": "",
+      "is_Secret": false
+    },
+    {
+      "title": "dassdds",
+      "content": "ddddas",
+      "is_Secret": "on",
+      "id": "ajIORzO"
+    },
+    {
+      "title": "",
+      "content": "dsfafsd",
+      "is_Secret": "on",
+      "id": "_iImUFq"
+    },
+    {
+      "title": "",
+      "content": "asfd",
+      "is_Secret": "on",
+      "id": "OW7mpEy"
+    },
+    {
+      "title": "",
+      "content": "ㅁㅇㄴㄹㅇㄴㄻㄹㄴㅁㅇ",
+      "is_Secret": "on",
+      "id": "ZS_xvdT"
+    },
+    {
+      "title": "",
+      "content": "ㅁㅇㄴㄹㄻㄴㅇㄴㅁㄹㅇㅁㄴㄹㅇ",
+      "is_Secret": "on",
+      "id": "_mx97LV"
+    },
+    {
+      "title": "ㅇㅇㅇ",
+      "content": "ㅇㅇㅇㅇ",
+      "is_Secret": "on",
+      "id": "Ln04LLd"
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
     }
   ],
   "products": [

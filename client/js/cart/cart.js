@@ -1,5 +1,11 @@
 import { getNode, getNodes } from "../../lib/dom/getNode.js";
+<<<<<<< HEAD
 
+=======
+import { insertLast } from "../../lib/dom/insert.js";
+
+// 전체선택, 개별선택
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
 const subCheck = getNodes("input[name='sub_check']");
 const allCheck = getNodes("input[name='all_check']");
 
@@ -15,8 +21,11 @@ let totalProductCount = +productPrice.replace(/[^0-9]/g, "") * subCheck.length;
 // 전체선택시 상품개수 체크
 const allCheckLabel = getNodes(".select_menu > label");
 
+<<<<<<< HEAD
 // 체크박스
 // 1. 전체 선택
+=======
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
 // 상품 금액란에 총합 계산해서 넣기
 function calcProductPrice(element) {
   element.innerText = `${totalProductCount
@@ -33,9 +42,16 @@ function showAllCheck() {
   });
 }
 
+<<<<<<< HEAD
 // 전체선택 수량
 showAllCheck();
 
+=======
+// 전체선택 수량 바로 보이게 하기
+showAllCheck();
+
+// 전체선택에 따른 기능구현
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
 function selectAllCheckBox() {
   allCheck.forEach((el) => {
     if (el.checked === true) {
@@ -68,7 +84,11 @@ allCheck.forEach((el) => {
   el.addEventListener("click", selectAllCheckBox);
 });
 
+<<<<<<< HEAD
 // 2. 개별선택
+=======
+// 개별선택에 따른 기능 구현
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
 function countCheckBox() {
   let subCheckCount = 0;
   function showSubCheckLabel() {
@@ -77,6 +97,10 @@ function countCheckBox() {
     });
   }
 
+<<<<<<< HEAD
+=======
+  // 개별선택에 따른 가격 계산
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
   function calcSubCheckPrice() {
     const subProductPrice =
       +productPrice.replace(/[^0-9]/g, "") * subCheckCount;
@@ -132,7 +156,11 @@ for (let i = 0; i < listTitle.length; i++) {
   });
 }
 
+<<<<<<< HEAD
 // 클릭시 수량 증가
+=======
+// 증가버튼 클릭시 수량, 가격 증가
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
 function getPlusCount(e) {
   let productCount = e.target.previousElementSibling;
   if (!productCount) return;
@@ -159,16 +187,23 @@ function getPlusCount(e) {
   originalPrice.innerText = `${totalPrice
     .toString()
     .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`;
+<<<<<<< HEAD
 
   // productAmount.innerText = totalPrice + totalProductCount;
   // scheduledPayment.innerText = totalPrice + totalProductCount;
   // console.log(totalPrice + totalProductCount);
+=======
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
 }
 
 plusBtn.forEach((el) => {
   el.addEventListener("click", getPlusCount);
 });
 
+<<<<<<< HEAD
+=======
+// 감소 버튼 클릭시 수량, 가격 감소
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
 function getMinusCount(e) {
   let productCount = e.target.nextElementSibling;
   if (!productCount) return;
@@ -207,3 +242,79 @@ function getMinusCount(e) {
 minusBtn.forEach((el) => {
   el.addEventListener("click", getMinusCount);
 });
+<<<<<<< HEAD
+=======
+
+// 데이터로 불러와서 장바구니 목록 넣기
+/*const createProductBox = ({ id = "", name = "", price = "" } = {}) => {
+  return `
+  <li class="product_list">
+                    <input
+                      type="checkbox"
+                      id="${id}"
+                      name="sub_check"
+                      checked
+                    />
+                    <label for="${id}" class="a11y_hidden">선택하기</label>
+
+                    <a href="#" class="product_img">
+                      <img
+                        src="./assets/thumbnail/product01.webp"
+                        alt="[풀무원]탱탱쫄면(4개입)"
+                      />
+                    </a>
+
+                    <div class="product_name">
+                      <a href="#">${name}</a>
+                    </div>
+
+                    <div class="count_box">
+                      <button class="minus_btn">
+                        <img
+                          src="./assets/icons/cart/minus.svg"
+                          alt="수량 내리기"
+                        />
+                      </button>
+
+                      <div class="count">1</div>
+
+                      <button class="plus_btn" id="btn_1">
+                        <img
+                          src="./assets/icons/cart/plus.svg"
+                          alt="수량 올리기"
+                        />
+                      </button>
+                    </div>
+                    <!-- count_box -->
+
+                    <p class="product_price">${price}원</p>
+
+                    <button class="delete_btn">
+                      <img
+                        src="./assets/icons/cart/cancle.svg"
+                        alt="상품 삭제하기"
+                      />
+                    </button>
+                  </li>
+  `;
+};
+
+const renderProduct = (target, data) => {
+  insertLast(target, createProductBox(data));
+};
+
+const productBox = getNode(".product_list_box");
+
+async function render() {
+  // console.log(productBox);
+  let response = await fetch("http://localhost:3000/products");
+  let product = await response.json();
+
+  product.forEach((el) => {
+    renderProduct(productBox, el);
+  });
+}
+
+render();
+*/
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12

@@ -1,5 +1,71 @@
 /* 회원 정보 (value 값 저장 할 변수) */
 let id = document.getElementById("id"),
+<<<<<<< HEAD
+	password = document.getElementById("password"),
+	password_check = document.getElementById("password_check"),
+	name = document.getElementById("name"),
+	email = document.getElementById("email"),
+	phone = document.getElementById("phone"),
+	address = document.getElementById("address"),
+	sub_address = document.getElementById("sub_address"),
+	gender = document.querySelector('input[name="gender"]:checked'),
+	male = document.getElementById("male"),
+	female = document.getElementById("female"),
+	nocheck = document.getElementById("nocheck"),
+	today = new Date(),
+	year = document.getElementById("birth_year"),
+	year_now = today.getFullYear(),
+	month = document.getElementById("birth_month"),
+	day = document.getElementById("birth_day"),
+	recommend = document.getElementById("recommend"),
+	event = document.getElementById("event"),
+	add_id = document.getElementById("add_id"),
+	join_event = document.getElementById("join_event");
+
+/* 정규 표현식 */
+let id_essential = /^[A-Za-z0-9]{4,20}$/,
+	password_essential = /^[a-zA-Z0-9][!@#$%^*+_=()/<>?-]{8,20}$/,
+	email_essential = /^[0-9a-zA-Z]([-_]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i,
+	phone_essential = /^[0-9]*$/;
+
+/* validation 변수 저장 */
+let id_validation = document.getElementById("id_validation"),
+	password_validation = document.getElementById("password_validation"),
+	password_length = document.getElementById("password_length"),
+	password_retry = document.getElementById("password_retry"),
+	password_same = document.getElementById("password_same"),
+	name_validation = document.getElementById("name_validation"),
+	email_validation = document.getElementById("email_validation"),
+	email_match = document.getElementById("email_match"),
+	phone_validation = document.getElementById("phone_validation"),
+	year_validation = document.getElementById("year_validation"),
+	year_available = document.getElementById("year_available"),
+	month_validation = document.getElementById("month_validation"),
+	month_available = document.getElementById("month_available"),
+	day_validation = document.getElementById("day_validation"),
+	day_available = document.getElementById("day_available");
+
+/* button 변수 저장 */
+let id_overlap = document.getElementById("id_overlap"),
+	email_overlap = document.getElementById("email_overlap"),
+	phone_overlap = document.getElementById("phone_overlap"),
+	address_search = document.getElementById("address_search"),
+	address_research = document.getElementById("address_research"),
+	submit = document.getElementById("register_submit");
+
+/* 추천인, 이벤트 변수 저장 */
+let add_recommend = document.querySelector(".register.recommend"),
+	add_event = document.querySelector(".register.event");
+
+/* 이용 약관 변수 */
+let use = document.getElementById("terms_use"),
+	privacy = document.getElementById("terms_privacy"),
+	receive = document.getElementById("terms_receive"),
+	age = document.getElementById("terms_age");
+/* 체크 박스 변수 */
+let check_all = document.querySelector(".terms_all input"),
+	check = document.querySelectorAll(".terms_check input");
+=======
 		password = document.getElementById("password"),
 		password_check = document.getElementById("password_check"),
 		name = document.getElementById("name"),
@@ -64,17 +130,26 @@ let use = document.getElementById("terms_use"),
 /* 체크 박스 변수 */
 let check_all = document.querySelector(".terms_all input"),
 		check = document.querySelectorAll(".terms_check input");
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
 
 id.addEventListener("keyup", event_id);
 id.addEventListener("click", random_text);
 password.addEventListener("keyup", event_password);
 password_check.addEventListener("keyup", event_password_check);
 name.addEventListener("keyup", event_name);
+<<<<<<< HEAD
+email.addEventListener("keyup", event_email);
+phone.addEventListener("keyup", event_phone);
+year.addEventListener("keyup", event_year);
+month.addEventListener("keyup", event_month);
+day.addEventListener("keyup", event_day);
+=======
 email.addEventListener("keyup",event_email);
 phone.addEventListener("keyup",event_phone);
 year.addEventListener("keyup",event_year);
 month.addEventListener("keyup",event_month);
 day.addEventListener("keyup",event_day);
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
 
 /* 10자리 random text 생성 함수 */
 function random_text() {
@@ -176,7 +251,11 @@ const kakao_address = function () {
 }
 
 /* 주소검색 버튼 눌렀을 때 */
+<<<<<<< HEAD
+address_search.addEventListener("click", function () {
+=======
 address_search.addEventListener("click", function (){
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
 	kakao_address();
 });
 
@@ -228,6 +307,10 @@ function event_month() {
 		month_available.classList.remove("is_active");
 	}
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
 /* 출생 날 */
 
 function event_day() {
@@ -242,6 +325,10 @@ function event_day() {
 		day_available.classList.remove("is_active");
 	}
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
 /* 추천인, 이벤트명 */
 
 const add = function () {
@@ -305,7 +392,11 @@ function all_check() {
 }
 
 /* 전체 동의 체크 했을 때, 모든 checkbox 선택 */
+<<<<<<< HEAD
+check_all.addEventListener("click", function (e) {
+=======
 check_all.addEventListener("click",function (e) {
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
 	let { checked } = e.target;
 	if (checked) {
 		check.forEach(function (item) {
@@ -357,6 +448,15 @@ async function register() {
 		headers: {
 			"Content-Type": "application/json",
 		},
+<<<<<<< HEAD
+		body: JSON.stringify(user_info),
+	})
+		.then((user_info) => user_info.json())
+		.then((data) => console.log(data));
+}
+
+submit.addEventListener("click", register);
+=======
 		body: JSON.stringify(user_info)
 	})
 		.then((user_info) => {
@@ -365,7 +465,8 @@ async function register() {
 			} else {
 				console.log("실패");
 			}
-		})
+		}) 
 }
 
 submit.addEventListener("click",register);
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
