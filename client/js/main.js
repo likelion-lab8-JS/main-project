@@ -1,5 +1,4 @@
-import { getNode, recommendProductsSwiper, addClass, removeClass, getNodes } from './main_page/index.js'
-
+import { getNode, recommendProductsSwiper, addClass, removeClass } from './main_page/index.js'
 
 /* -------------------------------------------------------------------------- */
 /*                                popup_beauty                                */
@@ -18,10 +17,12 @@ window.onload = function () {
 /* -------------------------------------------------------------------------- */
 /*                                 main_banner                                */
 /* -------------------------------------------------------------------------- */
-const mainBannerSwiper = new Swiper('.swiper_main_banner', {
-  autoplay: true,
+const mainBanner = getNode('.swiper_main_banner');
+
+// eslint-disable-next-line no-undef
+new Swiper('.swiper_main_banner', {
   autoplay: {
-    disableOnInteraction: false,
+    delay: 3000,
   }, 
   loop: true,
   speed: 1000,
@@ -33,11 +34,29 @@ const mainBannerSwiper = new Swiper('.swiper_main_banner', {
     nextEl: '.main_banner_next',
     prevEl: '.main_banner_prev',
   },
-});
-let mainBanners = getNodes('.slide_main_banner');
-mainBanners.forEach(node => {
-  if (node.classList.contains('swiper-slide-duplicate')) {
-    node.tabindex = '-1';
+  on: {
+    afterInit() {
+      const duplicatedSlideLinks = mainBanner.querySelectorAll('.swiper-slide-duplicate a');
+      duplicatedSlideLinks.forEach(link=>link.setAttribute('tabindex', -1));
+
+      const handleSwiperStop = (e) => {
+        e.currentTarget.swiper.autoplay.stop();
+      }
+      const handleSwiperPlay = (e) => {
+        e.currentTarget.swiper.autoplay.start();
+      }
+      mainBanner.addEventListener('mouseenter', handleSwiperStop);
+      mainBanner.addEventListener('mouseleave', handleSwiperPlay);
+      mainBanner.addEventListener('focusin', handleSwiperStop);
+      mainBanner.addEventListener('focusout', handleSwiperPlay);
+    },
+    slideChangeTransitionStart() {
+      const tabindexMinusOnes = mainBanner.querySelectorAll('[tabindex = "-1"]');
+      tabindexMinusOnes.forEach(link => link.removeAttribute('tabindex'));
+
+      const invisibleSlideLinks = mainBanner.querySelectorAll('.swiper-slide-duplicate a');
+      invisibleSlideLinks.forEach(link => link.setAttribute('tabindex', -1));
+    }
   }
 });
 
@@ -45,7 +64,7 @@ mainBanners.forEach(node => {
 /* -------------------------------------------------------------------------- */
 /*                                  오늘의 상품 추천                                 */
 /* -------------------------------------------------------------------------- */
-const todaySwiper = recommendProductsSwiper('.swiper_today','.today_next','.today_prev');
+recommendProductsSwiper('.swiper_today','.today_next','.today_prev');
 const cartModal = getNode('#cart_modal');
 const btnCancel = getNode('.btn_cancel');
 const recommendProductsWrapper = getNode('.recommend_products_wrapper');
@@ -76,7 +95,7 @@ btnCancel.addEventListener('click', function (){
 /* -------------------------------------------------------------------------- */
 /*                                  할인 상품 추천                                  */
 /* -------------------------------------------------------------------------- */
-const saleSwiper = recommendProductsSwiper('.swiper_sale','.sale_next','.sale_prev');
+recommendProductsSwiper('.swiper_sale','.sale_next','.sale_prev');
 
 
 /* -------------------------------------------------------------------------- */
