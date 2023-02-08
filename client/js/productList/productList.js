@@ -18,6 +18,10 @@ function resetCategoryList() {
 
 resetButton.addEventListener("click", resetCategoryList);
 
+<<<<<<< HEAD
+=======
+// 초기화 버튼
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
 for (let i = 0; i < list.length; i++) {
   list[i].addEventListener("click", function (e) {
     e.preventDefault();
@@ -30,6 +34,10 @@ for (let i = 0; i < list.length; i++) {
   });
 }
 
+<<<<<<< HEAD
+=======
+// 카테고리 아코디언 메뉴 토글 구현
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
 for (let i = 0; i < categoryTitle.length; i++) {
   categoryTitle[i].addEventListener("click", function (e) {
     let toggleButton = e.target.closest(".toggle_button");
@@ -44,6 +52,7 @@ for (let i = 0; i < categoryTitle.length; i++) {
     }
   });
 }
+<<<<<<< HEAD
 
 // function toggleCategory(e) {
 //   let toggleButton = e.target.closest(".toggle_button");
@@ -65,3 +74,5 @@ for (let i = 0; i < categoryTitle.length; i++) {
 // categoryTitle.forEach((el) => {
 //   el.addEventListener("click", toggleCategory);
 // });
+=======
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12

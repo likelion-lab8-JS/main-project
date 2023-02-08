@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
 <head>
+<<<<<<< HEAD
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>마켓칼리</title>
@@ -17,13 +18,44 @@
       navigation: {
         nextE1: ".swiper-button-next",
         prevE1: ".swiper-button-prev",
+=======
+  <meta name="description" content="market Karly clone site" />
+  <meta charset="UTF-8" />
+  <title>마켓칼리</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/a11y.css" />
+  <link rel="stylesheet" href="./css/color.css" />
+  <link rel="stylesheet" href="./css/page_productDetail_my.css"> 
+  <link rel="stylesheet" href="./css/page_productDetail_dr.css"> 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script type="module" src="./js/productDetail/productDetail_my.js"></script> <!-- getNode같은 걸 가져와서 쓰려면 type="module"을 적어야함 -->
+  <script type="module" src="./js/productDetail/productDetail_dr.js"></script> <!-- getNode같은 걸 가져와서 쓰려면 type="module"을 적어야함 -->
+  <script src="./js/main.js" type="module"></script>
+  <script type="module">
+    const swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
       },
     });
   </script>
 </head>
+<<<<<<< HEAD
 <!-- test -->
 <body>
   <!-- 헤 더 -->
+=======
+
+<body>
+  <!-- 창환님 코드 영역 -->
+
+  <!-- 창환님 new 헤더 코드 -->
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
   <header class="header_wrap">
     <section class="popup_wrap">
       <div class="popup container">
@@ -79,6 +111,16 @@
     </section>
 
     <section class="headContent_wrap container">
+<<<<<<< HEAD
+=======
+      <div class="modal_cart a11y_hidden">
+        <img class="modal_img" src="assets/tangtang/detail_view.jpg" alt="">
+        <div>
+          <span class="modal_product_name">[풀무원] 탱탱쫄면 (4개입)</span>
+          <span class="modal_text">장바구니에 상품을 담았습니다.</span>
+        </div>
+      </div>
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
       <article class="logo_wrap">
         <h1>
           <a href="#">
@@ -288,7 +330,11 @@
         <a href="#">신상품</a>
         <a href="#">베스트</a>
         <a href="#">알뜰쇼핑</a>
+<<<<<<< HEAD
         <a href="#">특가/헤택</a>
+=======
+        <a href="#">특가/혜택</a>
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
       </div>
 
       <div class="delivery">
@@ -298,12 +344,429 @@
         </a>
       </div>
     </nav>
+<<<<<<< HEAD
   </header>
   
   <!-- 상품 후기 -->
   <div class="review_wrapper">
 
     <!-- 후기 상단  -->
+=======
+
+    <!-- 스크롤바 내릴때 나타나는 창 -->
+    <div class="small_header_nav a11y_hidden">
+      <section class="category">
+          <a href="#">
+            <div class="burger_wrap">
+              <span class="burger"></span>
+              <span class="burger"></span>
+              <span class="burger"></span>
+            </div>
+            카테고리
+          </a>
+          <ul>
+            <li>
+              <a href="#">
+                <img src="./assets/icons/category/gift.png" alt="" />
+                <span>선물하기</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="#">
+                <img src="./assets/icons/category/vegetable.png" alt="" />
+                <span>채소</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="#">
+                <img src="./assets/icons/category/fruit.png" alt="" />
+                <span>과일 · 견과 · 쌀</span>
+              </a>
+            </li>
+    
+            <li>
+              <a href="#">
+                <img src="./assets/icons/category/seaFood.png" alt="" />
+                <span>수산 · 해산 · 건어물</span>
+              </a>
+            </li>
+    
+            <li>
+              <a href="#">
+                <img src="./assets/icons/category/meet.png" alt="" />
+                <span>정육 · 계란</span>
+              </a>
+            </li>
+    
+            <li>
+              <a href="#">
+                <img src="./assets/icons/category/cook.png" alt="" />
+                <span>국 · 반찬 · 메인요리</span>
+              </a>
+            </li>
+    
+            <li>
+              <a href="#">
+                <img src="./assets/icons/category/salad.png" alt="" />
+                <span>샐러드 · 간편식</span>
+              </a>
+            </li>
+    
+            <li>
+              <a href="#">
+                <img src="./assets/icons/category/spice.png" alt="" />
+                <span>면 · 양념 · 오일</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="#">
+                <img src="./assets/icons/category/coffee.png" alt="" />
+                <span>생수 · 음료 · 우유 · 커피</span>
+              </a>
+            </li>
+    
+            <li>
+              <a href="#">
+                <img src="./assets/icons/category/snack.png" alt="" />
+                <span>간식 · 과자 · 떡</span>
+              </a>
+            </li>
+    
+            <li>
+              <a href="#">
+                <img src="./assets/icons/category/bakery.png" alt="" />
+                <span>베이커리 · 치즈 · 델리</span>
+              </a>
+            </li>
+    
+            <li>
+              <a href="#">
+                <img src="./assets/icons/category/health.png" alt="" />
+                <span>건강식품</span>
+              </a>
+            </li>
+    
+            <li>
+              <a href="#">
+                <img src="./assets/icons/category/wine.png" alt="" />
+                <span>와인</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="#">
+                <img src="./assets/icons/category/traditionalLiquor.png" alt="" />
+                <span>전통주</span>
+              </a>
+            </li>
+    
+            <li>
+              <a href="#">
+                <img src="./assets/icons/category/detergent.png" alt="" />
+                <span>생활용품 · 리빙 · 캠핑</span>
+              </a>
+            </li>
+    
+            <li>
+              <a href="#">
+                <img src="./assets/icons/category/skincare.png" alt="" />
+                <span>스킨케어 · 메이크업</span>
+              </a>
+            </li>
+    
+            <li>
+              <a href="#">
+                <img src="./assets/icons/category/shampoo.png" alt="" />
+                <span>헤어 · 바디 · 구강</span>
+              </a>
+            </li>
+    
+            <li>
+              <a href="#">
+                <img src="./assets/icons/category/kitchen.png" alt="" />
+                <span>주방용품</span>
+              </a>
+            </li>
+    
+            <li>
+              <a href="#">
+                <img src="./assets/icons/category/wash.png" alt="" />
+                <span>가전제품</span>
+              </a>
+            </li>
+    
+            <li>
+              <a href="#">
+                <img src="./assets/icons/category/animal.png" alt="" />
+                <span>반려동물</span>
+              </a>
+            </li>
+    
+            <li>
+              <a href="#">
+                <img src="./assets/icons/category/baby.png" alt="" />
+                <span>베이비 · 키즈 · 완구</span>
+              </a>
+            </li>
+    
+            <li>
+              <a href="#">
+                <img src="./assets/icons/category/travel.png" alt="" />
+                <span>여행 · 티켓</span>
+              </a>
+            </li>
+          </ul>
+      </section>
+      <div class="small_nav_link">
+        <a href="#">신상품</a>
+        <a href="#">베스트</a>
+        <a href="#">알뜰쇼핑</a>
+        <a href="#">특가/헤택</a>
+      </div>
+      <div class="small_nav_search">
+        <article>
+          <form method="POST">
+            <fieldset>
+              <legend>검색</legend>
+              <div class="searchForm_group">
+                <div class="small_search_form">
+                  <label for="search" class="a11y_hidden">검색어</label>
+                  <input id="search" class="small_search_input" type="search" required placeholder="검색어를 입력해주세요" name="search"/>
+                  <button class="small_search_btn" type="submit"></button>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </article>
+      </div>
+      <div class="small_nav_icon">
+        <article class="small_icon_wrap">
+          <a class="icon_location" href="#"></a>
+          <a class="icon_heart" href="#"></a>
+          <a class="icon_cart" href="#"></a>
+        </article>
+      </div>
+    </div>
+  </header>
+
+  <!-------------------------- 나의 코드 영역 시작 -------------------------->
+  <main class="productDetail_main">
+    <img class="product_image" src="assets/tangtang/detail_view.jpg" alt="탱탱쫄면 제품 이미지">
+    <section class="product_information">
+      <article class="main_information">
+        <div class="type_of_delivery">샛별배송</div>
+        <div class="selected_product"> 
+          <h2 class="product_name">[풀무원] 탱탱쫄면 (4개입)</h2>
+          <div class="product_short_description">튀기지 않아 부담 없는 매콤함</div>
+        </div>
+        <article class="price">
+          <div class="number">4,980</div>
+          <div class="unit">원</div>
+        </article>
+        <div class="point_benefits_information">로그인 후, 적립 혜택이 제공됩니다.</div>
+      </article>
+      <article class="sub_information">
+        <dl>
+          <dt>배송</dt>
+          <dd>
+            <p>샛별배송</p>
+            <p class="condition_of_morning_delivery">23시 전 주문 시 내일 아침 7시 전 도착 <br>(대구•부산•울산 샛별배송 운영시간 별도 확인)</p>
+          </dd>
+        </dl>
+        <dl>
+          <dt>판매자</dt>
+          <dd>컬리</dd>
+        </dl>
+        <dl>
+          <dt>포장타입</dt>
+          <dd>
+            <p>상온 (종이포장)</p>
+            <p style="color:#898989; margin-top:4px;">택배배송은 에코 포장이 스티로폼으로 대체됩니다.</p>
+          </dd>
+        </dl>
+        <dl>
+          <dt>판매단위</dt>
+          <dd>1봉</dd>
+        </dl>
+        <dl>
+          <dt>중량/용량</dt>
+          <dd>123g*4봉</dd>
+        </dl>
+        <dl>
+          <dt>원산지</dt>
+          <dd>상품설명/상세정보 참조</dd>
+        </dl>
+        <dl>
+          <dt>알레르기정보</dt>
+          <dd class="material_information">
+            <p>-대두, 밀, 쇠고기 함유</p>
+            <p>
+              -계란, 우유, 메밀, 땅콩, 고등어, 게, 돼지고기, 새우, 복숭아, 토마토, 아황산류, 호두, 잣, 닭고기, 오징어, 조개류(굴, 전복, 홍합 포함)를 
+              사용한 제품과 같은 제조시설에서 제조
+            </p>
+          </dd>
+        </dl>
+      </article>
+      <article class="buy_information">
+        <dl class="dl_product_choose">
+          <dt>상품선택</dt>
+          <dd class="buy_box">
+            <div class="calc_price">
+              <div class="buy_product_name">[풀무원]탱탱쫄면(4개입)</div>
+              <div>
+                <div class="choose_product_num">
+                  <button class="minus_amount" aria-label="제품의 수량을 하나 감소시킵니다">
+                    <img src="./assets/icons/detail_miyoung/minus_light.svg" alt="제품 수량 감소">
+                  </button>
+                  <div class="number_of_product">
+                    <span>1</span>
+                  </div>
+                  <button class="plus_amount" aria-label="제품의 수량을 하나 증가시킵니다">
+                    <img src="./assets/icons/detail_miyoung/plus_dark.svg" alt="제품 수량 증가">
+                  </button>
+                </div>
+                <div>
+                  <span class="total_price_1">4,980원</span>
+                </div>
+              </div>
+            </div>
+          </dd>
+        </dl>
+
+        <div style="padding: 28px 0px;">
+          <div class="calc_total_price"> <!-- 총 상품금액 -->
+            <span>총 상품금액:</span>
+            <span class="total_price_2">4,980</span>
+            <span>원</span>
+          </div>
+          <div class="point"> <!-- 적립 -->
+            <div>
+              <span>적립</span>
+            </div>
+            <span>로그인 후, 적립 혜택 제공</span>
+          </div>
+        </div>
+        
+        <div class="button_related_cart">
+          <button class="like" aria-label="상품을 찜하지 않습니다">
+            <img src="./assets/icons/detail_miyoung/like_check.svg" alt="상품 찜하지 않음">
+          </button>
+          <button class="alarm" aria-label="재입고 알림을 받지 않습니다">
+            <img src="./assets/icons/detail_miyoung/alarm_nocheck.svg" alt="재입고 알림 끔">
+          </button>
+          <button class="push_cart">장바구니 담기</button>
+        </div>
+      </article>
+    </section> <!-- /product_information -->
+  </main>
+  
+  <nav class="product_navigation">
+    <button class="btn_product_description" aria-label="상품설명">상품설명</button>
+    <button class="btn_detail_information" aria-label="상세정보">상세정보</button>
+    <button class="btn_product_review" aria-label="상품후기">후기<span>(0)</span></button>
+    <button class="btn_product_inquiry" aria-label="상품문의">문의</button>
+  </nav> <!-- /product_navigation -->
+
+  <section class="description">
+    <article class="product_intro">
+      <img src="assets/tangtang/detail_banner.jpg" alt="">
+      <div class="description_text">
+        <div class="description_text_short">
+          <div>튀기지 않아 부담 없는 매콤함</div>
+          <div>[풀무원] 탱탱쫄면</div>
+        </div>
+        <p class="description_text_long">
+          쫄면의 진가는 매콤새콤한 양념과 탱탱한 면발에서 찾을 수 있지요. 풀무원은 이 맛을 더 부담 없이 즐길 수 있도록 튀기지 않고 만든 탱탱쫄면을 선보입니다. 밀가루와 감자 전분을 적절히 배합해 탄력이 좋고, 입에 넣었을 때는 찰지게 씹히죠. 고추장을 넣어 숙성한 비빔장은 자연스럽고 깊은 맛을 냅니다. 간단하게 조리해 마지막 한 가닥까지 탱탱한 식감을 즐겨보세요. 취향에 따라 다양한 고명을 올려 드셔도 좋아요.
+        </p>
+      </div>
+    </article>
+    <article class="product_check_point">
+      <h3>
+        <div class="check_point_title">Kurly's Check Point</div>
+      </h3>
+      <div class="check_point_img">
+        <img src="assets/icons/detail_miyoung/check_point.svg" alt="이 상품에 대해 주목할 점들(Kurly's Check Point)">
+        <div class="sr_only">
+          <dl>
+            <dt>생산 유통 과정 Process</dt>
+            <dd>1. 튀기지 않고 바람으로 말린 면</dd>
+          </dl>
+          <dl>
+            <dt>활용법 Recommendation</dt>
+            <dd>1. 온 가족이 즐기기 좋은 4개입 포장</dd>
+            <dd>2. 간편한 조리로 완성되는 쫄면</dd>
+          </dl>
+          <dl>
+            <dt>브랜드와 생산자 Brand & Artisan</dt>
+            <dd>1. 내 가족의 건강을 위한 바른먹거리 전문기업, 풀무원</dd>
+          </dl>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="detail_information">
+    <article class="detail_information_img">
+      <img src="assets/tangtang/detail_info.jpg" alt="탱탱쫄면의 상세정보">
+    </article>
+    <article class="why_karly">
+      <div class="why_karly_title">WHY KARLY</div>
+      <div class="why_karly_contents">
+        <div>
+          <dl class="why_karly_content1">
+            <dt>
+              깐깐한 상품위원회
+            </dt>
+            <dd>
+              나와 내 가족이 먹고 쓸 상품을 고르는<br>마음으로 매주 상품을 직접 먹어보고,<br>경험해보고 성분, 맛 안정성 등 다각도의<br>기준을 통과한 상품만을 판매합니다.
+            </dd>
+          </dl>
+          <dl class="why_karly_content2">
+            <dt>
+              차별화된 Karly Only 상품
+            </dt>
+            <dd>
+              전국 각지와 해외의 훌륭한 생산자가<br>믿고 선택하는 파트너, 마켓칼리.<br>3천여 개가 넘는 칼리 단독 브랜드, 스펙의<br>Karly Only 상품을 믿고 만나보세요.
+            </dd>
+          </dl>
+          <dl class="why_karly_content3">
+            <dt>
+              신선한 풀콜드체인 배송
+            </dt>
+            <dd>
+              온라인 업계 최초로 산지에서 문 앞까지<br>상온, 냉장, 냉동 상품을 분리 포장 후<br>최적의 온도를 유지하는 냉장 배송 시스템,<br>풀콜드체인으로 상품을 신선하게 전해드립니다.
+            </dd>
+          </dl>
+        </div>
+        <div>
+          <dl class="why_karly_content4">
+            <dt>
+              고객, 생산자를 위한 최선의 가격
+            </dt>
+            <dd>
+              매주 대형 마트와 주요 온라인 마트의 가격<br>변동 상황을 확인해 신선식품은 품질을<br>타협하지 않는 선에서 최선의 가격으로,<br>가공식품은 언제나 합리적인 가격으로<br>정기 조정합니다.
+            </dd>
+          </dl>
+          <dl class="why_karly_content5">
+            <dt>
+              환경을 생각하는 지속 가능한 유통
+            </dt>
+            <dd>
+              친환경 포장재부터 생산자가 상품에만<br>집중할 수 있는 직매입 유통구조까지,<br>지속 가능한 유통을 고민하며 컬리를 있게<br>하는 모든 환경(생산자,커뮤니티,직원)이<br>더 나아질 수 있도록 노력합니다.
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- 상품후기 영역 -->
+
+  <div class="review_wrapper">
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
     <section class="review_header">
       <h2>
         상품후기
@@ -311,7 +774,10 @@
       <button class="write_btn" id="write_review">
         후기 작성하기
       </button>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
       <!--후기 작성 팝업  -->
       <div class="review_popup_wrapper folded">
         <div class="review_popup_header">
@@ -327,13 +793,21 @@
         </div>
         <div class="review_popup_input">
           <fieldset class="review_title_input_wrapper">
+<<<<<<< HEAD
             <label for="title">제목</label>
+=======
+            <label for="title"  >제목</label>
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
             <input type="text" placeholder="제목을 입력해 주세요" required>
           </fieldset>
           
           <fieldset class="review_content_input_wrapper">
             <label for="content">내용</label>
+<<<<<<< HEAD
             <textarea inputmode='text' name="content" id="review_text" maxlength="5000" required></textarea>
+=======
+            <textarea name="content" id="review_text" maxlength="5000" required></textarea>
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
             <p class="content_length_counter" id="reviewcounter">0/5000</p>  
           </fieldset>
         </div>
@@ -356,7 +830,10 @@
           <button class="btn_submit popup_close">등록</button>
         </div>
       </div>
+<<<<<<< HEAD
       <!-- 후기 작성 안내 -->
+=======
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
       <ul class="review_benefit">
         <span class="review_benefit_title">글후기 50원 적립금 혜택이 있어요.</span>
         <li>퍼플, 더퍼플은 2배 적립(100원) / 주간 베스트 후기로 선정 시 5,000원 추가 적립</li>
@@ -364,8 +841,11 @@
         <li>작성하신 후기는 확인 후 적립금이 지급됩니다.(영업일 기준 평균 1~2일 소요)</li>
       </ul>
     </section>
+<<<<<<< HEAD
 
     <!-- 좌상단 후기 갯수 카운트 & 추천순 | 최신등록순 sort 버튼 묶음 -->
+=======
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
     <div class="count_n_sort">
       <p class="review_count">
         총 2개
@@ -380,8 +860,13 @@
       </div>
     </div>
     
+<<<<<<< HEAD
     <!-- 후기 바디 -->
     <div class="product_review_body">
+=======
+    <div class="product_review_body">
+      <!-- 공지글 1 -->
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
       <div class="product_review_notice">
         <div class="notice_header">
           <span class="notice_badge">
@@ -390,16 +875,62 @@
           <button class="notice_title collapsible">금주의 베스트 후기 안내</button>
         </div> 
         <div class="notice_content folded">  
+<<<<<<< HEAD
           <img class="quest_icon" src="./assets/icons/Icon/question.svg" alt=""/>
           <div class="question">
             <p>
               스티로폼 박스도 손상되어 있어 포장이 터져 엉망이네요<br>
+=======
+            <img class="quest_icon" src="./assets/icons/Icon/question.svg" alt=""/>
+            <div class="question">
+              <p>
+                스티로폼 박스도 손상되어 있어 포장이 터져 엉망이네요</br>
+                환불 요청합니다.
+              </p>
+            </div>
+            <img class="ans_icon" src="./assets/icons/Icon/answer.svg" alt=""/>
+            <div class="answer">
+              <p>
+                안녕하세요. 칼리입니다.</br>
+                믿고 찾아주신 상품에 불편을 드려 정말 죄송합니다.</br>
+                 </br>
+                더불어, 해당 게시판은 실시간으로 상담이 어려워 순차적으로 답변드리고 있는 관계로 신속하게 답변 드리지 못하여 대단히 죄송합니다.</br> 
+                </br>
+                다행히도 고객님의 불편하셨던 사항은 고객행복센터를 통해 안내 받으신 점 확인하였습니다.</br> 
+                </br>
+                불편을 드려 정말 죄송할 따름이며, 고객님께 늘 신선하고 최상의 상품을 불편 없이 전달드리기 위해 최선을 다하는 칼리가 되겠습니다. </br>
+                </br>
+                  칼리 드림.</br>
+                </br>
+              </p>
+              <p class="written_date">  
+                2022. 11. 11
+              </p> 
+            </div>
+        </div>
+      </div>
+    
+      <!-- 공지글 2 -->
+      <div class="product_review_notice">
+        <div class="notice_header">
+          <span class="notice_badge">
+            공지
+          </span>
+          <button class="notice_title collapsible">상품 후기 적립금 정책 안내</button>
+        </div> 
+        <div class="notice_content folded">  
+          <img class="quest_icon" src="./assets/icons/Icon/question.svg" alt=""/>
+          <div class="question">
+            <p>
+              스티로폼 박스도 손상되어 있어 포장이 터져 엉망이네요</br>
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
               환불 요청합니다.
             </p>
           </div>
           <img class="ans_icon" src="./assets/icons/Icon/answer.svg" alt=""/>
           <div class="answer">
             <p>
+<<<<<<< HEAD
               안녕하세요. 칼리입니다.<br>
               믿고 찾아주신 상품에 불편을 드려 정말 죄송합니다.<br>
                <br>
@@ -411,6 +942,19 @@
               <br>
                 칼리 드림.<br>
               <br>
+=======
+              안녕하세요. 칼리입니다.</br>
+              믿고 찾아주신 상품에 불편을 드려 정말 죄송합니다.</br>
+              </br>
+              더불어, 해당 게시판은 실시간으로 상담이 어려워 순차적으로 답변드리고 있는 관계로 신속하게 답변 드리지 못하여 대단히 죄송합니다.</br> 
+              </br>
+              다행히도 고객님의 불편하셨던 사항은 고객행복센터를 통해 안내 받으신 점 확인하였습니다.</br> 
+              </br>
+              불편을 드려 정말 죄송할 따름이며, 고객님께 늘 신선하고 최상의 상품을 불편 없이 전달드리기 위해 최선을 다하는 칼리가 되겠습니다. </br>
+              </br>
+              칼리 드림.</br>
+              </br>
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
             </p>
             <p class="written_date">  
               2022. 11. 11
@@ -418,6 +962,7 @@
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
       <!-- 공지글 파트 -->
       <div class="product_review_notice">
@@ -765,6 +1310,77 @@
 
         </div>
         <!-- 나머지 슬라이드 -->
+=======
+    </div>
+    <!-- 본 리뷰 영역 -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="product_review_content">
+            <div class="user_info">
+              <p>
+              <span class="is_best">베스트</span>
+              <span class="membership_grade">퍼플</span>
+              김*진    
+              </p>
+            </div>
+            <div class="review_info">
+              <p class="product_info">
+                [풀무원] 탱탱쫄면(4개입)
+              </p>
+              <p class="written_review">
+                너무 맛있어여~</br>
+                면이 쫄깃하고 양념도 짱맛나요!!
+              </p>
+              <p class="written_date">
+                2022. 11. 10
+              </p>
+            </div>
+          </div>
+          <div class="product_review_content">
+            <div class="user_info">
+              <p>
+              <span class="is_best">베스트</span>
+              <span class="membership_grade">퍼플</span>
+              김*진    
+              </p>
+            </div>
+            <div class="review_info">
+              <p class="product_info">
+                [풀무원] 탱탱쫄면(4개입)
+              </p>
+              <p class="written_review">
+                또 주문할 것 같습니다.</br>
+                너무 맛있어요 내스타일이야~!
+              </p>
+              <p class="written_date">
+                2022. 11. 10
+              </p>
+            </div>
+          </div>   
+          <div class="product_review_content">
+            <div class="user_info">
+              <p>
+              <span class="is_best">베스트</span>
+              <span class="membership_grade">퍼플</span>
+              김*범    
+              </p>
+            </div>
+            <div class="review_info">
+              <p class="product_info">
+                [풀무원] 탱탱쫄면(4개입)
+              </p>
+              <p class="written_review">
+                너무 맛있어여~</br>
+                면이 쫄깃하고 양념도 짱맛나요!!
+              </p>
+              <p class="written_date">
+                2022. 11. 10
+              </p>
+            </div>
+          </div>
+        </div>
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
         <div class="swiper-slide">Slide 2</div>
         <div class="swiper-slide">Slide 3</div>
         <div class="swiper-slide">Slide 4</div>
@@ -775,6 +1391,7 @@
         <div class="swiper-slide">Slide 9</div>
       </div>
 
+<<<<<<< HEAD
     </div>
 
     <!-- 후기 게시판 이전-다음 페이지 버튼 -->
@@ -786,6 +1403,234 @@
   </div>
 
  <!-- 푸 터 -->
+=======
+      <div class="prev_next_btn_wrapper">
+        <button class="bg_arrow_prev swiper-button-prev" aria-label="previous_page"></button>
+        <button class="bg_arrow_next swiper-button-next" aria-label="next_page"></button>
+      </div>
+
+    </div>
+  </div> 
+
+  
+  <!--상품 문의  -->
+  <div class="inquiry_wrapper">
+    <section class="inquiry_header">
+      <h2>
+        상품문의
+      </h2>
+      <button class="write_btn" id="write_inquiry">
+        문의하기
+      </button>
+      <!--문의 작성 팝업  -->
+      <div class="inquiry_popup_wrapper folded">
+        <div class="inquiry_popup_header">
+          <h2>
+            문의 작성
+          </h2>
+          <button class="icon_close popup_close" aria-label="창닫기"></button>
+        </div>
+    
+        <div class="inquiry_popup_info">
+          <img src="./assets/tangtang/thumbnail.jpg" alt=""/>
+          <p class="product_name">[풀무원] 탱탱쫄면 (4개입)</p>
+        </div>
+        <div class="inquiry_popup_input">
+          <fieldset class="inquiry_title_input_wrapper">
+            <label>제목</label>
+            <input type="text" id="inquiry_title" placeholder="제목을 입력해 주세요" required>
+          </fieldset>
+          
+          <fieldset class="inquiry_content_input_wrapper">
+            <label>내용</label>
+            <textarea inputmode='text' id="inquiry_text" required maxlength="5000"
+            name="content"></textarea>
+            
+            <p class="content_length_counter" id="inquiry_count">0/5000</p>
+          </fieldset>
+        </div>
+        <div class="secret_checkbox">
+        <input type="checkbox" name="checker" id="isSecret" role="tab" aria-checked="false" tabindex="0"><label for="isSecret">비밀글로 문의하기</label>
+        </div>
+        <div class="inquiry_popup_button_wrapper">
+          <button class="btn_cancel popup_close">취소</button>
+          <button class="btn_submit popup_close" id="post_inquiry">등록</button>
+        </div>
+      </div>
+      <div class="popup_modal"></div>
+      <ul class="inquiry_benefit">
+        <li>상품에 대한 문의를 남기는 공간입니다. 해당 게시판의 성격과 다른 글은 사전동의 없이 담당 게시판으로 이동될 수 있습니다.</li>
+        <li>배송관련, 주문(취소/교환/환불)관련 문의 및 요청사항은 마이컬리 내 1:1 문의에 남겨주세요.</li>
+      </ul>
+    </section>
+
+    <!-- 문의 테이블  -->
+    <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+
+      <table class="inquiry_table">
+        <thead>
+          <tr>
+            <th class="title">제목</th>
+            <th class="author">작성자</th>
+            <th class="created_date">작성일</th>
+            <th class="status">답변상태</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="notice_badge">
+              공지
+            </span>
+            <button class="notice_title collapsible_table">판매(일시)중단 제품 안내(22.11.10 업데이트)</button></td>
+            <td class="author">칼리</td>
+            <td class="created_date">2017.02.01</td>
+            <td class="status">-</td>
+          </tr>
+        </tbody>
+      </table>
+
+        <div class="notice_content folded">  
+          <img class="quest_icon" src="./assets/icons/Icon/question.svg" alt=""/>
+          <div class="question">
+            <p>
+              스티로폼 박스도 손상되어 있어 포장이 터져 엉망이네요</br>
+              환불 요청합니다.
+            </p>
+          </div>
+          <img class="ans_icon" src="./assets/icons/Icon/answer.svg" alt=""/>
+          <div class="answer">
+            <p>
+              안녕하세요. 칼리입니다.</br>
+              믿고 찾아주신 상품에 불편을 드려 정말 죄송합니다.</br>
+              </br>
+              더불어, 해당 게시판은 실시간으로 상담이 어려워 순차적으로 답변드리고 있는 관계로 신속하게 답변 드리지 못하여 대단히 죄송합니다.</br> 
+              </br>
+              다행히도 고객님의 불편하셨던 사항은 고객행복센터를 통해 안내 받으신 점 확인하였습니다.</br> 
+              </br>
+              불편을 드려 정말 죄송할 따름이며, 고객님께 늘 신선하고 최상의 상품을 불편 없이 전달드리기 위해 최선을 다하는 칼리가 되겠습니다. </br>
+              </br>
+              칼리 드림.</br>
+              </br>
+            </p>
+            <p class="written_date">  
+              2022. 11. 11
+            </p> 
+          </div>
+        </div>
+      
+      <table class="inquiry_table">
+        <tbody>
+          <tr>
+            <td><button class="collapsible_table">팩이 터져서 왔어요</button></td>
+            <td class="author">김*식</td>
+            <td class="created_date">2022.11.11</td>
+            <td class="status">답변대기</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="notice_content folded">  
+        <img class="quest_icon" src="./assets/icons/Icon/question.svg" alt=""/>
+        <div class="question">
+          <p>
+            스티로폼 박스도 손상되어 있어 포장이 터져 엉망이네요</br>
+            환불 요청합니다.
+          </p>
+        </div>
+        <img class="ans_icon" src="./assets/icons/Icon/answer.svg" alt=""/>
+        <div class="answer">
+          <p>
+            안녕하세요. 칼리입니다.</br>
+            믿고 찾아주신 상품에 불편을 드려 정말 죄송합니다.</br>
+            </br>
+            더불어, 해당 게시판은 실시간으로 상담이 어려워 순차적으로 답변드리고 있는 관계로 신속하게 답변 드리지 못하여 대단히 죄송합니다.</br> 
+            </br>
+            다행히도 고객님의 불편하셨던 사항은 고객행복센터를 통해 안내 받으신 점 확인하였습니다.</br> 
+            </br>
+            불편을 드려 정말 죄송할 따름이며, 고객님께 늘 신선하고 최상의 상품을 불편 없이 전달드리기 위해 최선을 다하는 칼리가 되겠습니다. </br>
+            </br>
+            칼리 드림.</br>
+            </br>
+          </p>
+          <p class="written_date">  
+            2022. 11. 11
+          </p> 
+        </div>
+      </div>
+
+      <table class="inquiry_table">
+        <tbody>
+          <tr>
+            <td class="is_secret"><button class="collapsible_table">비밀글입니다.</button><img src="./assets/icons/Icon/Lock.svg" alt=""/></td>
+            <td class="author">김*범</td>
+            <td class="created_date">2022.09.13</td>
+            <td class="status is_answered">답변완료</td>
+          </tr>
+          <!-- <tr>
+            <td class="is-secret"><button class="notice-title">비밀글입니다.</button><img src="./assets/icons/Icon/Lock.svg" alt="" /></td>
+            <td>김*범</td>
+            <td>2022.09.13</td>
+            <td class="is-answered">답변완료</td>
+          </tr>
+          <tr>
+            <td class="is-secret">비밀글입니다. <img src="./assets/icons/Icon/Lock.svg" alt="" /></td>
+            <td>김*범</td>
+            <td>2022.09.13</td>
+            <td class="is-answered">답변완료</td>
+          </tr> -->
+        </tbody>
+      </table>
+    
+      <div class="notice_content folded">  
+        <img class="quest_icon" src="./assets/icons/Icon/question.svg" alt=""/>
+        <div class="question">
+          <p>
+            스티로폼 박스도 손상되어 있어 포장이 터져 엉망이네요</br>
+            환불 요청합니다.
+          </p>
+        </div>
+        <img class="ans_icon" src="./assets/icons/Icon/answer.svg" alt=""/>
+        <div class="answer">
+          <p>
+            안녕하세요. 칼리입니다.</br>
+            믿고 찾아주신 상품에 불편을 드려 정말 죄송합니다.</br>
+            </br>
+            더불어, 해당 게시판은 실시간으로 상담이 어려워 순차적으로 답변드리고 있는 관계로 신속하게 답변 드리지 못하여 대단히 죄송합니다.</br> 
+            </br>
+            다행히도 고객님의 불편하셨던 사항은 고객행복센터를 통해 안내 받으신 점 확인하였습니다.</br> 
+            </br>
+            불편을 드려 정말 죄송할 따름이며, 고객님께 늘 신선하고 최상의 상품을 불편 없이 전달드리기 위해 최선을 다하는 칼리가 되겠습니다. </br>
+            </br>
+            칼리 드림.</br>
+            </br>
+          </p>
+          <p class="written_date">  
+            2022. 11. 11
+          </p> 
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+    <div class="swiper-slide">Slide 4</div>
+    <div class="swiper-slide">Slide 5</div>
+    <div class="swiper-slide">Slide 6</div>
+    <div class="swiper-slide">Slide 7</div>
+    <div class="swiper-slide">Slide 8</div>
+    <div class="swiper-slide">Slide 9</div>
+
+  </div>
+  <div class="prev_next_btn_wrapper">
+    <button class="bg_arrow_prev swiper-button-prev" aria-label="previous_page"></button>
+    <button class="bg_arrow_next swiper-button-next" aria-label="next_page"></button>
+  </div>
+    </div>
+  </div>
+
+  <!-- 창환님 코드 영역-->
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
   <footer class="footer_wrap">
     <section class="information_wrap container">
       <article class="consumer">
@@ -851,7 +1696,11 @@
             주소 : 서울특별시 강남구 테헤란로 133, 18층(역삼동)<span class="footer_bar">|</span>대표이사 : 김슬아
           </p>
           <p>
+<<<<<<< HEAD
             입점문의 : <a href="#">입정문의하기</a><span class="footer_bar">|</span>제휴문의 : <a href="#">business@karlycorp.com</a>
+=======
+            입점문의 : <a href="#">입점문의하기</a><span class="footer_bar">|</span>제휴문의 : <a href="#">business@karlycorp.com</a>
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
           </p>
           <p>채용문의 : recruit@karlycorp.com</p>
           <p>팩스 : 070 - 7500 - 6098</p>
@@ -920,8 +1769,12 @@
       <p class="copyright_text">© KURLY CORP. ALL RIGHTS RESERVED</p>
     </section>
   </footer>
+<<<<<<< HEAD
 
 
 </body>
 
+=======
+</body>
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
 </html>

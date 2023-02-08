@@ -56,6 +56,7 @@
       "privacy": true,
       "receive": false,
       "age": true
+<<<<<<< HEAD
     },
     {
       "id": "popp62v9oo",
@@ -170,6 +171,52 @@
       "privacy": true,
       "receive": false,
       "age": true
+=======
+    }
+  ],
+  "inquiry": [
+    {
+      "id": "",
+      "title": "",
+      "content": "",
+      "is_Secret": false
+    },
+    {
+      "title": "dassdds",
+      "content": "ddddas",
+      "is_Secret": "on",
+      "id": "ajIORzO"
+    },
+    {
+      "title": "",
+      "content": "dsfafsd",
+      "is_Secret": "on",
+      "id": "_iImUFq"
+    },
+    {
+      "title": "",
+      "content": "asfd",
+      "is_Secret": "on",
+      "id": "OW7mpEy"
+    },
+    {
+      "title": "",
+      "content": "ㅁㅇㄴㄹㅇㄴㄻㄹㄴㅁㅇ",
+      "is_Secret": "on",
+      "id": "ZS_xvdT"
+    },
+    {
+      "title": "",
+      "content": "ㅁㅇㄴㄹㄻㄴㅇㄴㅁㄹㅇㅁㄴㄹㅇ",
+      "is_Secret": "on",
+      "id": "_mx97LV"
+    },
+    {
+      "title": "ㅇㅇㅇ",
+      "content": "ㅇㅇㅇㅇ",
+      "is_Secret": "on",
+      "id": "Ln04LLd"
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
     }
   ],
   "products": [

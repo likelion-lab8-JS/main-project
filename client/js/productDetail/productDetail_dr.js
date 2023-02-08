@@ -1,4 +1,8 @@
 import { getNode } from "../../lib/index.js";
+<<<<<<< HEAD
+=======
+export * from "./inquiry.js"
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
 
 // 상품 후기 게시판 내 아코디언 메뉴 기능 
 const coll = document.getElementsByClassName("collapsible");
@@ -36,15 +40,25 @@ const modal = getNode('.popup_modal');
 const write_review = getNode('#write_review');
 const reviewpopup = getNode('.review_popup_wrapper');
 const inquirypopup = getNode('.inquiry_popup_wrapper');
+<<<<<<< HEAD
 
+=======
+const write_inquiry = getNode('#write_inquiry');
+
+/** 후기 작성하기 팝업 띄우기 */
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
 const open_reviewpopup = function (){
   modal.style.display ='block';
   reviewpopup.style.display = 'block';
 }
 
 
+<<<<<<< HEAD
 /** 문의하기 버튼 클릭 이벤트*/
 const write_inquiry = getNode('#write_inquiry');
+=======
+/** 문의하기 팝업 띄우기 */
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
 const open_inquirypopup = function (){
   modal.style.display ='block';
   inquirypopup.style.display = 'block';
@@ -67,6 +81,7 @@ for (let i = 0; i < cancel.length; i++){
   cancel[i].addEventListener('click',quit_popup);
 }
 
+<<<<<<< HEAD
 
 /** 질문글 등록 */
 
@@ -87,6 +102,8 @@ let template = /* html */`
 `
 
 
+=======
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
 /** 글자수 세기 */
 
 let rev_textarea = document.getElementById('review_text');
@@ -110,6 +127,7 @@ rev_textarea.addEventListener('input', review_count);
 inq_textarea.addEventListener('input', inquiry_count);
 
 
+<<<<<<< HEAD
 /** swiper 사용 */
 // const swiper = new Swiper('.swiper', {
 //   // Optional parameters
@@ -132,3 +150,6 @@ inq_textarea.addEventListener('input', inquiry_count);
   //   el: '.swiper-scrollbar',
   // },
 // });
+=======
+
+>>>>>>> 919dbec473e1976731875d93624538f708b42d12
