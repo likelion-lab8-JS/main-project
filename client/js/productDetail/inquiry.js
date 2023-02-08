@@ -8,6 +8,7 @@ let content = document.getElementById('inquiry_text');
 let is_Secret = document.getElementById('isSecret');
 
 async function postInquiry(e){
+
   const inquiry = {
     title : title.value,
     content : content.value,
