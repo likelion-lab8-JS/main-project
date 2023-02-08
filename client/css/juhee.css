@@ -89,12 +89,6 @@ body {
 }
 
 
-/* main */
-.page_main {
-  position: relative;
-}
-
-
 /* 상품 추천 공통 */
 .swiper-button-disabled {
   display: none;
@@ -349,11 +343,17 @@ body {
 }
 
 /* 최근 본 상품 */
+.recent_products {
+  position: absolute;
+  top: 810px;
+  right: 39px;
+  height: 1030px;
+}
 .recent_products_container {
   width: 74px;
-  position: absolute;
-  top: 193px;
-  right: 39px;
+  height: 223px;
+  position: sticky;
+  top: 50%;
   border: 1px solid var(--gray-200);
   display: flex;
   flex-flow: row wrap;
@@ -364,14 +364,16 @@ body {
 .recent_products_title {
   font-size: 12px;
   font-weight: 600;
+  white-space: nowrap;
 }
 .recent_products_list {
   width: 40px;
-  max-height: 130px;
+  height: 129px;
   overflow: hidden;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  gap: 4px;
 }
 .recent_product {
   width: 40px;

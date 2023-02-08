@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
 <head>
+  <meta name="description" content="market Karly clone site" />
   <meta charset="UTF-8" />
   <title>마켓칼리</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -290,7 +291,7 @@
         <a href="#">신상품</a>
         <a href="#">베스트</a>
         <a href="#">알뜰쇼핑</a>
-        <a href="#">특가/헤택</a>
+        <a href="#">특가/혜택</a>
       </div>
 
       <div class="delivery">
@@ -723,7 +724,6 @@
                 <img src="./client/assets/icons/Icon/Cart.svg" alt="장바구니 아이콘" />
               </button>
             </div>
-            
           </div>
         </div>
         <button class="swiper-button-prev recommend_products_prev sale_prev"></button>
@@ -731,18 +731,20 @@
       </div>
     </section>
     <!-- 최근 본 상품 -->
-    <section class="recent_products_container">
-      <h2 class="recent_products_title">최근 본 상품</h2>
-      <ul class="recent_products_list">
-        <li class="recent_product">
-          <a href="" title="최근 본 상품 페이지로 이동 (현재창)"></a>
-        </li>
-        <li class="recent_product">product2</li>
-        <li class="recent_product">product3</li>
-      </ul>
-      <button type="button" class="recent_products_prev" aria-label="이전 슬라이드로 이동"></button>
-      <button type="button" class="recent_products_next" aria-label="다음 슬라이드로 이동"></button>
-    </section>
+    <div class="recent_products" hidden>
+      <section class="recent_products_container">
+        <h2 class="recent_products_title">최근 본 상품</h2>
+        <ul class="recent_products_list">
+          <li class="recent_product">
+            <a href="" title="최근 본 상품 페이지로 이동 (현재창)"></a>
+          </li>
+          <li class="recent_product"></li>
+          <li class="recent_product"></li>
+        </ul>
+        <button type="button" class="recent_products_prev" aria-label="이전 슬라이드로 이동"></button>
+        <button type="button" class="recent_products_next" aria-label="다음 슬라이드로 이동"></button>
+      </section>
+    </div>
   </main>
 
 
