@@ -397,3 +397,9 @@ body {
   background: url(../assets/icons/main/Arrow-recent-products.svg) no-repeat;
   transform: scaleY(-1);
 }
+
+@media (max-width: 1250px){
+  .recent_products {
+    display: none;
+}
+}
