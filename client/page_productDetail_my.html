@@ -14,8 +14,8 @@
   <link rel="stylesheet" href="./css/page_productDetail_my.css"> 
   <link rel="stylesheet" href="./css/page_productDetail_dr.css"> 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script type="module" src="./js/productDetail/productDetail_my.js"></script> <!-- getNode같은 걸 가져와서 쓰려면 type="module"을 적어야함 -->
-  <script type="module" src="./js/productDetail/productDetail_dr.js"></script> <!-- getNode같은 걸 가져와서 쓰려면 type="module"을 적어야함 -->
+  <script type="module" src="./js/productDetail/productDetail_my.js"></script> 
+  <script type="module" src="./js/productDetail/productDetail_dr.js"></script> 
   <script src="./js/main.js" type="module"></script>
   <script type="module">
     const swiper = new Swiper(".mySwiper", {
@@ -28,8 +28,6 @@
 </head>
 
 <body>
-  <!-- 창환님 코드 영역 -->
-
   <!-- 창환님 new 헤더 코드 -->
   <header class="header_wrap" style="height: auto;">
     <section class="popup_wrap">
@@ -493,9 +491,9 @@
               <legend>검색</legend>
               <div class="searchForm_group">
                 <div class="small_search_form">
-                  <label for="search" class="a11y_hidden">검색어</label>
-                  <input id="search" class="small_search_input" type="search" required placeholder="검색어를 입력해주세요" name="search"/>
-                  <button class="small_search_btn" type="submit"></button>
+                  <label for="small_search" class="a11y_hidden">검색어</label>
+                  <input id="small_search" class="small_search_input" type="search" required placeholder="검색어를 입력해주세요" name="search"/>
+                  <button class="small_search_btn" type="submit" aria-label="검색을 작동시키는 버튼"></button>
                 </div>
               </div>
             </fieldset>
@@ -504,9 +502,9 @@
       </div>
       <div class="small_nav_icon">
         <article class="small_icon_wrap">
-          <a class="icon_location" href="#"></a>
-          <a class="icon_heart" href="#"></a>
-          <a class="icon_cart" href="#"></a>
+          <a class="icon_location" href="#" aria-label="배송지를 등록하고 구매 가능한 상품을 볼 수 아이콘"></a>
+          <a class="icon_heart" href="#" aria-label="찜한 상품들의 목록을 보러갈 수 있는 아이콘"></a>
+          <a class="icon_cart" href="#" aria-label="장바구니에 담아둔 상품 목록을 보러갈 수 있는 아이콘"></a>
         </article>
       </div>
     </div>
@@ -1238,7 +1236,7 @@
             주소 : 서울특별시 강남구 테헤란로 133, 18층(역삼동)<span class="footer_bar">|</span>대표이사 : 김슬아
           </p>
           <p>
-            입점문의 : <a href="#">입정문의하기</a><span class="footer_bar">|</span>제휴문의 : <a href="#">business@karlycorp.com</a>
+            입점문의 : <a href="#">입점문의하기</a><span class="footer_bar">|</span>제휴문의 : <a href="#">business@karlycorp.com</a>
           </p>
           <p>채용문의 : recruit@karlycorp.com</p>
           <p>팩스 : 070 - 7500 - 6098</p>
